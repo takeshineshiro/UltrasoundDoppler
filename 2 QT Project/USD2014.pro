@@ -52,3 +52,11 @@ static { # everything below takes effect with CONFIG += static
     INCLUDEPATH += $$PWD/app/usbDevicelib/libusb/MS32/static
     DEPENDPATH += $$PWD/app/usbDevicelib/libusb/MS32/static
 }
+
+release: DESTDIR = build/release
+debug:   DESTDIR = build/debug
+
+OBJECTS_DIR = $$DESTDIR/.obj
+MOC_DIR = $$DESTDIR/.moc
+RCC_DIR = $$DESTDIR/.qrc
+UI_DIR = $$DESTDIR/.ui

@@ -19,6 +19,5 @@
         <file>resources/handle.png</file>
         <file>resources/oscilloscope.icns</file>
         <file>resources/oscilloscope.ico</file>
-        <file>resources/oscilloscope.txt</file>
     </qresource>
 </RCC>
