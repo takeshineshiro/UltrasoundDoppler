@@ -1,13 +1,13 @@
 #include "mmode.h"
 
-Mmode::Mmode(QCustomPlot *parent) :
+Mmode::Mmode(uint32_t dataSize, QCustomPlot *parent) :
     QCustomPlot(parent){
-    _time.resize(SAMPLES/2);
-    _dataRe.resize(SAMPLES/2);
-    _dataIm.resize(SAMPLES/2);
-    _data2Re.resize(SAMPLES/2);
-    _data2Im.resize(SAMPLES/2);
-    for (int i = 0; i < SAMPLES/2; i++){
+    _time.resize(dataSize/2);
+    _dataRe.resize(dataSize/2);
+    _dataIm.resize(dataSize/2);
+    _data2Re.resize(dataSize/2);
+    _data2Im.resize(dataSize/2);
+    for (uint32_t i = 0; i < dataSize/2; i++){
         _time[i] = i;
         _dataRe[i] = (double)(i/10);
         _dataIm[i] = (double)(i/10);
@@ -25,7 +25,7 @@ Mmode::Mmode(QCustomPlot *parent) :
     graph(3)->setPen(QPen(Qt::green));
     xAxis->setLabel("x");
     yAxis->setLabel("Signalamplitude in mV");
-    xAxis->setRange(0, SAMPLES/2);
+    xAxis->setRange(0, dataSize/2);
     yAxis->setRange(-825, 825);
 
     setLocale(QLocale(QLocale::German, QLocale::Germany)); // period as decimal separator and comma as thousand separator
@@ -42,7 +42,7 @@ Mmode::Mmode(QCustomPlot *parent) :
     axisRect()->setBackground(Qt::white);
     replot();
     connect(this, SIGNAL(mouseWheel(QWheelEvent*)), this, SLOT(on_mouseWheel(QWheelEvent*)));
-    fill_Time(SAMPLES*Multiply/2);
+    fill_Time(dataSize/2);
 }
 
 void Mmode::plot()

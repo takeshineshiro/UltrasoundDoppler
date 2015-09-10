@@ -4,7 +4,7 @@ Menu::Menu(QWidget *uiContext, QObject *parent) :
     QObject(parent)
 {
     _ctx = uiContext;
-    _mmode = new Mmode();
+    _mmode = new Mmode(SAMPLES);
     _spectro = new Spectrogram();
     device = new usdDevice(this);
     QObject::connect(device, SIGNAL(availableStatusChanged(usbDevice*)), this, SLOT(handleDeviceChanged(usbDevice*)));

@@ -3,7 +3,6 @@
 
 
 #include <QWidget>
-#include "usdmodel.h"
 #include <QtMath>
 #include "libs/QCPlib/qcustomplot.h"
 
@@ -11,7 +10,7 @@ class Mmode : public QCustomPlot
 {
     Q_OBJECT
 public:
-    explicit Mmode(QCustomPlot *parent = 0);
+    explicit Mmode(uint32_t dataSize, QCustomPlot *parent = 0);
     Mmode* mmode()       { return this; }
 
     void plot();
