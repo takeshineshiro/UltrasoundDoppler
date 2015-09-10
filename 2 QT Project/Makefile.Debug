@@ -974,9 +974,43 @@ build/debug/.moc/moc_mmode.cpp: C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qfiledevice.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
-		app/usdmodel.h \
-		app/libs/usbDevicelib/usbdevice.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QtMath \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qmath.h \
+		app/libs/QCPlib/qcustomplot.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QObject \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QPointer \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qpointer.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QPainter \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qpainter.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qtextoption.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qpen.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QPaintEvent \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QMouseEvent \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QPixmap \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QVector \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QString \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QDateTime \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qdatetime.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QMultiMap \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QFlags \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QDebug \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QVector2D \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QStack \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qstack.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QCache \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qcache.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QMargins \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/QPrinter \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/qprinter.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qpagedpaintdevice.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qpagelayout.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qpagesize.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/qtprintsupportglobal.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/QPrintEngine \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/qprintengine.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QtNumeric \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/QtPrintSupport \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/QtPrintSupportDepends \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QtCore \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QtCoreDepends \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qabstractanimation.h \
@@ -990,7 +1024,6 @@ build/debug/.moc/moc_mmode.cpp: C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qtextcodec.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qendian.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qlibraryinfo.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qdatetime.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qbuffer.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qdir.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qfileinfo.h \
@@ -1024,11 +1057,9 @@ build/debug/.moc/moc_mmode.cpp: C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qabstractnativeeventfilter.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qbasictimer.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qmath.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qmetaobject.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qmimedata.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qobjectcleanuphandler.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qpointer.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qsharedmemory.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qsignalmapper.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qsocketnotifier.h \
@@ -1068,7 +1099,6 @@ build/debug/.moc/moc_mmode.cpp: C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qarraydatapointer.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qbitarray.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qbytearraymatcher.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qcache.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qcollator.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qcommandlineoption.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qcommandlineparser.h \
@@ -1079,48 +1109,11 @@ build/debug/.moc/moc_mmode.cpp: C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtWidgets/
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qqueue.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qregularexpression.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qscopedvaluerollback.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qstack.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qtextboundaryfinder.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qtimeline.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qtimezone.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qxmlstream.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qtcoreversion.h \
-		app/libs/usbDevicelib/libusb/libusb.h \
-		app/libs/usbDevicelib/usbtransfer.h \
-		app/libs/usbDevicelib/usbwatcher.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QThread \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QtDebug \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QtMath \
-		app/libs/QCPlib/qcustomplot.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QPointer \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QPainter \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qpainter.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qtextoption.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qpen.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QPaintEvent \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QMouseEvent \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QPixmap \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QVector \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QString \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QDateTime \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QMultiMap \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QFlags \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QDebug \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QVector2D \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QStack \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QCache \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QMargins \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/QPrinter \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/qprinter.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qpagedpaintdevice.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qpagelayout.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qpagesize.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/qtprintsupportglobal.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/QPrintEngine \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/qprintengine.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QtNumeric \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/QtPrintSupport \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/QtPrintSupportDepends \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QtGui \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QtGuiDepends \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qaccessible.h \
@@ -3206,9 +3199,43 @@ build/debug/.obj/mmode.o: app/mmode.cpp app/mmode.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qfiledevice.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
-		app/usdmodel.h \
-		app/libs/usbDevicelib/usbdevice.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QtMath \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qmath.h \
+		app/libs/QCPlib/qcustomplot.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QObject \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QPointer \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qpointer.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QPainter \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qpainter.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qtextoption.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qpen.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QPaintEvent \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QMouseEvent \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QPixmap \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QVector \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QString \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QDateTime \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qdatetime.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QMultiMap \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QFlags \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QDebug \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QVector2D \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QStack \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qstack.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QCache \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qcache.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QMargins \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/QPrinter \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/qprinter.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qpagedpaintdevice.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qpagelayout.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qpagesize.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/qtprintsupportglobal.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/QPrintEngine \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/qprintengine.h \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QtNumeric \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/QtPrintSupport \
+		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/QtPrintSupportDepends \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QtCore \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QtCoreDepends \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qabstractanimation.h \
@@ -3222,7 +3249,6 @@ build/debug/.obj/mmode.o: app/mmode.cpp app/mmode.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qtextcodec.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qendian.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qlibraryinfo.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qdatetime.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qbuffer.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qdir.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qfileinfo.h \
@@ -3256,11 +3282,9 @@ build/debug/.obj/mmode.o: app/mmode.cpp app/mmode.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qabstractnativeeventfilter.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qbasictimer.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qmath.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qmetaobject.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qmimedata.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qobjectcleanuphandler.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qpointer.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qsharedmemory.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qsignalmapper.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qsocketnotifier.h \
@@ -3300,7 +3324,6 @@ build/debug/.obj/mmode.o: app/mmode.cpp app/mmode.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qarraydatapointer.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qbitarray.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qbytearraymatcher.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qcache.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qcollator.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qcommandlineoption.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qcommandlineparser.h \
@@ -3311,48 +3334,11 @@ build/debug/.obj/mmode.o: app/mmode.cpp app/mmode.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qqueue.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qregularexpression.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qscopedvaluerollback.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qstack.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qtextboundaryfinder.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qtimeline.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qtimezone.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qxmlstream.h \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/qtcoreversion.h \
-		app/libs/usbDevicelib/libusb/libusb.h \
-		app/libs/usbDevicelib/usbtransfer.h \
-		app/libs/usbDevicelib/usbwatcher.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QThread \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QtDebug \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QtMath \
-		app/libs/QCPlib/qcustomplot.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QPointer \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QPainter \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qpainter.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qtextoption.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qpen.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QPaintEvent \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QMouseEvent \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QPixmap \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QVector \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QString \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QDateTime \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QMultiMap \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QFlags \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QDebug \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QVector2D \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QStack \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QCache \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QMargins \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/QPrinter \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/qprinter.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qpagedpaintdevice.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qpagelayout.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qpagesize.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/qtprintsupportglobal.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/QPrintEngine \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/qprintengine.h \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtCore/QtNumeric \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/QtPrintSupport \
-		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtPrintSupport/QtPrintSupportDepends \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QtGui \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/QtGuiDepends \
 		C:/Qt/Qt5.5.0/5.5/mingw492_32/include/QtGui/qaccessible.h \
