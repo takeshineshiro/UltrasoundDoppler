@@ -2,12 +2,13 @@
 #include "QtMath"
 #include <QtDebug>
 
-Spectrogram::Spectrogram(QCustomPlot *parent) :
+Spectrogram::Spectrogram(uint32_t dataSize, QCustomPlot *parent) :
     QCustomPlot(parent){
-    _frequency.resize(SAMPLES);
-    _data.resize(SAMPLES);
-    _SampleFreq = 64000 / SAMPLES;
-    for (int i = 0; i < SAMPLES; i++){
+    _dataSize = dataSize;
+    _frequency.resize(_dataSize);
+    _data.resize(_dataSize);
+    _SampleFreq = 64000 / _dataSize;
+    for (uint32_t i = 0; i < _dataSize; i++){
         _frequency[i] = i;// (double)i * _SampleFreq;
         _data[i] = i;
     }
@@ -18,7 +19,7 @@ Spectrogram::Spectrogram(QCustomPlot *parent) :
     xAxis->setLabel("frequency in kHz");
     yAxis->setLabel("Magnitude in dB");
 
-    xAxis->setRange(0, SAMPLES);
+    xAxis->setRange(0, _dataSize);
     //xAxis->setRange(_frequency[1], _frequency[SAMPLES/2-1]);
     graph(0)->setData(_frequency, _data);
     graph(0)->setBrush(QBrush(QColor(255/4.0,160,50,150)));
@@ -58,6 +59,8 @@ void Spectrogram::on_NewData(uint16_t *data, int size)
     kiss_fftr_cfg fftcfg = kiss_fftr_alloc(SAMPLES, 0, NULL, NULL);
 
     //fill cin array
+    kiss_fft_scalar in[SAMPLES];
+    kiss_fft_cpx cout[SAMPLES];
     for (int i = 0; i < SAMPLES; i++){
         in[i] = (uint16_t)data[i];// *usdDevice::adcRange()/2/usdDevice::adcResolution(); //2000 mV/2^14bit
         out << (uint16_t)data[i] << "\n";
@@ -98,7 +101,7 @@ void Spectrogram::on_NewData(uint16_t *data, int size)
         }
     }
 */
-    for (int i = 0; i < SAMPLES; i++){
+    for (uint32_t i = 0; i < _dataSize; i++){
         _data[i] = (double)data[i];
     }
     //file.close();
@@ -112,19 +115,19 @@ void Spectrogram::on_SampleFreqChanged(quint32 divider)
 {
     switch(divider){
     case 2000000:
-        _SampleFreq = 16000 / SAMPLES;
+        _SampleFreq = 16000 / _dataSize;
         xAxis->setRange(0, 8000);
         break;
     case 4000000:
-        _SampleFreq = 32000 / SAMPLES;
+        _SampleFreq = 32000 / _dataSize;
         xAxis->setRange(0, 16000);
         break;
     case 8000000:
-        _SampleFreq = 64000 / SAMPLES;
+        _SampleFreq = 64000 / _dataSize;
         xAxis->setRange(0, 32000);
         break;
     }
-    for (int i = 0; i < SAMPLES; i++){
+    for (uint32_t i = 0; i < _dataSize; i++){
         _frequency[i] = (double)i * _SampleFreq;
     }
 }

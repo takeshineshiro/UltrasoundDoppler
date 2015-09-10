@@ -2,17 +2,14 @@
 #define SPECTROGRAM_H
 
 #include <QWidget>
-#include "usdmodel.h"
 #include "libs/QCPlib/qcustomplot.h"
 #include "libs/kiss_fft/kiss_fftr.h"
-#include <QTextStream>
-#include <QFile>
 
 class Spectrogram : public QCustomPlot
 {
     Q_OBJECT
 public:
-    explicit Spectrogram(QCustomPlot *parent = 0);
+    explicit Spectrogram(uint32_t dataSize, QCustomPlot *parent = 0);
     Spectrogram* spectrogram()       { return this; }
 
 signals:
@@ -24,8 +21,7 @@ private slots:
     void on_mouseWheel(QWheelEvent *event);
 private:
     QVector<double> _frequency, _data;
-    kiss_fft_scalar in[SAMPLES];
-    kiss_fft_cpx cout[SAMPLES];
+    uint32_t _dataSize;
     double _SampleFreq;
     QCPBars *fft = new QCPBars(xAxis, yAxis);
 };
