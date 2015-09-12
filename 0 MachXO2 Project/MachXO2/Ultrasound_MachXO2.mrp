@@ -1,0 +1,600 @@
+
+     Lattice Mapping Report File for Design Module 'UltrasoundDopplerTop'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO2 -p LCMXO2-7000HC -t TQFP144 -s 4 -oc Commercial
+     Ultrasound_MachXO2.ngd -o Ultrasound_MachXO2_map.ncd -pr
+     Ultrasound_MachXO2.prf -mp Ultrasound_MachXO2.mrp -lpf
+     D:/workspace/UltrasoundDoppler/0 MachXO2
+     Project/MachXO2/Ultrasound_MachXO2_synplify.lpf -lpf
+     D:/workspace/UltrasoundDoppler/0 MachXO2 Project/Settings/MachXO2.lpf -c 0
+     -gui -msgset D:/workspace/UltrasoundDoppler/0 MachXO2 Project/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO2-7000HCTQFP144
+Target Performance:   4
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.5.1.302
+Mapped on:  09/12/15  19:31:34
+
+Design Summary
+--------------
+
+   Number of registers:    255 out of  7209 (4%)
+      PFU registers:          253 out of  6864 (4%)
+      PIO registers:            2 out of   345 (1%)
+   Number of SLICEs:       157 out of  3432 (5%)
+      SLICEs as Logic/ROM:    145 out of  3432 (4%)
+      SLICEs as RAM:           12 out of  2574 (0%)
+      SLICEs as Carry:         43 out of  3432 (1%)
+   Number of LUT4s:        310 out of  6864 (5%)
+      Number of logic LUTs:      200
+      Number of distributed RAM:  12 (24 LUT4s)
+      Number of ripple logic:     43 (86 LUT4s)
+      Number of shift registers:   0
+   Number of PIO sites used: 44 + 4(JTAG) out of 115 (42%)
+   Number of block RAMs:  2 out of 26 (8%)
+   Number of GSRs:  1 out of 1 (100%)
+   EFB used :       No
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   POR :            On
+   Bandgap :        On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  6
+     Net CLK_EXT_c: 94 loads, 94 rising, 0 falling (Driver: PIO CLK_EXT )
+
+                                    Page 1
+
+
+
+
+Design:  UltrasoundDopplerTop                          Date:  09/12/15  19:31:34
+
+Design Summary (cont)
+---------------------
+     Net spi_clk_c: 42 loads, 25 rising, 17 falling (Driver: PIO spi_clk )
+     Net DATA_CLK_c: 2 loads, 0 rising, 2 falling (Driver: dataOut/DATA_OUT_CLK
+     )
+     Net TP_c[3]: 3 loads, 3 rising, 0 falling (Driver: core/RX_CLK_u_i_m4 )
+     Net fifo/READY2WRITE_RNIEB281: 2 loads, 2 rising, 0 falling (Driver:
+     fifo/READY2WRITE_RNIEB281 )
+     Net mem_clk: 8 loads, 8 rising, 0 falling (Driver: com/MEM_CLK )
+   Number of Clock Enables:  13
+     Net divider[0]: 8 loads, 8 LSLICEs
+     Net com.mode3out.counter_1_sqmuxa_i: 9 loads, 8 LSLICEs
+     Net com.mode3in.SHIFT_OUT.done8_i: 9 loads, 8 LSLICEs
+     Net TP_c[0]: 4 loads, 2 LSLICEs
+     Net fifo/un17_READY2READ_i: 1 loads, 1 LSLICEs
+     Net mem/MEM_0__cnv[0]: 8 loads, 8 LSLICEs
+     Net mem/MEM_4__cnv[0]: 3 loads, 3 LSLICEs
+     Net mem/MEM_3__cnv[0]: 8 loads, 8 LSLICEs
+     Net mem/MEM_2__cnv[0]: 8 loads, 8 LSLICEs
+     Net mem/MEM_1__cnv[0]: 8 loads, 8 LSLICEs
+     Net com/ENABLE_1_sqmuxa_i: 1 loads, 1 LSLICEs
+     Net com/un1_MEM_WDATA_0_sqmuxa_0_0: 8 loads, 8 LSLICEs
+     Net com/N_359_i: 2 loads, 2 LSLICEs
+   Number of local set/reset loads for net TP_c[0] merged into GSR:  101
+   Number of LSRs:  3
+     Net TP_c[0]: 18 loads, 14 LSLICEs
+     Net en: 11 loads, 11 LSLICEs
+     Net com/un1_mem_burst_cnt_0_sqmuxa_3_0_RNIIQLA1: 5 loads, 5 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net TP_c[0]: 59 loads
+     Net com/xfer_done: 50 loads
+     Net mem_addr[0]: 28 loads
+     Net mem_addr[1]: 27 loads
+     Net mem_addr[2]: 27 loads
+     Net com/spi_cmd[2]: 20 loads
+     Net com/N_326_i_0: 18 loads
+     Net core/Count: 17 loads
+     Net com/dataOut_0_sqmuxa: 16 loads
+     Net com/mode3in/done8_10: 15 loads
+
+
+
+
+   Number of warnings:  1
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: IO buffer missing for top level port RX_OTR...logic will be
+     discarded.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+
+                                    Page 2
+
+
+
+
+Design:  UltrasoundDopplerTop                          Date:  09/12/15  19:31:34
+
+IO (PIO) Attributes (cont)
+--------------------------
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| spi_miso            | OUTPUT    | LVCMOS25  | OUT        |
++---------------------+-----------+-----------+------------+
+| CLK_EXT             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| TP[5]               | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| TP[4]               | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| TP[3]               | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| TP[2]               | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| TP[1]               | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| TP[0]               | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DATA_OUT[7]         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DATA_OUT[6]         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DATA_OUT[5]         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DATA_OUT[4]         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DATA_OUT[3]         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DATA_OUT[2]         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DATA_OUT[1]         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DATA_OUT[0]         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| HARM_SYNC           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| ROI_SYNC            | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DATA_CLK            | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| RX_PWDN             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| RX_CLK              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| RX[13]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| RX[12]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| RX[11]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| RX[10]              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| RX[9]               | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| RX[8]               | INPUT     | LVCMOS25  |            |
+
+                                    Page 3
+
+
+
+
+Design:  UltrasoundDopplerTop                          Date:  09/12/15  19:31:34
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| RX[7]               | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| RX[6]               | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| RX[5]               | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| RX[4]               | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| RX[3]               | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| RX[2]               | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| RX[1]               | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| RX[0]               | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| TX_SWITCH           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| TX_CLK[1]           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| TX_CLK[0]           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| TX_PWDN[1]          | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| TX_PWDN[0]          | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| spi_csn             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| spi_mosi            | INPUT     | LVCMOS25  | IN         |
++---------------------+-----------+-----------+------------+
+| spi_clk             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| ENABLE              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block VCC undriven or does not drive anything - clipped.
+Block com/mode3out/GND undriven or does not drive anything - clipped.
+Block com/mode3out/VCC undriven or does not drive anything - clipped.
+Block com/mode3in/GND undriven or does not drive anything - clipped.
+Block com/mode3in/VCC undriven or does not drive anything - clipped.
+Block core/VCC undriven or does not drive anything - clipped.
+Block fifo/GND undriven or does not drive anything - clipped.
+Block fifo/VCC undriven or does not drive anything - clipped.
+Block dataOut/VCC undriven or does not drive anything - clipped.
+Signal TP_c_i[0] was merged into signal TP_c[0]
+Signal en_i was merged into signal en
+Signal com.mode3out.outreg_9_.CN was merged into signal spi_clk_c
+Signal DATA_CLK_c_i was merged into signal DATA_CLK_c
+Signal com/GND undriven or does not drive anything - clipped.
+Signal mem/VCC undriven or does not drive anything - clipped.
+Signal mem/GND undriven or does not drive anything - clipped.
+Signal core/GND undriven or does not drive anything - clipped.
+
+                                    Page 4
+
+
+
+
+Design:  UltrasoundDopplerTop                          Date:  09/12/15  19:31:34
+
+Removed logic (cont)
+--------------------
+Signal fifo/ebr1/VCC undriven or does not drive anything - clipped.
+Signal fifo/ebr1/GND undriven or does not drive anything - clipped.
+Signal dataOut/GND undriven or does not drive anything - clipped.
+Signal com/un1_mem_burst_cnt_s_7_0_S1 undriven or does not drive anything -
+     clipped.
+Signal com/un1_mem_burst_cnt_s_7_0_COUT undriven or does not drive anything -
+     clipped.
+Signal com/un1_mem_burst_cnt_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal com/N_1 undriven or does not drive anything - clipped.
+Signal core/Count_cry_0_S0[0] undriven or does not drive anything - clipped.
+Signal core/N_1 undriven or does not drive anything - clipped.
+Signal core/Count_s_0_S1[15] undriven or does not drive anything - clipped.
+Signal core/Count_s_0_COUT[15] undriven or does not drive anything - clipped.
+Signal core/N_13_i undriven or does not drive anything - clipped.
+Signal core/nextState19_0_I_1_0_S0 undriven or does not drive anything -
+     clipped.
+Signal core/N_2 undriven or does not drive anything - clipped.
+Signal core/nextState19_0_I_9_0_S1 undriven or does not drive anything -
+     clipped.
+Signal core/nextState19_0_I_9_0_S0 undriven or does not drive anything -
+     clipped.
+Signal core/nextState19_0_I_27_0_S1 undriven or does not drive anything -
+     clipped.
+Signal core/nextState19_0_I_27_0_S0 undriven or does not drive anything -
+     clipped.
+Signal core/nextState19_0_I_33_0_S1 undriven or does not drive anything -
+     clipped.
+Signal core/nextState19_0_I_33_0_S0 undriven or does not drive anything -
+     clipped.
+Signal core/nextState19_0_I_21_0_S0 undriven or does not drive anything -
+     clipped.
+Signal core/nextState19_0_I_21_0_COUT undriven or does not drive anything -
+     clipped.
+Signal core/N_19_i undriven or does not drive anything - clipped.
+Signal core/nextState14_0_I_1_0_S0 undriven or does not drive anything -
+     clipped.
+Signal core/N_3 undriven or does not drive anything - clipped.
+Signal core/nextState14_0_I_9_0_S1 undriven or does not drive anything -
+     clipped.
+Signal core/nextState14_0_I_9_0_S0 undriven or does not drive anything -
+     clipped.
+Signal core/nextState14_0_I_27_0_S1 undriven or does not drive anything -
+     clipped.
+Signal core/nextState14_0_I_27_0_S0 undriven or does not drive anything -
+     clipped.
+Signal core/nextState14_0_I_33_0_S1 undriven or does not drive anything -
+     clipped.
+Signal core/nextState14_0_I_33_0_S0 undriven or does not drive anything -
+     clipped.
+Signal core/nextState14_0_I_21_0_S0 undriven or does not drive anything -
+     clipped.
+Signal core/nextState14_0_I_21_0_COUT undriven or does not drive anything -
+     clipped.
+Signal core/N_25_i undriven or does not drive anything - clipped.
+Signal core/nextState9_0_I_1_0_S0 undriven or does not drive anything - clipped.
+
+                                    Page 5
+
+
+
+
+Design:  UltrasoundDopplerTop                          Date:  09/12/15  19:31:34
+
+Removed logic (cont)
+--------------------
+     
+Signal core/N_4 undriven or does not drive anything - clipped.
+Signal core/nextState9_0_I_9_0_S1 undriven or does not drive anything - clipped.
+     
+Signal core/nextState9_0_I_9_0_S0 undriven or does not drive anything - clipped.
+     
+Signal core/nextState9_0_I_27_0_S1 undriven or does not drive anything -
+     clipped.
+Signal core/nextState9_0_I_27_0_S0 undriven or does not drive anything -
+     clipped.
+Signal core/nextState9_0_I_33_0_S1 undriven or does not drive anything -
+     clipped.
+Signal core/nextState9_0_I_33_0_S0 undriven or does not drive anything -
+     clipped.
+Signal core/nextState9_0_I_21_0_S0 undriven or does not drive anything -
+     clipped.
+Signal core/nextState9_0_I_21_0_COUT undriven or does not drive anything -
+     clipped.
+Signal core/N_31_i undriven or does not drive anything - clipped.
+Signal core/nextState4_0_I_1_0_S0 undriven or does not drive anything - clipped.
+     
+Signal core/N_5 undriven or does not drive anything - clipped.
+Signal core/nextState4_0_I_9_0_S1 undriven or does not drive anything - clipped.
+     
+Signal core/nextState4_0_I_9_0_S0 undriven or does not drive anything - clipped.
+     
+Signal core/nextState4_0_I_27_0_S1 undriven or does not drive anything -
+     clipped.
+Signal core/nextState4_0_I_27_0_S0 undriven or does not drive anything -
+     clipped.
+Signal core/nextState4_0_I_33_0_S1 undriven or does not drive anything -
+     clipped.
+Signal core/nextState4_0_I_33_0_S0 undriven or does not drive anything -
+     clipped.
+Signal core/nextState4_0_I_21_0_S0 undriven or does not drive anything -
+     clipped.
+Signal core/nextState4_0_I_21_0_COUT undriven or does not drive anything -
+     clipped.
+Signal fifo/ebr1/FF undriven or does not drive anything - clipped.
+Signal fifo/ebr1/AFF undriven or does not drive anything - clipped.
+Signal fifo/ebr1/AEF undriven or does not drive anything - clipped.
+Signal fifo/ebr1/EF undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO17 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO16 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO15 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO14 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO13 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO12 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO11 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO10 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO9 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO8 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO7 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO6 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO5 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO4 undriven or does not drive anything - clipped.
+
+                                    Page 6
+
+
+
+
+Design:  UltrasoundDopplerTop                          Date:  09/12/15  19:31:34
+
+Removed logic (cont)
+--------------------
+Signal fifo/ebr1/DO17_0 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO16_0 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO15_0 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO14_0 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO13_0 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO12_0 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO11_0 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO10_0 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO9_0 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO8_0 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO7_0 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO6_0 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO5_0 undriven or does not drive anything - clipped.
+Signal fifo/ebr1/DO4_0 undriven or does not drive anything - clipped.
+Signal dataOut/un1_frameCounter_1_cry_0_0_S1 undriven or does not drive anything
+     - clipped.
+Signal dataOut/un1_frameCounter_1_cry_0_0_S0 undriven or does not drive anything
+     - clipped.
+Signal dataOut/N_1 undriven or does not drive anything - clipped.
+Signal dataOut/un1_frameCounter_1_s_15_0_S1 undriven or does not drive anything
+     - clipped.
+Signal dataOut/un1_frameCounter_1_s_15_0_COUT undriven or does not drive
+     anything - clipped.
+Block ENABLE_pad_RNIRNR9 was optimized away.
+Block com/ENABLE_RNIKUNB was optimized away.
+Block com/mode3out/outreg_0_.CN was optimized away.
+Block dataOut/DATA_OUT_CLK_RNIANI was optimized away.
+Block com/GND was optimized away.
+Block mem/VCC was optimized away.
+Block mem/GND was optimized away.
+Block core/GND was optimized away.
+Block fifo/ebr1/VCC was optimized away.
+Block fifo/ebr1/GND was optimized away.
+Block dataOut/GND was optimized away.
+
+Memory Usage
+------------
+
+/fifo/ebr1:
+    EBRs: 2
+    RAM SLICEs: 0
+    Logic SLICEs: 0
+    PFU Registers: 0
+    -Contains EBR FIFO_OUT_0_1:  TYPE= FIFO8KB,  Width= 4,  REGMODE= OUTREG,
+         RESETMODE= ASYNC,  ASYNC_RESET_RELEASE= ASYNC,  GSR= DISABLED
+    -Contains EBR FIFO_OUT_1_0:  TYPE= FIFO8KB,  Width= 4,  REGMODE= OUTREG,
+         RESETMODE= ASYNC,  ASYNC_RESET_RELEASE= ASYNC,  GSR= DISABLED
+/mem:
+    EBRs: 0
+    RAM SLICEs: 8
+    Logic SLICEs: 1
+    PFU Registers: 18
+/mem/MEM_ram:
+    EBRs: 0
+    RAM SLICEs: 1
+    Logic SLICEs: 0
+
+                                    Page 7
+
+
+
+
+Design:  UltrasoundDopplerTop                          Date:  09/12/15  19:31:34
+
+Memory Usage (cont)
+-------------------
+    PFU Registers: 0
+/mem/MEM_ram_0:
+    EBRs: 0
+    RAM SLICEs: 1
+    Logic SLICEs: 0
+    PFU Registers: 0
+/mem/MEM_ram_1:
+    EBRs: 0
+    RAM SLICEs: 1
+    Logic SLICEs: 0
+    PFU Registers: 0
+/mem/MEM_ram_2:
+    EBRs: 0
+    RAM SLICEs: 1
+    Logic SLICEs: 0
+    PFU Registers: 0
+
+     
+
+ASIC Components
+---------------
+
+Instance Name: fifo/ebr1/FIFO_OUT_0_1
+         Type: FIFO8KB
+Instance Name: fifo/ebr1/FIFO_OUT_1_0
+         Type: FIFO8KB
+
+GSR Usage
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'TP_c[0]'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'TP_c[0]' via the GSR component.
+
+     Type and number of components of the type: 
+   FIFO8KB = 2
+
+     Type and instance name of component: 
+   FIFO8KB : fifo/ebr1/FIFO_OUT_0_1
+   FIFO8KB : fifo/ebr1/FIFO_OUT_1_0
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+                                    Page 8
+
+
+
+
+Design:  UltrasoundDopplerTop                          Date:  09/12/15  19:31:34
+
+GSR Usage (cont)
+----------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'TP_c[0]' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 33 
+
+     Type and instance name of component: 
+   Register : com/dataOut[3]
+   Register : com/MEM_ADDR[7]
+   Register : com/ENABLE
+   Register : com/mem_burst_cnt[0]
+   Register : com/mem_burst_cnt[1]
+   Register : com/mem_burst_cnt[2]
+   Register : com/mem_burst_cnt[3]
+   Register : com/mem_burst_cnt[4]
+   Register : com/mem_burst_cnt[5]
+   Register : com/mem_burst_cnt[6]
+   Register : com/mem_burst_cnt[7]
+   Register : com/dataOut[0]
+   Register : com/dataOut[1]
+   Register : com/dataOut[2]
+   Register : com/dataOut[4]
+   Register : com/dataOut[5]
+   Register : com/dataOut[6]
+   Register : com/dataOut[7]
+   Register : com/dataOut[8]
+   Register : com/dataOut[9]
+   Register : com/dataOut[10]
+   Register : com/dataOut[11]
+   Register : com/dataOut[12]
+   Register : com/dataOut[13]
+   Register : com/dataOut[14]
+   Register : com/dataOut[15]
+   Register : com/MEM_ADDR[0]
+   Register : com/MEM_ADDR[1]
+   Register : com/MEM_ADDR[2]
+   Register : com/MEM_ADDR[3]
+   Register : com/MEM_ADDR[4]
+   Register : com/MEM_ADDR[5]
+   Register : com/MEM_ADDR[6]
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 59 MB
+        
+
+
+
+
+
+
+                                    Page 9
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights
+     reserved.

@@ -1,0 +1,22 @@
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled 
+@N: FX493 |Applying initial value "010" on instance mem.MEM_4_[2:0] 
+@N: FX493 |Applying initial value "0001100100000000" on instance mem.MEM_3_[15:0] 
+@N: FX493 |Applying initial value "0000010111010101" on instance mem.MEM_2_[15:0] 
+@N: FX493 |Applying initial value "0000000011011000" on instance mem.MEM_1_[15:0] 
+@N: FX493 |Applying initial value "0000000010100000" on instance mem.MEM_0_[15:0] 
+@N: MF179 :"d:\workspace\ultrasounddoppler\0 machxo2 project\modules\corelayer.v":50:19:50:39|Found 16 bit by 16 bit '==' comparator, 'NextStateLogic\.nextState4'
+@N: MF179 :"d:\workspace\ultrasounddoppler\0 machxo2 project\modules\corelayer.v":51:19:51:39|Found 16 bit by 16 bit '==' comparator, 'NextStateLogic\.nextState9'
+@N: MF179 :"d:\workspace\ultrasounddoppler\0 machxo2 project\modules\corelayer.v":52:18:52:38|Found 16 bit by 16 bit '==' comparator, 'NextStateLogic\.nextState14'
+@N: MF179 :"d:\workspace\ultrasounddoppler\0 machxo2 project\modules\corelayer.v":53:19:53:39|Found 16 bit by 16 bit '==' comparator, 'NextStateLogic\.nextState19'
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+@N: FO126 :"d:\workspace\ultrasounddoppler\0 machxo2 project\modules\memorymap.v":27:0:27:5|Generating RAM mem.MEM[15:0]
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
+@N: MT286 |System clock period 0.000 stretches to negative invalid value -- ignoring stretching.
+@N: MT582 |Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
+@N: MT286 |System clock period 0.000 stretches to negative invalid value -- ignoring stretching.
+@N: MT582 |Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack

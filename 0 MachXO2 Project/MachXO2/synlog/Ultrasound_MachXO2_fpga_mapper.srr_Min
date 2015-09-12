@@ -1,0 +1,457 @@
+
+
+@S |##### START OF TIMING REPORT #####[
+# Timing Report written on Sat Sep 12 19:31:31 2015
+#
+
+
+Top view:               UltrasoundDopplerTop
+Requested Frequency:    1.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
+
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: -0.074
+
+@N: MT286 |System clock period 0.000 stretches to negative invalid value -- ignoring stretching.
+                                                  Requested     Estimated     Requested     Estimated                 Clock                                           Clock              
+Starting Clock                                    Frequency     Frequency     Period        Period        Slack       Type                                            Group              
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CommunicationLayer|MEM_CLK_derived_clock          1.0 MHz       636.2 MHz     1000.000      1.572         998.428     derived (from UltrasoundDopplerTop|CLK_EXT)     Inferred_clkgroup_0
+UltrasoundDopplerTop|CLK_EXT                      1.0 MHz       140.3 MHz     1000.000      7.129         992.871     inferred                                        Inferred_clkgroup_0
+UltrasoundDopplerTop|divider_derived_clock[0]     1.0 MHz       NA            1000.000      NA            NA          derived (from UltrasoundDopplerTop|CLK_EXT)     Inferred_clkgroup_0
+UltrasoundDopplerTop|spi_clk                      1.0 MHz       159.3 MHz     1000.000      6.276         496.862     inferred                                        Inferred_clkgroup_1
+System                                            1.0 MHz       1.0 MHz       1000.000      1000.074      -0.074      system                                          system_clkgroup    
+=========================================================================================================================================================================================
+@N: MT582 |Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                              |    rise  to  rise    |    fall  to  fall   |    rise  to  fall     |    fall  to  rise 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                  Ending                                    |  constraint  slack   |  constraint  slack  |  constraint  slack    |  constraint  slack
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                    System                                    |  0.000       0.000   |  No paths    -      |  No paths    -        |  No paths    -    
+System                                    UltrasoundDopplerTop|CLK_EXT              |  0.000       -0.074  |  No paths    -      |  No paths    -        |  No paths    -    
+UltrasoundDopplerTop|CLK_EXT              System                                    |  0.000       1.252   |  No paths    -      |  No paths    -        |  No paths    -    
+UltrasoundDopplerTop|CLK_EXT              UltrasoundDopplerTop|CLK_EXT              |  0.000       0.657   |  No paths    -      |  No paths    -        |  No paths    -    
+UltrasoundDopplerTop|CLK_EXT              UltrasoundDopplerTop|spi_clk              |  No paths    -       |  No paths    -      |  Diff grp    -        |  No paths    -    
+UltrasoundDopplerTop|CLK_EXT              CommunicationLayer|MEM_CLK_derived_clock  |  0.000       0.826   |  No paths    -      |  No paths    -        |  No paths    -    
+UltrasoundDopplerTop|spi_clk              UltrasoundDopplerTop|CLK_EXT              |  Diff grp    -       |  No paths    -      |  No paths    -        |  No paths    -    
+UltrasoundDopplerTop|spi_clk              UltrasoundDopplerTop|spi_clk              |  0.000       0.606   |  0.000       0.921  |  500.000     500.874  |  No paths    -    
+CommunicationLayer|MEM_CLK_derived_clock  UltrasoundDopplerTop|CLK_EXT              |  0.000       1.225   |  No paths    -      |  No paths    -        |  No paths    -    
+=============================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: CommunicationLayer|MEM_CLK_derived_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                  Starting                                                                            Arrival          
+Instance          Reference                                    Type         Pin     Net               Time        Slack
+                  Clock                                                                                                
+-----------------------------------------------------------------------------------------------------------------------
+mem.MEM_ram       CommunicationLayer|MEM_CLK_derived_clock     SPR16X4C     DO3     mem_rdata[3]      0.731       1.225
+mem.MEM_ram_0     CommunicationLayer|MEM_CLK_derived_clock     SPR16X4C     DO3     mem_rdata[7]      0.731       1.225
+mem.MEM_ram_1     CommunicationLayer|MEM_CLK_derived_clock     SPR16X4C     DO3     mem_rdata[11]     0.731       1.225
+mem.MEM_ram_2     CommunicationLayer|MEM_CLK_derived_clock     SPR16X4C     DO3     mem_rdata[15]     0.731       1.225
+=======================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                      Starting                                                                             Required          
+Instance              Reference                                    Type        Pin     Net                 Time         Slack
+                      Clock                                                                                                  
+-----------------------------------------------------------------------------------------------------------------------------
+com.MEM_WDATA[3]      CommunicationLayer|MEM_CLK_derived_clock     FD1P3AX     D       MEM_WDATA_7[3]      -0.062       1.225
+com.MEM_WDATA[7]      CommunicationLayer|MEM_CLK_derived_clock     FD1P3AX     D       MEM_WDATA_7[7]      -0.062       1.225
+com.MEM_WDATA[11]     CommunicationLayer|MEM_CLK_derived_clock     FD1P3AX     D       MEM_WDATA_7[11]     -0.062       1.225
+com.MEM_WDATA[15]     CommunicationLayer|MEM_CLK_derived_clock     FD1P3AX     D       MEM_WDATA_7[15]     -0.062       1.225
+com.dataOut[3]        CommunicationLayer|MEM_CLK_derived_clock     FD1S3JX     D       dataOut_5[3]        -0.062       1.225
+com.dataOut[7]        CommunicationLayer|MEM_CLK_derived_clock     FD1S3IX     D       dataOut_5[7]        -0.062       1.225
+com.dataOut[11]       CommunicationLayer|MEM_CLK_derived_clock     FD1S3IX     D       dataOut_5[11]       -0.062       1.225
+com.dataOut[15]       CommunicationLayer|MEM_CLK_derived_clock     FD1S3IX     D       dataOut_5[15]       -0.062       1.225
+=============================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Propagation time:                        1.163
+    + Clock delay at starting point:         0.000 (ideal)
+    - Requested Period:                      0.000
+    - Hold time:                             -0.062
+    - Clock delay at ending point:           0.000 (ideal)
+    = Slack (non-critical) :                 1.225
+
+    Number of logic level(s):                1
+    Starting point:                          mem.MEM_ram / DO3
+    Ending point:                            com.MEM_WDATA[3] / D
+    The start point is clocked by            CommunicationLayer|MEM_CLK_derived_clock [rising] on pin CK
+    The end   point is clocked by            UltrasoundDopplerTop|CLK_EXT [rising] on pin CK
+
+Instance / Net                      Pin      Pin               Arrival     No. of    
+Name                   Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------
+mem.MEM_ram            SPR16X4C     DO3      Out     0.731     0.731       -         
+mem_rdata[3]           Net          -        -       -         -           2         
+com.MEM_WDATA_7[3]     ORCALUT4     C        In      0.000     0.731       -         
+com.MEM_WDATA_7[3]     ORCALUT4     Z        Out     0.432     1.163       -         
+MEM_WDATA_7[3]         Net          -        -       -         -           1         
+com.MEM_WDATA[3]       FD1P3AX      D        In      0.000     1.163       -         
+=====================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: UltrasoundDopplerTop|CLK_EXT
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                      Starting                                                               Arrival          
+Instance              Reference                        Type        Pin     Net               Time        Slack
+                      Clock                                                                                   
+--------------------------------------------------------------------------------------------------------------
+fifo.canReadAE[0]     UltrasoundDopplerTop|CLK_EXT     FD1P3AX     Q       canReadAE[0]      0.731       0.657
+fifo.canReadAF[0]     UltrasoundDopplerTop|CLK_EXT     FD1P3AX     Q       canReadAF[0]      0.775       0.702
+com.MEM_WDATA[3]      UltrasoundDopplerTop|CLK_EXT     FD1P3AX     Q       mem_wdata[3]      0.826       0.752
+com.MEM_WDATA[4]      UltrasoundDopplerTop|CLK_EXT     FD1P3AX     Q       mem_wdata[4]      0.826       0.752
+com.MEM_WDATA[5]      UltrasoundDopplerTop|CLK_EXT     FD1P3AX     Q       mem_wdata[5]      0.826       0.752
+com.MEM_WDATA[6]      UltrasoundDopplerTop|CLK_EXT     FD1P3AX     Q       mem_wdata[6]      0.826       0.752
+com.MEM_WDATA[7]      UltrasoundDopplerTop|CLK_EXT     FD1P3AX     Q       mem_wdata[7]      0.826       0.752
+com.MEM_WDATA[8]      UltrasoundDopplerTop|CLK_EXT     FD1P3AX     Q       mem_wdata[8]      0.826       0.752
+com.MEM_WDATA[9]      UltrasoundDopplerTop|CLK_EXT     FD1P3AX     Q       mem_wdata[9]      0.826       0.752
+com.MEM_WDATA[10]     UltrasoundDopplerTop|CLK_EXT     FD1P3AX     Q       mem_wdata[10]     0.826       0.752
+==============================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                      Starting                                                               Required          
+Instance              Reference                        Type        Pin     Net               Time         Slack
+                      Clock                                                                                    
+---------------------------------------------------------------------------------------------------------------
+fifo.canReadAE[1]     UltrasoundDopplerTop|CLK_EXT     FD1P3AX     D       canReadAE[0]      0.074        0.657
+fifo.canReadAF[1]     UltrasoundDopplerTop|CLK_EXT     FD1P3AX     D       canReadAF[0]      0.074        0.702
+mem.MEM_0_[3]         UltrasoundDopplerTop|CLK_EXT     FD1P3AX     D       mem_wdata[3]      0.074        0.752
+mem.MEM_0_[4]         UltrasoundDopplerTop|CLK_EXT     FD1P3AX     D       mem_wdata[4]      0.074        0.752
+mem.MEM_0_[5]         UltrasoundDopplerTop|CLK_EXT     FD1P3AY     D       mem_wdata[5]      0.074        0.752
+mem.MEM_0_[6]         UltrasoundDopplerTop|CLK_EXT     FD1P3AX     D       mem_wdata[6]      0.074        0.752
+mem.MEM_0_[7]         UltrasoundDopplerTop|CLK_EXT     FD1P3AY     D       mem_wdata[7]      0.074        0.752
+mem.MEM_0_[8]         UltrasoundDopplerTop|CLK_EXT     FD1P3AX     D       mem_wdata[8]      0.074        0.752
+mem.MEM_0_[9]         UltrasoundDopplerTop|CLK_EXT     FD1P3AX     D       mem_wdata[9]      0.074        0.752
+mem.MEM_0_[10]        UltrasoundDopplerTop|CLK_EXT     FD1P3AX     D       mem_wdata[10]     0.074        0.752
+===============================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Propagation time:                        0.731
+    + Clock delay at starting point:         0.000 (ideal)
+    - Requested Period:                      0.000
+    - Hold time:                             0.074
+    - Clock delay at ending point:           0.000 (ideal)
+    = Slack (non-critical) :                 0.657
+
+    Number of logic level(s):                0
+    Starting point:                          fifo.canReadAE[0] / Q
+    Ending point:                            fifo.canReadAE[1] / D
+    The start point is clocked by            UltrasoundDopplerTop|CLK_EXT [rising] on pin CK
+    The end   point is clocked by            UltrasoundDopplerTop|CLK_EXT [rising] on pin CK
+
+Instance / Net                    Pin      Pin               Arrival     No. of    
+Name                  Type        Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------
+fifo.canReadAE[0]     FD1P3AX     Q        Out     0.731     0.731       -         
+canReadAE[0]          Net         -        -       -         -           2         
+fifo.canReadAE[1]     FD1P3AX     D        In      0.000     0.731       -         
+===================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: UltrasoundDopplerTop|spi_clk
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                          Starting                                                           Arrival          
+Instance                  Reference                        Type        Pin     Net           Time        Slack
+                          Clock                                                                               
+--------------------------------------------------------------------------------------------------------------
+com.mode3in.inreg[14]     UltrasoundDopplerTop|spi_clk     FD1S3DX     Q       inreg[14]     0.680       0.606
+com.mode3in.inreg[0]      UltrasoundDopplerTop|spi_clk     FD1S3DX     Q       inreg[0]      0.731       0.657
+com.mode3in.inreg[1]      UltrasoundDopplerTop|spi_clk     FD1S3DX     Q       inreg[1]      0.731       0.657
+com.mode3in.inreg[2]      UltrasoundDopplerTop|spi_clk     FD1S3DX     Q       inreg[2]      0.731       0.657
+com.mode3in.inreg[3]      UltrasoundDopplerTop|spi_clk     FD1S3DX     Q       inreg[3]      0.731       0.657
+com.mode3in.inreg[4]      UltrasoundDopplerTop|spi_clk     FD1S3DX     Q       inreg[4]      0.731       0.657
+com.mode3in.inreg[5]      UltrasoundDopplerTop|spi_clk     FD1S3DX     Q       inreg[5]      0.731       0.657
+com.mode3in.inreg[6]      UltrasoundDopplerTop|spi_clk     FD1S3DX     Q       inreg[6]      0.731       0.657
+com.mode3in.inreg[7]      UltrasoundDopplerTop|spi_clk     FD1S3DX     Q       inreg[7]      0.731       0.657
+com.mode3in.inreg[8]      UltrasoundDopplerTop|spi_clk     FD1S3DX     Q       inreg[8]      0.731       0.657
+==============================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                           Starting                                                           Required          
+Instance                   Reference                        Type        Pin     Net           Time         Slack
+                           Clock                                                                                
+----------------------------------------------------------------------------------------------------------------
+com.mode3in.dataIn[15]     UltrasoundDopplerTop|spi_clk     FD1P3DX     D       inreg[14]     0.074        0.606
+com.mode3in.dataIn[1]      UltrasoundDopplerTop|spi_clk     FD1P3DX     D       inreg[0]      0.074        0.657
+com.mode3in.dataIn[2]      UltrasoundDopplerTop|spi_clk     FD1P3DX     D       inreg[1]      0.074        0.657
+com.mode3in.dataIn[3]      UltrasoundDopplerTop|spi_clk     FD1P3DX     D       inreg[2]      0.074        0.657
+com.mode3in.dataIn[4]      UltrasoundDopplerTop|spi_clk     FD1P3DX     D       inreg[3]      0.074        0.657
+com.mode3in.dataIn[5]      UltrasoundDopplerTop|spi_clk     FD1P3DX     D       inreg[4]      0.074        0.657
+com.mode3in.dataIn[6]      UltrasoundDopplerTop|spi_clk     FD1P3DX     D       inreg[5]      0.074        0.657
+com.mode3in.dataIn[7]      UltrasoundDopplerTop|spi_clk     FD1P3DX     D       inreg[6]      0.074        0.657
+com.mode3in.dataIn[8]      UltrasoundDopplerTop|spi_clk     FD1P3DX     D       inreg[7]      0.074        0.657
+com.mode3in.dataIn[9]      UltrasoundDopplerTop|spi_clk     FD1P3DX     D       inreg[8]      0.074        0.657
+================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Propagation time:                        0.680
+    + Clock delay at starting point:         0.000 (ideal)
+    - Requested Period:                      0.000
+    - Hold time:                             0.074
+    - Clock delay at ending point:           0.000 (ideal)
+    = Slack (non-critical) :                 0.606
+
+    Number of logic level(s):                0
+    Starting point:                          com.mode3in.inreg[14] / Q
+    Ending point:                            com.mode3in.dataIn[15] / D
+    The start point is clocked by            UltrasoundDopplerTop|spi_clk [rising] on pin CK
+    The end   point is clocked by            UltrasoundDopplerTop|spi_clk [rising] on pin CK
+
+Instance / Net                         Pin      Pin               Arrival     No. of    
+Name                       Type        Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------
+com.mode3in.inreg[14]      FD1S3DX     Q        Out     0.680     0.680       -         
+inreg[14]                  Net         -        -       -         -           1         
+com.mode3in.dataIn[15]     FD1P3DX     D        In      0.000     0.680       -         
+========================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                           Starting                                          Arrival           
+Instance                   Reference     Type        Pin     Net             Time        Slack 
+                           Clock                                                               
+-----------------------------------------------------------------------------------------------
+fifo.ebr1.FIFO_OUT_0_1     System        FIFO8KB     AEF     FlagAE_OSZI     0.000       -0.074
+fifo.ebr1.FIFO_OUT_0_1     System        FIFO8KB     AFF     FlagAF_OSZI     0.000       -0.074
+fifo.ebr1.FIFO_OUT_0_1     System        FIFO8KB     EF      Empty           0.000       0.000 
+fifo.ebr1.FIFO_OUT_0_1     System        FIFO8KB     FF      Full            0.000       0.000 
+===============================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                           Starting                                             Required           
+Instance                   Reference     Type        Pin        Net             Time         Slack 
+                           Clock                                                                   
+---------------------------------------------------------------------------------------------------
+fifo.canReadAE[0]          System        FD1P3AX     D          FlagAE_OSZI     0.074        -0.074
+fifo.canReadAF[0]          System        FD1P3AX     D          FlagAF_OSZI     0.074        -0.074
+fifo.ebr1.FIFO_OUT_0_1     System        FIFO8KB     EMPTYI     Empty           0.000        0.000 
+fifo.ebr1.FIFO_OUT_0_1     System        FIFO8KB     FULLI      Full            0.000        0.000 
+fifo.ebr1.FIFO_OUT_1_0     System        FIFO8KB     EMPTYI     Empty           0.000        0.000 
+fifo.ebr1.FIFO_OUT_1_0     System        FIFO8KB     FULLI      Full            0.000        0.000 
+===================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Propagation time:                        0.000
+    + Clock delay at starting point:         0.000 (ideal)
+-0.000
+    - Requested Period:                      0.000
+    - Hold time:                             0.074
+    - Clock delay at ending point:           0.000 (ideal)
+    = Slack (critical) :                     -0.074
+
+    Number of logic level(s):                0
+    Starting point:                          fifo.ebr1.FIFO_OUT_0_1 / AEF
+    Ending point:                            fifo.canReadAE[0] / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            UltrasoundDopplerTop|CLK_EXT [rising] on pin CK
+
+Instance / Net                         Pin      Pin               Arrival     No. of    
+Name                       Type        Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------
+fifo.ebr1.FIFO_OUT_0_1     FIFO8KB     AEF      Out     0.000     0.000       -         
+FlagAE_OSZI                Net         -        -       -         -           1         
+fifo.canReadAE[0]          FD1P3AX     D        In      0.000     0.000       -         
+========================================================================================
+
+
+Path information for path number 2: 
+    Propagation time:                        0.000
+    + Clock delay at starting point:         0.000 (ideal)
+-0.000
+    - Requested Period:                      0.000
+    - Hold time:                             0.074
+    - Clock delay at ending point:           0.000 (ideal)
+    = Slack (critical) :                     -0.074
+
+    Number of logic level(s):                0
+    Starting point:                          fifo.ebr1.FIFO_OUT_0_1 / AFF
+    Ending point:                            fifo.canReadAF[0] / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            UltrasoundDopplerTop|CLK_EXT [rising] on pin CK
+
+Instance / Net                         Pin      Pin               Arrival     No. of    
+Name                       Type        Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------
+fifo.ebr1.FIFO_OUT_0_1     FIFO8KB     AFF      Out     0.000     0.000       -         
+FlagAF_OSZI                Net         -        -       -         -           1         
+fifo.canReadAF[0]          FD1P3AX     D        In      0.000     0.000       -         
+========================================================================================
+
+
+Path information for path number 3: 
+    Propagation time:                        0.000
+    + Clock delay at starting point:         0.000 (ideal)
+-0.000
+    - Requested Period:                      0.000
+    - Hold time:                             0.000
+    - Clock delay at ending point:           0.000 (ideal)
+0.000
+    = Slack (non-critical) :                 0.000
+
+    Number of logic level(s):                0
+    Starting point:                          fifo.ebr1.FIFO_OUT_0_1 / EF
+    Ending point:                            fifo.ebr1.FIFO_OUT_0_1 / EMPTYI
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            System [rising]
+
+Instance / Net                         Pin        Pin               Arrival     No. of    
+Name                       Type        Name       Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------
+fifo.ebr1.FIFO_OUT_0_1     FIFO8KB     EF         Out     0.000     0.000       -         
+Empty                      Net         -          -       -         -           2         
+fifo.ebr1.FIFO_OUT_0_1     FIFO8KB     EMPTYI     In      0.000     0.000       -         
+==========================================================================================
+
+
+Path information for path number 4: 
+    Propagation time:                        0.000
+    + Clock delay at starting point:         0.000 (ideal)
+-0.000
+    - Requested Period:                      0.000
+    - Hold time:                             0.000
+    - Clock delay at ending point:           0.000 (ideal)
+0.000
+    = Slack (non-critical) :                 0.000
+
+    Number of logic level(s):                0
+    Starting point:                          fifo.ebr1.FIFO_OUT_0_1 / FF
+    Ending point:                            fifo.ebr1.FIFO_OUT_0_1 / FULLI
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            System [rising]
+
+Instance / Net                         Pin       Pin               Arrival     No. of    
+Name                       Type        Name      Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------
+fifo.ebr1.FIFO_OUT_0_1     FIFO8KB     FF        Out     0.000     0.000       -         
+Full                       Net         -         -       -         -           2         
+fifo.ebr1.FIFO_OUT_0_1     FIFO8KB     FULLI     In      0.000     0.000       -         
+=========================================================================================
+
+
+Path information for path number 5: 
+    Propagation time:                        0.000
+    + Clock delay at starting point:         0.000 (ideal)
+-0.000
+    - Requested Period:                      0.000
+    - Hold time:                             0.000
+    - Clock delay at ending point:           0.000 (ideal)
+0.000
+    = Slack (non-critical) :                 0.000
+
+    Number of logic level(s):                0
+    Starting point:                          fifo.ebr1.FIFO_OUT_0_1 / EF
+    Ending point:                            fifo.ebr1.FIFO_OUT_1_0 / EMPTYI
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            System [rising]
+
+Instance / Net                         Pin        Pin               Arrival     No. of    
+Name                       Type        Name       Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------
+fifo.ebr1.FIFO_OUT_0_1     FIFO8KB     EF         Out     0.000     0.000       -         
+Empty                      Net         -          -       -         -           2         
+fifo.ebr1.FIFO_OUT_1_0     FIFO8KB     EMPTYI     In      0.000     0.000       -         
+==========================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+

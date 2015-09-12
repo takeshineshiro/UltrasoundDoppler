@@ -1,0 +1,24 @@
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+2 non-gated/non-generated clock tree(s) driving 250 clock pin(s) of sequential element(s)
+2 gated/generated clock tree(s) driving 9 clock pin(s) of sequential element(s)
+86 instances converted, 9 sequential instances remain driven by gated/generated clocks
+
+=============================== Non-Gated/Non-Generated Clocks ================================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance        
+-----------------------------------------------------------------------------------------------
+@K:CKID0003       CLK_EXT             port                   171        com.MEM_CLK            
+@K:CKID0004       spi_clk             port                   79         com_mode3in_dataInio[0]
+===============================================================================================
+=================================================================== Gated/Generated Clocks ====================================================================
+Clock Tree ID     Driving Element        Drive Element Type     Fanout     Sample Instance       Explanation                                                   
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0001       com.MEM_CLK            FD1S3AX                4          mem.MEM_ram           No gated clock conversion method for cell cell:LUCENT.SPR16X4C
+@K:CKID0002       core.RX_CLK_u_i_m4     ORCALUT4               5          fifo.canReadAE[1]     Inferred clock from port                                      
+===============================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+

@@ -1,0 +1,67 @@
+Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1176R, Built Apr 20 2015 17:38:44
+Copyright (C) 1994-2015, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+Product Version J-2015.03L
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@L: D:\workspace\UltrasoundDoppler\0 MachXO2 Project\MachXO2\Ultrasound_MachXO2_scck.rpt 
+Printing clock  summary report in "D:\workspace\UltrasoundDoppler\0 MachXO2 Project\MachXO2\Ultrasound_MachXO2_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 103MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 103MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 112MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 114MB)
+
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@N: BN362 :"d:\workspace\ultrasounddoppler\0 machxo2 project\modules\communicationlayer.v":35:0:35:5|Removing sequential instance MEM_WR of view:PrimLib.dffe(prim) in hierarchy view:work.CommunicationLayer(verilog) because there are no references to its outputs 
+@N: BN362 :"d:\workspace\ultrasounddoppler\0 machxo2 project\modules\memorymap.v":27:0:27:5|Removing sequential instance MEM_4_[6] of view:PrimLib.dffre(prim) in hierarchy view:work.MemoryMap(verilog) because there are no references to its outputs 
+@N: BN362 :"d:\workspace\ultrasounddoppler\0 machxo2 project\modules\memorymap.v":27:0:27:5|Removing sequential instance MEM_4_[7] of view:PrimLib.dffre(prim) in hierarchy view:work.MemoryMap(verilog) because there are no references to its outputs 
+@N: BN362 :"d:\workspace\ultrasounddoppler\0 machxo2 project\modules\memorymap.v":27:0:27:5|Removing sequential instance MEM_4_[8] of view:PrimLib.dffse(prim) in hierarchy view:work.MemoryMap(verilog) because there are no references to its outputs 
+@N: BN362 :"d:\workspace\ultrasounddoppler\0 machxo2 project\modules\memorymap.v":27:0:27:5|Removing sequential instance MEM_4_[9] of view:PrimLib.dffse(prim) in hierarchy view:work.MemoryMap(verilog) because there are no references to its outputs 
+@N: BN362 :"d:\workspace\ultrasounddoppler\0 machxo2 project\modules\memorymap.v":27:0:27:5|Removing sequential instance MEM_4_[10] of view:PrimLib.dffre(prim) in hierarchy view:work.MemoryMap(verilog) because there are no references to its outputs 
+@N: BN362 :"d:\workspace\ultrasounddoppler\0 machxo2 project\modules\memorymap.v":27:0:27:5|Removing sequential instance MEM_4_[11] of view:PrimLib.dffre(prim) in hierarchy view:work.MemoryMap(verilog) because there are no references to its outputs 
+@N: BN362 :"d:\workspace\ultrasounddoppler\0 machxo2 project\modules\memorymap.v":27:0:27:5|Removing sequential instance MEM_4_[12] of view:PrimLib.dffre(prim) in hierarchy view:work.MemoryMap(verilog) because there are no references to its outputs 
+@N: BN362 :"d:\workspace\ultrasounddoppler\0 machxo2 project\modules\memorymap.v":27:0:27:5|Removing sequential instance MEM_4_[13] of view:PrimLib.dffre(prim) in hierarchy view:work.MemoryMap(verilog) because there are no references to its outputs 
+@N: BN362 :"d:\workspace\ultrasounddoppler\0 machxo2 project\modules\storagelayer.v":39:0:39:5|Removing sequential instance READY2READ of view:PrimLib.dffre(prim) in hierarchy view:work.Storeage(verilog) because there are no references to its outputs 
+@W: MT462 :"d:\workspace\ultrasounddoppler\0 machxo2 project\modules\corelayer.v":68:12:68:86|Net core.RX_CLK appears to be an unidentified clock source. Assuming default frequency. 
+ICG Latch Removal Summary:
+Number of ICG latches removed:	0
+Number of ICG latches not removed:	0
+syn_allowed_resources : blockrams=26  set on top level netlist UltrasoundDopplerTop
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
+
+
+
+@S |Clock Summary
+*****************
+
+Start                                             Requested     Requested     Clock                                           Clock              
+Clock                                             Frequency     Period        Type                                            Group              
+-------------------------------------------------------------------------------------------------------------------------------------------------
+CommunicationLayer|MEM_CLK_derived_clock          1.0 MHz       1000.000      derived (from UltrasoundDopplerTop|CLK_EXT)     Inferred_clkgroup_0
+System                                            1.0 MHz       1000.000      system                                          system_clkgroup    
+UltrasoundDopplerTop|CLK_EXT                      1.0 MHz       1000.000      inferred                                        Inferred_clkgroup_0
+UltrasoundDopplerTop|divider_derived_clock[0]     1.0 MHz       1000.000      derived (from UltrasoundDopplerTop|CLK_EXT)     Inferred_clkgroup_0
+UltrasoundDopplerTop|spi_clk                      1.0 MHz       1000.000      inferred                                        Inferred_clkgroup_1
+=================================================================================================================================================
+
+@W: MT529 :"d:\workspace\ultrasounddoppler\0 machxo2 project\modules\communicationlayer.v":35:0:35:5|Found inferred clock UltrasoundDopplerTop|CLK_EXT which controls 90 sequential elements including com.mem_burst_cnt[7:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"d:\workspace\ultrasounddoppler\0 machxo2 project\modules\spi_slave.v":36:0:36:5|Found inferred clock UltrasoundDopplerTop|spi_clk which controls 79 sequential elements including com.mode3out.counter[15:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 76MB peak: 140MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Sep 12 19:31:28 2015
+
+###########################################################]

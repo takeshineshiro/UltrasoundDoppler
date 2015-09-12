@@ -8,7 +8,7 @@
 #include <QtDebug>
 #define DEVICENAME "Ultrasonic Doppler beta"
 
-#define SAMPLES 16384/2
+#define SAMPLES 1024
 #define Multiply 2
 
 using namespace USB;

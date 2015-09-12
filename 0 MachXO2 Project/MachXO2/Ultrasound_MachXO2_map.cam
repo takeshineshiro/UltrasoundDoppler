@@ -1,0 +1,157 @@
+[ START MERGED ]
+en_i en
+com.mode3out.outreg_9_.CN spi_clk_c
+TP_c_i[0] TP_c[0]
+DATA_CLK_c_i DATA_CLK_c
+[ END MERGED ]
+[ START CLIPPED ]
+com/GND
+mem/VCC
+mem/GND
+core/GND
+fifo/ebr1/VCC
+fifo/ebr1/GND
+dataOut/GND
+com/un1_mem_burst_cnt_s_7_0_S1
+com/un1_mem_burst_cnt_s_7_0_COUT
+com/un1_mem_burst_cnt_cry_0_0_S0
+com/N_1
+core/Count_cry_0_S0[0]
+core/N_1
+core/Count_s_0_S1[15]
+core/Count_s_0_COUT[15]
+core/N_13_i
+core/nextState19_0_I_1_0_S0
+core/N_2
+core/nextState19_0_I_9_0_S1
+core/nextState19_0_I_9_0_S0
+core/nextState19_0_I_27_0_S1
+core/nextState19_0_I_27_0_S0
+core/nextState19_0_I_33_0_S1
+core/nextState19_0_I_33_0_S0
+core/nextState19_0_I_21_0_S0
+core/nextState19_0_I_21_0_COUT
+core/N_19_i
+core/nextState14_0_I_1_0_S0
+core/N_3
+core/nextState14_0_I_9_0_S1
+core/nextState14_0_I_9_0_S0
+core/nextState14_0_I_27_0_S1
+core/nextState14_0_I_27_0_S0
+core/nextState14_0_I_33_0_S1
+core/nextState14_0_I_33_0_S0
+core/nextState14_0_I_21_0_S0
+core/nextState14_0_I_21_0_COUT
+core/N_25_i
+core/nextState9_0_I_1_0_S0
+core/N_4
+core/nextState9_0_I_9_0_S1
+core/nextState9_0_I_9_0_S0
+core/nextState9_0_I_27_0_S1
+core/nextState9_0_I_27_0_S0
+core/nextState9_0_I_33_0_S1
+core/nextState9_0_I_33_0_S0
+core/nextState9_0_I_21_0_S0
+core/nextState9_0_I_21_0_COUT
+core/N_31_i
+core/nextState4_0_I_1_0_S0
+core/N_5
+core/nextState4_0_I_9_0_S1
+core/nextState4_0_I_9_0_S0
+core/nextState4_0_I_27_0_S1
+core/nextState4_0_I_27_0_S0
+core/nextState4_0_I_33_0_S1
+core/nextState4_0_I_33_0_S0
+core/nextState4_0_I_21_0_S0
+core/nextState4_0_I_21_0_COUT
+fifo/ebr1/FF
+fifo/ebr1/AFF
+fifo/ebr1/AEF
+fifo/ebr1/EF
+fifo/ebr1/DO17
+fifo/ebr1/DO16
+fifo/ebr1/DO15
+fifo/ebr1/DO14
+fifo/ebr1/DO13
+fifo/ebr1/DO12
+fifo/ebr1/DO11
+fifo/ebr1/DO10
+fifo/ebr1/DO9
+fifo/ebr1/DO8
+fifo/ebr1/DO7
+fifo/ebr1/DO6
+fifo/ebr1/DO5
+fifo/ebr1/DO4
+fifo/ebr1/DO17_0
+fifo/ebr1/DO16_0
+fifo/ebr1/DO15_0
+fifo/ebr1/DO14_0
+fifo/ebr1/DO13_0
+fifo/ebr1/DO12_0
+fifo/ebr1/DO11_0
+fifo/ebr1/DO10_0
+fifo/ebr1/DO9_0
+fifo/ebr1/DO8_0
+fifo/ebr1/DO7_0
+fifo/ebr1/DO6_0
+fifo/ebr1/DO5_0
+fifo/ebr1/DO4_0
+dataOut/un1_frameCounter_1_cry_0_0_S1
+dataOut/un1_frameCounter_1_cry_0_0_S0
+dataOut/N_1
+dataOut/un1_frameCounter_1_s_15_0_S1
+dataOut/un1_frameCounter_1_s_15_0_COUT
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.5.1.302 -- WARNING: Map write only section -- Sat Sep 12 19:31:35 2015
+
+SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE ;
+LOCATE COMP "spi_miso" SITE "45" ;
+LOCATE COMP "CLK_EXT" SITE "128" ;
+LOCATE COMP "TP[5]" SITE "35" ;
+LOCATE COMP "TP[4]" SITE "34" ;
+LOCATE COMP "TP[3]" SITE "33" ;
+LOCATE COMP "TP[2]" SITE "32" ;
+LOCATE COMP "TP[1]" SITE "31" ;
+LOCATE COMP "TP[0]" SITE "28" ;
+LOCATE COMP "DATA_OUT[7]" SITE "73" ;
+LOCATE COMP "DATA_OUT[6]" SITE "96" ;
+LOCATE COMP "DATA_OUT[5]" SITE "92" ;
+LOCATE COMP "DATA_OUT[4]" SITE "97" ;
+LOCATE COMP "DATA_OUT[3]" SITE "98" ;
+LOCATE COMP "DATA_OUT[2]" SITE "99" ;
+LOCATE COMP "DATA_OUT[1]" SITE "100" ;
+LOCATE COMP "DATA_OUT[0]" SITE "103" ;
+LOCATE COMP "HARM_SYNC" SITE "91" ;
+LOCATE COMP "ROI_SYNC" SITE "93" ;
+LOCATE COMP "DATA_CLK" SITE "104" ;
+LOCATE COMP "RX_PWDN" SITE "142" ;
+LOCATE COMP "RX_CLK" SITE "143" ;
+LOCATE COMP "RX[13]" SITE "112" ;
+LOCATE COMP "RX[12]" SITE "113" ;
+LOCATE COMP "RX[11]" SITE "114" ;
+LOCATE COMP "RX[10]" SITE "115" ;
+LOCATE COMP "RX[9]" SITE "117" ;
+LOCATE COMP "RX[8]" SITE "121" ;
+LOCATE COMP "RX[7]" SITE "122" ;
+LOCATE COMP "RX[6]" SITE "127" ;
+LOCATE COMP "RX[5]" SITE "132" ;
+LOCATE COMP "RX[4]" SITE "133" ;
+LOCATE COMP "RX[3]" SITE "138" ;
+LOCATE COMP "RX[2]" SITE "139" ;
+LOCATE COMP "RX[1]" SITE "140" ;
+LOCATE COMP "RX[0]" SITE "141" ;
+LOCATE COMP "TX_SWITCH" SITE "105" ;
+LOCATE COMP "TX_CLK[1]" SITE "107" ;
+LOCATE COMP "TX_CLK[0]" SITE "106" ;
+LOCATE COMP "TX_PWDN[1]" SITE "110" ;
+LOCATE COMP "TX_PWDN[0]" SITE "109" ;
+LOCATE COMP "spi_csn" SITE "69" ;
+LOCATE COMP "spi_mosi" SITE "71" ;
+LOCATE COMP "spi_clk" SITE "44" ;
+LOCATE COMP "ENABLE" SITE "95" ;
+FREQUENCY PORT "CLK_EXT" 64.000000 MHz ;
+FREQUENCY PORT "spi_clk" 16.000000 MHz ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="FIFO_OUT" module="FIFO_OUT" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2015 09 10 16:39:41.960" version="5.8" type="Module" synthesis="synplify" source_format="Verilog HDL">
+  <Package>
+		<File name="FIFO_OUT.lpc" type="lpc" modified="2015 09 10 16:39:40.691"/>
+		<File name="FIFO_OUT.v" type="top_level_verilog" modified="2015 09 10 16:39:40.753"/>
+		<File name="FIFO_OUT_tmpl.v" type="template_verilog" modified="2015 09 10 16:39:40.753"/>
+		<File name="tb_FIFO_OUT_tmpl.v" type="testbench_verilog" modified="2015 09 10 16:39:40.769"/>
+  </Package>
+</DiamondModule>

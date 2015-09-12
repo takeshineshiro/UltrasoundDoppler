@@ -1,0 +1,4 @@
+CKID0001:@|S:com.MEM_CLK@|E:mem.MEM_ram@|F:@syn_sample_clock_path==CKID0001@|M:ClockId0001 
+CKID0002:@|S:core.RX_CLK_u_i_m4@|E:fifo.canReadAE[1]@|F:@syn_sample_clock_path1==CKID0002@|M:ClockId0002 
+CKID0003:@|S:CLK_EXT@|E:com.MEM_CLK@|F:@syn_sample_clock_path2==CKID0003@|M:ClockId0003 
+CKID0004:@|S:spi_clk@|E:com_mode3in_dataInio[0]@|F:@syn_sample_clock_path==CKID0004@|M:ClockId0004 

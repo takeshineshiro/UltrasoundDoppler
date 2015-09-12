@@ -1,0 +1,816 @@
+<html><body><samp><pre>
+<!@TC:1442079085>
+#Build: Synplify Pro J-2015.03L, Build 030R, Apr 20 2015
+#install: C:\lscc\diamond\3.5_x64\synpbase
+#OS: Windows 8 6.2
+#Hostname: YOGA13
+
+#Implementation: MachXO2
+
+<a name=compilerReport1>Synopsys HDL Compiler, version comp201503p1, Build 058R, built Apr 20 2015</a>
+@N: : <!@TM:1442079086> | Running in 64-bit mode 
+Copyright (C) 1994-2015 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+<a name=compilerReport2>Synopsys Verilog Compiler, version comp201503p1, Build 058R, built Apr 20 2015</a>
+@N: : <!@TM:1442079086> | Running in 64-bit mode 
+Copyright (C) 1994-2015 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@I::"C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\machxo2.v"
+@I::"C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\pmi_def.v"
+@I::"C:\lscc\diamond\3.5_x64\synpbase\lib\vlog\hypermods.v"
+@I::"C:\lscc\diamond\3.5_x64\synpbase\lib\vlog\umr_capim.v"
+@I::"C:\lscc\diamond\3.5_x64\synpbase\lib\vlog\scemi_objects.v"
+@I::"C:\lscc\diamond\3.5_x64\synpbase\lib\vlog\scemi_pipes.svh"
+@I::"D:\workspace\UltrasoundDoppler\0 MachXO2 Project\UltrasoundDopplerTop.v"
+@I:"D:\workspace\UltrasoundDoppler\0 MachXO2 Project\UltrasoundDopplerTop.v":"D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\Defines.v"
+@I::"D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\CommunicationLayer.v"
+@I::"D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\CoreLayer.v"
+@I::"D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\MemoryMap.v"
+@I::"D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\parallelInterface.v"
+@I::"D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\spi_slave.v"
+@I::"D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\StorageLayer.v"
+@I::"D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\MachXO2\FIFO_OUT.v"
+Verilog syntax check successful!
+File D:\workspace\UltrasoundDoppler\0 MachXO2 Project\UltrasoundDopplerTop.v changed - recompiling
+File D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\CoreLayer.v changed - recompiling
+Selecting top level module UltrasoundDopplerTop
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\machxo2.v:494:7:494:10:@N:CG364:@XP_MSG">machxo2.v(494)</a><!@TM:1442079086> | Synthesizing module GSR
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\spi_slave.v:26:7:26:27:@N:CG364:@XP_MSG">spi_slave.v(26)</a><!@TM:1442079086> | Synthesizing module parallelIN_serialOUT
+
+	Width=32'b00000000000000000000000000010000
+   Generated name = parallelIN_serialOUT_16s
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\spi_slave.v:64:7:64:27:@N:CG364:@XP_MSG">spi_slave.v(64)</a><!@TM:1442079086> | Synthesizing module serialIN_parallelOUT
+
+	Width=32'b00000000000000000000000000010000
+   Generated name = serialIN_parallelOUT_16s
+
+<font color=#A52A2A>@W:<a href="@W:CL265:@XP_HELP">CL265</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\spi_slave.v:74:0:74:6:@W:CL265:@XP_MSG">spi_slave.v(74)</a><!@TM:1442079086> | Pruning bit 15 of inreg[15:0] -- not in use ...</font>
+
+<font color=#A52A2A>@W:<a href="@W:CL265:@XP_HELP">CL265</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\spi_slave.v:74:0:74:6:@W:CL265:@XP_MSG">spi_slave.v(74)</a><!@TM:1442079086> | Pruning bit 0 of counter[15:0] -- not in use ...</font>
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\CommunicationLayer.v:3:7:3:25:@N:CG364:@XP_MSG">CommunicationLayer.v(3)</a><!@TM:1442079086> | Synthesizing module CommunicationLayer
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\MemoryMap.v:3:7:3:16:@N:CG364:@XP_MSG">MemoryMap.v(3)</a><!@TM:1442079086> | Synthesizing module MemoryMap
+
+<font color=#A52A2A>@W:<a href="@W:CG532:@XP_HELP">CG532</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\MemoryMap.v:22:0:22:7:@W:CG532:@XP_MSG">MemoryMap.v(22)</a><!@TM:1442079086> | Initial statement will only initialize memories through the usage of $readmemh and $readmemb. Everything else is ignored</font>
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\CoreLayer.v:3:7:3:16:@N:CG364:@XP_MSG">CoreLayer.v(3)</a><!@TM:1442079086> | Synthesizing module CoreLayer
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\machxo2.v:1482:7:1482:14:@N:CG364:@XP_MSG">machxo2.v(1482)</a><!@TM:1442079086> | Synthesizing module FIFO8KB
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\machxo2.v:1120:7:1120:10:@N:CG364:@XP_MSG">machxo2.v(1120)</a><!@TM:1442079086> | Synthesizing module VHI
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="C:\lscc\diamond\3.5_x64\synpbase\lib\lucent\machxo2.v:1124:7:1124:10:@N:CG364:@XP_MSG">machxo2.v(1124)</a><!@TM:1442079086> | Synthesizing module VLO
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\MachXO2\FIFO_OUT.v:8:7:8:15:@N:CG364:@XP_MSG">FIFO_OUT.v(8)</a><!@TM:1442079086> | Synthesizing module FIFO_OUT
+
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\StorageLayer.v:2:7:2:15:@N:CG364:@XP_MSG">StorageLayer.v(2)</a><!@TM:1442079086> | Synthesizing module Storeage
+
+<font color=#A52A2A>@W:<a href="@W:CG360:@XP_HELP">CG360</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\StorageLayer.v:25:27:25:35:@W:CG360:@XP_MSG">StorageLayer.v(25)</a><!@TM:1442079086> | No assignment to wire Data_DOP</font>
+
+<font color=#A52A2A>@W:<a href="@W:CG360:@XP_HELP">CG360</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\StorageLayer.v:26:5:26:15:@W:CG360:@XP_MSG">StorageLayer.v(26)</a><!@TM:1442079086> | No assignment to wire FlagAE_DOP</font>
+
+<font color=#A52A2A>@W:<a href="@W:CG360:@XP_HELP">CG360</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\StorageLayer.v:26:17:26:27:@W:CG360:@XP_MSG">StorageLayer.v(26)</a><!@TM:1442079086> | No assignment to wire FlagAF_DOP</font>
+
+<font color=#A52A2A>@W:<a href="@W:CG360:@XP_HELP">CG360</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\StorageLayer.v:26:29:26:41:@W:CG360:@XP_MSG">StorageLayer.v(26)</a><!@TM:1442079086> | No assignment to wire FlagFULL_DOP</font>
+
+<font color=#A52A2A>@W:<a href="@W:CG360:@XP_HELP">CG360</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\StorageLayer.v:26:43:26:56:@W:CG360:@XP_MSG">StorageLayer.v(26)</a><!@TM:1442079086> | No assignment to wire FlagEmpty_DOP</font>
+
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\StorageLayer.v:39:0:39:6:@A:CL282:@XP_MSG">StorageLayer.v(39)</a><!@TM:1442079086> | Feedback mux created for signal canReadAF[1:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A:<a href="@A:CL282:@XP_HELP">CL282</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\StorageLayer.v:39:0:39:6:@A:CL282:@XP_MSG">StorageLayer.v(39)</a><!@TM:1442079086> | Feedback mux created for signal canReadAE[1:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\parallelInterface.v:1:7:1:24:@N:CG364:@XP_MSG">parallelInterface.v(1)</a><!@TM:1442079086> | Synthesizing module parallelInterface
+
+@A:<a href="@A:CL291:@XP_HELP">CL291</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\parallelInterface.v:22:2:22:8:@A:CL291:@XP_MSG">parallelInterface.v(22)</a><!@TM:1442079086> | Register frameCounter with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@N:<a href="@N:CG364:@XP_HELP">CG364</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\UltrasoundDopplerTop.v:3:7:3:27:@N:CG364:@XP_MSG">UltrasoundDopplerTop.v(3)</a><!@TM:1442079086> | Synthesizing module UltrasoundDopplerTop
+
+<font color=#A52A2A>@W:<a href="@W:CG781:@XP_HELP">CG781</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\UltrasoundDopplerTop.v:134:6:134:7:@W:CG781:@XP_MSG">UltrasoundDopplerTop.v(134)</a><!@TM:1442079086> | Undriven input RE_IN on instance fifo, tying to 0</font>
+<font color=#A52A2A>@W:<a href="@W:CG781:@XP_HELP">CG781</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\UltrasoundDopplerTop.v:134:16:134:17:@W:CG781:@XP_MSG">UltrasoundDopplerTop.v(134)</a><!@TM:1442079086> | Undriven input IM_IN on instance fifo, tying to 0</font>
+<font color=#A52A2A>@W:<a href="@W:CL169:@XP_HELP">CL169</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\UltrasoundDopplerTop.v:66:0:66:6:@W:CL169:@XP_MSG">UltrasoundDopplerTop.v(66)</a><!@TM:1442079086> | Pruning register counter[15:0] </font>
+
+<font color=#A52A2A>@W:<a href="@W:CL159:@XP_HELP">CL159</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\UltrasoundDopplerTop.v:16:14:16:20:@W:CL159:@XP_MSG">UltrasoundDopplerTop.v(16)</a><!@TM:1442079086> | Input RX_OTR is unused</font>
+<font color=#A52A2A>@W:<a href="@W:CL156:@XP_HELP">CL156</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\StorageLayer.v:26:5:26:15:@W:CL156:@XP_MSG">StorageLayer.v(26)</a><!@TM:1442079086> | *Input FlagAE_DOP to expression [mux] has undriven bits that are tied to 0 -- simulation mismatch possible.</font>
+<font color=#A52A2A>@W:<a href="@W:CL156:@XP_HELP">CL156</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\StorageLayer.v:26:17:26:27:@W:CL156:@XP_MSG">StorageLayer.v(26)</a><!@TM:1442079086> | *Input FlagAF_DOP to expression [mux] has undriven bits that are tied to 0 -- simulation mismatch possible.</font>
+<font color=#A52A2A>@W:<a href="@W:CL156:@XP_HELP">CL156</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\StorageLayer.v:25:27:25:35:@W:CL156:@XP_MSG">StorageLayer.v(25)</a><!@TM:1442079086> | *Input Data_DOP[7:0] to expression [mux] has undriven bits that are tied to 0 -- simulation mismatch possible.</font>
+<font color=#A52A2A>@W:<a href="@W:CL159:@XP_HELP">CL159</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\StorageLayer.v:11:17:11:22:@W:CL159:@XP_MSG">StorageLayer.v(11)</a><!@TM:1442079086> | Input RE_IN is unused</font>
+<font color=#A52A2A>@W:<a href="@W:CL159:@XP_HELP">CL159</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\StorageLayer.v:11:24:11:29:@W:CL159:@XP_MSG">StorageLayer.v(11)</a><!@TM:1442079086> | Input IM_IN is unused</font>
+@N:<a href="@N:CL201:@XP_HELP">CL201</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\CoreLayer.v:36:0:36:6:@N:CL201:@XP_MSG">CoreLayer.v(36)</a><!@TM:1442079086> | Trying to extract state machine for register currentState
+Extracted state machine for register currentState
+State machine has 5 reachable states with original encodings of:
+   000
+   001
+   010
+   011
+   100
+@N:<a href="@N:CL134:@XP_HELP">CL134</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\MemoryMap.v:27:0:27:6:@N:CL134:@XP_MSG">MemoryMap.v(27)</a><!@TM:1442079086> | Found RAM MEM, depth=5, width=16
+<font color=#A52A2A>@W: : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\MemoryMap.v:27:0:27:6:@W::@XP_MSG">MemoryMap.v(27)</a><!@TM:1442079086> | The read address covers a larger address space than the RAM depth. Access beyond the memory depth will be treated as a "don't-care"</font>
+<font color=#A52A2A>@W:<a href="@W:CL246:@XP_HELP">CL246</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\MemoryMap.v:5:36:5:44:@W:CL246:@XP_MSG">MemoryMap.v(5)</a><!@TM:1442079086> | Input port bits 7 to 3 of MEM_ADDR[7:0] are unused</font>
+
+@N:<a href="@N:CL201:@XP_HELP">CL201</a> : <a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Modules\CommunicationLayer.v:35:0:35:6:@N:CL201:@XP_MSG">CommunicationLayer.v(35)</a><!@TM:1442079086> | Trying to extract state machine for register main_sm
+Extracted state machine for register main_sm
+State machine has 9 reachable states with original encodings of:
+   0000
+   0011
+   0100
+   0101
+   0111
+   1000
+   1001
+   1010
+   1011
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 74MB peak: 76MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Sep 12 19:31:26 2015
+
+###########################################################]
+<a name=compilerReport3>Synopsys Netlist Linker, version comp201503p1, Build 058R, built Apr 20 2015</a>
+@N: : <!@TM:1442079086> | Running in 64-bit mode 
+File D:\workspace\UltrasoundDoppler\0 MachXO2 Project\MachXO2\synwork\layer0.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Sep 12 19:31:26 2015
+
+###########################################################]
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Sep 12 19:31:26 2015
+
+###########################################################]
+<a name=compilerReport4>Synopsys Netlist Linker, version comp201503p1, Build 058R, built Apr 20 2015</a>
+@N: : <!@TM:1442079087> | Running in 64-bit mode 
+File D:\workspace\UltrasoundDoppler\0 MachXO2 Project\MachXO2\synwork\Ultrasound_MachXO2_comp.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 68MB peak: 69MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Sep 12 19:31:27 2015
+
+###########################################################]
+Pre-mapping Report
+
+<a name=mapperReport5>Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1176R, Built Apr 20 2015 17:38:44</a>
+Copyright (C) 1994-2015, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+Product Version J-2015.03L
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@L: D:\workspace\UltrasoundDoppler\0 MachXO2 Project\MachXO2\Ultrasound_MachXO2_scck.rpt 
+Printing clock  summary report in "D:\workspace\UltrasoundDoppler\0 MachXO2 Project\MachXO2\Ultrasound_MachXO2_scck.rpt" file 
+@N:<a href="@N:MF248:@XP_HELP">MF248</a> : <!@TM:1442079088> | Running in 64-bit mode. 
+@N:<a href="@N:MF666:@XP_HELP">MF666</a> : <!@TM:1442079088> | Clock conversion enabled  
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 103MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 103MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 112MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 112MB peak: 114MB)
+
+<font color=#A52A2A>@W:<a href="@W:FX474:@XP_HELP">FX474</a> : <!@TM:1442079088> | User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. </font> 
+@N:<a href="@N:BN362:@XP_HELP">BN362</a> : <a href="d:\workspace\ultrasounddoppler\0 machxo2 project\modules\communicationlayer.v:35:0:35:6:@N:BN362:@XP_MSG">communicationlayer.v(35)</a><!@TM:1442079088> | Removing sequential instance MEM_WR of view:PrimLib.dffe(prim) in hierarchy view:work.CommunicationLayer(verilog) because there are no references to its outputs 
+@N:<a href="@N:BN362:@XP_HELP">BN362</a> : <a href="d:\workspace\ultrasounddoppler\0 machxo2 project\modules\memorymap.v:27:0:27:6:@N:BN362:@XP_MSG">memorymap.v(27)</a><!@TM:1442079088> | Removing sequential instance MEM_4_[6] of view:PrimLib.dffre(prim) in hierarchy view:work.MemoryMap(verilog) because there are no references to its outputs 
+@N:<a href="@N:BN362:@XP_HELP">BN362</a> : <a href="d:\workspace\ultrasounddoppler\0 machxo2 project\modules\memorymap.v:27:0:27:6:@N:BN362:@XP_MSG">memorymap.v(27)</a><!@TM:1442079088> | Removing sequential instance MEM_4_[7] of view:PrimLib.dffre(prim) in hierarchy view:work.MemoryMap(verilog) because there are no references to its outputs 
+@N:<a href="@N:BN362:@XP_HELP">BN362</a> : <a href="d:\workspace\ultrasounddoppler\0 machxo2 project\modules\memorymap.v:27:0:27:6:@N:BN362:@XP_MSG">memorymap.v(27)</a><!@TM:1442079088> | Removing sequential instance MEM_4_[8] of view:PrimLib.dffse(prim) in hierarchy view:work.MemoryMap(verilog) because there are no references to its outputs 
+@N:<a href="@N:BN362:@XP_HELP">BN362</a> : <a href="d:\workspace\ultrasounddoppler\0 machxo2 project\modules\memorymap.v:27:0:27:6:@N:BN362:@XP_MSG">memorymap.v(27)</a><!@TM:1442079088> | Removing sequential instance MEM_4_[9] of view:PrimLib.dffse(prim) in hierarchy view:work.MemoryMap(verilog) because there are no references to its outputs 
+@N:<a href="@N:BN362:@XP_HELP">BN362</a> : <a href="d:\workspace\ultrasounddoppler\0 machxo2 project\modules\memorymap.v:27:0:27:6:@N:BN362:@XP_MSG">memorymap.v(27)</a><!@TM:1442079088> | Removing sequential instance MEM_4_[10] of view:PrimLib.dffre(prim) in hierarchy view:work.MemoryMap(verilog) because there are no references to its outputs 
+@N:<a href="@N:BN362:@XP_HELP">BN362</a> : <a href="d:\workspace\ultrasounddoppler\0 machxo2 project\modules\memorymap.v:27:0:27:6:@N:BN362:@XP_MSG">memorymap.v(27)</a><!@TM:1442079088> | Removing sequential instance MEM_4_[11] of view:PrimLib.dffre(prim) in hierarchy view:work.MemoryMap(verilog) because there are no references to its outputs 
+@N:<a href="@N:BN362:@XP_HELP">BN362</a> : <a href="d:\workspace\ultrasounddoppler\0 machxo2 project\modules\memorymap.v:27:0:27:6:@N:BN362:@XP_MSG">memorymap.v(27)</a><!@TM:1442079088> | Removing sequential instance MEM_4_[12] of view:PrimLib.dffre(prim) in hierarchy view:work.MemoryMap(verilog) because there are no references to its outputs 
+@N:<a href="@N:BN362:@XP_HELP">BN362</a> : <a href="d:\workspace\ultrasounddoppler\0 machxo2 project\modules\memorymap.v:27:0:27:6:@N:BN362:@XP_MSG">memorymap.v(27)</a><!@TM:1442079088> | Removing sequential instance MEM_4_[13] of view:PrimLib.dffre(prim) in hierarchy view:work.MemoryMap(verilog) because there are no references to its outputs 
+@N:<a href="@N:BN362:@XP_HELP">BN362</a> : <a href="d:\workspace\ultrasounddoppler\0 machxo2 project\modules\storagelayer.v:39:0:39:6:@N:BN362:@XP_MSG">storagelayer.v(39)</a><!@TM:1442079088> | Removing sequential instance READY2READ of view:PrimLib.dffre(prim) in hierarchy view:work.Storeage(verilog) because there are no references to its outputs 
+<font color=#A52A2A>@W:<a href="@W:MT462:@XP_HELP">MT462</a> : <a href="d:\workspace\ultrasounddoppler\0 machxo2 project\modules\corelayer.v:68:12:68:87:@W:MT462:@XP_MSG">corelayer.v(68)</a><!@TM:1442079088> | Net core.RX_CLK appears to be an unidentified clock source. Assuming default frequency. </font>
+ICG Latch Removal Summary:
+Number of ICG latches removed:	0
+Number of ICG latches not removed:	0
+syn_allowed_resources : blockrams=26  set on top level netlist UltrasoundDopplerTop
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
+
+
+
+<a name=mapperReport6>@S |Clock Summary</a>
+*****************
+
+Start                                             Requested     Requested     Clock                                           Clock              
+Clock                                             Frequency     Period        Type                                            Group              
+-------------------------------------------------------------------------------------------------------------------------------------------------
+CommunicationLayer|MEM_CLK_derived_clock          1.0 MHz       1000.000      derived (from UltrasoundDopplerTop|CLK_EXT)     Inferred_clkgroup_0
+System                                            1.0 MHz       1000.000      system                                          system_clkgroup    
+UltrasoundDopplerTop|CLK_EXT                      1.0 MHz       1000.000      inferred                                        Inferred_clkgroup_0
+UltrasoundDopplerTop|divider_derived_clock[0]     1.0 MHz       1000.000      derived (from UltrasoundDopplerTop|CLK_EXT)     Inferred_clkgroup_0
+UltrasoundDopplerTop|spi_clk                      1.0 MHz       1000.000      inferred                                        Inferred_clkgroup_1
+=================================================================================================================================================
+
+<font color=#A52A2A>@W:<a href="@W:MT529:@XP_HELP">MT529</a> : <a href="d:\workspace\ultrasounddoppler\0 machxo2 project\modules\communicationlayer.v:35:0:35:6:@W:MT529:@XP_MSG">communicationlayer.v(35)</a><!@TM:1442079088> | Found inferred clock UltrasoundDopplerTop|CLK_EXT which controls 90 sequential elements including com.mem_burst_cnt[7:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. </font>
+<font color=#A52A2A>@W:<a href="@W:MT529:@XP_HELP">MT529</a> : <a href="d:\workspace\ultrasounddoppler\0 machxo2 project\modules\spi_slave.v:36:0:36:6:@W:MT529:@XP_MSG">spi_slave.v(36)</a><!@TM:1442079088> | Found inferred clock UltrasoundDopplerTop|spi_clk which controls 79 sequential elements including com.mode3out.counter[15:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. </font>
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 76MB peak: 140MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sat Sep 12 19:31:28 2015
+
+###########################################################]
+Map & Optimize Report
+
+<a name=mapperReport7>Synopsys Lattice Technology Mapper, Version maplat, Build 1176R, Built Apr 20 2015 17:38:44</a>
+Copyright (C) 1994-2015, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+Product Version J-2015.03L
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@N:<a href="@N:MF248:@XP_HELP">MF248</a> : <!@TM:1442079091> | Running in 64-bit mode. 
+@N:<a href="@N:MF666:@XP_HELP">MF666</a> : <!@TM:1442079091> | Clock conversion enabled  
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 110MB peak: 111MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 113MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@N:<a href="@N:FX493:@XP_HELP">FX493</a> : <!@TM:1442079091> | Applying initial value "010" on instance mem.MEM_4_[2:0]  
+@N:<a href="@N:FX493:@XP_HELP">FX493</a> : <!@TM:1442079091> | Applying initial value "0001100100000000" on instance mem.MEM_3_[15:0]  
+@N:<a href="@N:FX493:@XP_HELP">FX493</a> : <!@TM:1442079091> | Applying initial value "0000010111010101" on instance mem.MEM_2_[15:0]  
+@N:<a href="@N:FX493:@XP_HELP">FX493</a> : <!@TM:1442079091> | Applying initial value "0000000011011000" on instance mem.MEM_1_[15:0]  
+@N:<a href="@N:FX493:@XP_HELP">FX493</a> : <!@TM:1442079091> | Applying initial value "0000000010100000" on instance mem.MEM_0_[15:0]  
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
+
+Encoding state machine main_sm[8:0] (view:work.CommunicationLayer(verilog))
+original code -> new code
+   0000 -> 000000001
+   0011 -> 000000010
+   0100 -> 000000100
+   0101 -> 000001000
+   0111 -> 000010000
+   1000 -> 000100000
+   1001 -> 001000000
+   1010 -> 010000000
+   1011 -> 100000000
+Encoding state machine currentState[4:0] (view:work.CoreLayer(verilog))
+original code -> new code
+   000 -> 00001
+   001 -> 00010
+   010 -> 00100
+   011 -> 01000
+   100 -> 10000
+@N: : <a href="d:\workspace\ultrasounddoppler\0 machxo2 project\modules\corelayer.v:36:0:36:6:@N::@XP_MSG">corelayer.v(36)</a><!@TM:1442079091> | Found counter in view:work.CoreLayer(verilog) inst Count[15:0]
+@N:<a href="@N:MF179:@XP_HELP">MF179</a> : <a href="d:\workspace\ultrasounddoppler\0 machxo2 project\modules\corelayer.v:50:19:50:40:@N:MF179:@XP_MSG">corelayer.v(50)</a><!@TM:1442079091> | Found 16 bit by 16 bit '==' comparator, 'NextStateLogic\.nextState4'
+@N:<a href="@N:MF179:@XP_HELP">MF179</a> : <a href="d:\workspace\ultrasounddoppler\0 machxo2 project\modules\corelayer.v:51:19:51:40:@N:MF179:@XP_MSG">corelayer.v(51)</a><!@TM:1442079091> | Found 16 bit by 16 bit '==' comparator, 'NextStateLogic\.nextState9'
+@N:<a href="@N:MF179:@XP_HELP">MF179</a> : <a href="d:\workspace\ultrasounddoppler\0 machxo2 project\modules\corelayer.v:52:18:52:39:@N:MF179:@XP_MSG">corelayer.v(52)</a><!@TM:1442079091> | Found 16 bit by 16 bit '==' comparator, 'NextStateLogic\.nextState14'
+@N:<a href="@N:MF179:@XP_HELP">MF179</a> : <a href="d:\workspace\ultrasounddoppler\0 machxo2 project\modules\corelayer.v:53:19:53:40:@N:MF179:@XP_MSG">corelayer.v(53)</a><!@TM:1442079091> | Found 16 bit by 16 bit '==' comparator, 'NextStateLogic\.nextState19'
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 142MB peak: 143MB)
+
+
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 143MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 143MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 143MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 143MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 143MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 143MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 143MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:01s		   496.86ns		 202 /       255
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 143MB)
+
+@N:<a href="@N:FX164:@XP_HELP">FX164</a> : <!@TM:1442079091> | The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.   
+@N:<a href="@N:FO126:@XP_HELP">FO126</a> : <a href="d:\workspace\ultrasounddoppler\0 machxo2 project\modules\memorymap.v:27:0:27:6:@N:FO126:@XP_MSG">memorymap.v(27)</a><!@TM:1442079091> | Generating RAM mem.MEM[15:0]
+@A:<a href="@A:BN291:@XP_HELP">BN291</a> : <a href="d:\workspace\ultrasounddoppler\0 machxo2 project\modules\communicationlayer.v:35:0:35:6:@A:BN291:@XP_MSG">communicationlayer.v(35)</a><!@TM:1442079091> | Boundary register com.ENABLE.fb packed into a complex cell. To disable register packing, set syn_keep=1 on net between register and complex cell. 
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 143MB)
+
+
+
+<a name=clockReport8>#### START OF CLOCK OPTIMIZATION REPORT #####[</a>
+
+2 non-gated/non-generated clock tree(s) driving 250 clock pin(s) of sequential element(s)
+2 gated/generated clock tree(s) driving 9 clock pin(s) of sequential element(s)
+86 instances converted, 9 sequential instances remain driven by gated/generated clocks
+
+=============================== Non-Gated/Non-Generated Clocks ================================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance        
+-----------------------------------------------------------------------------------------------
+<a href="@|S:CLK_EXT@|E:com.MEM_CLK@|F:@syn_sample_clock_path2==CKID0003@|M:ClockId0003  @XP_NAMES_BY_PROP">ClockId0003 </a>       CLK_EXT             port                   171        com.MEM_CLK            
+<a href="@|S:spi_clk@|E:com_mode3in_dataInio[0]@|F:@syn_sample_clock_path==CKID0004@|M:ClockId0004  @XP_NAMES_BY_PROP">ClockId0004 </a>       spi_clk             port                   79         com_mode3in_dataInio[0]
+===============================================================================================
+=================================================================== Gated/Generated Clocks ====================================================================
+Clock Tree ID     Driving Element        Drive Element Type     Fanout     Sample Instance       Explanation                                                   
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+<a href="@|S:com.MEM_CLK@|E:mem.MEM_ram@|F:@syn_sample_clock_path==CKID0001@|M:ClockId0001  @XP_NAMES_BY_PROP">ClockId0001 </a>       com.MEM_CLK            FD1S3AX                4          mem.MEM_ram           No gated clock conversion method for cell cell:LUCENT.SPR16X4C
+<a href="@|S:core.RX_CLK_u_i_m4@|E:fifo.canReadAE[1]@|F:@syn_sample_clock_path1==CKID0002@|M:ClockId0002  @XP_NAMES_BY_PROP">ClockId0002 </a>       core.RX_CLK_u_i_m4     ORCALUT4               5          fifo.canReadAE[1]     Inferred clock from port                                      
+===============================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 110MB peak: 143MB)
+
+Writing Analyst data base D:\workspace\UltrasoundDoppler\0 MachXO2 Project\MachXO2\synwork\Ultrasound_MachXO2_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 141MB peak: 143MB)
+
+Writing EDIF Netlist and constraint files
+<font color=#A52A2A>@W:<a href="@W:MT558:@XP_HELP">MT558</a> : <!@TM:1442079091> | Unable to locate source for clock UltrasoundDopplerTop|divider_derived_clock[0]. Clock will not be forward annotated</font> 
+J-2015.03L
+@N:<a href="@N:BW106:@XP_HELP">BW106</a> : <!@TM:1442079091> | Synplicity Constraint File capacitance units using default value of 1pF  
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 145MB peak: 147MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 145MB peak: 147MB)
+
+<font color=#A52A2A>@W:<a href="@W:MT246:@XP_HELP">MT246</a> : <a href="d:\workspace\ultrasounddoppler\0 machxo2 project\modules\machxo2\fifo_out.v:72:12:72:24:@W:MT246:@XP_MSG">fifo_out.v(72)</a><!@TM:1442079091> | Blackbox FIFO8KB is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) </font>
+<font color=#A52A2A>@W:<a href="@W:MT420:@XP_HELP">MT420</a> : <!@TM:1442079091> | Found inferred clock UltrasoundDopplerTop|CLK_EXT with period 1000.00ns. Please declare a user-defined clock on object "p:CLK_EXT"</font> 
+
+<font color=#A52A2A>@W:<a href="@W:MT420:@XP_HELP">MT420</a> : <!@TM:1442079091> | Found inferred clock UltrasoundDopplerTop|spi_clk with period 1000.00ns. Please declare a user-defined clock on object "p:spi_clk"</font> 
+
+Found clock CommunicationLayer|MEM_CLK_derived_clock with period 1000.00ns 
+
+
+<a name=timingReport9>@S |##### START OF TIMING REPORT #####[</a>
+# Timing Report written on Sat Sep 12 19:31:31 2015
+#
+
+
+Top view:               UltrasoundDopplerTop
+Requested Frequency:    1.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N:<a href="@N:MT320:@XP_HELP">MT320</a> : <!@TM:1442079091> | Timing report estimates place and route data. Please look at the place and route timing report for final timing. 
+
+@N:<a href="@N:MT322:@XP_HELP">MT322</a> : <!@TM:1442079091> | Clock constraints cover only FF-to-FF paths associated with the clock. 
+
+
+
+<a name=performanceSummary10>Performance Summary </a>
+*******************
+
+
+Worst slack in design: 496.862
+
+@N:<a href="@N:MT286:@XP_HELP">MT286</a> : <!@TM:1442079091> | System clock period 0.000 stretches to negative invalid value -- ignoring stretching. 
+                                                  Requested     Estimated      Requested     Estimated                 Clock                                           Clock              
+Starting Clock                                    Frequency     Frequency      Period        Period        Slack       Type                                            Group              
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CommunicationLayer|MEM_CLK_derived_clock          1.0 MHz       636.2 MHz      1000.000      1.572         998.428     derived (from UltrasoundDopplerTop|CLK_EXT)     Inferred_clkgroup_0
+UltrasoundDopplerTop|CLK_EXT                      1.0 MHz       140.3 MHz      1000.000      7.129         992.871     inferred                                        Inferred_clkgroup_0
+UltrasoundDopplerTop|divider_derived_clock[0]     1.0 MHz       NA             1000.000      NA            NA          derived (from UltrasoundDopplerTop|CLK_EXT)     Inferred_clkgroup_0
+UltrasoundDopplerTop|spi_clk                      1.0 MHz       159.3 MHz      1000.000      6.276         496.862     inferred                                        Inferred_clkgroup_1
+System                                            1.0 MHz       9469.7 MHz     1000.000      0.106         999.894     system                                          system_clkgroup    
+==========================================================================================================================================================================================
+@N:<a href="@N:MT582:@XP_HELP">MT582</a> : <!@TM:1442079091> | Estimated period and frequency not reported for given clock unless the clock has at least one timing path which is not a false or a max delay path and that does not have excessive slack 
+
+
+
+
+
+<a name=clockRelationships11>Clock Relationships</a>
+*******************
+
+Clocks                                                                              |    rise  to  rise      |    fall  to  fall     |    rise  to  fall     |    fall  to  rise 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                  Ending                                    |  constraint  slack     |  constraint  slack    |  constraint  slack    |  constraint  slack
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                    System                                    |  1000.000    1000.000  |  No paths    -        |  No paths    -        |  No paths    -    
+System                                    UltrasoundDopplerTop|CLK_EXT              |  1000.000    999.894   |  No paths    -        |  No paths    -        |  No paths    -    
+UltrasoundDopplerTop|CLK_EXT              System                                    |  1000.000    998.212   |  No paths    -        |  No paths    -        |  No paths    -    
+UltrasoundDopplerTop|CLK_EXT              UltrasoundDopplerTop|CLK_EXT              |  1000.000    992.871   |  No paths    -        |  No paths    -        |  No paths    -    
+UltrasoundDopplerTop|CLK_EXT              UltrasoundDopplerTop|spi_clk              |  No paths    -         |  No paths    -        |  Diff grp    -        |  No paths    -    
+UltrasoundDopplerTop|CLK_EXT              CommunicationLayer|MEM_CLK_derived_clock  |  1000.000    998.756   |  No paths    -        |  No paths    -        |  No paths    -    
+UltrasoundDopplerTop|spi_clk              UltrasoundDopplerTop|CLK_EXT              |  Diff grp    -         |  No paths    -        |  No paths    -        |  No paths    -    
+UltrasoundDopplerTop|spi_clk              UltrasoundDopplerTop|spi_clk              |  1000.000    994.846   |  1000.000    995.066  |  500.000     496.862  |  No paths    -    
+CommunicationLayer|MEM_CLK_derived_clock  UltrasoundDopplerTop|CLK_EXT              |  1000.000    998.428   |  No paths    -        |  No paths    -        |  No paths    -    
+=================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+<a name=interfaceInfo12>Interface Information </a>
+*********************
+
+No IO constraint found
+
+
+
+====================================
+<a name=clockReport13>Detailed Report for Clock: CommunicationLayer|MEM_CLK_derived_clock</a>
+====================================
+
+
+
+<a name=startingSlack14>Starting Points with Worst Slack</a>
+********************************
+
+                  Starting                                                                            Arrival            
+Instance          Reference                                    Type         Pin     Net               Time        Slack  
+                  Clock                                                                                                  
+-------------------------------------------------------------------------------------------------------------------------
+mem.MEM_ram       CommunicationLayer|MEM_CLK_derived_clock     SPR16X4C     DO3     mem_rdata[3]      1.044       998.428
+mem.MEM_ram_0     CommunicationLayer|MEM_CLK_derived_clock     SPR16X4C     DO3     mem_rdata[7]      1.044       998.428
+mem.MEM_ram_1     CommunicationLayer|MEM_CLK_derived_clock     SPR16X4C     DO3     mem_rdata[11]     1.044       998.428
+mem.MEM_ram_2     CommunicationLayer|MEM_CLK_derived_clock     SPR16X4C     DO3     mem_rdata[15]     1.044       998.428
+=========================================================================================================================
+
+
+<a name=endingSlack15>Ending Points with Worst Slack</a>
+******************************
+
+                      Starting                                                                             Required            
+Instance              Reference                                    Type        Pin     Net                 Time         Slack  
+                      Clock                                                                                                    
+-------------------------------------------------------------------------------------------------------------------------------
+com.MEM_WDATA[3]      CommunicationLayer|MEM_CLK_derived_clock     FD1P3AX     D       MEM_WDATA_7[3]      1000.089     998.428
+com.MEM_WDATA[7]      CommunicationLayer|MEM_CLK_derived_clock     FD1P3AX     D       MEM_WDATA_7[7]      1000.089     998.428
+com.MEM_WDATA[11]     CommunicationLayer|MEM_CLK_derived_clock     FD1P3AX     D       MEM_WDATA_7[11]     1000.089     998.428
+com.MEM_WDATA[15]     CommunicationLayer|MEM_CLK_derived_clock     FD1P3AX     D       MEM_WDATA_7[15]     1000.089     998.428
+com.dataOut[3]        CommunicationLayer|MEM_CLK_derived_clock     FD1S3JX     D       dataOut_5[3]        1000.089     998.428
+com.dataOut[7]        CommunicationLayer|MEM_CLK_derived_clock     FD1S3IX     D       dataOut_5[7]        1000.089     998.428
+com.dataOut[11]       CommunicationLayer|MEM_CLK_derived_clock     FD1S3IX     D       dataOut_5[11]       1000.089     998.428
+com.dataOut[15]       CommunicationLayer|MEM_CLK_derived_clock     FD1S3IX     D       dataOut_5[15]       1000.089     998.428
+===============================================================================================================================
+
+
+
+<a name=worstPaths16>Worst Path Information</a>
+<a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\MachXO2\Ultrasound_MachXO2.srr:srsfD:\workspace\UltrasoundDoppler\0 MachXO2 Project\MachXO2\Ultrasound_MachXO2.srs:fp:35702:36224:@XP_NAMES_GATE">View Worst Path in Analyst</a>
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      1000.000
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         1000.089
+
+    - Propagation time:                      1.661
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 998.428
+
+    Number of logic level(s):                1
+    Starting point:                          mem.MEM_ram / DO3
+    Ending point:                            com.MEM_WDATA[3] / D
+    The start point is clocked by            CommunicationLayer|MEM_CLK_derived_clock [rising] on pin CK
+    The end   point is clocked by            UltrasoundDopplerTop|CLK_EXT [rising] on pin CK
+
+Instance / Net                      Pin      Pin               Arrival     No. of    
+Name                   Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------
+mem.MEM_ram            SPR16X4C     DO3      Out     1.044     1.044       -         
+mem_rdata[3]           Net          -        -       -         -           2         
+com.MEM_WDATA_7[3]     ORCALUT4     C        In      0.000     1.044       -         
+com.MEM_WDATA_7[3]     ORCALUT4     Z        Out     0.617     1.661       -         
+MEM_WDATA_7[3]         Net          -        -       -         -           1         
+com.MEM_WDATA[3]       FD1P3AX      D        In      0.000     1.661       -         
+=====================================================================================
+
+
+
+
+====================================
+<a name=clockReport17>Detailed Report for Clock: UltrasoundDopplerTop|CLK_EXT</a>
+====================================
+
+
+
+<a name=startingSlack18>Starting Points with Worst Slack</a>
+********************************
+
+                         Starting                                                                  Arrival            
+Instance                 Reference                        Type        Pin     Net                  Time        Slack  
+                         Clock                                                                                        
+----------------------------------------------------------------------------------------------------------------------
+com.MEM_CLK              UltrasoundDopplerTop|CLK_EXT     FD1S3AX     Q       MEM_CLK_i            1.220       992.871
+com.main_sm[0]           UltrasoundDopplerTop|CLK_EXT     FD1S3AY     Q       main_sm[0]           1.220       992.871
+com.main_sm[8]           UltrasoundDopplerTop|CLK_EXT     FD1S3AX     Q       main_sm[8]           1.108       992.983
+com.spi_cmd[2]           UltrasoundDopplerTop|CLK_EXT     FD1P3AX     Q       spi_cmd[2]           1.280       993.013
+com.mem_burst_cnt[0]     UltrasoundDopplerTop|CLK_EXT     FD1S3IX     Q       mem_burst_cnt[0]     1.044       993.151
+com.mem_burst_cnt[1]     UltrasoundDopplerTop|CLK_EXT     FD1S3IX     Q       mem_burst_cnt[1]     1.044       993.151
+com.mem_burst_cnt[2]     UltrasoundDopplerTop|CLK_EXT     FD1S3IX     Q       mem_burst_cnt[2]     1.044       993.151
+com.mem_burst_cnt[3]     UltrasoundDopplerTop|CLK_EXT     FD1S3IX     Q       mem_burst_cnt[3]     1.044       993.151
+com.mem_burst_cnt[4]     UltrasoundDopplerTop|CLK_EXT     FD1S3IX     Q       mem_burst_cnt[4]     1.044       993.151
+com.mem_burst_cnt[5]     UltrasoundDopplerTop|CLK_EXT     FD1S3IX     Q       mem_burst_cnt[5]     1.044       993.151
+======================================================================================================================
+
+
+<a name=endingSlack19>Ending Points with Worst Slack</a>
+******************************
+
+                         Starting                                                                            Required            
+Instance                 Reference                        Type        Pin     Net                            Time         Slack  
+                         Clock                                                                                                   
+---------------------------------------------------------------------------------------------------------------------------------
+com.mem_burst_cnt[7]     UltrasoundDopplerTop|CLK_EXT     FD1S3IX     D       un1_mem_burst_cnt_s_7_0_S0     999.894      992.871
+mem.MEM_0_[0]            UltrasoundDopplerTop|CLK_EXT     FD1P3AX     SP      MEM_0__cnv[0]                  999.528      993.013
+mem.MEM_0_[1]            UltrasoundDopplerTop|CLK_EXT     FD1P3AX     SP      MEM_0__cnv[0]                  999.528      993.013
+mem.MEM_0_[2]            UltrasoundDopplerTop|CLK_EXT     FD1P3AX     SP      MEM_0__cnv[0]                  999.528      993.013
+mem.MEM_0_[3]            UltrasoundDopplerTop|CLK_EXT     FD1P3AX     SP      MEM_0__cnv[0]                  999.528      993.013
+mem.MEM_0_[4]            UltrasoundDopplerTop|CLK_EXT     FD1P3AX     SP      MEM_0__cnv[0]                  999.528      993.013
+mem.MEM_0_[5]            UltrasoundDopplerTop|CLK_EXT     FD1P3AY     SP      MEM_0__cnv[0]                  999.528      993.013
+mem.MEM_0_[6]            UltrasoundDopplerTop|CLK_EXT     FD1P3AX     SP      MEM_0__cnv[0]                  999.528      993.013
+mem.MEM_0_[7]            UltrasoundDopplerTop|CLK_EXT     FD1P3AY     SP      MEM_0__cnv[0]                  999.528      993.013
+mem.MEM_0_[8]            UltrasoundDopplerTop|CLK_EXT     FD1P3AX     SP      MEM_0__cnv[0]                  999.528      993.013
+=================================================================================================================================
+
+
+
+<a name=worstPaths20>Worst Path Information</a>
+<a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\MachXO2\Ultrasound_MachXO2.srr:srsfD:\workspace\UltrasoundDoppler\0 MachXO2 Project\MachXO2\Ultrasound_MachXO2.srs:fp:41519:43895:@XP_NAMES_GATE">View Worst Path in Analyst</a>
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      1000.000
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         999.894
+
+    - Propagation time:                      7.023
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 992.871
+
+    Number of logic level(s):                7
+    Starting point:                          com.MEM_CLK / Q
+    Ending point:                            com.mem_burst_cnt[7] / D
+    The start point is clocked by            UltrasoundDopplerTop|CLK_EXT [rising] on pin CK
+    The end   point is clocked by            UltrasoundDopplerTop|CLK_EXT [rising] on pin CK
+
+Instance / Net                                  Pin      Pin               Arrival     No. of    
+Name                               Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------
+com.MEM_CLK                        FD1S3AX      Q        Out     1.220     1.220       -         
+MEM_CLK_i                          Net          -        -       -         -           8         
+com.un1_main_sm_3_0_o4_0_o2        ORCALUT4     A        In      0.000     1.220       -         
+com.un1_main_sm_3_0_o4_0_o2        ORCALUT4     Z        Out     1.193     2.413       -         
+N_319                              Net          -        -       -         -           4         
+com.un1_mem_burst_cnt_0_sqmuxa     ORCALUT4     A        In      0.000     2.413       -         
+com.un1_mem_burst_cnt_0_sqmuxa     ORCALUT4     Z        Out     1.089     3.501       -         
+un1_mem_burst_cnt_0_sqmuxa         Net          -        -       -         -           2         
+com.un1_mem_burst_cnt_cry_0_0      CCU2D        B0       In      0.000     3.501       -         
+com.un1_mem_burst_cnt_cry_0_0      CCU2D        COUT     Out     1.545     5.046       -         
+un1_mem_burst_cnt_cry_0            Net          -        -       -         -           1         
+com.un1_mem_burst_cnt_cry_1_0      CCU2D        CIN      In      0.000     5.046       -         
+com.un1_mem_burst_cnt_cry_1_0      CCU2D        COUT     Out     0.143     5.189       -         
+un1_mem_burst_cnt_cry_2            Net          -        -       -         -           1         
+com.un1_mem_burst_cnt_cry_3_0      CCU2D        CIN      In      0.000     5.189       -         
+com.un1_mem_burst_cnt_cry_3_0      CCU2D        COUT     Out     0.143     5.332       -         
+un1_mem_burst_cnt_cry_4            Net          -        -       -         -           1         
+com.un1_mem_burst_cnt_cry_5_0      CCU2D        CIN      In      0.000     5.332       -         
+com.un1_mem_burst_cnt_cry_5_0      CCU2D        COUT     Out     0.143     5.474       -         
+un1_mem_burst_cnt_cry_6            Net          -        -       -         -           1         
+com.un1_mem_burst_cnt_s_7_0        CCU2D        CIN      In      0.000     5.474       -         
+com.un1_mem_burst_cnt_s_7_0        CCU2D        S0       Out     1.549     7.023       -         
+un1_mem_burst_cnt_s_7_0_S0         Net          -        -       -         -           1         
+com.mem_burst_cnt[7]               FD1S3IX      D        In      0.000     7.023       -         
+=================================================================================================
+
+
+
+
+====================================
+<a name=clockReport21>Detailed Report for Clock: UltrasoundDopplerTop|spi_clk</a>
+====================================
+
+
+
+<a name=startingSlack22>Starting Points with Worst Slack</a>
+********************************
+
+                            Starting                                                             Arrival            
+Instance                    Reference                        Type        Pin     Net             Time        Slack  
+                            Clock                                                                                   
+--------------------------------------------------------------------------------------------------------------------
+com.mode3in.done            UltrasoundDopplerTop|spi_clk     FD1S3DX     Q       xfer_done       1.353       496.862
+com.mode3in.counter[11]     UltrasoundDopplerTop|spi_clk     FD1S3BX     Q       counter[11]     1.044       994.846
+com.mode3in.counter[12]     UltrasoundDopplerTop|spi_clk     FD1S3BX     Q       counter[12]     1.044       994.846
+com.mode3in.counter[13]     UltrasoundDopplerTop|spi_clk     FD1S3BX     Q       counter[13]     1.044       994.846
+com.mode3in.counter[14]     UltrasoundDopplerTop|spi_clk     FD1S3BX     Q       counter[14]     1.044       994.846
+com.mode3out.counter[1]     UltrasoundDopplerTop|spi_clk     FD1S3BX     Q       counter[1]      1.044       995.066
+com.mode3out.counter[2]     UltrasoundDopplerTop|spi_clk     FD1S3BX     Q       counter[2]      1.044       995.066
+com.mode3out.counter[3]     UltrasoundDopplerTop|spi_clk     FD1S3BX     Q       counter[3]      1.044       995.066
+com.mode3out.counter[4]     UltrasoundDopplerTop|spi_clk     FD1S3BX     Q       counter[4]      1.044       995.066
+com.mode3out.counter[5]     UltrasoundDopplerTop|spi_clk     FD1S3BX     Q       counter[5]      1.044       995.066
+====================================================================================================================
+
+
+<a name=endingSlack23>Ending Points with Worst Slack</a>
+******************************
+
+                              Starting                                                                                  Required            
+Instance                      Reference                        Type         Pin     Net                                 Time         Slack  
+                              Clock                                                                                                         
+--------------------------------------------------------------------------------------------------------------------------------------------
+com_mode3out_outregio[15]     UltrasoundDopplerTop|spi_clk     OFS1P3DX     SP      com.mode3out.counter_1_sqmuxa_i     499.528      496.862
+com.mode3out.outreg[0]        UltrasoundDopplerTop|spi_clk     FD1P3DX      SP      counter_1_sqmuxa_i                  499.528      496.862
+com.mode3out.outreg[1]        UltrasoundDopplerTop|spi_clk     FD1P3DX      SP      counter_1_sqmuxa_i                  499.528      496.862
+com.mode3out.outreg[2]        UltrasoundDopplerTop|spi_clk     FD1P3DX      SP      counter_1_sqmuxa_i                  499.528      496.862
+com.mode3out.outreg[3]        UltrasoundDopplerTop|spi_clk     FD1P3DX      SP      counter_1_sqmuxa_i                  499.528      496.862
+com.mode3out.outreg[4]        UltrasoundDopplerTop|spi_clk     FD1P3DX      SP      counter_1_sqmuxa_i                  499.528      496.862
+com.mode3out.outreg[5]        UltrasoundDopplerTop|spi_clk     FD1P3DX      SP      counter_1_sqmuxa_i                  499.528      496.862
+com.mode3out.outreg[6]        UltrasoundDopplerTop|spi_clk     FD1P3DX      SP      counter_1_sqmuxa_i                  499.528      496.862
+com.mode3out.outreg[7]        UltrasoundDopplerTop|spi_clk     FD1P3DX      SP      counter_1_sqmuxa_i                  499.528      496.862
+com.mode3out.outreg[8]        UltrasoundDopplerTop|spi_clk     FD1P3DX      SP      counter_1_sqmuxa_i                  499.528      496.862
+============================================================================================================================================
+
+
+
+<a name=worstPaths24>Worst Path Information</a>
+<a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\MachXO2\Ultrasound_MachXO2.srr:srsfD:\workspace\UltrasoundDoppler\0 MachXO2 Project\MachXO2\Ultrasound_MachXO2.srs:fp:49392:50070:@XP_NAMES_GATE">View Worst Path in Analyst</a>
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      500.000
+    - Setup time:                            0.472
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         499.528
+
+    - Propagation time:                      2.666
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     496.862
+
+    Number of logic level(s):                1
+    Starting point:                          com.mode3in.done / Q
+    Ending point:                            com_mode3out_outregio[15] / SP
+    The start point is clocked by            UltrasoundDopplerTop|spi_clk [rising] on pin CK
+    The end   point is clocked by            UltrasoundDopplerTop|spi_clk [falling] on pin SCLK
+
+Instance / Net                                                Pin      Pin               Arrival     No. of    
+Name                                             Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------
+com.mode3in.done                                 FD1S3DX      Q        Out     1.353     1.353       -         
+xfer_done                                        Net          -        -       -         -           50        
+com.mode3out.counter_4_i_a2_0_12_RNITB4U[14]     ORCALUT4     C        In      0.000     1.353       -         
+com.mode3out.counter_4_i_a2_0_12_RNITB4U[14]     ORCALUT4     Z        Out     1.313     2.666       -         
+counter_1_sqmuxa_i                               Net          -        -       -         -           16        
+com_mode3out_outregio[15]                        OFS1P3DX     SP       In      0.000     2.666       -         
+===============================================================================================================
+
+
+
+
+====================================
+<a name=clockReport25>Detailed Report for Clock: System</a>
+====================================
+
+
+
+<a name=startingSlack26>Starting Points with Worst Slack</a>
+********************************
+
+                           Starting                                          Arrival             
+Instance                   Reference     Type        Pin     Net             Time        Slack   
+                           Clock                                                                 
+-------------------------------------------------------------------------------------------------
+fifo.ebr1.FIFO_OUT_0_1     System        FIFO8KB     AEF     FlagAE_OSZI     0.000       999.894 
+fifo.ebr1.FIFO_OUT_0_1     System        FIFO8KB     AFF     FlagAF_OSZI     0.000       999.894 
+fifo.ebr1.FIFO_OUT_0_1     System        FIFO8KB     EF      Empty           0.000       1000.000
+fifo.ebr1.FIFO_OUT_0_1     System        FIFO8KB     FF      Full            0.000       1000.000
+=================================================================================================
+
+
+<a name=endingSlack27>Ending Points with Worst Slack</a>
+******************************
+
+                           Starting                                             Required             
+Instance                   Reference     Type        Pin        Net             Time         Slack   
+                           Clock                                                                     
+-----------------------------------------------------------------------------------------------------
+fifo.canReadAE[0]          System        FD1P3AX     D          FlagAE_OSZI     999.894      999.894 
+fifo.canReadAF[0]          System        FD1P3AX     D          FlagAF_OSZI     999.894      999.894 
+fifo.ebr1.FIFO_OUT_0_1     System        FIFO8KB     EMPTYI     Empty           1000.000     1000.000
+fifo.ebr1.FIFO_OUT_0_1     System        FIFO8KB     FULLI      Full            1000.000     1000.000
+fifo.ebr1.FIFO_OUT_1_0     System        FIFO8KB     EMPTYI     Empty           1000.000     1000.000
+fifo.ebr1.FIFO_OUT_1_0     System        FIFO8KB     FULLI      Full            1000.000     1000.000
+=====================================================================================================
+
+
+
+<a name=worstPaths28>Worst Path Information</a>
+<a href="D:\workspace\UltrasoundDoppler\0 MachXO2 Project\MachXO2\Ultrasound_MachXO2.srr:srsfD:\workspace\UltrasoundDoppler\0 MachXO2 Project\MachXO2\Ultrasound_MachXO2.srs:fp:53632:53902:@XP_NAMES_GATE">View Worst Path in Analyst</a>
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      1000.000
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         999.894
+
+    - Propagation time:                      0.000
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 999.894
+
+    Number of logic level(s):                0
+    Starting point:                          fifo.ebr1.FIFO_OUT_0_1 / AEF
+    Ending point:                            fifo.canReadAE[0] / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            UltrasoundDopplerTop|CLK_EXT [rising] on pin CK
+
+Instance / Net                         Pin      Pin               Arrival     No. of    
+Name                       Type        Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------
+fifo.ebr1.FIFO_OUT_0_1     FIFO8KB     AEF      Out     0.000     0.000       -         
+FlagAE_OSZI                Net         -        -       -         -           1         
+fifo.canReadAE[0]          FD1P3AX     D        In      0.000     0.000       -         
+========================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+
+Finished final timing analysis (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 145MB peak: 147MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 145MB peak: 147MB)
+
+---------------------------------------
+<a name=resourceUsage29>Resource Usage Report</a>
+Part: lcmxo2_7000hc-4
+
+Register bits: 255 of 6864 (4%)
+PIC Latch:       0
+I/O cells:       44
+Block Rams : 2 of 26 (7%)
+
+
+Details:
+CCU2D:          43
+FD1P3AX:        75
+FD1P3AY:        18
+FD1P3BX:        2
+FD1P3DX:        44
+FD1P3IX:        1
+FD1S3AX:        9
+FD1S3AY:        1
+FD1S3BX:        32
+FD1S3DX:        39
+FD1S3IX:        30
+FD1S3JX:        2
+FIFO8KB:        2
+GSR:            1
+IB:             19
+IFS1P3DX:       1
+INV:            7
+OB:             25
+OFS1P3DX:       1
+ORCALUT4:       196
+PUR:            1
+SPR16X4C:       4
+VHI:            8
+VLO:            9
+true:           1
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 54MB peak: 147MB)
+
+Process took 0h:00m:03s realtime, 0h:00m:02s cputime
+# Sat Sep 12 19:31:31 2015
+
+###########################################################]
+
+</pre></samp></body></html>

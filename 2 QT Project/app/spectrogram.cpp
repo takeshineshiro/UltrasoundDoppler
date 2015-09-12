@@ -48,6 +48,7 @@ Spectrogram::Spectrogram(uint32_t dataSize, QCustomPlot *parent) :
 void Spectrogram::on_NewData(uint16_t *data, int size)
 {
     Q_UNUSED(size)
+    int16_t* data1 = (int16_t*)&data[0];
 
     double sum = 0.0, signal = 0.0;//, rauschen = 0.0;
     float magnitude = 0.0;
@@ -102,12 +103,12 @@ void Spectrogram::on_NewData(uint16_t *data, int size)
     }
 */
     for (uint32_t i = 0; i < _dataSize; i++){
-        _data[i] = (double)data[i];
+        _data[i] = (double)data1[i];
     }
     //file.close();
     graph(0)->setData(_frequency, _data);
     replot();
-    // emit graphChanged();
+    //emit graphChanged();
 }
 
 

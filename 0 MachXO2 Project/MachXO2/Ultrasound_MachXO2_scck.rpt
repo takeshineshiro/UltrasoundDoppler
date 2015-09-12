@@ -1,0 +1,32 @@
+# Synopsys Constraint Checker(syntax only), version maplat, Build 1176R, built Apr 20 2015
+# Copyright (C) 1994-2015, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+# Written on Sat Sep 12 19:31:27 2015
+
+
+##### DESIGN INFO #######################################################
+
+Top View:                "UltrasoundDopplerTop"
+Constraint File(s):      (none)
+
+#Run constraint checker to find more issues with constraints.
+#########################################################################
+
+
+
+No issues found in constraint syntax.
+
+
+
+Clock Summary
+*************
+
+Start                                             Requested     Requested     Clock                                           Clock              
+Clock                                             Frequency     Period        Type                                            Group              
+-------------------------------------------------------------------------------------------------------------------------------------------------
+CommunicationLayer|MEM_CLK_derived_clock          1.0 MHz       1000.000      derived (from UltrasoundDopplerTop|CLK_EXT)     Inferred_clkgroup_0
+System                                            1.0 MHz       1000.000      system                                          system_clkgroup    
+UltrasoundDopplerTop|CLK_EXT                      1.0 MHz       1000.000      inferred                                        Inferred_clkgroup_0
+UltrasoundDopplerTop|divider_derived_clock[0]     1.0 MHz       1000.000      derived (from UltrasoundDopplerTop|CLK_EXT)     Inferred_clkgroup_0
+UltrasoundDopplerTop|spi_clk                      1.0 MHz       1000.000      inferred                                        Inferred_clkgroup_1
+=================================================================================================================================================
