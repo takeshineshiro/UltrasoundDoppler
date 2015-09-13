@@ -1,1 +1,0 @@
- -erf "D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Testbench\Top\compile\Top.erf" -work work -lc "D:/workspace/UltrasoundDoppler/0 MachXO2 Project/Testbench/Top/library.cfg" -fl "D:/workspace/UltrasoundDoppler/0 MachXO2 Project/Testbench/Top/projlib.cfg" -o "D:/workspace/UltrasoundDoppler/0 MachXO2 Project/Testbench/Top/compile" -sve   -O2

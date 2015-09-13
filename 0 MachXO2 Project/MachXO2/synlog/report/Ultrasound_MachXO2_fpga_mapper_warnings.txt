@@ -1,4 +1,0 @@
-@W: MT558 :|Unable to locate source for clock UltrasoundDopplerTop|divider_derived_clock[0]. Clock will not be forward annotated
-@W: MT246 :"d:\workspace\ultrasounddoppler\0 machxo2 project\modules\machxo2\fifo_out.v":72:12:72:23|Blackbox FIFO8KB is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
-@W: MT420 |Found inferred clock UltrasoundDopplerTop|CLK_EXT with period 1000.00ns. Please declare a user-defined clock on object "p:CLK_EXT"
-@W: MT420 |Found inferred clock UltrasoundDopplerTop|spi_clk with period 1000.00ns. Please declare a user-defined clock on object "p:spi_clk"

@@ -1,455 +1,0 @@
-<HTML>
-<HEAD><TITLE>Synthesis and Ngdbuild Report</TITLE>
-<STYLE TYPE="text/css">
-<!--
- body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
--->
-</STYLE>
-</HEAD>
-<PRE><A name="Syn"></A><B><U><big>Synthesis and Ngdbuild  Report</big></U></B>
-synthesis:  version Diamond (64-bit) 3.5.1.302
-
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-Copyright (c) 1995 AT&T Corp.   All rights reserved.
-Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Sep 12 12:05:25 2015
-
-
-Command Line:  synthesis -f Ultrasound_MachXO2_lattice.synproj -gui 
-
-Synthesis options:
-The -a option is MachXO2.
-The -s option is 4.
-The -t option is TQFP144.
-The -d option is LCMXO2-7000HC.
-Using package TQFP144.
-Using performance grade 4.
-                                                          
-
-##########################################################
-
-### Lattice Family : MachXO2
-
-### Device  : LCMXO2-7000HC
-
-### Package : TQFP144
-
-### Speed   : 4
-
-##########################################################
-
-                                                          
-
-Optimization goal = Balanced
-Top-level module name = UltrasoundDopplerTop.
-Target frequency = 200.000000 MHz.
-Maximum fanout = 1000.
-Timing path count = 3
-BRAM utilization = 100.000000 %
-DSP usage = true
-DSP utilization = 100.000000 %
-fsm_encoding_style = auto
-resolve_mixed_drivers = 0
-fix_gated_clocks = 1
-
-Mux style = Auto
-Use Carry Chain = true
-carry_chain_length = 0
-Loop Limit = 1950.
-Use IO Insertion = TRUE
-Use IO Reg = AUTO
-
-Resource Sharing = TRUE
-Propagate Constants = TRUE
-Remove Duplicate Registers = TRUE
-force_gsr = auto
-ROM style = auto
-RAM style = auto
-The -comp option is FALSE.
-The -syn option is FALSE.
--p D:/workspace/UltrasoundDoppler/0 MachXO2 Project (searchpath added)
--p C:/lscc/diamond/3.5_x64/ispfpga/xo2c00/data (searchpath added)
--p D:/workspace/UltrasoundDoppler/0 MachXO2 Project/MachXO2 (searchpath added)
--p D:/workspace/UltrasoundDoppler/0 MachXO2 Project (searchpath added)
-Verilog design file = D:/workspace/UltrasoundDoppler/0 MachXO2 Project/UltrasoundDopplerTop.v
-Verilog design file = D:/workspace/UltrasoundDoppler/0 MachXO2 Project/Modules/CommunicationLayer.v
-Verilog design file = D:/workspace/UltrasoundDoppler/0 MachXO2 Project/Modules/CoreLayer.v
-Verilog design file = D:/workspace/UltrasoundDoppler/0 MachXO2 Project/Modules/Defines.v
-Verilog design file = D:/workspace/UltrasoundDoppler/0 MachXO2 Project/Modules/MemoryMap.v
-Verilog design file = D:/workspace/UltrasoundDoppler/0 MachXO2 Project/Modules/parallelInterface.v
-Verilog design file = D:/workspace/UltrasoundDoppler/0 MachXO2 Project/Modules/spi_slave.v
-Verilog design file = D:/workspace/UltrasoundDoppler/0 MachXO2 Project/Modules/StorageLayer.v
-Verilog design file = D:/workspace/UltrasoundDoppler/0 MachXO2 Project/Modules/MachXO2/FIFO_OUT.v
-NGD file = Ultrasound_MachXO2.ngd
--sdc option: SDC file input not used.
--lpf option: Output file option is ON.
-Hardtimer checking is enabled (default). The -dt option is not used.
-The -r option is OFF. [ Remove LOC Properties is OFF. ]
-Technology check ok...
-
-Analyzing Verilog file C:/lscc/diamond/3.5_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
-Compile design.
-Compile Design Begin
-Analyzing Verilog file d:/workspace/ultrasounddoppler/0 machxo2 project/ultrasounddopplertop.v. VERI-1482
-INFO - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/ultrasounddopplertop.v(1): analyzing included file d:/workspace/ultrasounddoppler/0 machxo2 project/Modules/Defines.v. VERI-1328
-Analyzing Verilog file d:/workspace/ultrasounddoppler/0 machxo2 project/modules/communicationlayer.v. VERI-1482
-INFO - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/communicationlayer.v(1): analyzing included file d:/workspace/ultrasounddoppler/0 machxo2 project/modules/Defines.v. VERI-1328
-Analyzing Verilog file d:/workspace/ultrasounddoppler/0 machxo2 project/modules/corelayer.v. VERI-1482
-INFO - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/corelayer.v(1): analyzing included file d:/workspace/ultrasounddoppler/0 machxo2 project/modules/Defines.v. VERI-1328
-Analyzing Verilog file d:/workspace/ultrasounddoppler/0 machxo2 project/modules/defines.v. VERI-1482
-Analyzing Verilog file d:/workspace/ultrasounddoppler/0 machxo2 project/modules/memorymap.v. VERI-1482
-INFO - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/memorymap.v(1): analyzing included file d:/workspace/ultrasounddoppler/0 machxo2 project/modules/Defines.v. VERI-1328
-Analyzing Verilog file d:/workspace/ultrasounddoppler/0 machxo2 project/modules/parallelinterface.v. VERI-1482
-Analyzing Verilog file d:/workspace/ultrasounddoppler/0 machxo2 project/modules/spi_slave.v. VERI-1482
-INFO - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/spi_slave.v(24): analyzing included file d:/workspace/ultrasounddoppler/0 machxo2 project/modules/Defines.v. VERI-1328
-Analyzing Verilog file d:/workspace/ultrasounddoppler/0 machxo2 project/modules/storagelayer.v. VERI-1482
-INFO - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/storagelayer.v(1): analyzing included file d:/workspace/ultrasounddoppler/0 machxo2 project/modules/Defines.v. VERI-1328
-Analyzing Verilog file d:/workspace/ultrasounddoppler/0 machxo2 project/modules/machxo2/fifo_out.v. VERI-1482
-Analyzing Verilog file C:/lscc/diamond/3.5_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
-Top module name (Verilog): UltrasoundDopplerTop
-INFO - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/ultrasounddopplertop.v(3): compiling module UltrasoundDopplerTop. VERI-1018
-INFO - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/communicationlayer.v(3): compiling module CommunicationLayer. VERI-1018
-INFO - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/spi_slave.v(26): compiling module parallelIN_serialOUT. VERI-1018
-INFO - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/spi_slave.v(64): compiling module serialIN_parallelOUT. VERI-1018
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/communicationlayer.v(55): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/communicationlayer.v(56): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/communicationlayer.v(143): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/communicationlayer.v(144): expression size 32 truncated to fit in target size 8. VERI-1209
-INFO - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/memorymap.v(3): compiling module MemoryMap. VERI-1018
-INFO - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/corelayer.v(3): compiling module CoreLayer. VERI-1018
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/corelayer.v(24): expression size 32 truncated to fit in target size 1. VERI-1209
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/corelayer.v(25): expression size 32 truncated to fit in target size 1. VERI-1209
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/corelayer.v(42): expression size 32 truncated to fit in target size 16. VERI-1209
-INFO - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/storagelayer.v(2): compiling module Storeage. VERI-1018
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/storagelayer.v(47): expression size 32 truncated to fit in target size 1. VERI-1209
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/storagelayer.v(48): expression size 32 truncated to fit in target size 1. VERI-1209
-INFO - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/machxo2/fifo_out.v(8): compiling module FIFO_OUT. VERI-1018
-INFO - synthesis: C:/lscc/diamond/3.5_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1482): compiling module FIFO8KB_renamed_due_excessive_length_1. VERI-1018
-INFO - synthesis: C:/lscc/diamond/3.5_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1120): compiling module VHI. VERI-1018
-INFO - synthesis: C:/lscc/diamond/3.5_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1124): compiling module VLO. VERI-1018
-INFO - synthesis: C:/lscc/diamond/3.5_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1482): compiling module FIFO8KB_renamed_due_excessive_length_2. VERI-1018
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/storagelayer.v(26): net FlagAE_DOP does not have a driver. VDB-1002
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/storagelayer.v(26): net FlagAF_DOP does not have a driver. VDB-1002
-INFO - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/parallelinterface.v(1): compiling module parallelInterface. VERI-1018
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/parallelinterface.v(28): expression size 32 truncated to fit in target size 16. VERI-1209
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/ultrasounddopplertop.v(140): input port RE_IN[31] is not connected on this instance. VDB-1013
-Loading NGL library 'C:/lscc/diamond/3.5_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
-Loading NGL library 'C:/lscc/diamond/3.5_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
-Loading NGL library 'C:/lscc/diamond/3.5_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
-Loading NGL library 'C:/lscc/diamond/3.5_x64/ispfpga/or5g00/data/orc5glib.ngl'...
-Loading device for application map from file 'xo2c7000.nph' in environment: C:/lscc/diamond/3.5_x64/ispfpga.
-Package Status:                     Final          Version 1.39.
-Top-level module name = UltrasoundDopplerTop.
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/storagelayer.v(26): net FlagAE_DOP does not have a driver. VDB-1002
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/storagelayer.v(26): net FlagAF_DOP does not have a driver. VDB-1002
-######## Missing driver on net \MEM_DATA_OUT_7__I_0/FlagAE_DOP. Patching with GND.
-######## Missing driver on net \MEM_DATA_OUT_7__I_0/FlagAF_DOP. Patching with GND.
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/storagelayer.v(35): Transparent Latch \MEM_DATA_OUT_7__I_0/dlatchrs_33_i1 gate is stuck at One
-
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/storagelayer.v(35): Transparent Latch \MEM_DATA_OUT_7__I_0/dlatchrs_33_i2 gate is stuck at One
-
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/storagelayer.v(35): Transparent Latch \MEM_DATA_OUT_7__I_0/dlatchrs_33_i3 gate is stuck at One
-
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/storagelayer.v(35): Transparent Latch \MEM_DATA_OUT_7__I_0/dlatchrs_33_i4 gate is stuck at One
-
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/storagelayer.v(35): Transparent Latch \MEM_DATA_OUT_7__I_0/dlatchrs_33_i5 gate is stuck at One
-
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/storagelayer.v(35): Transparent Latch \MEM_DATA_OUT_7__I_0/dlatchrs_33_i6 gate is stuck at One
-
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/storagelayer.v(35): Transparent Latch \MEM_DATA_OUT_7__I_0/dlatchrs_33_i7 gate is stuck at One
-
-WARNING - synthesis: d:/workspace/ultrasounddoppler/0 machxo2 project/modules/storagelayer.v(35): Transparent Latch \MEM_DATA_OUT_7__I_0/dlatchrs_33_i8 gate is stuck at One
-
-Converting Generated Clock on instance \mem/MEM[4]_i1.
-Converting Generated Clock on instance \mem/MEM[4]_i2.
-Converting Generated Clock on instance \mem/MEM[4]_i3.
-Converting Generated Clock on instance \mem/MEM[4]_i4.
-Converting Generated Clock on instance \mem/MEM[4]_i5.
-Converting Generated Clock on instance \mem/MEM[4]_i6.
-Converting Generated Clock on instance \mem/MEM[4]_i7.
-Converting Generated Clock on instance \mem/MEM[4]_i8.
-Converting Generated Clock on instance \mem/MEM[4]_i9.
-Converting Generated Clock on instance \mem/MEM[4]_i10.
-Converting Generated Clock on instance \mem/MEM[4]_i11.
-Converting Generated Clock on instance \mem/MEM[4]_i12.
-Converting Generated Clock on instance \mem/MEM[4]_i13.
-Converting Generated Clock on instance \mem/MEM[4]_i14.
-Converting Generated Clock on instance \mem/MEM[4]_i15.
-Converting Generated Clock on instance \mem/MEM[4]_i16.
-Converting Generated Clock on instance \mem/MEM[4]_i17.
-Converting Generated Clock on instance \mem/MEM[4]_i18.
-Converting Generated Clock on instance \mem/MEM[4]_i19.
-Converting Generated Clock on instance \mem/MEM[4]_i20.
-Converting Generated Clock on instance \mem/MEM[4]_i21.
-Converting Generated Clock on instance \mem/MEM[4]_i22.
-Converting Generated Clock on instance \mem/MEM[4]_i23.
-Converting Generated Clock on instance \mem/MEM[4]_i24.
-Converting Generated Clock on instance \mem/MEM[4]_i25.
-Converting Generated Clock on instance \mem/MEM[4]_i26.
-Converting Generated Clock on instance \mem/MEM[4]_i27.
-Converting Generated Clock on instance \mem/MEM[4]_i28.
-Converting Generated Clock on instance \mem/MEM[4]_i29.
-Converting Generated Clock on instance \mem/MEM[4]_i30.
-Converting Generated Clock on instance \mem/MEM[4]_i31.
-Converting Generated Clock on instance \mem/MEM[4]_i32.
-Converting Generated Clock on instance \mem/MEM[4]_i33.
-Converting Generated Clock on instance \mem/MEM[4]_i34.
-Converting Generated Clock on instance \mem/MEM[4]_i35.
-Converting Generated Clock on instance \mem/MEM[4]_i36.
-Converting Generated Clock on instance \mem/MEM[4]_i37.
-Converting Generated Clock on instance \mem/MEM[4]_i38.
-Converting Generated Clock on instance \mem/MEM[4]_i39.
-Converting Generated Clock on instance \mem/MEM[4]_i40.
-Converting Generated Clock on instance \mem/MEM[4]_i41.
-Converting Generated Clock on instance \mem/MEM[4]_i42.
-Converting Generated Clock on instance \mem/MEM[4]_i43.
-Converting Generated Clock on instance \mem/MEM[4]_i44.
-Converting Generated Clock on instance \mem/MEM[4]_i45.
-Converting Generated Clock on instance \mem/MEM[4]_i46.
-Converting Generated Clock on instance \mem/MEM[4]_i47.
-Converting Generated Clock on instance \mem/MEM[4]_i48.
-Converting Generated Clock on instance \mem/MEM[4]_i49.
-Converting Generated Clock on instance \mem/MEM[4]_i50.
-Converting Generated Clock on instance \mem/MEM[4]_i51.
-Converting Generated Clock on instance \mem/MEM[4]_i52.
-Converting Generated Clock on instance \mem/MEM[4]_i53.
-Converting Generated Clock on instance \mem/MEM[4]_i54.
-Converting Generated Clock on instance \mem/MEM[4]_i55.
-Converting Generated Clock on instance \mem/MEM[4]_i56.
-Converting Generated Clock on instance \mem/MEM[4]_i57.
-Converting Generated Clock on instance \mem/MEM[4]_i58.
-Converting Generated Clock on instance \mem/MEM[4]_i59.
-Converting Generated Clock on instance \mem/MEM[4]_i60.
-Converting Generated Clock on instance \mem/MEM[4]_i61.
-Converting Generated Clock on instance \mem/MEM[4]_i62.
-Converting Generated Clock on instance \mem/MEM[4]_i63.
-Converting Generated Clock on instance \mem/MEM[4]_i64.
-Converting Generated Clock on instance \mem/MEM[4]_i65.
-Converting Generated Clock on instance \mem/MEM[4]_i66.
-Converting Generated Clock on instance \mem/MEM[4]_i67.
-Converting Generated Clock on instance \mem/MEM[4]_i68.
-Converting Generated Clock on instance \mem/MEM[4]_i69.
-Converting Generated Clock on instance \mem/MEM[4]_i70.
-Converting Generated Clock on instance \mem/MEM[4]_i71.
-Converting Generated Clock on instance \mem/MEM[4]_i72.
-Converting Generated Clock on instance \mem/MEM[4]_i73.
-Converting Generated Clock on instance \mem/MEM[4]_i74.
-Converting Generated Clock on instance \mem/MEM[4]_i75.
-Converting Generated Clock on instance \mem/MEM[4]_i76.
-Converting Generated Clock on instance \mem/MEM[4]_i77.
-Converting Generated Clock on instance \mem/MEM[4]_i78.
-Converting Generated Clock on instance \mem/MEM[4]_i79.
-Converting Generated Clock on instance \mem/MEM[4]_i80.
-INFO - synthesis: Extracted state machine for register '\com/main_sm' with one-hot encoding
-State machine has 9 reachable states with original encodings of:
-
- 0000 
-
- 0011 
-
- 0100 
-
- 0101 
-
- 0111 
-
- 1000 
-
- 1001 
-
- 1010 
-
- 1011 
-
-original encoding -> new encoding (one-hot encoding)
-
- 0000 -> 000000001
-
- 0011 -> 000000010
-
- 0100 -> 000000100
-
- 0101 -> 000001000
-
- 0111 -> 000010000
-
- 1000 -> 000100000
-
- 1001 -> 001000000
-
- 1010 -> 010000000
-
- 1011 -> 100000000
-
-
-
-
-WARNING - synthesis: Bit 0 of Register \com/main_sm_FSM is stuck at Zero
-WARNING - synthesis: Bit 1 of Register \com/main_sm_FSM is stuck at Zero
-WARNING - synthesis: Bit 2 of Register \com/main_sm_FSM is stuck at Zero
-WARNING - synthesis: Bit 3 of Register \com/main_sm_FSM is stuck at Zero
-WARNING - synthesis: Bit 9 of Register \com/main_sm_FSM is stuck at Zero
-WARNING - synthesis: Bit 13 of Register \com/main_sm_FSM is stuck at Zero
-WARNING - synthesis: Bit 14 of Register \com/main_sm_FSM is stuck at Zero
-GSR instance connected to net n2242_c.
-Applying 200.000000 MHz constraint to all clocks
-
-WARNING - synthesis: No user .sdc file.
-Results of NGD DRC are available in UltrasoundDopplerTop_drc.log.
-Loading NGL library 'C:/lscc/diamond/3.5_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
-Loading NGL library 'C:/lscc/diamond/3.5_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
-Loading NGL library 'C:/lscc/diamond/3.5_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
-Loading NGL library 'C:/lscc/diamond/3.5_x64/ispfpga/or5g00/data/orc5glib.ngl'...
-WARNING - synthesis: logical net 'RX_OTR' has no load.
-WARNING - synthesis: input pad net 'RX_OTR' has no legal load.
-WARNING - synthesis: DRC complete with 2 warnings.
-All blocks are expanded and NGD expansion is successful.
-Writing NGD file Ultrasound_MachXO2.ngd.
-
-################### Begin Area Report (UltrasoundDopplerTop)######################
-Number of register bits => 264 of 7209 (3 % )
-CCU2D => 49
-FD1P3AX => 110
-FD1P3AY => 1
-FD1P3IX => 9
-FD1P3JX => 15
-FD1S3AX => 50
-FD1S3AY => 2
-FD1S3BX => 1
-FD1S3DX => 17
-FD1S3IX => 39
-FD1S3JX => 20
-FIFO8KB => 2
-GSR => 1
-IB => 19
-INV => 1
-LUT4 => 276
-OB => 25
-PFUMX => 24
-################### End Area Report ##################
-
-################### Begin BlackBox Report ######################
-TSALL => 1
-################### End BlackBox Report ##################
-
-################### Begin Clock Report ######################
-Clock Nets
-Number of Clocks: 4
-  Net : CLK_EXT_c, loads : 165
-  Net : spi_clk_c, loads : 48
-  Net : divider_0, loads : 17
-  Net : TX_CLK_1__I_0/n2239, loads : 5
-Clock Enable Nets
-Number of Clock Enables: 15
-Top 10 highest fanout Clock Enables:
-  Net : com/mode3in/dataIn_15__N_240, loads : 32
-  Net : com/mode3out/clock_N_160_enable_15, loads : 31
-  Net : mem/CLK_EXT_c_enable_36, loads : 16
-  Net : mem/CLK_EXT_c_enable_89, loads : 16
-  Net : mem/CLK_EXT_c_enable_92, loads : 16
-  Net : mem/CLK_EXT_c_enable_76, loads : 16
-  Net : mem/CLK_EXT_c_enable_52, loads : 16
-  Net : com/CLK_EXT_c_enable_99, loads : 8
-  Net : com/CLK_EXT_c_enable_90, loads : 7
-  Net : n2242_c, loads : 7
-Highest fanout non-clock nets
-Top 10 highest fanout non-clock nets:
-  Net : com/mode3in/counter_15_N_193_15, loads : 46
-  Net : ENABLE_N_2, loads : 39
-  Net : com/mem_addr_0, loads : 38
-  Net : n2242_c, loads : 34
-  Net : com/n626, loads : 33
-  Net : clock_N_160, loads : 32
-  Net : com/mode3in/dataIn_15__N_240, loads : 32
-  Net : com/mode3out/clock_N_160_enable_15, loads : 31
-  Net : com/mem_addr_2, loads : 22
-  Net : com/mem_addr_1, loads : 22
-################### End Clock Report ##################
-
-<A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
---------------
---------------------------------------------------------------------------------
-Constraint                              |   Constraint|       Actual|Levels
---------------------------------------------------------------------------------
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk3 [get_nets divider[0]]              |  200.000 MHz|  121.139 MHz|     5 *
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk2 [get_nets n2239]                   |  200.000 MHz|  287.522 MHz|     2  
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets CLK_EXT_c]               |  200.000 MHz|  102.051 MHz|     5 *
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets spi_clk_c]               |  200.000 MHz|   99.325 MHz|     6 *
-                                        |             |             |
---------------------------------------------------------------------------------
-
-
-3 constraints not met.
-
-
-Peak Memory Usage: 66.957  MB
-
---------------------------------------------------------------
-Elapsed CPU time for LSE flow : 2.844  secs
---------------------------------------------------------------
-
-
-
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-</PRE></FONT>
-</BODY>
-</HTML>
