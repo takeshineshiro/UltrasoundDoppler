@@ -21,6 +21,9 @@
 /MachXO2/synwork
 /MachXO2/Ultrasound_MachXO2.dir
 /Testbench/TopLevel
+/Ultrasound_tcr.dir
+promote.xml
+reportview.xml
 
 # Qt-es
 
