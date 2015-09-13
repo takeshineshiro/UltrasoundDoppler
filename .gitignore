@@ -12,16 +12,9 @@
 
 # Lattice
 
-/MachXO2/.vdbs
-/MachXO2/backup
-/MachXO2/coreip
-/MachXO2/dm
-/MachXO2/synlog
-/MachXO2/syntmp
-/MachXO2/synwork
-/MachXO2/Ultrasound_MachXO2.dir
-/Testbench/TopLevel
-/Ultrasound_tcr.dir
+MachXO2/
+Testbench/TopLevel/
+Ultrasound_tcr.dir/
 promote.xml
 reportview.xml
 
