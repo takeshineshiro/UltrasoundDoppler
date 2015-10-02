@@ -21,18 +21,18 @@ Ziel dieser Arbeit ist die Realisierung eines Systems für die eindeutige Detekt
 Diese Thesis soll \ac{ua} eine Optimierung einer vorhandenen Hardware darstellen, da eine Detektion von Ereignissen durch die Messgenauigkeit des Messsystems bedingt ist. Beim Designen der Elektronik ist darauf zu achten, dass verschiedene Ultraschallsonden verwendet werden können. Des Weiteren soll eine Optimierung der bereits entwickelten Schnittstelle zum \ac{pc} erfolgen, da die aktuelle Datentransferrate für eine eindeutige Detektion von Embolien nicht ideal erscheint. Zudem muss ein Algorithmus implementiert werden, um Embolien eindeutig zu detektieren und dem Nutzer zu visualisieren. Die Visualisierung der Messung soll dabei auf einen \ac{pc} unter Nutzung diverser Betriebssysteme erfolgen indem eine benutzerfreundliche \ac{gui} bereitgestellt wird. Alle weiteren Details werden in \autoref{sec:sysreq} spezifiziert.
 \begin{figure}[ht]
 	\centering
-	\begin{subfigure}[b]{0.49\textwidth}
+	\begin{subfigure}[b]{0.48\textwidth}
 		\centering
-  		\includegraphics[trim = 0mm 0cm 0cm 0cm, clip=true, width=0.9\textwidth]{pw/USDSchema}  
-		\caption{Methodik mit M-Mode und Spektrogramm}
+  		\includegraphics[page=2, trim = 16mm 22mm 97mm 216mm, clip=true, width=0.7\textwidth]{Ultrasound/Embolusdetection_tutorial}  
+		\caption{Transcraniale Emitierung von Ultraschall}
   	\end{subfigure}
   	\hfill
-  	\begin{subfigure}[b]{0.49\textwidth}
+  	\begin{subfigure}[b]{0.48\textwidth}
 	  	\centering
-  		\includegraphics[trim = 0mm 0cm 0cm 0cm, clip=true, width=0.9\textwidth]{emboMeasure}
-	  	\caption{Emboliedetektion mittels Ultraschall Doppler}
+  		\includegraphics[page=2, trim = 98mm 237mm 7mm 21mm, clip=true, width=1\textwidth]{Ultrasound/Embolusdetection_tutorial}
+	  	\caption{Verarbeitung des Signals}
   	\end{subfigure}
-	\caption{Vereinfachte Darstellung des Vorhabens}
+	\caption[Vereinfachte Darstellung der Emboliedetektion]{Vereinfachte Darstellung der Emboliedetektion\cite[p. 2]{emboli}}
   	\label{fig:usdschema}
 \end{figure}
 %

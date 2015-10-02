@@ -345,7 +345,7 @@ Durch die Limitierung der Kernfrequenz des Systems auf die maximale Samplingfreq
 \end{figure}
 Diese Schicht wurde implementiert, damit die Speicherung der demodulierten Daten mit der dafür benötigten Ansteuerung und Flags vereinfacht wird. Für die Speicherung wird ein \ac{fifo} mit dualen Takt genutzt, welches von Lattice Semicondutors Corp. für den MachXO2\SymbTM implementiert wurde und als parametriertes Modul in der IPexpress Bibliothek von \nameref{subsub:diamond}\SymbTM bereitgestellt wird. Es wurde sich dabei für eine Implementierung mit den embedded RAM des \ac{cpld}s entschieden, da dieser Bereich in Hinblick auf \ac{lut}s zwar langsamer, jedoch aber Platzsparender ist. Zudem wurde die Speicherung der Daten an die des ARM\SymbReg Cortex\SymbReg-M auf Big Endian angepasst, um Fehler zu vermeiden. Die Eingangsdatenbreite wurde mit 64-Bit (2x32-Bit) und die Ausgangsdatenbreite mit 8-Bit definiert. Somit wird keine zusätzliche Logik für die Reduzierung der Datenbreite benötigt und durch die Aneinanderreihung der Daten erfolgt ein sequenzielles auslesen der In- und Quadraturphase Daten.\\
 Durch den Ringspeicher mit separaten schreib und lese Takt wird eine Entkopplung der Demodulierung und des Datentransfers zu Verfügung gestellt, wodurch die Komplexität des Systems, Fehler und Datenverluste reduziert werden.
- 
+\vfill
 \subsection{Logikschicht Testbench}
 
 \newpage
