@@ -19,6 +19,10 @@ promote.xml
 reportview.xml
 .recovery
 
+# Latex
+
+3 Dokumentation/build/
+
 # Qt-es
 
 /.qmake.cache

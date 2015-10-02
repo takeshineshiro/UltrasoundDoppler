@@ -1,0 +1,78 @@
+\documentclass[11pt, a4paper]{scrreprt}
+
+\include{setup/preamble}
+\input{setup/settings}
+\setlength{\columnsep}{20pt}
+\include{sourcecode/SourceCmd}
+
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage{attachfile} %attach files to pdf :)
+\hypersetup{%
+	hidelinks,
+    %bookmarks=true,         % show bookmarks bar?
+	pdfdisplaydoctitle=true,
+	bookmarksopen=true,
+	pdfpagelayout=OneColumn,% SinglePage / OneColumn 
+	% pdfpagetransition={Dissolve},
+	% Blinds 	/Dm | Box 	/M | Dissolve | Glitter 	/Di | Split 	/Dm /M | Wipe 	/Di 
+	% /Di= direction  in degrees, generally in 90 steps | /Dm horizontal (/H) or vertical (/V) | 
+	% /M is motion, in (/I) or out (/O).
+    unicode=true,          % non-Latin characters in Acrobats bookmarks
+    %pdftoolbar=true,        % show Acrobats toolbar?
+    %pdfmenubar=true,        % show Acrobats menu?
+    pdffitwindow=true,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the FitV/FitH of the page to the window
+    pdftitle={\arbeit} { - \titel},    % title
+    pdfauthor= {\fullname},     % author
+    pdfsubject={\arbeit - \titel},   % subject of the document
+    pdfcreator={LaTeX},   % creator of the document
+    pdfproducer={PDFLaTeX}, % producer of the document
+    pdfkeywords={Signalverarbeitung} {\arbeit} {Hämatokrit} {Cortex-M3} {\titel}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=false,       % false: boxed links; true: colored links
+    linkcolor=blue,          % color of internal links (change box color with linkbordercolor)
+    citecolor=blue,        % color of links to bibliography
+    filecolor=blue,      % color of file links
+    urlcolor=blue           % color of external links
+}
+\begin{document}
+\pagenumbering{Roman}
+
+\input{chapters/titlepage}
+\input{chapters/statement}
+\phantomsection
+\pdfbookmark{\contentsname}{toc}
+\tableofcontents 										%Inhaltsverzeichnis hier anlegen
+\phantomsection
+\listoffigures 											%Abbildungsverzeichnis
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\phantomsection
+\listoftables 											%Tabellenverzeichnis
+\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+%\lstlistoflistings
+%\addcontentsline{toc}{chapter}{Quellcodeverzeichnis}
+\newpage 												%neue Seite
+\pagenumbering{arabic}
+
+\input{chapters/abbreviations}
+
+\input{chapters/Einleitung} %done
+
+\input{chapters/principles} %done
+
+\input{chapters/actuelltechnics}
+
+\input{chapters/materials&methods}
+
+\input{chapters/systemdesign&implementation}
+
+\input{chapters/tests&results}
+
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+\bibliographystyle{IEEEtran}
+\bibliography{literatur}
+\include{chapters/attachment}
+
+\end{document}

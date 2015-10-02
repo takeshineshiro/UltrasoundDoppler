@@ -1,0 +1,175 @@
+%\usepackage{settings}
+\usepackage{amsmath,amstext,amsfonts,amssymb} %Mathe-Formeln
+
+\usepackage{graphicx} %Einbinden von extern erzeugten Grafiken
+\graphicspath{{images/}} %Pfad zu den Bildern (einfache Referenzierung)
+\usepackage{makeidx}
+
+\usepackage{pdflscape} %Change orientation of specific part
+\usepackage{afterpage}
+\usepackage{rotating}
+
+\usepackage{xcolor}
+\usepackage{fancybox}
+\usepackage{ulem} %für Text linien
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[OT1]{fontenc} % Ligaturen, richtige Umlaute im PDF
+%Umschalten der Sprache
+\selectlanguage{ngerman}
+\usepackage{marvosym}
+\DeclareInputText{128}{\EUR}
+%Anzeige mathematischer Symbole
+\usepackage{amssymb}
+%Anzeige von mathematischer Umgebung
+\usepackage{amsthm}
+\usepackage{stmaryrd}
+\usepackage{verbatim}
+
+%f?r integralzeichen Hoch- und Tiefstellung
+\usepackage[intlimits]{empheq}
+%PDF-Dokumente einbinden
+%\usepackage{pdfpages}
+%Tabellen einbinden
+%\usepackage{booktabs}
+\usepackage{tabularx}
+%\usepackage{tabular}
+\usepackage{hhline}
+\usepackage{enumerate}
+\usepackage[format = hang, font = {footnotesize, sf}, labelfont = {bf}, margin = 1cm, aboveskip = 5pt, position = bottom]{caption}
+
+%Seitenlayout
+\usepackage[left = 2.5cm, right = 2.5cm, top = 1.5cm, bottom = 1.5cm, headheight = 7mm, headsep = 1.2 cm, footskip= 1.5cm, includeheadfoot]{geometry}
+
+%Seitenstil = inhaltliche Gestaltung der Kopf- und Fu?zeile
+%\pagestyle{headings}
+
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+	\fancyhf{}
+
+	\fancyhead[L]{Entwicklung einer Dopplerinstrumentierung zur Detektion von Luftembolin in\\ einen künstlichen Blutkreislauf}
+	\fancyhead[R]{\includegraphics[width=2cm]{images/HS_logo_sw.jpg}}
+	\fancyfoot[R]{\thepage}
+	\fancyfoot[L]{\nouppercase{\leftmark}}
+\fancypagestyle{plain}
+{
+	\fancyhf{}
+		
+		\fancyhead[L]{Entwicklung einer Dopplerinstrumentierung zur Detektion von Luftembolin in\\ einen künstlichen Blutkreislauf}
+		\fancyhead[R]{\includegraphics[width=2cm]{images/HS_logo_sw.jpg}}
+			\fancyfoot[R]{\thepage}
+	\fancyfoot[L]{\nouppercase{\leftmark}}
+}
+\fancypagestyle{number}
+{
+	\fancyhf{}
+		\fancyfoot[R]{\thepage}		
+}
+
+%Zeilenabstand festlegen
+\linespread{1.3}
+
+
+%\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+%Nullen der Seitenzahl
+%\setcounter{page}{0}
+
+%Formelnummerierung anhand der Kapitel
+\def\theequation{\thesection.\arabic{equation}}
+
+%Paket zum zitieren
+\usepackage{cite}
+
+\usepackage{colortbl} % Um die Zellen innerhalb von \multicolumn farbig darzustellen, muss das Paket colortbl eingebunden werden
+
+%Paket um sprachbezogene Anf?hrungszeichen zu setzen
+%\usepackage{csquotes}
+
+%EInbinden des Bibstyles
+%\usepackage[backend = biber, style= numeric-comp, sorting = nyt, maxnames = 4, minnames = 1, abbreviate = false]{biblatex}
+
+\newenvironment{myitemize}{\begin{itemize}\itemsep -4pt}{\end{itemize}}
+
+\usepackage{longtable}
+%Packet zum Einbinden von Graphiken mit umflie?endem Text
+\usepackage{wrapfig}
+%Packet zum Benutzen von mehrzeiligen Spalten
+\usepackage{multirow}
+
+%Striche raus aus Literaturverzeichnis ????? JM
+%\makeatletter
+%\def\bstctlcite{\@ifnextchar[{\@bstctlcite}{\@bstctlcite[@auxout]}}
+%\def\@bstctlcite[#1]#2{\@bsphack
+%  \@for\@citeb:=#2\do{%
+%    \edef\@citeb{\expandafter\@firstofone\@citeb}%
+%    \if@filesw\immediate\write\csname #1\endcsname{\string\citation{\@citeb}}\fi}%
+%  \@esphack}
+%\makeatother
+
+%Kapitel etwas weiter nach oben setzen
+\renewcommand*\chapterheadstartvskip{\vspace*{-0.2cm}}
+
+\usepackage{indentfirst}
+
+\usepackage{url}
+
+%%
+%% Trennungsregeln
+%%
+\hyphenation{Sil-ben-trenn-ung}
+
+%%
+%% Schönere Bullets bei Aufzählungen
+%%
+\renewcommand{\labelitemi}{$\bullet$}
+%\renewcommand{\labelitemii}{$\cdot$}
+\renewcommand{\labelitemiii}{$\cdot$}
+\renewcommand{\labelitemiv}{$\ast$}
+\usepackage{acronym}
+%Bilder und Tabellen nebeneinander
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,automata,matrix,trees}
+\usetikzlibrary{decorations.pathreplacing,calc,positioning}
+\usetikzlibrary{fit}					% fitting shapes to coordinates
+\usepackage{footnote}
+\usepackage{tikz-timing}[2009/12/09]
+% Use tikz-timing library 'counters' to define a counter character.
+% This character draws a 'D{<counter value>}' and increases the counter
+% value by one. A reset character which resets the counter value 
+% (by default to 1) is also defined.
+\usetikztiminglibrary[new={char=Q,reset char=R}]{counters}
+%\usepackage[active,tightpage]{preview}
+%\PreviewEnvironment{tikzpicture}
+\usetikzlibrary{dsp,chains}
+
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\usepackage{amssymb}
+\usepackage{eurosym} %für euronen..
+\usepackage{paralist} %lässt sich die Art der Aufzählung ändern
+\usetikzlibrary{plotmarks}
+\usepackage[active,tightpage]{preview}
+\newcommand{\dotprod}{{\scriptscriptstyle \stackrel{\bullet}{{}}}}
+
+% \wraptextureframe{Höhe_in_Zeilen}{Breite}{Text}
+% #1 Breite (Anzahl der Zeilen) und variable Höhe
+% #2 Text
+\newcommand{\wraptextureframe}[2][]{%
+  \begin{wrapfigure}{r}{#1}
+    \begin{Sbox}
+      \begin{minipage}{#1-1em}
+        \small\slshape#2%
+      \end{minipage}
+    \end{Sbox}
+    \vskip-2ex%
+    \fcolorbox{blue}{gray!0}{\TheSbox}
+  \end{wrapfigure}%
+}
+
+\newcommand*{\myMarvosymbol}[1]{{\fontfamily{mvs}\fontencoding{U}\fontseries{m}\fontshape{n}\selectfont\char#1}}
+\newcommand*{\emailsymbol}{\myMarvosymbol{66}~}
