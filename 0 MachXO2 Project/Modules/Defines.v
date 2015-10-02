@@ -16,6 +16,7 @@
     `define S_DATA_SET  4'hA
 	`define S_DATA_UPDATE  4'hB
     `define S_RDATA_ST  4'hC
+	`define S_ADDRESS_UP 4'hD
     
     // The definitions for the SPI command values of the reference design
     `define C_EN_SET     8'h06 

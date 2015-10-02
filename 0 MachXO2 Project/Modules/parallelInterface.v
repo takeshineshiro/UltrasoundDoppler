@@ -25,7 +25,7 @@ module parallelInterface (
 	  DATA_OUT_CLK		<= #`DELAY 1'b0;
 	end // RESET
 	else begin : NORMAL
-	  frameCounter		<= frameCounter - 1;
+	  if(frameCounter != 0) frameCounter		<= frameCounter - 1;
 	  if(FLAG_FRAME) begin
 		DATA_OUT_CLK <= !DATA_OUT_CLK;
 	  end
@@ -42,34 +42,5 @@ module parallelInterface (
 		FRAME_DONE = 1'b0;
 	end
   end
-  
-  /*
-  always@(posedge CLK, posedge RESET) begin : ALWAYS
-	if(RESET) begin : RESET
-	  DATA_OUT 			= #`DELAY DATA_IN;
-	  FRAME_DONE 		= #`DELAY 0;
-	  DATA_OUT_CLK 		= #`DELAY 0;
-	  FLAG_FRAME		= #`DELAY 0;
-	  frameCounter 		= #`DELAY FRAME_LENGH;
-	end // RESET
-	else begin : NORMAL
-	  if(ENABLE_SHIFT) begin
-	    frameCounter		= frameCounter - 1;
-	    if(frameCounter == 0 || FRAME_DONE)  begin : FRAME_FINISH
-		  DATA_OUT 		= #`DELAY DATA_IN;
-		  FRAME_DONE 		= #`DELAY 1'b1;
-		  FLAG_FRAME 		= #`DELAY 1'b0;
-	    end // FRAME_FINISH
-	    else begin : FRAME
-		  FRAME_DONE		= #`DELAY 0;
-		  if(FLAG_FRAME) begin : CLK_OUT
-		    DATA_OUT_CLK 	= #`DELAY !DATA_OUT_CLK;
-		  end // CLK_OUT
-	    end // FRAME
-	  end
-	  FLAG_FRAME		= #`DELAY 1;
-	end // NORMAL
-  end // ALWAYS
-*/
 endmodule
 

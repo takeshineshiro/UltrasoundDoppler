@@ -16,8 +16,8 @@ CoreRevision=5.8
 ModuleName=FIFO_OUT
 SourceFormat=Verilog HDL
 ParameterFileVersion=1.0
-Date=09/10/2015
-Time=16:39:40
+Date=09/14/2015
+Time=13:24:39
 
 [Parameters]
 Verilog=1
@@ -28,9 +28,9 @@ Expression=None
 Order=Big Endian [MSB:LSB]
 IO=0
 FIFOImp=EBR Only
-RDepth=2048
+RDepth=8192
 RWidth=8
-WDepth=1024
+WDepth=4096
 WWidth=16
 regout=1
 CtrlByRdEn=0
@@ -41,7 +41,7 @@ PeAssert=256
 PeDeassert=12
 FullFlg=1
 PfMode=Static - Single Threshold
-PfAssert=960
+PfAssert=4000
 PfDeassert=506
 Reset=Async
 Reset1=Async
@@ -50,4 +50,4 @@ WDataCount=0
 EnECC=0
 
 [Command]
-cmd_line= -w -n FIFO_OUT -lang verilog -synth synplify -bb -arch xo2c00 -type ebfifo -depth 1024 -width 16 -rwidth 8 -regout -resetmode ASYNC -reset_rel ASYNC -no_enable -pe 256 -pf 960
+cmd_line= -w -n FIFO_OUT -lang verilog -synth synplify -bb -arch xo2c00 -type ebfifo -depth 4096 -width 16 -rwidth 8 -regout -resetmode ASYNC -reset_rel ASYNC -no_enable -pe 256 -pf 4000

@@ -36,7 +36,13 @@
         <Source name="Testbench/tb_TopLevel.v" type="Verilog" type_short="Verilog" syn_sim="SimOnly">
             <Options/>
         </Source>
+        <Source name="MachXO2/MachXO2.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
         <Source name="Settings/MachXO2.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+        <Source name="Settings/MEM.ini" type="Unknown Type" type_short="Unknown">
             <Options/>
         </Source>
         <Source name="Testbench/TopLevel/TopLevel.spf" type="Simulation Project File" type_short="SPF">

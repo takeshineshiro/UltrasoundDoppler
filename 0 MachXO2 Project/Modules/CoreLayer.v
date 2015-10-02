@@ -22,18 +22,18 @@ reg[15:0] Count;
 
 /* --- TX logic --- */
 assign TX_CLK[0] = (currentState == BurstState) ? TxClock(freq, Count[4:0]) : 0;
-assign TX_CLK[1] = (currentState == BurstState) ? ~TX_CLK[0] : 0;
+assign TX_CLK[1] = (currentState == BurstState) ? ~TX_CLK[0] : 1;
 
 /* --- RX logic --- */
 assign RX_CLK = RxClock(coreClock, freq, Count[1:0]);
 
 /* --- Demodulation logic --- */
-assign DEMOD_ON = (currentState == DemodState);
+assign DEMOD_ON = (currentState == DemodState) ? 1'b1 : 1'b0;
 
 /* --- RETRANSMIT --- */
-assign RETRANSMIT = (currentState == RetransmitState);
+assign RETRANSMIT = (currentState == RetransmitState) ? 1'b1 : 1'b0;
 
-always@(posedge coreClock, posedge RESET) begin : FSM
+always@(posedge coreClock or posedge RESET) begin : FSM
 	if(RESET) begin : RESET
 		Count <= #`DELAY 0;
 		currentState <= BurstState;
@@ -47,11 +47,11 @@ end
 always@(*) begin : NextStateLogic
 	nextState = currentState;
 	case (currentState)
-	BurstState 		: if(Count == State0Value)	nextState = Delay1State;
-	Delay1State 	: if(Count == State1Value)	nextState = DemodState;
-	DemodState		: if(Count == State2Value)	nextState = Delay2State;
-	Delay2State		: if(Count == StateRValue)	nextState = RetransmitState;
-	RetransmitState	: nextState = BurstState;
+	BurstState 		: begin if(Count >= State0Value)	nextState = Delay1State; end
+	Delay1State 	: begin if(Count >= State1Value)	nextState = DemodState; end
+	DemodState		: begin if(Count >= State2Value)	nextState = Delay2State; end
+	Delay2State		: begin if(Count >= StateRValue)	nextState = RetransmitState; end
+	RetransmitState	: begin nextState = BurstState; end
 	endcase
 end
 

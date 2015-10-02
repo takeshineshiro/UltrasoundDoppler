@@ -1,0 +1,91 @@
+timestamp=1443096445989
+
+[~A]
+D:/workspace/UltrasoundDoppler/0 MachXO2 Project/Testbench/tb_TopLevel.v=0*185458*194771
+LastVerilogToplevel=tb_TopLevel
+ModifyID=1145
+Version=73
+
+[$root]
+A/$root=22|""|0|1*613677
+BinI32/$root=3*254551
+Version=10.1.3088.5434  (Windows)|00000004789cd34d494a0700030f015b|c73a565f2ade592f8ac1c68f484c92168a12fd74649ba2c611e94ec3f2177cac
+
+[CommunicationLayer]
+A/CommunicationLayer=22|./../../../Modules/CommunicationLayer.v|3|1*623452
+BinI32/CommunicationLayer=3*256732
+R=./../../../Modules/CommunicationLayer.v|3
+Version=10.1.3088.5434  (Windows)|00000004789cd34d494a0700030f015b|e029712e6ab2073d75fc8e7cbea0bec28131abb90b080826f22972148419a5cea3d113575a7c6f33ba7baa6a295dd94c
+
+[CoreLayer]
+A/CoreLayer=22|./../../../Modules/CoreLayer.v|3|1*630891
+BinI32/CoreLayer=3*262276
+R=./../../../Modules/CoreLayer.v|3
+Version=10.1.3088.5434  (Windows)|00000004789cd34d494a0700030f015b|50172e856f0a68e61b708b3b1d04d9891317bc68154476505842f0eda9bf30406db94f82bdda6104346d9e5395c1aef0
+
+[FIFO_OUT]
+A/FIFO_OUT=22|./../../../Modules/MachXO2/FIFO_OUT.v|8|1*647043
+BinI32/FIFO_OUT=3*274714
+R=./../../../Modules/MachXO2/FIFO_OUT.v|8
+Version=10.1.3088.5434  (Windows)|00000004789cd34d494a0700030f015b|dd8e36c5be31970f7429311175c8350dd85a02cb83baa216ed9fe996c0e9dc9f8ed8f7bd787a24464525c595ab22980e
+
+[MemoryMap]
+A/MemoryMap=22|./../../../Modules/MemoryMap.v|3|1*626963
+BinI32/MemoryMap=3*260567
+R=./../../../Modules/MemoryMap.v|3
+Version=10.1.3088.5434  (Windows)|00000004789cd34d494a0700030f015b|8246d0281cd26d747d10ca4973f1a7c99961e575aa7fd2c48b32ff31582402f531a9669976e979a9d2cfc588984bf330
+
+[Storeage]
+A/Storeage=22|./../../../Modules/StorageLayer.v|2|1*636363
+BinI32/Storeage=3*266325
+R=./../../../Modules/StorageLayer.v|2
+Version=10.1.3088.5434  (Windows)|00000004789cd34d494a0700030f015b|e6a499f41ecc4407162cf5942d9709946b143096d3c51d0a9c6fa1cf847b2f8696744350256c827f5b525ab09d76288b
+
+[UltrasoundDopplerTop]
+A/UltrasoundDopplerTop=22|./../../../UltrasoundDopplerTop.v|3|1*614067
+BinI32/UltrasoundDopplerTop=3*254680
+R=./../../../UltrasoundDopplerTop.v|3
+Version=10.1.3088.5434  (Windows)|00000004789cd34d494a0700030f015b|8e9f8f07e708431df8928c8a13322a4dc08ebd0cf2f2032cc03a61acb43d8f08960a5e1961d5e0d72bf3fe57de058ae6
+
+[parallelIN_serialOUT]
+A/parallelIN_serialOUT=22|./../../../Modules/spi_slave.v|26|1*643228
+BinI32/parallelIN_serialOUT=3*269403
+R=./../../../Modules/spi_slave.v|26
+Version=10.1.3088.5434  (Windows)|00000004789cd34d494a0700030f015b|f8cc6f0e34a4504e8a284213e31b282738bc901c507f0de33a3e61f8f4282349749e183332a5ed614c1755d0ac5eeecc
+
+[parallelInterface]
+A/parallelInterface=22|./../../../Modules/parallelInterface.v|1|1*640845
+BinI32/parallelInterface=3*268179
+R=./../../../Modules/parallelInterface.v|1
+Version=10.1.3088.5434  (Windows)|00000004789cd34d494a0700030f015b|b87d72c2d9221ee4ac6cf3fdf869a351edff0bee716acc3c02e8166caef113c3c9b1c375c3bee66f11f56a2a0f696c0f
+
+[serialIN_parallelOUT]
+A/serialIN_parallelOUT=22|./../../../Modules/spi_slave.v|64|1*645193
+BinI32/serialIN_parallelOUT=3*272197
+R=./../../../Modules/spi_slave.v|64
+Version=10.1.3088.5434  (Windows)|00000004789cd34d494a0700030f015b|530b6fcf1e0cd091b711bc9fdd77858fb8226416eb8c3e713cdab49d767bd42f70c8b01ee6a4a7f237871958e3c86ba2
+
+[tb_TopLevel]
+A/tb_TopLevel=22|./../../tb_TopLevel.v|29|1*668008
+BinI32/tb_TopLevel=3*275079
+R=./../../tb_TopLevel.v|29
+Version=10.1.3088.5434  (Windows)|00000004789cd34d494a0700030f015b|18968c717a61171aafb2ed76e1ab5a9c39b8de74392bb1fb15ca4e35ab341cc91b1b5854f4140ba255b0ed5395f9f15e
+
+[~MFT]
+0=162|0work.mgf|194771|99636
+1=230|1work.mgf|668008|613677
+3=230|3work.mgf|275079|254551
+
+[~U]
+$root=12|0*177656|
+CommunicationLayer=12|0*179032|
+CoreLayer=12|0*180423|
+FIFO_OUT=12|0*183391|
+MemoryMap=12|0*179728|
+Storeage=12|0*181618|
+UltrasoundDopplerTop=12|0*177934|
+parallelIN_serialOUT=12|0*182699|
+parallelInterface=12|0*182196|
+serialIN_parallelOUT=12|0*183033|
+tb_TopLevel=12|0*184158||0x10
+

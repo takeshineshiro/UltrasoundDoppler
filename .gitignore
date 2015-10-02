@@ -17,6 +17,7 @@ Testbench/TopLevel/
 Ultrasound_tcr.dir/
 promote.xml
 reportview.xml
+.recovery
 
 # Qt-es
 

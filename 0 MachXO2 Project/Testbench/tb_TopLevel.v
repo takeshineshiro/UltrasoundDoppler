@@ -32,7 +32,7 @@ GSR GSR_INST (.GSR (~ENABLE));
 PUR PUR_INST (.PUR (~ENABLE));
 	
 reg CLK_64MHz, SPI_SCK, SPI_MOSI, ENABLE, SPI_csn;
-wire[13:0] ADC;
+reg[13:0] ADC;
 //assign ADC[13:0] = 2;
 
 wire INTERRUPT, ADC_CLK, ADC_PWDN, SPI_MISO, SWITCH, ROI_SYNC;
@@ -58,12 +58,11 @@ UltrasoundDopplerTop main(
   // DATA Transfer
   .DATA_CLK(),	// Transfer Clock
   .ROI_SYNC(ROI_SYNC),	// Transfer µGate transmitted
-  .HARM_SYNC(),	// Transfer value transmitted
+  .DATA_IN_CLK(),	// Transfer value transmitted
   .DATA_OUT(),		// Transfer 8 bit data port -> 4 transactions for 1 value and 8/16 transactions for 1 µGate
   .TP()
   );
 	
-	assign ADC = 16'h0002;
 	
 event start_sim;
 initial begin : START_UP
@@ -76,6 +75,7 @@ initial begin : START_UP
 	SPI_MOSI <= 0;		 
 	SPI_SCK <= 0; 
 	SPI_csn <= 1;
+	ADC <= 14'sb00000100001001;
 end
 
 event terminate_sim;
@@ -85,11 +85,7 @@ initial begin : EVENT_TERMINATE_SIM
 	$finish;
 end
 		   
-event SamplingActivated;
-always begin : EVENT_Sampling_ACTIVATED
-	@(SamplingActivated);
-	$display("TIME = %d << Sampling Event is called Sampling %b >> ", $time, ADC_CLK);
-end				
+			
 
 event ReadingActivated;
 always begin : EVENT_Reading_ACTIVATED
@@ -173,9 +169,16 @@ always begin : EVENT_ACTIVATED
 	#5 writeToReg(`C_EN_SET);
 	#1 SPI_csn <= 1;
 	end
-end
+end			  
 
-//always@(ADC_CLK)			->SamplingActivated;				 
+event SamplingActivated;
+always begin : EVENT_Sampling_ACTIVATED
+	@(SamplingActivated);
+	ADC <= ADC + 1;
+	//$display("TIME = %d << Sampling Event is called Sampling %b >> ", $time, ADC_CLK);
+end	
+
+always@(posedge ADC_CLK)			->SamplingActivated;				 
 always@(posedge INTERRUPT)	->ReadingActivated;
 always@(negedge ROI_SYNC)	->ROI_deactivated;
 	
@@ -186,17 +189,8 @@ initial begin
 	#5 toggle_maschine_enable;
 	//#5 toggle_maschine_enable; 
 	
-	//#1 fillFIFO;	
-	/*
-	#1 SPI_csn <= 0;
-	#1 writeToReg(`C_EN_SET);
-	#1 SPI_csn <= 1;
-	*/
-	#1 SPI_csn <= 0;
-	#1 writeToReg(`C_MEM_WR);
-	#1 writeToReg(4);	
-	#1 writeToReg((1 << 0) | (1 << 1) | (1 << 2) | (8 << 6) | (`freq8MHz << 14));			  
-	#1 SPI_csn <= 1;
+	#1 fillFIFO;		 
+	
 	#5 SPI_csn <= 0;
 	#1 writeToReg(8);
 	#1 writeToReg(8'h0);	
@@ -207,6 +201,17 @@ initial begin
 	#1 writeToReg(0);
 	#1 writeToReg(0);
 	#1 SPI_csn <= 1;
+	/*
+	#1 SPI_csn <= 0;
+	#1 writeToReg(`C_EN_SET);
+	#1 SPI_csn <= 1;
+	*/
+	#1 SPI_csn <= 0;
+	#1 writeToReg(`C_MEM_WR);
+	#1 writeToReg(4);	
+	#1 writeToReg((0 << 0) | (1 << 1) | (1 << 2) | (8 << 6) | (`freq8MHz << 14));			  
+	#1 SPI_csn <= 1;
+	
 	#50 ->ROI_deactivated;
 	//#1 SPI_csn <= 0;
 	//#50 writeToReg(`C_EN_CLR);

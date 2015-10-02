@@ -22,18 +22,10 @@ module MemoryMap(
 initial begin : LAOD_INITIALS
 	$readmemb("../Settings/MEM.ini", MEM);
 end
-assign MEM_RDATA = MEM[MEM_ADDR[`MEM_ADDR_WIDTH-1:0]];
+assign MEM_RDATA = MEM[MEM_ADDR];
 
 always @(posedge MEM_CLK) begin
-	case(MEM_ADDR[2:0])	
-		0		: MEM[0] <= MEM_WDATA;  // Delay Time 1
-		1		: MEM[1] <= MEM_WDATA;  // Demod Start Time
-		2		: MEM[2] <= MEM_WDATA;  // Delay Time 2
-		3		: MEM[3] <= MEM_WDATA;  // Retransmit
-		4		: MEM[4] <= MEM_WDATA;  // Settings
-		//`cmdGetSettings		: MEM_RDATA <= MEM[4];  // Settings
-		default : ;  // Settings
-	endcase
+	MEM[MEM_ADDR] <= MEM_WDATA;
 end
 
 // future always@(SETFREQUENCY) MEM[4][15:14] <= SETFREQUENCY; // future

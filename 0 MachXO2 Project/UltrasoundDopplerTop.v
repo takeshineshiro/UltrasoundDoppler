@@ -14,13 +14,13 @@ module UltrasoundDopplerTop(
 	output	wire		TX_SWITCH,	// Switch to enable resistance for 2 MHz transducer
 	// Receiver
 	input	wire 		RX_OTR,		// Receiver OUT OF RANGE / CARRY BIT
-	input 	wire [13:0]	RX,			// Receiver 14 bit parallel input 2er Complement
+	input  	wire [13:0]	RX,			// Receiver 14 bit parallel input 2er Complement
 	output	wire		RX_CLK, 	// Receiver Sample Clock
 	output	wire		RX_PWDN,	// Receiver Power down (8 cycles needed to setup)
 	// DATA Transfer
 	output	wire		DATA_CLK,	// Transfer Clock
 	output	wire		ROI_SYNC,	// Transfer µGate transmitted
-	output	wire		HARM_SYNC,	// Transfer value transmitted
+	input	wire		DATA_IN_CLK,// Transfer value transmitted
 	output	wire [7:0]	DATA_OUT,	// Transfer 8 bit data port -> 4 transactions for 1 value and 8/16 transactions for 1 µGate
 	output 	wire [5:0]  TP			// Testpoints for special useage
 	); ///* synthesis GSR=”ENABLED” */
@@ -60,17 +60,8 @@ assign HARM_SYNC = 0;
   wire 		[15:0] state1, state2, state3, state4;
   wire[7:0] gatelength;
 
-	reg[15:0] counter;
   	reg[7:0] divider;
 	wire readyToRead, readyToWrite;
-always@(negedge divider[0] or posedge ~ENABLE) begin
-	if(~ENABLE) begin : reset
-		counter = 0;
-	end
-	else if(readyToWrite & en) begin
-		counter = counter + 1'b1;
-	end	
-end
   
   wire CoreEN;
   
@@ -89,7 +80,9 @@ end
 	.STATERVALUE(state4),	// Statemachine - value for state Retransmit
 	.MEM_RDATA(mem_rdata)	// Memory read data
   );
-	
+	wire[1:0] tx;
+	assign TX_CLK = 	(TX_PWDN == 2'b11) ? tx : 2'b10;
+	assign TX_SWITCH  = (frequency_i == `freq2MHz) ? 1 : 0;
 	
 CoreLayer core(
 	.coreClock(CLK_64MHz),
@@ -100,7 +93,7 @@ CoreLayer core(
 	.State1Value(state2),
 	.State2Value(state3),
 	.StateRValue(state4),
-	.TX_CLK(TX_CLK),
+	.TX_CLK(tx),
 	.RX_CLK(RX_CLK),
 	.DEMOD_ON(d),
 	.RETRANSMIT(r)
@@ -117,20 +110,15 @@ end
 	wire [7:0] MEM_DATA_OUT;
 	wire MEM_DATA_RD_CLK;
 	
-function [1:0] ADC14To16;
-	input ADCbit;
-	begin
-		ADC14To16 = ADCbit ? 2'b11 : 2'b00;
-	end
-endfunction
-wire[15:0] ADCData = {RX, ADC14To16(RX[13])} ;
+
+wire signed[15:0] ADCData = $signed(RX);
 
 Storeage fifo(
 .CLK(RX_CLK),		// System clock
 .MODE(`OSZI_MODE),
-.WRITE(~RX_CLK & readyToWrite),
+.WRITE(RX_CLK && readyToWrite && d),
 .READ(MEM_DATA_RD_CLK),
-.DIN(ADCData),//counter),
+.DIN(ADCData),
 .RE_IN(), .IM_IN(),
 .ENABLE(ENABLE),
 .RESET(~ENABLE),
@@ -148,19 +136,17 @@ parallelInterface dataOut(
 	.FLAG_FRAME(ROI_SYNC),		// Hardware Region of Interest Data Flag
 	.DATA_OUT(DATA_OUT),		// Hardware parallel output data
 	// MEM interface
-	.FRAME_LENGH(16'd4096),			// ROI Counter value for Sync
+	.FRAME_LENGH(16'd64),			// ROI Counter value for Sync
 	.DATA_IN(MEM_DATA_OUT),	// Memory Data
 	.READ_NEXT(MEM_DATA_RD_CLK),//
 	.FRAME_DONE(transferDone)
 );
 
-assign TX_SWITCH 	= 0;
-
-assign TP[2]		= en;			//16
+assign TP[2]		= TX_CLK[0];			//16
 assign TP[1]		= r;		//15
-assign TP[0]		= ENABLE;		//14
+assign TP[0]		= readyToWrite;		//14
 assign TP[5]		= d;		//19
-assign TP[4]		= TX_CLK[0];		//18
+assign TP[4]		= readyToRead;		//18
 assign TP[3]		= RX_CLK;		//17
 
 //assign DATACLK		= 0;

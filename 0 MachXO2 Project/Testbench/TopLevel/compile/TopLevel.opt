@@ -1,0 +1,1 @@
+ -u "C:/lscc/diamond/3.5_x64/active-hdl/bin/systf.dll" -v2k5  "D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Testbench\tb_TopLevel.v"  -cs  -g 5  -r -li "D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Testbench\TopLevel\compile\TopLevel.epr" -p "D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Testbench\TopLevel\work" 

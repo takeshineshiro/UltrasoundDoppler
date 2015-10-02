@@ -1,0 +1,1 @@
+ -erf "D:\workspace\UltrasoundDoppler\0 MachXO2 Project\Testbench\TopLevel\compile\TopLevel.erf" -work work -lc "D:/workspace/UltrasoundDoppler/0 MachXO2 Project/Testbench/TopLevel/library.cfg" -fl "D:/workspace/UltrasoundDoppler/0 MachXO2 Project/Testbench/TopLevel/projlib.cfg" -o "D:/workspace/UltrasoundDoppler/0 MachXO2 Project/Testbench/TopLevel/compile" -sve   -dbg

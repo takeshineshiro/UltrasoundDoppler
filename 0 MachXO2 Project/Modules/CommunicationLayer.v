@@ -22,7 +22,6 @@ module CommunicationLayer(
 	wire	[`DATABusWidth-1:0] rd_data;
 	wire 	xfer_done;
 	reg		[`DATABusWidth-1:0] dataOut;
-	reg  	[7:0] mem_burst_cnt;
 			
 	parallelIN_serialOUT #(`DATABusWidth) mode3out (.clock(CCLK), .reset(RESET), .dataOut(dataOut), .next(xfer_done), .out(SO));
 	serialIN_parallelOUT #(`DATABusWidth) mode3in  (.clock(CCLK), .reset(RESET), .csn(SCSN), .dataIn(rd_data), .done(xfer_done), .in(SI));
@@ -38,28 +37,22 @@ always@(posedge CLK) begin : NextStateLogic
 		MEM_ADDR 	<= 0;
 		MEM_CLK		<= 1'b0;
 		MEM_WDATA 	<= MEM_RDATA;
-		dataOut		<= 8'hA;
+		dataOut		<= `C_REV_ID;
 		main_sm		<= `S_IDLE;
 		spi_cmd 	<= `REV_ID;
-		mem_burst_cnt <= 1'b0;
+		MEM_WR 		<= 1'b0;
 	end
 	else begin : NormalStateLogic
-		MEM_WR	<= 1'b0;
 		if(RESETEN) ENABLE 		<= 1'b0;
 		dataOut <= (spi_cmd == `INVALID) ? `C_REV_ID : MEM_RDATA;
 		case (main_sm)
 		// IDEL state
-        `S_IDLE:	begin
-					spi_cmd <= `INVALID;
-						if(MEM_CLK) begin
-							MEM_ADDR <= (SCSN || (MEM_ADDR >= MAX_MEM_BURST_NUM-1)) ? 0 : MEM_ADDR + 1;
-							mem_burst_cnt <= (mem_burst_cnt !== MAX_MEM_BURST_NUM) ? mem_burst_cnt + 1 : 0;
-							MEM_CLK	<= 1'b0;
-							main_sm <= `S_IDLE;
-						end
+        `S_IDLE		:	begin
+						MEM_CLK	<= 1'b0;
+						MEM_WR <= 1'b0;
+						spi_cmd <= `INVALID;
 						if (~SCSN && ~xfer_done) begin
 							main_sm <= `S_CMD_ST;	// Go to `S_CMD_ST state when the TXDR register write is done
-							dataOut <= {`DATABusWidth-1{1'b1}};
 						end
 					end
 		// Wait for the SPI command is ready in the RXDR register                                              
@@ -100,49 +93,42 @@ always@(posedge CLK) begin : NextStateLogic
 								main_sm <= `S_IDLE;
 											end
 							endcase
-							mem_burst_cnt <= 'b0;
+							MEM_ADDR 	  <= 0;
 						end
-		`S_ADDR_ST	:	if(~xfer_done) main_sm <= `S_ADDR_LD;
+		`S_ADDR_ST	:	begin
+						if(~xfer_done) main_sm <= `S_ADDR_LD;
 						else if(SCSN) main_sm <= `S_IDLE;
+						end
 		`S_ADDR_LD	:	if(xfer_done) begin
-                          case (spi_cmd) 
-                          `MEM_WR:     begin 
-                                          main_sm <= `S_DATA_ST; // Go to `S_WDATA_ST state when the SPI command is Write Memory 
-                                          MEM_ADDR <= rd_data[`MEM_ADDR_WIDTH-1:0];
-                                       end
-                          `MEM_RD:     begin 
-                                          main_sm <= `S_DATA_ST;  // Go to `S_DATA_RD state when the SPI command is Read Memory
-                                          MEM_ADDR <= rd_data[`MEM_ADDR_WIDTH-1:0];
-                                       end           
-                          `REV_ID:     main_sm <= `S_IDLE;        // Go to `S_IDLE state when the SPI command is Revision ID                              
-                          endcase
+						  main_sm <= `S_DATA_ST;  // Go to `S_DATA_RD state when the SPI command is Read Memory
+						  MEM_ADDR <= rd_data[`MEM_ADDR_WIDTH-1:0];
+						  if(spi_cmd == `REV_ID) 
+							  main_sm <= `S_IDLE;        // Go to `S_IDLE state when the SPI command is Revision ID   
                        end
 		`S_DATA_ST	: 	begin
-						if(SCSN) begin
-							mem_burst_cnt <= 0;
-							MEM_ADDR <= 0;
+						if(~xfer_done) main_sm <= `S_DATA_SET;
+						else if(SCSN) main_sm <= `S_IDLE;
 						end
-						if(~xfer_done || SCSN)
-							main_sm <= (~SCSN) ? `S_DATA_SET : `S_IDLE;
-					end
-		`S_DATA_SET	:	if (xfer_done) begin
-						case (spi_cmd)
-						`MEM_WR:	begin
-										main_sm <= (~SCSN) ? `S_DATA_UPDATE : `S_IDLE; // Go to `S_WDATA_ST state when the SPI command is Write Memory but
-																// the current SPI transaction is not ended
+		`S_DATA_SET	:	if(xfer_done) begin
+						if(spi_cmd == `MEM_WR) begin
 										MEM_WDATA <= rd_data;
-										MEM_CLK <= (mem_burst_cnt !== MAX_MEM_BURST_NUM) ? 1'b1 : 1'b0;
-									end
-                        default:	begin
+										MEM_CLK	<= 1'b0;
 										main_sm <= (~SCSN) ? `S_DATA_UPDATE : `S_IDLE; // Go to `S_WDATA_ST state when the SPI command is Write Memory but
 																// the current SPI transaction is not ended
-									end
-						endcase
+								end
+						else begin
+							main_sm <= (~SCSN) ? `S_ADDRESS_UP : `S_IDLE; // Go to `S_WDATA_ST state when the SPI command is Write Memory but
+																// the current SPI transaction is not ended
+							end
 						end
+						//else if(SCSN) main_sm <= `S_DATA_ST;
 		`S_DATA_UPDATE	:	begin
-								MEM_ADDR <= (SCSN || (MEM_ADDR >= MAX_MEM_BURST_NUM-1)) ? 0 : MEM_ADDR + 1;
-								mem_burst_cnt <= (mem_burst_cnt !== MAX_MEM_BURST_NUM) ? mem_burst_cnt + 1 : 0;
+								MEM_CLK <= 1'b1;
+								main_sm <= (~SCSN) ? `S_ADDRESS_UP : `S_IDLE;
+							end
+		`S_ADDRESS_UP	:	begin
 								MEM_CLK	<= 1'b0;
+								MEM_ADDR <= (SCSN || (MEM_ADDR == MAX_MEM_BURST_NUM)) ? 0 : MEM_ADDR + 1;
 								main_sm <= (~SCSN) ? `S_DATA_ST : `S_IDLE;
 							end
 		endcase

@@ -40,6 +40,8 @@ always@(posedge CLK or posedge RESET) begin : FLAG_UPDATE
 	if(RESET) begin 
 		READY2READ  <= 1'b0;
 		READY2WRITE <= 1'b1;
+		canReadAF <= 2'b00;
+		canReadAE <= 2'b00;
 	end
 	else begin
 		canReadAE <= {canReadAE[0], FlagAE};
