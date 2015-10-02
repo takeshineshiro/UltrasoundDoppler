@@ -80,6 +80,10 @@ public slots:
     void initSingleShot(void);
     void setDeepth(quint16 value);
 
+    void rxChanged(void);
+    void txChanged(void);
+    void resetDevice(void);
+
 private:
     QDockWidget *_settings;
     QWidget* _ctx;
@@ -96,6 +100,8 @@ private:
 
     QPushButton* _changeRunMode;
     QPushButton* _singleShot;
+    QPushButton* _rxOn;
+    QPushButton* _txOn;
     QAction* _action_changeRunMode;
     QAction* _action_singleShot;
     QSlider* _gateslider;

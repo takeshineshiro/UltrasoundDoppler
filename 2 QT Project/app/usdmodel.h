@@ -8,7 +8,7 @@
 #include <QtDebug>
 #define DEVICENAME "Ultrasonic Doppler beta"
 
-#define SAMPLES 1024
+#define SAMPLES 4096
 #define Multiply 2
 
 using namespace USB;
@@ -32,6 +32,7 @@ class usdDevice : public usbDevice
     Q_PROPERTY(quint8 gateLength READ gateLength WRITE setGateLength NOTIFY gateLengthChanged)
     Q_PROPERTY(quint8 svLength READ svLength WRITE setSvLength NOTIFY svLengthChanged)
     Q_PROPERTY(quint8 tx READ transmitter WRITE settransmitter NOTIFY transmitterChanged)
+    Q_PROPERTY(quint8 rx READ receiver WRITE setreceiver NOTIFY receiverChanged)
     Q_ENUMS(usdDevice::Mode)
 public:
     explicit usdDevice(QObject *parent = 0);
@@ -42,6 +43,10 @@ public:
 
     static short adcRange() { return 2000; }         //!< in mV */
     static short adcResolution() { return 16384; }   //!< 2^14 bit */
+    static short LNA() { return 20; }   //!< Faktor 20 */
+    static double valueToVolt(short value){
+        return ((double)value)*adcRange()/adcResolution()/LNA();
+    }
 
     static QList<int> supportedBurstFrequencyRates()
     {
@@ -116,7 +121,7 @@ public:
         if(_prf != value && value != 0 && this->isAvailable()){
             _prf = value;
             ctx.devHandle(this->_devHandle);
-            if(ctx.TransmitSetupPackage<LIBUSB_REQUEST_TYPE_VENDOR>(PRF, (64000000/value)-1, 0, 0) >= 0)
+            if(ctx.TransmitSetupPackage<LIBUSB_REQUEST_TYPE_VENDOR>(PRF, (64000000/value), 0, 0) >= 0)
                 emit prfChanged(value);
         }
     }
@@ -174,8 +179,8 @@ public:
     }
 
     /* SVLength */
-    quint8 svLength() const { return _svLength; }
-    void setSvLength(const quint8& value){
+    quint16 svLength() const { return _svLength; }
+    void setSvLength(const quint16& value){
         if(_svLength != value && value != 0){
             _svLength = value;
             if(!this->isAvailable()) return;
@@ -190,19 +195,41 @@ public:
     /* Transmitter */
     quint8 transmitter() const { return _tx; }
     void settransmitter(const quint8& value){
-        if(_tx != value && value != 0){
+        if(_tx != value){
             _tx = value;
             if(!this->isAvailable()) return;
             ctx.devHandle(this->_devHandle);
-            if(ctx.TransmitSetupPackage<LIBUSB_REQUEST_TYPE_VENDOR>(RX_ON, value, 0, 0) >= 0){
+            if(ctx.TransmitSetupPackage<LIBUSB_REQUEST_TYPE_VENDOR>(TX_ON, value, 0, 0) >= 0){
                 _recalculateDepth();
                 emit transmitterChanged(value);
             }
         }
     }
 
+    /* Receiver */
+    quint8 receiver() const { return _rx; }
+    void setreceiver(const quint8& value){
+        if(_rx != value){
+            _rx = value;
+            if(!this->isAvailable()) return;
+            ctx.devHandle(this->_devHandle);
+            if(ctx.TransmitSetupPackage<LIBUSB_REQUEST_TYPE_VENDOR>(RX_ON, value, 0, 0) >= 0){
+                emit receiverChanged(value);
+            }
+        }
+    }
+
+    /* RESET CPLD */
+    void resetDevice(void){
+        if(!this->isAvailable()) return;
+        ctx.devHandle(this->_devHandle);
+        if(ctx.TransmitSetupPackage<LIBUSB_REQUEST_TYPE_VENDOR>(RESET, 0, 0, 0) >= 0){
+            emit Devicereseted();
+        }
+    }
+
     //int32_t data32[SAMPLES*Multiply*2];// = {0};
-    uint16_t data16[SAMPLES*Multiply];// = {0};
+    int16_t data16[SAMPLES*Multiply];// = {0};
 
 signals:
     void shutingDown(void);
@@ -216,10 +243,12 @@ signals:
     void gateLengthChanged(quint8);
     void svLengthChanged(quint8);
     void transmitterChanged(quint8);
+    void receiverChanged(quint8);
+    void Devicereseted(void);
 
     void DataArrieved();
     void NewData(int32_t* data32, int size);
-    void NewData(uint16_t* data16, int size);
+    void NewData(int16_t* data16, int size);
 public slots:
     void on_ModeChanged(usdDevice::Mode mode);
 
@@ -231,8 +260,9 @@ private:
     quint16 _sample;
     quint16 _depth;
     quint8  _gateLength = 3;
-    quint8  _svLength = 8;
+    quint16  _svLength = 8;
     quint8  _tx = 0;
+    quint8  _rx = 0;
 
 
     enum Request { FREQUENCY	= 5,		/**< write frequency to \ref USD_HW_VALUES */
@@ -243,7 +273,8 @@ private:
                    GATE			= 10,
                    MODE			= 11,		/**< start / stop CPLD Doppler Mode */
                    TX_ON		= 12,
-                   RX_ON		= 13
+                   RX_ON		= 13,
+                   RESET        = 14
                   };
     usbAsyncTransfer<BULK> async;
     usbAsyncTransfer<CONTROL> ctx;

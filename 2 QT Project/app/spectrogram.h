@@ -15,7 +15,7 @@ public:
 signals:
     void graphChanged(void);
 public slots:
-    void on_NewData(uint16_t *data, int size);
+    void on_NewData(int16_t *data, int size);
     void on_SampleFreqChanged(quint32 divider);
 private slots:
     void on_mouseWheel(QWheelEvent *event);

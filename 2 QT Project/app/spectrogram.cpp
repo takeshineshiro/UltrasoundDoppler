@@ -1,6 +1,10 @@
 #include "spectrogram.h"
+#include "usdmodel.h"
 #include "QtMath"
 #include <QtDebug>
+
+#include <fstream>
+#include <iostream>
 
 Spectrogram::Spectrogram(uint32_t dataSize, QCustomPlot *parent) :
     QCustomPlot(parent){
@@ -18,13 +22,14 @@ Spectrogram::Spectrogram(uint32_t dataSize, QCustomPlot *parent) :
 
     xAxis->setLabel("frequency in kHz");
     yAxis->setLabel("Magnitude in dB");
+    yAxis->setLabel("Amplitude in mV");
 
     xAxis->setRange(0, _dataSize);
     //xAxis->setRange(_frequency[1], _frequency[SAMPLES/2-1]);
     graph(0)->setData(_frequency, _data);
-    graph(0)->setBrush(QBrush(QColor(255/4.0,160,50,150)));
-    yAxis->setRange(0, 96);
-    xAxis->setRange(0, 32000);
+    //graph(0)->setBrush(QBrush(QColor(255/4.0,160,50,150)));
+    yAxis->setRange(-150, 150);
+    xAxis->setRange(0, _dataSize);
     //yAxis->setNumberPrecision(3); // makes sure "1*10^4" is displayed only as "10^4"
 
     //yAxis->grid()->setSubGridVisible(true);
@@ -45,26 +50,21 @@ Spectrogram::Spectrogram(uint32_t dataSize, QCustomPlot *parent) :
     connect(this, SIGNAL(mouseWheel(QWheelEvent*)), this, SLOT(on_mouseWheel(QWheelEvent*)));
 }
 
-void Spectrogram::on_NewData(uint16_t *data, int size)
+void Spectrogram::on_NewData(int16_t *data, int size)
 {
     Q_UNUSED(size)
-    int16_t* data1 = (int16_t*)&data[0];
 
     double sum = 0.0, signal = 0.0;//, rauschen = 0.0;
     float magnitude = 0.0;
-
- /*   QFile file("D://out.txt");
-    file.open(QIODevice::WriteOnly | QIODevice::Truncate);
-    QTextStream out(&file);
-
+/*
     kiss_fftr_cfg fftcfg = kiss_fftr_alloc(SAMPLES, 0, NULL, NULL);
 
     //fill cin array
     kiss_fft_scalar in[SAMPLES];
     kiss_fft_cpx cout[SAMPLES];
     for (int i = 0; i < SAMPLES; i++){
-        in[i] = (uint16_t)data[i];// *usdDevice::adcRange()/2/usdDevice::adcResolution(); //2000 mV/2^14bit
-        out << (uint16_t)data[i] << "\n";
+        in[i] = (uint16_t)data[i];//
+
     }
 
     kiss_fftr(fftcfg, in, cout);
@@ -102,13 +102,16 @@ void Spectrogram::on_NewData(uint16_t *data, int size)
         }
     }
 */
+     ofstream file ("D://out.txt");
+
     for (uint32_t i = 0; i < _dataSize; i++){
-        _data[i] = (double)data1[i];
+        _data[i] = (double)data[i];// usdDevice::valueToVolt(data[i]); //2000 mV/2^14bit und dann durch gain von 20
+        file<<data[i]<<"\n";
     }
-    //file.close();
+    file.close();
     graph(0)->setData(_frequency, _data);
     replot();
-    //emit graphChanged();
+    emit graphChanged();
 }
 
 

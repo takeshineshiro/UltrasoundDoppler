@@ -15,7 +15,7 @@ Menu::Menu(QWidget *uiContext, QObject *parent) :
     setActions(false);
 
     //connect(device, SIGNAL(frequencyChanged(quint32)), _spectro, SLOT(on_SampleFreqChanged(quint32)));
-    connect(device, SIGNAL(NewData(uint16_t*,int)), _spectro, SLOT(on_NewData(uint16_t*,int)));
+    connect(device, SIGNAL(NewData(int16_t*,int)), _spectro, SLOT(on_NewData(int16_t*,int)));
     //connect(device, SIGNAL(NewData(int32_t*,int)), _mmode, SLOT(on_NewData(int32_t*,int)));
     connect(_mmode,   SIGNAL(graphChanged()), this, SLOT(readyforData()));
     connect(_spectro, SIGNAL(graphChanged()), this, SLOT(readyforData()));
@@ -143,13 +143,13 @@ void Menu::SetupStart()
     _startslider->setToolTip(QUOTE(TOOLTIP_START_SAMPLE));
     _startspinner = new QSpinBox;
     _startspinner->setToolTip(QUOTE(TOOLTIP_START_SAMPLE));
-    _startslider->setRange(101,3600);
-    _startspinner->setRange(101,3600);
+    _startslider->setRange(129,6398);
+    _startspinner->setRange(129,6398);
     //_startspinner->setSuffix(" mm");
     QObject::connect(_startslider, &QAbstractSlider::valueChanged, device, &usdDevice::setSample);
     QObject::connect(_startslider, SIGNAL(valueChanged(int)), _startspinner, SLOT(setValue(int)));
     QObject::connect(_startspinner, SIGNAL(valueChanged(int)), _startslider, SLOT(setValue(int)));
-    _startslider->setValue(3000);
+    _startslider->setValue(device->burst()+200);
 }
 
 void Menu::setupGate()
@@ -172,8 +172,8 @@ void Menu::setupSV()
     _svslider->setToolTip(QUOTE(TOOLTIP_SV));
     _svspinner = new QSpinBox;
     _svspinner->setToolTip(QUOTE(TOOLTIP_SV));
-    _svslider->setRange(1,140);
-    _svspinner->setRange(1,140);
+    _svslider->setRange(1,6401);
+    _svspinner->setRange(1,6401);
     //_startspinner->setSuffix(" µs");
     QObject::connect(_svslider, &QAbstractSlider::valueChanged, device, &usdDevice::setSvLength);
     QObject::connect(_svslider, SIGNAL(valueChanged(int)), _svspinner, SLOT(setValue(int)));
@@ -246,6 +246,17 @@ void Menu::createToolBar()
     QObject::connect(_singleShot, SIGNAL(clicked()), this, SLOT(initSingleShot()));
     vbox->addWidget(_singleShot);
 
+    _rxOn = new QPushButton("RX");
+    QObject::connect(_rxOn, SIGNAL(clicked()), this, SLOT(rxChanged()));
+    vbox->addWidget(_rxOn);
+    _txOn = new QPushButton("TX");
+    QObject::connect(_txOn, SIGNAL(clicked()), this, SLOT(txChanged()));
+    vbox->addWidget(_txOn);
+
+    QPushButton* reset = new QPushButton("Reset Device");
+    QObject::connect(reset, SIGNAL(clicked()), this, SLOT(resetDevice()));
+    vbox->addWidget(reset);
+
     vbox->addStretch(1);
     groupBox->setLayout(vbox);
 
@@ -265,6 +276,24 @@ void Menu::createToolBar()
     _toolbar->setAllowedAreas(Qt::AllToolBarAreas);
 */
 
+}
+
+void Menu::txChanged(){
+    if(device->transmitter() == 1)
+        device->settransmitter(0);
+    else
+        device->settransmitter(1);
+}
+
+void Menu::rxChanged(){
+    if(device->receiver() == 1)
+        device->setreceiver(0);
+    else
+        device->setreceiver(1);
+}
+
+void Menu::resetDevice(){
+    device->resetDevice();
 }
 
 void Menu::setupValues(usdDevice *device)

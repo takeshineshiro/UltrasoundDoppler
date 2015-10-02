@@ -48,6 +48,7 @@ void usdDevice::on_ModeChanged(usdDevice::Mode mode)
 
 void usdDevice::_recalculateDepth()
 {
+    /*
     short value = 0;
     switch(frequency()){
         case 2000000: value = 64*svLength()*2+16;
@@ -58,9 +59,9 @@ void usdDevice::_recalculateDepth()
         case 8000000: value = 32*svLength()*2+4;
             break;
     }
-
-    setDepth(sample()+value);
+*/
+    setDepth(sample()+svLength());
 #ifdef QT_DEBUG
-    qDebug() << value;
+    qDebug() << sample()+svLength();
 #endif
 }
