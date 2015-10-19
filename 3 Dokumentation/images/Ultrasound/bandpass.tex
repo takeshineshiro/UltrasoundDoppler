@@ -1,0 +1,47 @@
+%\title{18W MOSFET amplifier)
+% Title: 18W MOSFET amplifier, with npn transistor.
+% Author: RamÃ³n Jaramillo.
+% Source: http://www.circuitstoday.com/mosfet-amplifier-circuits
+% Abstract:
+% This example made use of circuitikz and siunits packages for drawing a 18W MOSFET  Amplifier for one-channel. It is mandatory than siunitx and related packages have been instaled, acording to your LaTeX distribution.
+\documentclass[10pt,a4paper]{standalone}
+\usepackage{filecontents,pgfplots}
+
+\begin{filecontents}{pistonkinetics.dat}
+freq    amplitude  verstäkrung
+0.1000  890 		 7.03279978
+0.5000  450			12.95634964
+1.0000  430			13.3512308
+1.5000  440			13.15154638
+2.0000  440			13.15154638
+2.5000  450			12.95634964
+3.0000  470			12.57864275
+3.5000  520			11.70053304
+4.0000  570			10.9031028
+4.5000  680			 9.370421659
+5.0000  590			10.60355968
+5.5000  530			11.53508252
+6.0000  500			12.04119983
+6.5000  500			12.04119983
+7.0000  500			12.04119983
+7.5000  530			11.53508252
+8.0000  570			10.9031028
+8.5000  610			10.31400321
+9.0000  650			 9.76233278
+9.5000  760			 8.404328068
+10.0000  880		 7.13094647
+\end{filecontents}
+
+\begin{document}
+\pgfplotstableread{pistonkinetics.dat}{\pistonkinetics}
+\begin{tikzpicture}[scale=1]
+\begin{axis}[minor tick num=1,
+xlabel=Frequenz in MHz, 
+%ylabel=Verstärkung in dB]
+ylabel=Eingangsspannung $U_{in}$ in Vpp]
+\addplot [black,very thick] table [x={freq}, y={amplitude}] {\pistonkinetics};
+%\addplot [dashed,red,very thick] table [x={freq}, y={amplitude}] {\pistonkinetics};
+%\addplot [dashed,blue,very thick] table [x={freq}, y={amplitude}] {\pistonkinetics};
+\end{axis}
+\end{tikzpicture}
+\end{document}
