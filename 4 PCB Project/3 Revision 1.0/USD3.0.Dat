@@ -1,0 +1,74 @@
+﻿Field=value~String~value~38|Field=Designator~String~Designator~232|Field=Footprint~String~Footprint~40|Field=LibRef~String~LibRef~52|Field=Manufacturer Part Number 1~String~Manufacturer Part Number 1~43|Field=Supplier 1~String~Supplier 1~23|Field=Supplier 2~String~Supplier 2~23|Field=Supplier Order Qty 1~Integer~Supplier Order Qty 1~32|Field=Supplier Order Qty 2~Integer~Supplier Order Qty 2~32|Field=Supplier Part Number 1~String~Supplier Part Number 1~45|Field=Supplier Part Number 2~String~Supplier Part Number 2~36|Field=Supplier Unit Price 1~Float~Supplier Unit Price 1~32|Field=Supplier Unit Price 2~Float~Supplier Unit Price 2~21|Field=Description~String~Description~208|Field=Layer~String~Layer~27|ReportField=Currency~<none>|ReportField=ProductionQuantity~1|ReportField=ProjectFileName~USD3.0.PrjPcb|ReportField=ProjectFullPath~D:\workspace\Altium\USD\USD3.0.PrjPcb|ReportField=Title~Bill of Materials For Project [USD3.0.PrjPcb] (PCB Document : USD3.0.PcbDoc)|ReportField=TotalQuantity~221|ReportField=ReportTime~12:13:14|ReportField=ReportDate~16.06.2015|ReportField=ReportDateTime~16.06.2015 12:13:14|ReportField=OutputName~Bill of Materials|ReportField=OutputType~BOM_PartType|ReportField=GeneratorName~BOM|ReportField=GeneratorDescription~Bill of Materials|ReportField=VariantName~None|ReportField=ProjectName~Ultrasound Doppler 2015|ReportField=Address1~Institut für Medizintechnik|ReportField=Address2~und Mechatronik|ReportField=Address3~Albert-Einstein-Allee 55|ReportField=Address4~89081 Ulm|ReportField=Application_BuildNumber~|ReportField=ApprovedBy~|ReportField=Author~Andreas Rehn|ReportField=CheckedBy~|ReportField=CompanyName~Hochschule Ulm|ReportField=ConfigurationParameters~|ReportField=ConfiguratorName~|ReportField=CurrentDate~16.06.2015|ReportField=CurrentTime~11:26:17|ReportField=Date~|ReportField=DocumentFullPathAndName~D:\workspace\Altium\USD\System.SchDoc|ReportField=DocumentName~System.SchDoc|ReportField=DocumentNumber~|ReportField=DrawnBy~Andreas Rehn|ReportField=Engineer~Andreas Rehn|ReportField=ImagePath~D:\workspace\Altium\USD\logo.jpg|ReportField=IsUserConfigurable~|ReportField=ModifiedDate~15.06.2015|ReportField=Organization~Hochschule Ulm|ReportField=Revision~|ReportField=Rule~|ReportField=SheetNumber~1|ReportField=SheetTotal~11|ReportField=Time~|ReportField=Title~System Overview|ReportField=VersionControl_RevNumber~|ReportField=DataSourceFileName~USD3.0.PrjPcb|ReportField=DataSourceFullPath~D:\workspace\Altium\USD\USD3.0.PrjPcb|ReportField=PCBDataSourceFileName~USD3.0.PcbDoc|ReportField=PCBDataSourceFullPath~D:\workspace\Altium\USD\USD3.0.PcbDoc
+|CON1, CON2|SWD-10-SMD|SWD-10_SMD|20021121-00010C4LF|Digi-Key, Farnell|Farnell, Digi-Key|2|2|609-3695-1-ND, 1865279|1865279, 609-3695-1-ND||||Top
+|J2|TECHNIC-TSH-3675-BLACK_V|CMP-0437-00001-1||||||||||Connector, 3.5mm Stereo Audio Socket, Black|Top
+|LED1, LED2, LED3|LED-0603-GREEN|LED_SMD_Green_0603_525nm_350mcd|KPHM-1608ZGC|Farnell||3||2146438||0,376||LED 0603 SMD Green 525nm 350mcd 20mA|Top
+|Q2|INTR-SOT-23-3_V|CMP-0676-00001-1|IRLML6402TRPBF|Digi-Key||1||IRLML6402PBFCT-ND||0,39||HEXFET Power MOSFET, P-Channel, -20 V VDSS, 0.065 Ohm RDS, 3-Pin SOT23, RoHS, Tape and Reel|Top
+|TP1, TP2, TP3, TP4, TP5, TP6, TP8, TP9, TP10, TP11, TP12, TP13, TP14, TP15, TP16, TP17, TP18, TP19|TP-THT-MINI|TESTPOINT_THT_MINI|5002|Digi-Key||||5002K-ND||||Test Point PCB mount Miniature White|Top
+|U10|LQFP144|LPC4330FBD144|LPC4330FBD144,551|Digi-Key|Farnell|1|1|568-9450-ND|2094316|9,46|8,31|32-bit ARM Cortex-M4 MCU, 264 kB SRAM, 2 HS USB with on-chip PHY, Ethernet, CAN, AES, SPIFI, SGPIO, SCT, 144-Pin LQFP|Top
+|U11|TQFP144_N|CMP-0111-00318-1|LCMXO2-7000HC-4TG144C|Digi-Key|Farnell|1|1|220-1508-ND|2253049|14,71|14,29|MachXO2 High Performance CPLD with 6864 LUTs, Voltage Regulator, 2.5V/3.3V, 144-pin TQFP, Speed Grade-4, Commercial Grade, Halogen Free (RoHS)|Top
+0R|R12|0402[1005]|Resistor||||||||||Resistor|Top
+0.1µF|C4, C7, C12, C13, C16, C18, C21, C22, C23, C25, C26, C28, C44, C45, C58, C59, C60, C61, C62, C63, C64, C65, C66, C67, C71, C72, C76, C77, C78, C79, C80, C81, C82, C83, C84, C86, C87|0402[1005]|Capacitor|GRM155R71C104JA88D|Farnell||37||2470466||0,0311||Cap|Top, Top, Bottom, Top, Bottom, Bottom, Top, Top, Top, Top, Top, Top, Top, Top, Bottom, Bottom, Bottom, Bottom, Bottom, Bottom, Bottom, Bottom, Bottom, Bottom, Top, Top, Bottom, Bottom, Bottom, Bottom, Bottom, Bottom, Bottom, Bottom, Bottom, Top, Top
+0.1µF|C42, C43|0402[1005]|Capacitor|GRM152R61A104KE19D|Digi-Key|Farnell|2|2|490-10008-6-ND, 490-10008-1-ND|2470466|0,16||Cap|Top
+0.33µF|C40, C41|0603|Capacitor|C0603X7R1E331K030BA|Digi-Key||2||445-7269-1-ND||0,10||Cap|Top
+1k|R5, R7, R64|0402[1005]|Resistor||||||||||Resistor|Top
+1K0|R9|0402[1005]|Resistor||||||||||Resistor|Top
+1k5|R48|0402[1005]|Resistor||||||||||Resistor|Top
+1nF|C9, C15, C17, C20, C34, C35, C36|0402[1005]|Capacitor|0402YC102JAT2A|Farnell||7||2332540||||Cap|Bottom, Bottom, Bottom, Top, Bottom, Top, Top
+1R, 1/8W|R67|RES1405[3614 Metric]|Resistor|MCFRFTDV1R00|Farnell||1||2102883||||Resistor|Bottom
+1x1 Pos.|P1, P2, P3, P4, P5, P6|1x1POS_HEADER_LOWPROF|CONN_HEADER_PLUG_1x1P_0.100in|800-10-064-10-002000|Digi-Key||6||ED7564-ND||9,06||Pin header for socket THT 1-Pos Low profile Single-row 2.54mm pitch|Top
+1µF|C47, C48, C49, C50, C51, C52, C53, C54, C55, C75|0402[1005]|Capacitor|GRM153R61A105ME95D|Farnell||10||2218833||0,242||Cap|Top, Top, Top, Top, Top, Top, Top, Top, Top, Bottom
+1µF 10V|C46|0402[1005]|Capacitor|GRM153R61A105ME95D|Farnell||1||2218833||0,242||Cap|Top
+2K0|R10|0402[1005]|Resistor||||||||||Resistor|Top
+2K2|R35, R36, R37, R39, R40, R57, R59|0402[1005]|Resistor||||||||||Resistor|Top, Top, Top, Top, Bottom, Top, Top
+2.1mm ID, 5.5mm OD|J3|CONN_PWR_JACK_2.1x5.5mm|CONN_PWR_JACK_2.1x5.5mm|PJ-102AH|Digi-Key||1||CP-102AH-ND||1,19||Power Connector, THT, 2.1mm ID, 5.5mm OD|Top
+2.7µH, 5%, 1.16ohm, 320mA|L1, L2, L4, L5|WE0805|Inductor|0805AF-272XJRB|Farnell||4||2286352||0,928||Inductor, Inductor, Ferrit, Ferrit|Top
+3k3|R13, R21|0402[1005]|Resistor||||||||||Resistor|Top
+3R09|R26, R27|0402[1005]|Resistor||||||||||Resistor|Top
+4K7|R33|0402[1005]|Resistor||||||||||Resistor|Top
+4nF|C29, C32|0603[1508]|Capacitor|C0603C512J5GACTU|Farnell||2||1865495||||Cap|Top
+4.7µF|C39|Panasonic Size B|Capacitor|EEE-HA1E4R7R|Digi-Key||1||PCE4208CT-ND||0,51||Cap Panasonic Size B|Top
+4.7µF 10V|C70|0603[1508]|Capacitor|MC0603X475K100CT|Farnell||1||2320818||||Cap|Bottom
+5k6|R15, R18|0402[1005]|Resistor||||||||||Resistor|Top
+5R|R63|0402[1005]|Resistor||||||||||Resistor|Top
+8R|R8|0402[1005]|Resistor||||||||||Resistor|Top
+10k|R25, R30, R38, R41, R42, R43, R44, R45, R46, R47, R52, R53, R54, R55, R56, R60, R61, R65, R66, R69|0402[1005]|Resistor||||||||||Resistor|Top, Top, Top, Bottom, Top, Top, Top, Top, Bottom, Top, Bottom, Top, Top, Top, Top, Top, Top, Top, Top, Bottom
+10nF|C10, C56, C68, C69, C85|0402[1005]|Capacitor|GRM155R71C103KA01D|Farnell||5||1828864||||Cap|Bottom, Top, Bottom, Bottom, Bottom
+10pF|C5, C8|0402[1005]|Capacitor|GRM1555C1H100JA01D|Farnell||2||2218834||||Cap|Top
+10R|R24, R29, R68|0402[1005]|Resistor||||||||||Resistor|Top, Top, Bottom
+10µF|C33|0805[2012]|Capacitor|GRM21BR71A106KE51L|Farnell||1||1828828||||Cap|Bottom
+10µF|C38|Panasonic Size C|Capacitor|EEEHA1E100R|Farnell|Digi-Key|1|1|1973321|PCE4193CT-ND|0,303|0,46|Cap Panasonic Size C|Top
+10µF Tantalum|C11, C14, C19, C24, C27|0805[2012]|Capacitor|GRM21BR71A106KE51L|Farnell||5||1828828||||Cap|Bottom, Bottom, Top, Bottom, Bottom
+12K|R49|0402[1005]|Resistor||||||||||Resistor|Top
+12MHz|OSC1|CRYSTAL_HC49-US-SM|Crystal 2PIN|ABLS2-12.000MHZ-D4Y-T|Farnell||1||2101325||0,816||Resonator|Bottom
+18pF|C73, C74|0402[1005]|Capacitor|GRM1555C1H180JA01D|Farnell||2||1828876||||Cap|Bottom
+20pF|C6|0402[1005]|Capacitor|GRM1555C1H200JA01D|Farnell||1||2218848||||Cap|Top
+22pF|C2|0402[1005]|Capacitor|GRM1555C1H220JA01D|Farnell||1||2218849||||Cap|Top
+24R|R1, R3|0402[1005]|Resistor||||||||||Resistor|Top
+33R|R4, R6, R50, R51|0402[1005]|Resistor||||||||||Resistor|Top, Top, Bottom, Bottom
+47µF|C37|Panasonic Size E|Capacitor|EEEHA1E470P|Farnell|Digi-Key|1|1|1973327|PCE4205CT-ND|0,498|0,68|Cap Panasonic Size E|Top
+64 MHz|OSC2|3.2X.2.5|Crystal 4PIN|CFPS-32IB 64.0MHZ|Farnell||1||1276664||2,75||Oszilator|Bottom
+100k|R32, R62|0805[2012], 0402[1005]|Resistor||||||||||Resistor|Top
+100pF|C57|0402[1005]|Capacitor|GRM1555C1H101JA01D|Farnell||1||2218836||||Cap|Top
+100R|R58|0402[1005]|Resistor||||||||||Resistor|Top
+256R|R28|0402[1005]|Resistor||||||||||Resistor|Top
+270R|R2|0402[1005]|Resistor||||||||||Resistor|Top
+400R|R34|0402[1005]|Resistor||||||||||Resistor|Top
+470pF|C1, C3|0402[1005]|Capacitor|GRM1555C1H471JA01D|Farnell||2||8819688||||Cap|Top
+511R|R23, R31|0402[1005]|Resistor||||||||||Resistor|Top
+AD8018ARUZ|U3|TSSOP14|AD8018ARUZ|AD8018ARZ|Digi-Key|Farnell|1|1|AD8018ARZ-ND|2461979|6,85|7,22|XDSL - IC, OP-AMP, 130MHz, 300V/ us, 1mV|Top
+AD8351ARMZ|U1|MSOP10|AD8351ARMZ|AD8351ARMZ|Digi-Key|Farnell|1|1|AD8351ARMZ-ND|8397945|6,97|7,33|Differential RF/IF Amplifier|Top
+AD9245BCPZ-80|U2|LFCSP-32|AD9245BCPZ-80|AD9245BCPZ-80|Digi-Key|Farnell|1|1|AD9245BCPZ-80-ND|2096172|52,30|41,52|DIFF 14-Bit ADC|Top
+ADP151AUJZ-3.3-R7|U7|SOT23-5-TI|ADP151|ADP151AUJZ-3.3-R7|Farnell|Digi-Key|1|1|2074871|ADP151AUJZ-3.3-R7CT-ND|0,617|1,18|LDO|Top
+ADP7104ARDZ-3.3-R7|U9|SOIC8_EP|ADP7104|ADP7104ARDZ-3.3-R7|Digi-Key||1||ADP7104ARDZ-3.3-R7CT-ND||5,02||LDO|Top
+AQY282S|Q3|SOP4|AQY282S|AQY282S|Farnell||1||2396110||2,38||PhotoMOS RELAY 0.5A, 60V|Bottom
+B3S-1000|S1, S2|Omron B3S1000|B3S-1000|B3S-1000|Farnell||2||177807||0,533||Sealed Tactile Switch (SMT)|Top
+BAT64-04|D1, D3|SOT23-3|BAT64-04|BAT 64-04 E6327|Farnell||2||2432680||0,0542||Silicon Schottky Diodes|Top
+FDV303N|Q4|SOT23127P600-8N|MOSFET-N|FDV303N|Digi-Key|Farnell|1|1|FDV303NCT-ND|9845020|0,38||N-Channel MOSFET|Bottom
+Ferrit|L3, L6, L7, L8, L9, L10, L11, L12, L13, L14, L15, L16, L17, L18, L19|0603[1508]|Inductor||||||||||Ferrit|Top, Top, Top, Top, Top, Top, Top, Top, Top, Top, Top, Bottom, Bottom, Top, Top
+IRLML6402PBF|Q1|SOT23-3|PMOS-2|IRLML6402PBF|Farnell||1||9103503||||P-Channel Power MOSFET|Top
+L78M05CDT-TR|U6|DPAK|L78M|L78M05CDT-TR|Digi-Key||1||497-1203-1-ND||0,42||Switch mode power supply|Top
+MOLEX 47346-0001|J1|USB Micro|USB|47346-0001|Farnell||1||1568026||||MICRO USB 2.0 BUCHSE, TYP B, SMD|Top
+NA|R11|0402[1005]|Resistor||||||||||Resistor|Top
+PRTR5V0U2X|D2|SOT143-B|PRTR5V0|PRTR5V0U2X|Farnell||1||1524157||||rail-to-rail ESD protection diode|Top
+PWB-2-CLB|U4, U5|PWB-X-|RF Transformer|PWB-2-CLB|Farnell||2||2458077||2,03||RF Transformer|Top
+TPS2115A|U8|TSSOP-8|TPS2115A|TPS2115APWR|Farnell|Digi-Key|1|1|2460006|296-16940-1-ND|2,43|2,17|autoswitching power mux|Top
