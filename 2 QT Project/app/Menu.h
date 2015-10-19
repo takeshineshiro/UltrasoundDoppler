@@ -104,9 +104,7 @@ private:
     QPushButton* _txOn;
     QAction* _action_changeRunMode;
     QAction* _action_singleShot;
-    QSlider* _gateslider;
     QSlider* _svslider;
-    QSpinBox* _gatespinner;
     QSpinBox* _svspinner;
 
     QSlider* _startslider;

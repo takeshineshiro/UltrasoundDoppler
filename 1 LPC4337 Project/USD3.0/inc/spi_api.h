@@ -18,6 +18,7 @@
 
 typedef struct SPI_API_T* SPI_API_PTR;
 struct SPI_API_T{
+	uint8_t writing;
 	uint32_t (*write16bit)(uint16_t *txbuff, uint32_t transferSize);
 	uint32_t (*transfer16bit)(uint16_t *txbuff, uint16_t *rxbuff, uint32_t transferSize);
 };

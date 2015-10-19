@@ -136,17 +136,17 @@ parallelInterface dataOut(
 	.FLAG_FRAME(ROI_SYNC),		// Hardware Region of Interest Data Flag
 	.DATA_OUT(DATA_OUT),		// Hardware parallel output data
 	// MEM interface
-	.FRAME_LENGH(16'd64),			// ROI Counter value for Sync
+	.FRAME_LENGH(16'd2048),			// ROI Counter value for Sync
 	.DATA_IN(MEM_DATA_OUT),	// Memory Data
 	.READ_NEXT(MEM_DATA_RD_CLK),//
 	.FRAME_DONE(transferDone)
 );
 
-assign TP[2]		= TX_CLK[0];			//16
+assign TP[2]		= tx[1];			//16
 assign TP[1]		= r;		//15
-assign TP[0]		= readyToWrite;		//14
+assign TP[0]		= tx[0];		//14
 assign TP[5]		= d;		//19
-assign TP[4]		= readyToRead;		//18
+assign TP[4]		= CoreEN;		//18
 assign TP[3]		= RX_CLK;		//17
 
 //assign DATACLK		= 0;

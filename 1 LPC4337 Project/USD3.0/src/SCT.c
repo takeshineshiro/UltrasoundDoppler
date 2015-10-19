@@ -27,8 +27,15 @@ struct DATAPORT_T{
 	BUFFER_T rf;
 } DATAPORT;
 
-#define DATA_TO_TRANSFER		32
+#define DATA_TO_TRANSFER		1024
+#define TRANSFER_COUNT			1024
 #define USB_DEST_ADDR           buffer
+
+#define DATA0()		   LPC_SCU->SFSP[7][3] = (SCU_MODE_INACT | SCU_MODE_INBUFF_EN | SCU_MODE_PULLDOWN | SCU_MODE_HIGHSPEEDSLEW_EN | SCU_MODE_FUNC1)	// input low (pull down)
+#define DATA1()		   LPC_SCU->SFSP[7][3] = (SCU_MODE_INACT | SCU_MODE_INBUFF_EN | SCU_MODE_PULLUP   | SCU_MODE_HIGHSPEEDSLEW_EN | SCU_MODE_FUNC1)	// input high (pull up)
+
+//#define DATA0()		   LPC_SCU->SFSP[2][4] = 0x5B	// input low (pull down)
+//#define DATA1()		   LPC_SCU->SFSP[2][4] = 0x43	// input high (pull up)
 
 /*! @brief Initialize for next DMA xfer, data flow from GPIO to SDRAM
 *
@@ -37,22 +44,23 @@ struct DATAPORT_T{
 * unlike memory xfer, peripheral xfer do only 1 bust per request, while the former stops only all done
 * so we need to use peripheral -> memory xfer, and give #1 master to source, #0 master to dest (SDRAM).
 */
-static inline void _prvInitCamDMAXferDir(TransferType dataType, uint16_t count)
+inline void prvInitDMAXferDir(bool zero)
 {
+	if(zero) counter = 0;
 	LPC_GPDMA->CH[0].CONFIG =	(0 <<  0) | // Channel disabled
 								(8 <<  1) | // Source request peripheral from SCT DMA request 1
 								(0 <<  6) | // DMA Destination request peripheral (memory)
 								(2 << 11) | // Peripheral to memory
-								(0 << 15);	// Interrupts disabled
+								(1 << 15);	// Interrupts enabled
 	LPC_GPDMA->CH[0].LLI = 0;
 	LPC_GPDMA->CH[0].SRCADDR =  (uint32_t) &LPC_GPIO_PORT->PIN[DATA_GPIO_PORT];
 	LPC_GPDMA->CH[0].DESTADDR = (uint32_t) USB_DEST_ADDR + counter;
-	counter += count;
-	if(counter >= 10*SAMPLES) counter = 0;
+	counter += TRANSFER_COUNT;
+	if(counter >= 8*SAMPLES) counter = 0;
 
 	//TODO: ACHTUNG!! + 1 für Size sonst lücke..
 	LPC_GPDMA->CH[0].CONTROL = 	(uint32_t)
-						  ((count) <<  0) | //size
+						  ((DATA_TO_TRANSFER) <<  0) | //size
 								(0 << 12) | //SrcBurst=1
 								(1 << 15) | //DesBurst=4
 								(0 << 18) | //SrcWidth=8
@@ -63,23 +71,24 @@ static inline void _prvInitCamDMAXferDir(TransferType dataType, uint16_t count)
 								(1 << 27) | //DesIncrement=true
 								(1 << 28) | //Privilege
 								(3 << 29) | //B,C ???
-								(0 << 31);  //Interrupt=true
-
-
+								(1 << 31);  //Interrupt=true
 
 	LPC_GPDMA->CH[0].CONFIG |= 1; 	// Channel Enable 3073 4096
+
+	//CTIN3
+
 }
 
-/*
 void DMA_IRQHandler(void){
 	uint32_t intTCStat = LPC_GPDMA->INTTCSTAT;
 	if (intTCStat & (1 << 0))
 		{
-			counter++;
+			prvInitDMAXferDir(false);
+			DATAPORT.callback(ROI_Base);
 		}
 	LPC_GPDMA->INTTCCLEAR = intTCStat;
+
 }
-*/
 
 /*! @brief SCT IRQ handler, mainly for initializing the next DMA trnafer
 *
@@ -88,16 +97,25 @@ void DMA_IRQHandler(void){
 *		HARM rising edge ( prepare for next DMA xfer)
 *		ROI falling edge ( reset rx buffer and prepare for next (1st) DMA xfer)
 */
-void SCT_IRQHandler(void){
-	unsigned int flgs = LPC_SCT->EVFLAG;
-	LPC_SCT->EVFLAG = LPC_SCT->EVFLAG;
+void SCT_IRQHandler(void)
+{
+	LPC_SCT->EVFLAG 		= 0xFFFF;	// clear evt flags
 
-	if(flgs & (1 << ROI_fall)){
-		_prvInitCamDMAXferDir(ROI_Base, DATA_TO_TRANSFER);
-		DATAPORT.callback(ROI_Base);
-	}
+	//DATAPORT.callback(ROI_Base);
+	//LPC_SCT->CTRL_U |= (1 << 3) | (1 << 19);			// clear the L & H counter
+	/*	LPC_SCT->CTRL_L |=  (1 << 3);                      // clear the L counter
+	LPC_SCT->CTRL_H |=  (1 << 3);                      // clear the H counter
+
+
+
+	LPC_SCT->CTRL_L &= ~(1 << 1);                      // start the L counter
+	LPC_SCT->CTRL_H &= ~(1 << 1);                      // start the H counter
+
+
+	LPC_SCT->CTRL_U &= ~(1 << 1) | ~(1 << 17);			// start the L & H counter
+*/
+
 }
-
 
 static void pinmuxDataPort(uint8_t port){
 	PINMUX_GRP_T DataPort[] = {
@@ -126,20 +144,28 @@ static void pinmuxDataPort(uint8_t port){
 		{0x2, 13, (SCU_MODE_INACT | SCU_MODE_INBUFF_EN | SCU_MODE_HIGHSPEEDSLEW_EN | SCU_MODE_FUNC1)},	// SCTIN_4
 		{0x1,  6, (SCU_MODE_INACT | SCU_MODE_INBUFF_EN | SCU_MODE_HIGHSPEEDSLEW_EN | SCU_MODE_FUNC1)},	// SCTIN_5 DATA_CLK
 		{0x2,  2, (SCU_MODE_INACT | SCU_MODE_INBUFF_EN | SCU_MODE_HIGHSPEEDSLEW_EN | SCU_MODE_FUNC5)},	// SCTIN_6
-		{0x2,  6, (SCU_MODE_INACT | SCU_MODE_INBUFF_EN | SCU_MODE_HIGHSPEEDSLEW_EN | SCU_MODE_FUNC5)}	// SCTIN_7
+		{0x2,  6, (SCU_MODE_INACT | SCU_MODE_INBUFF_EN | SCU_MODE_HIGHSPEEDSLEW_EN | SCU_MODE_FUNC5)},	// SCTIN_7
+
+		{0x2, 10, (SCU_MODE_INACT | SCU_MODE_FUNC1)}	// SCTOUT2 (GPIO0[7])
 	};
 
 	for(int i=0; i < sizeof(DataPortCTRL) / sizeof(PINMUX_GRP_T); i++){
 		Chip_SCU_PinMuxSet(DataPortCTRL[i].pingrp, DataPortCTRL[i].pinnum, DataPortCTRL[i].modefunc);
 	}
-
+	Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 2, 10);
+	//Chip_SCU_PinMuxSet(  2,  8, (MD_PLN | FUNC1));            // pin P2_8  is SCT_OUT0
 }
+
+
+
+#define freq 13000000
+#define counts 16
 
 static void setupSCT(void){
 	Chip_SCT_Init(LPC_SCT);
 
-	LPC_SCT->CONFIG		= SCT_CONFIG_32BIT_COUNTER  |		// unified counter (32 bit)
-						  SCT_CONFIG_CLKMODE_BUSCLK |				// clock for SCT is bus clock
+	LPC_SCT->CONFIG		= SCT_CONFIG_32BIT_COUNTER  |				// unified counter (16 bit)
+						  SCT_CONFIG_CLKMODE_BUSCLK |				// clock for SCT is BUS clock
 						  //0 << 9;
 						  (_BIT(SCT_ROI) | _BIT(SCT_CLK) << 9); 	// synced inputs
 
@@ -170,13 +196,15 @@ static void setupSCT(void){
 										   (1 << 14) |	// STATELD [14]	= STATEV is loaded into state
 								    (ROI_READ << 15);	// STATEV [15]	= new state is ROI_READ
 
-	LPC_SCT->DMA1REQUEST	= (1 << CLK_rise);;
+	LPC_SCT->DMA1REQUEST	= (1 << CLK_rise);
 	LPC_SCT->EVFLAG 		= 0xFFFF;	// clear evt flags
-	LPC_SCT->EVEN 			= (1 << ROI_fall) | (1 << ROI_rise);
+	LPC_SCT->EVEN 			= (1 << ROI_fall);
+
 	NVIC_EnableIRQ(SCT_IRQn);
 
+
 	/* Start the SCT */
-	LPC_SCT->CTRL_U &= ~(SCT_CTRL_STOP_L | SCT_CTRL_HALT_L | SCT_CTRL_STOP_H | SCT_CTRL_HALT_H);
+	LPC_SCT->CTRL_U &= ~(SCT_CTRL_HALT_L | SCT_CTRL_STOP_L | SCT_CTRL_STOP_H | SCT_CTRL_HALT_H);
 }
 static void initDMA() {
 	// configure DMAMUX to select SCT as the request source
@@ -201,7 +229,7 @@ static void initDMA() {
 				(8 << 1) | // Source request peripheral from SCT DMA request 1
 				(0 << 6) | // DMA Destination request peripheral (memory)
 				(2 << 11)| // Peripheral to memory
-				(0 << 15); // IRQ Disable
+				(1 << 15); // IRQ ENable
 
 	LPC_GPDMA->CH[0].CONTROL = 0x00;
 	LPC_GPDMA->CH[0].LLI = 0;
@@ -218,8 +246,8 @@ static void initDMA() {
 			(1 << 27) | //DesIncrement=true
 			(1 << 28) | //Privilege
 			(3 << 29) | //B,C ???
-			(0 << 31);  //Interrupt=true
-	counter += DATA_TO_TRANSFER;
+			(1 << 31);  //Interrupt=true
+	counter += TRANSFER_COUNT;
 
 
 	/* Enable GPDMA interrupt */

@@ -46,6 +46,69 @@ pgr_project close
 
 
 
+<A name="pn151001172255"></A><B><U><big>pn151001172255</big></U></B>
+#Start recording tcl command: 10/1/2015 17:13:11
+#Project Location: D:/workspace/UltrasoundDoppler/0 MachXO2 Project; Project name: Ultrasound
+prj_project open "D:/workspace/UltrasoundDoppler/0 MachXO2 Project/Ultrasound.ldf"
+#Stop recording: 10/1/2015 17:22:55
+
+
+
+<A name="pn151012193607"></A><B><U><big>pn151012193607</big></U></B>
+#Start recording tcl command: 10/12/2015 19:34:26
+#Project Location: D:/workspace/UltrasoundDoppler/0 MachXO2 Project; Project name: Ultrasound
+prj_project open "D:/workspace/UltrasoundDoppler/0 MachXO2 Project/Ultrasound.ldf"
+prj_run Export -impl MachXO2 -task Jedecgen
+#Stop recording: 10/12/2015 19:36:07
+
+
+
+<A name="pn151014231101"></A><B><U><big>pn151014231101</big></U></B>
+#Start recording tcl command: 10/14/2015 21:22:03
+#Project Location: D:/workspace/UltrasoundDoppler/0 MachXO2 Project; Project name: Ultrasound
+prj_project open "D:/workspace/UltrasoundDoppler/0 MachXO2 Project/Ultrasound.ldf"
+prj_run Export -impl MachXO2 -task Jedecgen
+prj_run Export -impl MachXO2 -task TimingSimFileVHD
+prj_run PAR -impl MachXO2
+prj_run Export -impl MachXO2 -task Jedecgen
+pgr_project open "D:/workspace/UltrasoundDoppler/0 MachXO2 Project/MachXO2/MachXO2.xcf"
+prj_run Export -impl MachXO2 -task Jedecgen
+pgr_program run
+prj_run Export -impl MachXO2 -task Jedecgen
+prj_run Export -impl MachXO2 -task Jedecgen
+pgr_program run
+prj_run Export -impl MachXO2 -task Jedecgen
+prj_run Translate -impl MachXO2
+prj_run Map -impl MachXO2
+prj_run PAR -impl MachXO2
+prj_run Export -impl MachXO2 -task Jedecgen
+pgr_program run
+prj_run Export -impl MachXO2 -task Jedecgen
+pgr_program run
+prj_run Export -impl MachXO2 -task Jedecgen
+prj_run Export -impl MachXO2 -task Jedecgen
+pgr_program run
+prj_run Export -impl MachXO2 -task Jedecgen
+pgr_program run
+prj_run Export -impl MachXO2 -task Jedecgen
+pgr_program run
+prj_run Export -impl MachXO2 -task Jedecgen
+pgr_program run
+prj_run Export -impl MachXO2 -task Jedecgen
+pgr_program run
+prj_dev set -part LCMXO2-640HC-4TG100C
+pgr_project close
+prj_run Map -impl MachXO2
+prj_dev set -part LCMXO2-1200HC-4TG100C
+prj_run Map -impl MachXO2
+prj_dev set -part LCMXO2-2000HC-4TG100C
+prj_run Map -impl MachXO2
+prj_run PAR -impl MachXO2
+prj_dev set -part LCMXO2-7000HC-4TG144C
+#Stop recording: 10/14/2015 23:11:01
+
+
+
 <BR>
 <BR>
 <BR>

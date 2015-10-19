@@ -106,14 +106,23 @@ void uimainwindow::createHelpMenu()
 void uimainwindow::createDock()
 {
     addDockWidget(Qt::RightDockWidgetArea, app->settings());
+
     QVBoxLayout *layout = new QVBoxLayout;
-    //layout->addWidget(app->mmodeGraph());
-    QGroupBox *freq = new QGroupBox(tr("frequency analysis"));
+
+    QHBoxLayout *layoutmode = new QHBoxLayout;
+    layoutmode->addWidget(app->mmodeGraph());
+
+    QGroupBox *modebox = new QGroupBox(tr("M-Mode"));
+    modebox->setLayout(layoutmode);
+    layout->addWidget(modebox);
+
     QHBoxLayout *layoutfreq = new QHBoxLayout;
     layoutfreq->addWidget(app->spectromGraph());
-    freq->setLayout(layoutfreq);
 
+    QGroupBox *freq = new QGroupBox(tr("frequency analysis"));
+    freq->setLayout(layoutfreq);
     layout->addWidget(freq);
+
     // Set layout in QWidget
     QWidget *window = new QWidget();
     window->setLayout(layout);
@@ -137,7 +146,7 @@ void uimainwindow::about()
     msg.append(QString("User's Guide available on page: <a href=\"%1\" style=\"color:#4ec9b0\">%2</a>").arg(url).arg(url));
     msg.append("<br>");
     msg.append("<br>");
-    msg.append("Copyright 2014 ");
+    msg.append("Copyright 2015 ");
     msg.append(QCoreApplication::organizationName());
     msg.append(" - Institut IMM");
     msg.append("<br>");

@@ -21,8 +21,8 @@ reg[2:0] currentState, nextState;
 reg[15:0] Count;
 
 /* --- TX logic --- */
-assign TX_CLK[0] = (currentState == BurstState) ? TxClock(freq, Count[4:0]) : 0;
-assign TX_CLK[1] = (currentState == BurstState) ? ~TX_CLK[0] : 1;
+assign TX_CLK[0] = (currentState == BurstState && ENABLE) ? TxClock(freq, Count[4:0]) : 0;
+assign TX_CLK[1] = (currentState == BurstState && ENABLE) ? ~TX_CLK[0] : 0;
 
 /* --- RX logic --- */
 assign RX_CLK = RxClock(coreClock, freq, Count[1:0]);

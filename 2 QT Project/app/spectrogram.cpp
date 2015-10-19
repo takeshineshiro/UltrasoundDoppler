@@ -20,18 +20,21 @@ Spectrogram::Spectrogram(uint32_t dataSize, QCustomPlot *parent) :
     addGraph();
     setNoAntialiasingOnDrag(true); // more performance/responsiveness during dragging
 
-    xAxis->setLabel("frequency in kHz");
-    yAxis->setLabel("Magnitude in dB");
-    yAxis->setLabel("Amplitude in mV");
+    //xAxis->setLabel("frequency (kHz)");
+    yAxis->setLabel("Velocity (cm/s)");
+    //yAxis->setLabel("Magnitude in dB");
+    //yAxis->setLabel("Amplitude in mV");
 
     xAxis->setRange(0, _dataSize);
     //xAxis->setRange(_frequency[1], _frequency[SAMPLES/2-1]);
     graph(0)->setData(_frequency, _data);
+/**/
     //graph(0)->setBrush(QBrush(QColor(255/4.0,160,50,150)));
+/**/
     yAxis->setRange(-150, 150);
     xAxis->setRange(0, _dataSize);
     //yAxis->setNumberPrecision(3); // makes sure "1*10^4" is displayed only as "10^4"
-
+/**/
     //yAxis->grid()->setSubGridVisible(true);
     //xAxis->grid()->setSubGridVisible(true);
 
@@ -40,7 +43,7 @@ Spectrogram::Spectrogram(uint32_t dataSize, QCustomPlot *parent) :
     //xAxis->setNumberFormat("b"); // e = exponential, b = beautiful decimal powers
     //xAxis->setNumberPrecision(0); // makes sure "1*10^4" is displayed only as "10^4"
     //xAxis->setSubTickCount(8);
-
+/**/
     setInteraction(QCP::iRangeDrag, true);
     setInteraction(QCP::iRangeZoom, true);
     axisRect()->setRangeZoom(Qt::Vertical);

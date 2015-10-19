@@ -23,9 +23,10 @@
 enum{
 	ROI_fall = 0,
 	ROI_rise,
-	HARM_fall,
 	HARM_rise,
-	CLK_rise
+	CLK_fall,
+	CLK_rise,
+	FRAME_DONE
 } SCTevents;
 
 //states
@@ -43,8 +44,10 @@ typedef enum{
 	ROI_RF
 }TransferType;
 
-extern volatile uint16_t buffer[5*SAMPLES];
+extern volatile uint8_t buffer[8*SAMPLES];
 extern uint32_t counter;
+
+void prvInitDMAXferDir(bool zero);
 
 void USD_HW_DATAPORT_CREATE(void (*ROI_dataReceived)(TransferType dataType));
 void USD_HW_DATAPORT_BUFFER_SET(void* buffer, uint16_t bufferSize, uint16_t bufferIncrement, TransferType dataType);

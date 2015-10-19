@@ -34,7 +34,8 @@ typedef enum {
 	GATE			= 10,
 	MODE			= 11,		/**< start / stop CPLD Doppler Mode */
 	TX_ON			= 12,
-	RX_ON			= 13
+	RX_ON			= 13,
+	RESETDEV		= 14
 
 } USB_CMD_REQUEST;
 
@@ -53,15 +54,11 @@ typedef enum {
 } USD_REGISTER_REQUESTS;
 
 typedef struct {
-	uint16_t Value;
-	union {
-			uint8_t TX_ON : 1;		/**< set Transmitter to on */
-			uint8_t RX_ON : 1;		/**< set Receiver to on */
-			uint8_t ENABLE : 1;		/**< set Statemaschine to run */
-			uint8_t reserved : 3;	/**< actually not used */
-			uint8_t GATE_LENGTH : 8;/**< set the Gate length */
-			uint8_t FREQUENCY : 2;	/**< set The Frequency (2 MHz = 1, 4 MHz = 2, 8 MHz = 3 */
-		} bits;
+	uint8_t TX_ON;		/**< set Transmitter to on */
+	uint8_t RX_ON;		/**< set Receiver to on */
+	uint8_t ENABLE;		/**< set Statemaschine to run */
+	uint8_t GATE_LENGTH;/**< set the Gate length */
+	uint8_t FREQUENCY;	/**< set The Frequency (2 MHz = 1, 4 MHz = 2, 8 MHz = 3 */
 } Settings;
 
 /**
@@ -93,9 +90,10 @@ typedef struct USD_HW_API* USD_HW_API_PTR;
  */
 struct USD_HW_API{
 	USD_HW_VALUES 	Config;
-	char 			Mode;
+//	uint8_t			Mode;
 	void 			(*ResetUSD)(void);
 	void 			(*WriteConfig)(void);
+	void 			(*ReadConfig)(uint16_t* data);
 	void 			(*Start)(void);
 	void 			(*Stop)(void);
 };
@@ -104,6 +102,5 @@ extern USD_HW_API_PTR usdhandle;
 USD_HW_API_PTR USD_HW_API_CREATE(void);
 void USD_HW_API_DESTROY(USD_HW_API_PTR);
 
-void SetupHardware(void);
 
 #endif /* API_USD_API_H_ */

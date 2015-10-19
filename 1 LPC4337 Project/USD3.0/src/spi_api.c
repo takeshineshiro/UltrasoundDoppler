@@ -20,6 +20,8 @@ static inline void SSP_Mux(LPC_SSP_T *pSSP)
 		Chip_SCU_PinMuxSet(SSP1.MISO.port, SSP1.MISO.pin, SSP1.MISO.modefunc); 	/* P1.3 => MISO1 */
 #if SSP1_USE_CS
 		Chip_SCU_PinMuxSet(SSP1.SSEL.port, SSP1.SSEL.pin, SSP1.SSEL.modefunc);  /* P1.5 => SSEL1 */
+		Chip_GPIO_SetPinDIROutput(LPC_GPIO_PORT, 1, 8);
+		Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 8, true);
 #endif
 
 	}
@@ -36,7 +38,7 @@ static inline void SSP_Init(LPC_SSP_T *pSSP)
 
 		Chip_SSP_Set_Mode(pSSP, SSP_MODE_MASTER);
 		Chip_SSP_SetFormat(pSSP, SSP1.ssp_format.bits, SSP1.ssp_format.frameFormat, SSP1.ssp_format.clockMode);
-		Chip_SSP_SetBitRate(pSSP, 16000000);
+		Chip_SSP_SetBitRate(pSSP, 10000000);
 		Chip_SSP_Enable(pSSP);
 		NVIC_EnableIRQ(SSP_IRQ);
 		Chip_SSP_Set_Mode(pSSP, SSP_MODE_MASTER);
@@ -67,11 +69,15 @@ void SPI_API_DESTROY(SPI_API_PTR instance) {
 }
 
 static inline uint32_t spi_fillTransfer(uint16_t *txbuff, uint32_t transferSize){
+	uint32_t transfered = 0;
 	xf_setup.length = transferSize; /* total number of SPI transfers */
 	xf_setup.tx_data = &txbuff[0]; /* SPI TX buffer */
 	xf_setup.rx_cnt = xf_setup.tx_cnt = 0;
 	/* Transfer message as SPI master via polling */
-	return Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
+	Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 8, false);
+	transfered = Chip_SSP_RWFrames_Blocking(LPC_SSP, &xf_setup);
+	Chip_GPIO_SetPinState(LPC_GPIO_PORT, 1, 8, true);
+	return transfered;
 }
 
 /* Master SPI transmit in polling mode */

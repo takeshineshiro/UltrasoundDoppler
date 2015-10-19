@@ -131,8 +131,6 @@ void Menu::setActions(bool enable)
     _singleShot->setDisabled(enable);
     _action_changeRunMode->setDisabled(enable);
     _action_singleShot->setDisabled(enable);
-    _gateslider->setDisabled(enable);
-    _gatespinner->setDisabled(enable);
     _svslider->setDisabled(enable);
     _svspinner->setDisabled(enable);
 }
@@ -152,19 +150,6 @@ void Menu::SetupStart()
     _startslider->setValue(device->burst()+200);
 }
 
-void Menu::setupGate()
-{
-    _gateslider = new QSlider(Qt::Horizontal);
-    _gateslider->setToolTip(QUOTE(TOOLTIP_GATE));
-    _gatespinner = new QSpinBox;
-    _gateslider->setToolTip(QUOTE(TOOLTIP_GATE));
-    _gateslider->setRange(0,5);
-    _gatespinner->setRange(0,5);
-    QObject::connect(_gateslider, &QAbstractSlider::valueChanged, device, &usdDevice::setGateLength);
-    QObject::connect(_gateslider, SIGNAL(valueChanged(int)), _gatespinner, SLOT(setValue(int)));
-    QObject::connect(_gatespinner, SIGNAL(valueChanged(int)), _gateslider, SLOT(setValue(int)));
-    _gateslider->setValue(device->gateLength());
-}
 
 void Menu::setupSV()
 {
@@ -213,7 +198,7 @@ void Menu::createToolBar()
     vbox->addWidget(startBox);
 
     //gatelength
-    setupGate();
+    /*setupGate();
     QHBoxLayout *gate = new QHBoxLayout;
     gate->addWidget(_gateslider);
     gate->addWidget(_gatespinner);
@@ -221,7 +206,7 @@ void Menu::createToolBar()
     vbox->addWidget(new QLabel(QUOTE(LBL_GATE)));
     gateBox->setLayout(gate);
     vbox->addWidget(gateBox);
-
+*/
     //sampleVolume length
     setupSV();
     QHBoxLayout *sv = new QHBoxLayout;

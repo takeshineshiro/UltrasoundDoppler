@@ -64,6 +64,6 @@ USB_API_PTR USB_API_CREATE();
 
 void USB_API_DESTROY(USB_API_PTR instance);
 
-extern void PerformUSB_Vendor(int8_t cmd, uint16_t Value);
+extern void PerformUSB_Vendor(uint8_t cmd, uint16_t Value);
 
 #endif /* API_USB_API_H_ */

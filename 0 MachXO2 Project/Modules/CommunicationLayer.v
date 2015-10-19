@@ -18,7 +18,7 @@ module CommunicationLayer(
   output	reg							ENABLE,		// ENABLE for FSM
   input 	wire						RESETEN
   );
-	parameter MAX_MEM_BURST_NUM = 5;       // Maximum memory burst number
+	parameter MAX_MEM_BURST_NUM = 6;       // Maximum memory burst number
 	wire	[`DATABusWidth-1:0] rd_data;
 	wire 	xfer_done;
 	reg		[`DATABusWidth-1:0] dataOut;
