@@ -3,13 +3,14 @@
 
 \usepackage{graphicx} %Einbinden von extern erzeugten Grafiken
 \graphicspath{{images/}} %Pfad zu den Bildern (einfache Referenzierung)
+\usepackage{epstopdf}
 \usepackage{makeidx}
 
 \usepackage{pdflscape} %Change orientation of specific part
 \usepackage{afterpage}
 \usepackage{rotating}
 
-\usepackage{xcolor}
+\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{fancybox}
 \usepackage{ulem} %für Text linien
 \usepackage[utf8]{inputenc}
@@ -29,7 +30,7 @@
 %f?r integralzeichen Hoch- und Tiefstellung
 \usepackage[intlimits]{empheq}
 %PDF-Dokumente einbinden
-%\usepackage{pdfpages}
+\usepackage{pdfpages}
 %Tabellen einbinden
 %\usepackage{booktabs}
 \usepackage{tabularx}
@@ -50,7 +51,7 @@
 \pagestyle{fancy}
 	\fancyhf{}
 
-	\fancyhead[L]{Entwicklung einer Dopplerinstrumentierung zur Detektion von Luftembolin in\\ einen künstlichen Blutkreislauf}
+	\fancyhead[L]{Entwicklung einer Dopplerinstrumentierung zur Detektion von Luftembolien in\\ einem künstlichen Blutkreislauf}
 	\fancyhead[R]{\includegraphics[width=2cm]{images/HS_logo_sw.jpg}}
 	\fancyfoot[R]{\thepage}
 	\fancyfoot[L]{\nouppercase{\leftmark}}
@@ -58,7 +59,7 @@
 {
 	\fancyhf{}
 		
-		\fancyhead[L]{Entwicklung einer Dopplerinstrumentierung zur Detektion von Luftembolin in\\ einen künstlichen Blutkreislauf}
+		\fancyhead[L]{Entwicklung einer Dopplerinstrumentierung zur Detektion von Luftembolien in\\ einem künstlichen Blutkreislauf}
 		\fancyhead[R]{\includegraphics[width=2cm]{images/HS_logo_sw.jpg}}
 			\fancyfoot[R]{\thepage}
 	\fancyfoot[L]{\nouppercase{\leftmark}}
@@ -148,6 +149,8 @@
 %\PreviewEnvironment{tikzpicture}
 \usetikzlibrary{dsp,chains}
 
+\usepackage{ragged2e}
+
 \DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
 \usepackage{amssymb}
 \usepackage{eurosym} %für euronen..
@@ -170,6 +173,6 @@
     \fcolorbox{blue}{gray!0}{\TheSbox}
   \end{wrapfigure}%
 }
-
+\usepackage[,european]{circuitikz}
 \newcommand*{\myMarvosymbol}[1]{{\fontfamily{mvs}\fontencoding{U}\fontseries{m}\fontshape{n}\selectfont\char#1}}
 \newcommand*{\emailsymbol}{\myMarvosymbol{66}~}

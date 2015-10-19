@@ -35,14 +35,16 @@
     filecolor=blue,      % color of file links
     urlcolor=blue           % color of external links
 }
+
 \begin{document}
 \pagenumbering{Roman}
-
+\cleardoublepage\pdfbookmark{Deckblatt}{title}
 \input{chapters/titlepage}
+
+\input{chapters/abstract}
+
 \input{chapters/statement}
-\phantomsection
-\pdfbookmark{\contentsname}{toc}
-\tableofcontents 										%Inhaltsverzeichnis hier anlegen
+\cleardoublepage\pdfbookmark{\contentsname}{toc}\tableofcontents
 \phantomsection
 \listoffigures 											%Abbildungsverzeichnis
 \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
@@ -55,21 +57,14 @@
 \pagenumbering{arabic}
 
 \input{chapters/abbreviations}
-
 \input{chapters/Einleitung} %done
-
 \input{chapters/principles} %done
-
 \input{chapters/actuelltechnics}
-
 \input{chapters/materials&methods}
-
 \input{chapters/systemdesign&implementation}
-
 \input{chapters/tests&results}
-
-
-%\phantomsection
+\clearpage
+\phantomsection
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}
 \bibliographystyle{IEEEtran}
 \bibliography{literatur}

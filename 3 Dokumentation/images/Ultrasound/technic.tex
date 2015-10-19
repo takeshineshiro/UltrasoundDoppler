@@ -1,0 +1,40 @@
+%\title{18W MOSFET amplifier)
+% Title: 18W MOSFET amplifier, with npn transistor.
+% Author: RamÃ³n Jaramillo.
+% Source: http://www.circuitstoday.com/mosfet-amplifier-circuits
+% Abstract:
+% This example made use of circuitikz and siunits packages for drawing a 18W MOSFET  Amplifier for one-channel. It is mandatory than siunitx and related packages have been instaled, acording to your LaTeX distribution.
+\documentclass[10pt,a4paper]{standalone}
+\usepackage{tikz-timing}
+\usetikzlibrary{arrows}
+\newcommand{\arr}[1]{#1 $\Longrightarrow$}
+\makeatletter
+\tikzset{timing/name/.append style={timing/name \the\c@tikztiming@nrows/.try}}
+\makeatother
+\begin{document}
+    \begin{tikztimingtable}[
+        timing/name 1/.append style={
+            anchor=east,
+            yshift=\timingdslope cm/2+.6pt,
+            minimum height=\timingdslope cm,
+        },
+        timing/name 2/.append style={
+            anchor=east,
+            yshift=\timingdslope cm/2+.6pt,
+            minimum height=\timingdslope cm,
+            font=\tiny,
+            append after command={
+                \pgfextra
+                \pgfsetinnerlinewidth{.7pt}
+                \pgfsetbuttcap
+                \draw [line width=1.3pt,implies-] (\tikzlastnode.east) -- ++(-.25cm,0);
+                \endpgfextra
+            }
+        }
+        ]
+         &LLLLL !{-- ++(.5,.25) -- ++(.5,-1)} HHHHHH\\
+        & LLLLL  HHHHHH\\
+        \extracode
+        \tablegrid
+    \end{tikztimingtable}
+\end{document}

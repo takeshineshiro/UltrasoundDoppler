@@ -1,82 +1,92 @@
 \chapter{Einleitung und Aufgabenstellung}
-
-
+In diesem Kapitel wird die Motivation und die sich daraus ergebenen Aufgabenstellung sowie die Methodik der Problemlösung beschrieben. Dabei werden vorhandenen Systeme verglichen, Anforderungen für die Umsetzung der Aufgabe definiert und durch die Beschreibung der Methodik Erkenntnisse und Maßnahmen zur Umsetzung der Arbeit zusammengefasst.
 \section{Einleitung}
 Der Blutkreislauf ist eine der wichtigsten Regeleinrichtungen des menschlichen Organismus. Dieser Kreislauf transportiert Blut, welches sich aus festen - Erythrozyten, Leukozyten und Thrombozyten - und flüssigen - Plasma - Bestandteilen zusammensetzt. Dabei passt sich der Kreislauf an die aktuelle Belastungsart an, indem er die Durchflussgeschwindigkeit des Blutes reguliert. Jedoch ist die Durchflussgeschwindigkeit durch die Herzfrequenz und den Arterienquerschnitten begrenzt.
 %Arterien können durch die erhöhte bzw. ungesunde Zufuhr von Nahrungsmitteln sowie Genussmitteln stark belastet werden, da sich Ablagerungen (Gefäßverengung) bilden können oder die Dehnbarkeit der Arterien und somit der maximale Querschnitt reduziert werden kann. 
-Dabei kann der Blutfluss durch Ereignisse, sogenannte Embolien, welche in den Gefäßen auftreten gehemmt oder gar zum erliegen gebracht werden. Die Folge ist ein minderperfundiertes betroffenes Gewebe mit anschließenden Absterben von Zellen. Dabei gibt es drei Emboliearten, welche primär in der ambulanten und stationären Behandlung vorherrschen und ein Zellsterben mit sich bringen.
+Dabei kann der Blutfluss durch Ereignisse, sogenannte Embolien, welche in den Gefäßen auftreten, gehemmt oder gar zum erliegen gebracht werden. Die Folge ist ein minderperfundiertes Gewebe mit anschließenden Absterben von Zellen. Dabei gibt es drei Emboliearten, welche primär in der ambulanten und stationären Behandlung vorherrschen und ein Zellsterben mit sich bringen.
 \begin{description}
-\item[Luft- / Gasembolie] welche durch Injektion von Gas oder bei schnellen auftauchen aus großen Tiefen\footnote{Taucher- bzw. Dekompressionskrankheit} entstehen können. Injektionen treten meist bei Operationen am offenen Herzen und bei Operationen an Arterien auf.
+\item[Luft- / Gasembolie] welche durch Injektion von Gas oder bei zu schnellem auftauchen aus großen Tiefen\footnote{Taucher- bzw. Dekompressionskrankheit} entstehen können. Injektionen treten meist bei Operationen am offenen Herzen und bei Operationen an Arterien auf.
 \item[Tromboembolie] umgangssprachlich auch \glqq Blutgerinnsel\grqq{} genannt, entsteht durch eine Ansammlung von Blutblättchen an der Gefäßwand, welche durch Arterienverkalkungen begünstigt werden kann. Diese Ansammlung kann sich von der Gefäßwand lösen und anschließend die Arterie verschließen.
 \item[Fettembolie] ist eine Ansammlung von Fetttröpfchen bzw. Fettzellen, welche nach offenen Knochenbrüchen in den Blutkreislauf eingeschwemmt werden können.
 \end{description}
-Da diese Ereignisse vermehrt zufällig auftreten und das Risiko mitunter von dem Patienten abhängig ist, wurde für Lungenembolien der Wells-Score nach dem Wissenschaftler P.S. Wells eingeführt. Dieser Score beschreibt die Dringlichkeit und den zu betreibenden Aufwand für eine Diagnose. Des weiteren ist bekannt, dass bei Operationen vermehrt Ereignisse auftreten können, welche jedoch durch die relaxierte Muskulatur des Patienten nur bedingt wahrgenommen werden kann. Ein Monitoring zentraler Arterien während der Patient narkotisiert ist, könnte Embolien aufdecken und somit ein schnelle Entscheidungsfindung bei Schlaganfällen oder Lungenembolien begünstigen.\\
+Da diese Ereignisse vermehrt zufällig auftreten und das Risiko mitunter von dem Patienten abhängig ist, wurde für Lungenembolien der Wells-Score, nach dem Wissenschaftler P.S. Wells, eingeführt. Dieser Score beschreibt die Dringlichkeit und den zu betreibenden Aufwand für eine Diagnose. Des weiteren ist bekannt, dass bei Operationen vermehrt Ereignisse auftreten können, welche jedoch durch die relaxierte Muskulatur des Patienten nur bedingt wahrgenommen werden kann. Ein Monitoring zentraler Arterien während der Patient narkotisiert ist, könnte Embolien aufdecken und somit ein schnelle Entscheidungsfindung bei Schlaganfällen oder Lungenembolien begünstigen.\\
 Die zeitnahe Erkennung von Ereignissen ist somit von zentraler Bedeutung für jeden behandelnden Arzt, da in der operativen Medizin jeder Zeit -  \glqq Time is Brain\grqq{}, \glqq Time is Muscle\grqq{} und \glqq Golden hour\footnote{Zeit zum verhindern schlimmerer Sachen}\grqq{} - Komplikationen auftreten können. Die Erkennung eines Ereignisses erlaubt es dem Arzt zu entscheiden, ob die Operation weitergeführt werden kann oder abgebrochen werden muss. Dabei hat ein Abbruch der Operation eine Lysetherapie mit einer erhöhten Dosis Heparin gegen die erkannte Embolie zur Folge.\\
 Ein Monitoring von Ereignissen sollte an den Hauptarterien durchgeführt werden, da diese einen erhöhten Volumenstrom und somit eine erhöhte Chance auf die Erkennung von Ereignissen bieten. Dabei sind invasive\footnote{latein invadere \textit{einfallen, eindringen}} Methoden nicht zu empfehlen, da diese Gewebeschäden zur Folge haben. Eine Alternative bieten nicht invasive Methoden, da diese den Patienten nicht verletzen und das Gewebe zerstören wodurch eine Beobachtung von Gehirnarterien ermöglicht werden kann.\\
 Die vorliegende Arbeit befasst sich aus diesem Grund mit der Umsetzung einer nicht invasiven Methode zur schnellen und eindeutigen Emboliedetektion.
 
 \section{Aufgabenstellung}
 \subsection{Aufgabenstellung der Masterarbeit}
-Ziel dieser Arbeit ist die Realisierung eines Systems für die eindeutige Detektion von Embolien auf Basis der nichtinvasiven gepulsten Ultraschall-Dopplertechnologie. Eine Visualisierung in Spektrogramm und M-Mode sowie die akustische Wiedergabe der Signale sind dabei unverzichtbar, um möglichst viele Informationen aus der zeitnahen Messung zu generieren und somit eine eindeutige Detektion zu gewährleisten. \autoref{fig:usdschema} visualisiert dabei das grundlegende Vorhaben.\\
-Diese Thesis soll \ac{ua} eine Optimierung einer vorhandenen Hardware darstellen, da eine Detektion von Ereignissen durch die Messgenauigkeit des Messsystems bedingt ist. Beim Designen der Elektronik ist darauf zu achten, dass verschiedene Ultraschallsonden verwendet werden können. Des Weiteren soll eine Optimierung der bereits entwickelten Schnittstelle zum \ac{pc} erfolgen, da die aktuelle Datentransferrate für eine eindeutige Detektion von Embolien nicht ideal erscheint. Zudem muss ein Algorithmus implementiert werden, um Embolien eindeutig zu detektieren und dem Nutzer zu visualisieren. Die Visualisierung der Messung soll dabei auf einen \ac{pc} unter Nutzung diverser Betriebssysteme erfolgen indem eine benutzerfreundliche \ac{gui} bereitgestellt wird. Alle weiteren Details werden in \autoref{sec:sysreq} spezifiziert.
-\begin{figure}[ht]
+Ziel dieser Arbeit ist die Realisierung eines Systems für die eindeutige Detektion von Embolien auf Basis der nichtinvasiven gepulsten Ultraschall-Dopplertechnologie. Eine Visualisierung im Spektrogramm und M-Mode sowie die akustische Wiedergabe der Signale sind dabei unverzichtbar, um möglichst viele Informationen aus der zeitnahen Messung zu generieren und somit eine eindeutige Detektion zu gewährleisten. \autoref{fig:usdschema} visualisiert dabei das grundlegende Vorhaben.
+\begin{figure}[h!]
 	\centering
-	\begin{subfigure}[b]{0.48\textwidth}
+	\begin{subfigure}[b]{0.47\textwidth}
 		\centering
   		\includegraphics[page=2, trim = 16mm 22mm 97mm 216mm, clip=true, width=0.7\textwidth]{Ultrasound/Embolusdetection_tutorial}  
 		\caption{Transcraniale Emitierung von Ultraschall}
   	\end{subfigure}
   	\hfill
-  	\begin{subfigure}[b]{0.48\textwidth}
+  	\begin{subfigure}[b]{0.47\textwidth}
 	  	\centering
   		\includegraphics[page=2, trim = 98mm 237mm 7mm 21mm, clip=true, width=1\textwidth]{Ultrasound/Embolusdetection_tutorial}
 	  	\caption{Verarbeitung des Signals}
   	\end{subfigure}
 	\caption[Vereinfachte Darstellung der Emboliedetektion]{Vereinfachte Darstellung der Emboliedetektion\cite[p. 2]{emboli}}
   	\label{fig:usdschema}
-\end{figure}
-%
-%
-%
+\end{figure}\\
+Diese Thesis soll \ac{ua} eine Optimierung einer vorhandenen Hardware darstellen, da eine Detektion von Ereignissen durch die Messgenauigkeit des Messsystems bedingt ist. Beim Designen der Elektronik ist darauf zu achten, dass verschiedene Ultraschallsonden verwendet werden können. Des Weiteren soll eine Optimierung der bereits entwickelten Schnittstelle zum \ac{pc} erfolgen, da die aktuelle Datentransferrate für eine eindeutige Detektion von Embolien nicht ideal erscheint. Zudem muss ein Algorithmus implementiert werden, um Embolien eindeutig zu detektieren und dem Nutzer zu visualisieren. Die Visualisierung der Messung soll dabei auf einen \ac{pc} unter Nutzung diverser Betriebssysteme erfolgen indem eine benutzerfreundliche \ac{gui} bereitgestellt wird. Alle weiteren Details werden in \autoref{sec:sysreq} spezifiziert.
 
 \subsection{Vorstellung des vorhandenen Systems}
 \subsubsection*{Das digitale Ultraschall-Multigate-Doppler System - Version 2012}\label{cp:usdV1}
-
 Herr Sebastian Stemplewitz entwickelte in seiner Bachelorarbeit an der Hochschule Ulm einen Prototypen für die \ac{pc} gestützte Hämatokritwertmessung. Dieser sollte eine kostengünstige und intravasale Alternative zur aktuellen Hämatokritwertbestimmung werden.\\
-Das System ist soweit minimalisiert sowie miniaturisiert(\autoref{fig:system_stemp}), dass eine Weiterentwicklung des Systems die logische Schlussfolge war. Messdaten können erfolgreich mit 8 MHz Sonden aufgenommen und darstellen werden. Dabei dient ein PIC18F4550 \ac{mcu} der Firma Microchip als Schnittstelle zwischen der Messsteuerung und dem \ac{pc} durch die Implementierung eines \ac{usb} Audio-Profils, welches mit der selbst entwickelten Software\footnote{auf Basis von C++ und QT} kommuniziert. Jedoch wurde in der Testphase festgestellt, dass eine Optimierung der Transmitter- und Receiverschaltung notwendig ist um Artefakte zu reduzieren und die Messgenauigkeit zu erhöhen. Aus dem Wunsch, die Kompatibilität mit 2 und 4 MHz Ultraschallsonden zu gewährleisten, entstand die Idee dieses System mit einen ARM-Cortex \ac{mcu} zu betreiben und die Datenverarbeitung und Darstellung über diesen bereitzustellen.\cite{stemp2012}
-\newpage
-\begin{figure}[h]
+Das System ist soweit minimalisiert sowie miniaturisiert (\autoref{fig:system_stemp}), dass eine Weiterentwicklung des Systems die logische Schlussfolge war. Messdaten können erfolgreich mit 8 MHz Sonden aufgenommen und darstellen werden. Dabei dient ein PIC18F4550 \ac{mcu} der Firma Microchip als Schnittstelle zwischen der Messsteuerung und dem \ac{pc} durch die Implementierung eines \ac{usb} Audio-Profils, welches mit der selbst entwickelten Software\footnote{auf Basis von C++ und QT} kommuniziert. Jedoch wurde in der Testphase festgestellt, dass eine Optimierung der Transmitter- und Receiverschaltung notwendig ist um Artefakte zu reduzieren und die Messgenauigkeit zu erhöhen. Aus dem Wunsch, die Kompatibilität mit 2 und 4 MHz Ultraschallsonden zu gewährleisten, entstand die Idee dieses System mit einen ARM\SymbReg Cortex\SymbReg-M \ac{mcu} zu betreiben und die Datenverarbeitung und Darstellung über diesen bereitzustellen.\cite{stemp2012}
+\begin{figure}[h!t]
 \centering
-  	\includegraphics[width=\textwidth]{systemV1}  
+\begin{annotatedFigure}
+	{\includegraphics[width=0.9\linewidth]{systemV1.jpg}}
+	\annotatedFigureBoxCustom{0.0335,0.0669}{0.2759,0.8331}{1}{0.2759,0.0669}{white}{white}{black}{black}%br
+	\annotatedFigureBoxCustom{0.5025,0.7021}{0.9679,0.9662}{3}{0.9679,0.7021}{white}{white}{black}{black}%br
+	\annotatedFigureBoxCustom{0.347,0.288}{0.5349,0.6561}{2}{0.5349,0.288}{white}{white}{black}{black}%br
+	\annotatedFigureBoxCustom{0.5852,0.1885}{0.9419,0.6514}{4}{0.9419,0.1885}{white}{white}{black}{black}%br
+\end{annotatedFigure}
 	\caption{Systemaufbau Thesis Stemplewitz}
   	\label{fig:system_stemp}
 \end{figure}
-\begin{table}[h]
+\vfill
+\begin{table}[h!]
 \centering
-\caption{Bestandteile der Platine}
+\caption{Bestandteile der Platine - Version 2012}
 \label{tab:system_stemp_tab}
 \begin{tabular}{c|l}
 \textbf{Nr.} & \textbf{Beschreibung} \\
 \cline{1-2}
 1 & \ac{mcu} und \ac{usb}-Kommunikation\\ 
-2 & Signalerzeugung und Dempdulation \ac{cpld}\\ 
+2 & Signalerzeugung und Demodulation \ac{cpld}\\ 
 3 & Transmitter mit Differenzverstärker und Übertrager\\ 
 4 & Receiver mit Vorverstärker und \ac{adc}\\ 
 \end{tabular}
 \end{table}
 
 \subsubsection*{Das digitale Ultraschall-Multigate-Doppler System - Version 2014}\label{cp:usdV2}
-Herr Andreas Rehn, Autor dieser Arbeit, optimierte in seiner Bachelorarbeit an der Hochschule Ulm die Version 2012 (\autoref{cp:usdV1}) für die Hämatokritwertmessung. Dabei wurde das Messsystem modularisiert und ein ARM-Cortex M3 \ac{mcu} für den Datentransfer sowie für die Ansteuerung eines LCD-Displays integriert. Dabei stellte sich heraus, dass das vorhandene \ac{cpld} für die mathematische Vorverarbeitung der Signale keine Reserven bietet. Außerdem konnte eine Steigerung der Flexibilität durch die Umstrukturierung des Zustandsautomaten erreicht werden. Die Datentransferrate zwischen \ac{cpld} und \ac{mcu} wurde auf 15,7 Mbit/s gesteigert, welche durch das \ac{usb} Full-Speed Interface auf 12 Mbit/s (brutto) begrenzt ist. Messungen ergaben weiterhin, dass das 2-Layer Layout und die Schaltung nicht ideal sind, da ein Spannungsoffset von durchschnittlich 11 mV und ein \ac{snr} von 59 \ac{db} nach der Digitalisierung ermittelt wurden. Daher ergab sich der Wunsch, die Datentransferrate durch eine alternative Schnittstelle sowie die Messgenauigkeit des Systems zu erhöhen und die Signalverarbeitung zu optimieren.\cite{rehn2014}
-
-\begin{figure}[h]
+Herr Andreas Rehn, Autor dieser Arbeit, optimierte in seiner Bachelorarbeit an der Hochschule Ulm die Version 2012 (\autoref{cp:usdV1}) für die Hämatokritwertmessung. Dabei wurde das Messsystem modularisiert und ein ARM\SymbReg Cortex\SymbReg-M3 \ac{mcu} für den Datentransfer sowie für die Ansteuerung eines LCD-Displays integriert.
+\begin{figure}[h!t]
 \centering
-  	\includegraphics[trim = 10cm 0cm 2cm 5cm, clip=true, width=\textwidth]{systemV2}  
+\begin{annotatedFigure}
+	{\includegraphics[width=0.9\textwidth]{systemV2.jpg}}
+	\annotatedFigureBoxCustom{0.9185,0.1942}{0.9629,0.794}{4}{0.9185,0.1942}{white}{white}{black}{black}
+	\annotatedFigureBoxCustom{0.3535,0.1055}{0.8615,0.3189}{3}{0.3535,0.1055}{white}{white}{black}{black}
+	\annotatedFigureBoxCustom{0.3535,0.3362}{0.8615,0.5376}{2}{0.3535,0.3362}{white}{white}{black}{black}
+	
+	\annotatedFigureBoxCustom{0.1195,0.1655}{0.3089,0.3912}{1}{0.3089,0.1655}{white}{white}{black}{black}
+	\annotatedFigureBoxCustom{0.2825,0.5682}{0.8749,0.8883}{5}{0.8749,0.5682}{white}{white}{black}{black}
+\end{annotatedFigure}  	
 	\caption{Systemaufbau Thesis Rehn}
   	\label{fig:system_stemp}
-\end{figure}
+\end{figure}\\
+Dabei stellte sich heraus, dass das vorhandene \ac{cpld} für die mathematische Vorverarbeitung der Signale keine Reserven bietet. Außerdem konnte eine Steigerung der Flexibilität durch die Umstrukturierung des Zustandsautomaten erreicht werden. Die Datentransferrate zwischen \ac{cpld} und \ac{mcu} wurde auf 15,7 Mbit/s gesteigert, welche durch das \ac{usb} Full-Speed Interface auf 12 Mbit/s (brutto) begrenzt ist. Messungen ergaben weiterhin, dass das 2-Layer Layout und die Schaltung nicht ideal sind, da ein Spannungsoffset von durchschnittlich 11 mV und ein \ac{snr} von 59 \ac{db} nach der Digitalisierung ermittelt wurden. Daher ergab sich der Wunsch, die Datentransferrate durch eine alternative Schnittstelle sowie die Messgenauigkeit des Systems zu erhöhen und die Signalverarbeitung zu optimieren.\cite{rehn2014}
+
 \begin{table}[h]
 \centering
-\caption{Bestandteile der Platine}
+\caption{Bestandteile der Platine - Version 2014}
 \label{tab:system_stemp_tab}
 \begin{tabular}{c|l}
 \textbf{Nr.} & \textbf{Beschreibung} \\
@@ -91,27 +101,26 @@ Herr Andreas Rehn, Autor dieser Arbeit, optimierte in seiner Bachelorarbeit an d
 %
 %
 %
-\newpage
 \subsection{Anforderungen an das Messsystem}\label{sec:anforderungen}
 Es werden drei Ebenen von Anforderungen unterschieden: die Benutzeranforderungen, die Systemanforderungen und die Software- und Hardwareanforderungen.\newline
 Benutzer und deren Anforderungen werden dabei als höchste Ebene angesehen, da sie die Bedürfnisse des Kunden an das System darstellen. Darunter werden sowohl grundlegende Anforderung, Basisanforderungen sowie Begeisterungsfaktoren beschrieben, welche entschlüsselt, gegliedert und anschließend strukturiert werden müssen.\\
-Die grundlegenden Anforderungen, welche Richtlinien und Normen beinhalteten, müssen erfüllt sein. Basisanforderungen beschreiben die Funktionalität des Systems. Nur wenn grundlegende, sowie Basisanforderungen erfüllt sind, kann das System zertifiziert, auf den Markt gebracht und dem Kunden die Möglichkeit gewährt werden, das Produkt zu kaufen. Begeisterungsfaktoren sind Anforderungen, die aus Sicht des Kunden nicht unbedingt erfüllt sein müssen um das Produkt zu kaufen. Jedoch bewegen genau diese Faktoren den Kunden, das Produkt zu kaufen, da es sich durch diese von Konkurrenzprodukten abheben kann. Benutzeranforderungen enthalten derweil keinerlei technische Vorgaben.\newline
+Die grundlegenden Anforderungen, welche Richtlinien und Normen beinhalteten, müssen erfüllt sein. Basisanforderungen beschreiben die Funktionalität des Systems. Nur wenn diese Anforderungen erfüllt sind, kann das System zertifiziert und auf den Markt gebracht werden.. Begeisterungsfaktoren sind Anforderungen, die aus Sicht des Kunden nicht unbedingt erfüllt sein müssen um das Produkt zu kaufen. Jedoch bewegen genau diese Faktoren den Kunden, das Produkt zu kaufen, da es sich durch diese von Konkurrenzprodukten abheben kann. Benutzeranforderungen enthalten derweil keinerlei technische Vorgaben.\newline
 Systemanforderungen bilden die mittlere Anforderungsebene, welche die allgemeinen Leistungen des Produktes spezifiziert. Diese Leistungen dienen als Grundlage des Systemdesigns.\newline
 Die Software- und Hardwareanforderungen werden aus dem Systemdesign abgeleitet und detaillierter beschrieben.\newline % wodurch die Software- und Hardwaredesign abgeleitet werden.\newline
 Bindende und optionale Anforderungen können anhand der Kundenformulierung unterschieden werden. Dabei werden bindende Anforderungen durch "'soll"' oder "'darf nicht"' hervorgehoben. Normativ bindende Anforderungen werden durch "'muss"' Formulierungen dargestellt. Eine optionale Anforderung wird dabei durch "'sollte"' und eine Zusatzfunktion mit "'kann"' formuliert.\newline
 Die in dieser Arbeit durchgeführte Optimierung wurde durch die folgenden Anforderungen detailliert definiert.
-\subsection*{Benutzeranforderungen}
+\subsection*{Benutzeranforderungen}\label{sec:userreq}
 \begin{itemize}\itemsep0pt
 \item Das bestehende USD-System soll aus einer Messplatine bestehen.
 \item Das System soll mit Ultraschallsonden im Frequenzbereich von 2, 4 und 8 \ac{mhz} arbeiten.
-\item Für eine \ac{prf} sollen mindestens 40 Werte (20 Real-, 20 Imaginärteil) zu Verfügung gestellt werden, um weitere Analysen zu ermöglichen.
+\item Für eine \ac{prf} sollen mindestens 40 Werte (20 Realteile, 20 Imaginärteile) zu Verfügung gestellt werden, um weitere Analysen zu ermöglichen.
 \item Das System soll über eine \ac{pc} Software betrieben werden können.
 \item Die \ac{pc} Software soll auf den Betriebssystemen Linux und Windows funktionieren.
 \end{itemize}
 \subsection*{Systemanforderungen}\label{sec:sysreq}
 \begin{itemize}\itemsep0pt
 \item Das System soll über eine externe Spannungsversorgung betrieben werden, welche den Normen entspricht.
-\item Das System soll als Steuereinheit einen ARM-Cortex M4 besitzen.
+\item Das System soll als Steuereinheit einen ARM\SymbReg Cortex\SymbReg-M4 besitzen.
 %\item Das System soll einen funktionsfähigen Audioausgang besitzen.
 %\item Das System sollte einen Composite-Out Ausgang besitzen.
 \item Das System soll einen USB-micro Anschluss besitzen.
@@ -151,7 +160,7 @@ Die in dieser Arbeit durchgeführte Optimierung wurde durch die folgenden Anford
 \begin{itemize}\itemsep0pt
 	\item \textbf{\ac{gui}}
 	\begin{itemize}\itemsep0pt
-		\item Das \ac{gui} soll ein Menu bereitstellen, um die Parameter der Messung einzustellen.
+		\item Das \ac{gui} soll ein Menü bereitstellen, um die Parameter der Messung einzustellen.
 		\item Das \ac{gui} soll ein linearen, für die Messwerte und ein \ac{fft}-Graphen, für das Zeit-Schallsignal bereitstellen.
 	\end{itemize}
 \end{itemize}
@@ -159,4 +168,4 @@ Die in dieser Arbeit durchgeführte Optimierung wurde durch die folgenden Anford
 %
 %
 \section{Beschreibung der Methodik}
-Die Ausgangssituation wurde analysiert und mit dem aktuellen Stand der Forschung verglichen, indem die zur Verfügung stehenden Unterlagen studiert und mit aktueller Fachliteratur abgeglichen wurden. Durch die Recherchen des aktuellen Stands der Technik zeigte sich entsprechendes Optimierungspotenzial im Vergleich zu den vorhandenen Messsystemen. Insbesondere zeigte sich, dass eine deutliche Verbesserung der Nutzbarkeit erreicht werden kann, wenn eine Datentransfersteigerung des Systems erreicht werden kann. Desweiteren ergab sich Optimierungspotential in der Messgenauigkeit. Durch die Anpassung der Hard- und Software und der Anpassung des Layouts unter Beirücksichtung gängiger \ac{emi} Aspekte, wurden im Rahmen der hier beschriebenen Studienarbeit grundlegend Verbesserungen im Hinblick auf die Genauigkeit der Messung und des Nutzungskomforts des Messystems erreicht.
+Die Ausgangssituation wurde analysiert und mit dem aktuellen Stand der Forschung verglichen, indem die zur Verfügung stehenden Unterlagen studiert und mit aktueller Fachliteratur abgeglichen wurden. Durch die Recherchen des aktuellen Stands der Technik zeigte sich entsprechendes Optimierungspotenzial im Vergleich zu den vorhandenen Messsystemen. Insbesondere zeigte sich, dass eine deutliche Verbesserung der Nutzbarkeit erreicht werden kann, wenn eine Datentransfersteigerung des Systems erreicht werden kann. Des weiteren ergab sich ein Optimierungspotential in der Messgenauigkeit. Durch die Anpassung der Hard- und Software und der Anpassung des Layouts unter Beirücksichtung gängiger \ac{emi} Aspekte, wurden im Rahmen der hier beschriebenen Studienarbeit grundlegend Verbesserungen im Hinblick auf die Genauigkeit der Messung und des Nutzungskomforts des Messsystems erreicht.

@@ -1,13 +1,14 @@
 \chapter{Abkürzungen und Begriffsdefinition}
 
 \section{Abkürzungen} 
-\begin{acronym}[SEPSEP]\itemsep0pt
+\begin{acronym}[mosfetmosfet]\itemsep0pt
 \acro{adc}[ADC]{Analog-Digital Converter}
-\acro{alu}[ALU]{Arithmetic logic unit}
+%\acro{alu}[ALU]{Arithmetic logic unit}
+\acro{api}[API]{Application programming interface}
 \acro{bom}[BOM]{Bill of Materials}
 \acro{bzw}[bzw.]{beziehungsweise}
 \acro{ca}[ca.]{circa}
-\acro{cad}[CAD]{Computer Aided Design}
+%\acro{cad}[CAD]{Computer Aided Design}
 \acro{cmsis}[CMSIS]{Cortex Microcontroller Software Interface Standard}
 \acro{cw}[CW]{Continuous Wave}
 \acro{cpld}[CPLD]{Complex Programmable Logic Device}
@@ -15,6 +16,7 @@
 \acro{dac}[DAC]{Digital-Analog Converter}
 \acro{dc}[DC]{Direct Current}
 \acro{dft}[DFT]{Diskrete Fourier Transformation}
+\acro{esb}[ESB]{Ersatzschaltbild}
 %\acro{eeprom}[EEPROM]{Electrically Erasable Programmable Read Only Memory}
 \acro{dh}[d.h.]{das heißt}
 \acro{dma}[DMA]{direct memory access}
@@ -44,7 +46,7 @@
 \acro{lna}[LNA]{Low Noise Amplifier}
 \acro{lut}[LUT]{Look-up Table}
 \acro{ma}[mA]{Milliampere}
-\acro{mcu}[MCU]{Mikrocontroller}
+\acro{mcu}[MCU]{Microcontroller Unit}
 \acro{mhz}[MHz]{Megahertz}
 %\acro{mcv}[MCV]{mittleres corpusculäres Volumen der Erythrozyten}
 \acro{mosfet}[MOSFET]{metal oxide semiconductor field-effect transistor}
@@ -67,6 +69,7 @@
 %\acro{saw}[SAW]{Surface Acoustic Wave}
 \acro{smd}[SMD]{Surface-mounted device}
 \acro{smt}[SMT]{Surface-mount technology}
+\acro{sps}[Sps]{samples per second}
 \acro{ssp}[SSP]{Streaming Serial Port}
 \acro{sfdr}[SFDR]{Spurious-Free Dynamic Range}
 
@@ -97,7 +100,7 @@
 
 
 \newpage
-\section{Begriffsdefinitionen}
+\section{Begriffsdefinitionen}\label{sec:begriffe}
 
 \begin{longtable}{|p{5.5cm}|p{9.5cm}|}
 KILLED & LINE!!!! \kill
@@ -110,7 +113,8 @@ KILLED & LINE!!!! \kill
 \textbf{Begriff} & \textbf{Definition}\\ \hline \endhead
 \textbf{Begriff} & \textbf{Definition} \\\hline
 
-\acf{alu} & Arithmetisch-logische Einheit welche ein elektronisches Rechenwerk in einen Prozessor abbildet. \\ \hline
+%\acf{alu} & Arithmetisch-logische Einheit welche ein elektronisches Rechenwerk in einen Prozessor abbildet. \\ \hline
+\acf{api} & engl. Programmierschnittstelle, welche die wichtigsten Funktionen und Eigenschaften eines programmierten Moduls zu Verfügung stellt \\ \hline
 \acf{db} & Das Dezibel ist eine nach Alexander Graham Bell benannte Hilfsmaßeinheit zur Kennzeichnung von Pegeln und Maßen (Logarithmische Größe). Diese Größen finden ihre Anwendung \ac{ua} in der Elektrotechnik sowie in der Akustik. \\ \hline
 \ac{bom} & engl. Stückliste \\ \hline
 %\ac{cad} & rechnerunterstütztes Designen \\ \hline
@@ -122,14 +126,15 @@ KILLED & LINE!!!! \kill
 Interface & engl. Schnittstelle zwischen Funktionen oder Geräten \\ \hline
 %\ac{ito} & Molekülverbindung aus Indium-Zinn-Oxid \\ \hline
 \acf{ldo} & engl. linear Regler mit geringen Verlusten welcher auch mit geringfügig höheren Eingangsspannungen betrieben werden kann.\\ \hline
-\ac{lna} & engl. rauscharmer Verstärker, welcher sich duch besondere Rauscharmut auszeichnet \\ \hline
+\ac{lna} & engl. rauscharmer Verstärker, welcher sich durch besondere Rauscharmut auszeichnet \\ \hline
 \ac{pcb} & engl. Leiterplatte \\ \hline
 \acf{pw} Dopplerverfahren & Gepulstes Dopplerverfahren \\ \hline
+Ringing-Effekt	& Einschwingverhalten, welches durch die Steilheit der Flanken unstetiger Signale negativ beeinflusst wird. Dieser Effekt beruht auf dem Gibbssches Phänomen.  \\ \hline
 \acf{roi} & engl. Bereich von Interesse \\ \hline
 Schallimpedanz & Verhältnis von Schalldruck zu Schallschnelle \\ \hline
-\acf{sfdr} & Störungsfreier dynamischer Bereich - Abstand der größten Störung zur Grundschwingung in einem Spektrum anzugeben.\\ \hline
+%\acf{sfdr} & Störungsfreier dynamischer Bereich - Abstand der größten Störung zur Grundschwingung in einem Spektrum anzugeben.\\ \hline
 \acf{snr} & engl. Signal-Rausch-Verhältnis, beschreibt das Verhältnis zwischen Nutzsignal und des Rauschens in der Einheit \ac{db}\\ \hline
-%\acf{smd} & oberflächenmontiertes Bauelement \\ \hline
+\acf{smd} & oberflächenmontiertes Bauelement auf Basis der \acf{smt} \\ \hline
 %\acf{saw} & Akustische Oberflächenwelle \\ \hline
 Transducer & engl. Schallkopf \\ \hline
 \acf{uat} & Ist ein Test, welcher durch den Auftragnehmer durchgeführt wird, um den user die funktionale Sicherheit der Anwendung / des Produktes zu gewährleisten. \\ \hline

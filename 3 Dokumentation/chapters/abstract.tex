@@ -1,0 +1,27 @@
+\chapter*{Zusammenfassung}
+\addcontentsline{toc}{chapter}{Zusammenfassung}
+In der diagnostischen Medizin wird das nichtinvasive Verfahren der transkraniellen Doppler-Sonographie zur Bestimmung von Embolien eingesetzt. Dabei werden Instrumentierungen mit analogen Demodulierungen verwendet. Diese besitzen den Nachteil, kostenintensiv zu sein und benötigen einen sehr hohen Hardwareaufwand, um mehrere Messtiefen gleichzeitig anzuzeigen. Eine digitale Demodulierung hingegen kann den genannten Defiziten entgegenwirken und wird bereits in der diagnostischen Medizin eingesetzt.\\
+Darum befasst sich die vorliegende Arbeit mit der Entwicklung eines nichtinvasiven Verfahrens auf Grundlage der gepulsten Doppler-Technologie mit einer digitalen Demodulierung.\\
+Auf Basis dieser Technologie wurde ein digitale Dopplerinstrumentierung entwickelt. Dieses besteht aus einer Messplatine. Dabei kann das System über ein \ac{pc} Programm gesteuert und die gewünschten Messtiefen eingestellt werden.
+Anschließend werden die getroffenen Einstellungen an das \ac{cpld} übertragen, welcher einen Transmitter mit differentiellen Ausgang ansteuert. 
+Über Diesen wird die erforderliche Leistung für die Ultraschallsonde bereitgestellt, woraufhin durch die Sonde eine Ultraschallwelle in das Gewebe des Patienten eingestrahlt wird.\\
+Während die Ultraschallwelle das Gewebe durchdringt, reflektieren Zellwände, Blutteilchen und mögliche Embolien Teile der Welle. 
+Diese Reflexionen können je nach Bedarf durch die Ultraschallsonde in elektrische Signale umgewandelt werden. Folgend werden Diese verstärkt und mithilfe eines \acl{adc}s (\ac{adc}) digitalisiert. Dabei steuert das \ac{cpld} die Digitalisierung und bereitet die aufgenommenen Daten durch Demodulation und Filterung auf.\\
+Die demodulierten Daten werden anschließend durch eine parallele Schnittstelle an den ARM\SymbReg Cortex\SymbReg-M4 \ac{mcu} übertragen, welcher Diese an den \ac{pc} weiterreicht.\\
+Im zu Verfügung stehenden Zeitraum konnte die Ansteuerung des Transmitters und des Receivers, die Digitalisierung der Eingangssignale, die Kommunikation zwischen \ac{pc} und dem System aufgebaut, sowie ein \ac{gui} mit Auswertung realisiert werden. 
+Die Inbetriebnahme des gesamten Systems war teilweise ausführbar, da das Bandpassfilter des Receiver sich negativ auf den xDSL Interface Transformer auswirkte und dieser zudem bei der Übertragung einbricht. Als Folge dessen kann nicht garantiert werden, dass der Transducer korrekt arbeitet und somit Ultraschall ausgesendet oder Empfangen werden kann.
+Dennoch konnte hier die grundlegende Funktionsweise der Analysemethode nachgewiesen werden. Somit wurde die Grundlage für weitere Nachforschungen geschaffen, um die hier dargestellte Analysemethode weiter zu optimieren.
+
+\newpage
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+In diagnostic medicine non-invasive procedures of transcranial Doppler ultrasound are used for emboli. Usually instrumentations with analog demodulation are used. These instrumentations have the disadvantage of being expensive and more hardware is needed to display various depths of measurement simultaneously. Digital Demodulation, however, can avoid the aforementioned deficits and is already used in diagnostic medicine.\\
+A study of the development of a non-invasive method, based on the pulsed Doppler technology with digital demodulation, is reported here.\\
+Based on this technology, a digital ultrasonic doppler system was developed. The system of this study consists of a measuring board. In this case the system is controlled via a \acf{pc} program, in which the desired measurement depths can be adjusted.
+Subsequently, the settings made are transferred to the \acf{cpld}, which controls a transmitter with differential output. By this component part the power required for the ultrasound probe is provided, after which an ultrasonic wave is irradiated into the tissue of the patient through the probe.\\
+While the ultrasonic wave passes through the tissue, cell walls, blood corpuscles and possible emboli reflect parts of the ultrasonic wave.
+These reflections are converted into electrical signals by the ultrasonic probe. Subsequently these electrical signals are amplified and digitized by a high speed \acf{adc}. Here, the \ac{cpld} controls the digitization and prepares the recorded data by demodulation and filtering.\\
+The demodulated data is then transmitted through a parallel interface to the ARM\SymbReg Cortex\SymbReg-M4  microcontroller unit (\acs{mcu}), which forwards the data to the \ac{pc}.\\
+In the the available period of time the control of the transmitter and the receiver, digitization of the input signals, the communication between the PC and the system was built, and a GUI with data evaluation was realized.\\
+The complete system was only partially brought to operation, because the band-pass filter of the receiver has a negative impact on the xDSL interface Transformer and this also interrupts the transmission. As a result it can not be guaranteed, that the transducer is working properly and ultrasound is emitted or proper signals may be received.
+Nevertheless the basic mecanisms and the functionality of the shown analysis method have been demonstrated. Therefore the basis for further research in order to optimize the shown analysis method was made.
