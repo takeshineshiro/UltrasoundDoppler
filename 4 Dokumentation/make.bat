@@ -11,7 +11,7 @@ goto clean
 
 :clean-all
 	echo - removing old files
-	del /s /f *.ps *.dvi *.aux *.toc *.idx *.ind *.ilg *.log *.out *.brf *.blg *.bbl *.lof *.lol *.lot *.gz %F%.pdf    
+	del /s /f *.ps *.dvi *.aux *.toc *.idx *.ind *.ilg *.log *.out *.brf *.blg *.bbl *.lof *.lol *.lot *.gz %F%.pdf  *eps-converted-to.pdf
 
 :all
 	echo - pdflatex plods...
@@ -31,7 +31,7 @@ goto clean
 
 :clean
 	echo - removing temp files
-    del /s /f *.ps *.dvi *.aux *.toc *.idx *.ind *.ilg *.log *.out *.brf *.blg *.bbl *.lof *.lol *.lot *.gz
+    del /s /f *.ps *.dvi *.aux *.toc *.idx *.ind *.ilg *.log *.out *.brf *.blg *.bbl *.lof *.lol *.lot *.gz *eps-converted-to.pdf
 :check	
 	set /p o=Open PDF? [yn]
 	if "%o%"=="n" goto END
