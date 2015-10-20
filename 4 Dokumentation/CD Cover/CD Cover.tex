@@ -4,14 +4,29 @@
 % Source: http://www.circuitstoday.com/mosfet-amplifier-circuits
 % Abstract:
 % This example made use of circuitikz and siunits packages for drawing a 18W MOSFET  Amplifier for one-channel. It is mandatory than siunitx and related packages have been instaled, acording to your LaTeX distribution.
-\documentclass[10pt,a4paper]{standalone}
+\documentclass[10pt]{standalone}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage[,european]{circuitikz}
 \usepackage{amsmath}
+\usepackage{verbatim}
+\newcommand*\annotatedFigureBoxCustom[8]{\draw[#5,line width=0.75mm,rounded corners] (#1) rectangle (#2);\node at (#4) [fill=#6,thick,shape=circle,draw=#7,inner sep=2pt,font=\sffamily,text=#8] {\textbf{#3}};}
+%\annotatedFigureBox{bottom-left}{top-right}{label}{label-position}
+\newcommand*\annotatedFigureBox[4]{\annotatedFigureBoxCustom{#1}{#2}{#3}{#4}{black}{black}{white}{white}}
+\newcommand*\annotatedFigureText[4]{\node[draw=none, anchor=south west, text=#2, inner sep=0, text width=#3\linewidth,font=\sffamily] at (#1){#4};}
+\newenvironment {annotatedFigure}[1]{\centering\begin{tikzpicture}
+\node[anchor=south west,inner sep=0] (image) at (0,0) { #1};\begin{scope}[x={(image.south east)},y={(image.north west)}]}{\end{scope}\end{tikzpicture}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{document}
+\begin{annotatedFigure}
+{\includegraphics[width=12cm, height=12cm]{CD\_Cover}}
+\draw[line width=1.0mm] (0.5,0.15) node[fill=white,thick,inner sep=3pt,font=\sffamily,text=black,align=center] {\large Dopplerinstrumentierung 2015\\\large digitale Dokumentation};
+\draw[line width=1.0mm] (0.5,0.85) node[fill=white,thick,inner sep=3pt,font=\sffamily,text=black,align=center] {\large Hochschule Ulm\\\large Institut Medizintechnik und Mechatronik};
+\end{annotatedFigure}
+\begin{comment}
 \begin{tikzpicture}[scale=2] 
 \draw[color=black, thick]
 	(0,0) 	to [C=\ $C_p{=}1.1nF$] (0,-1)
@@ -79,4 +94,5 @@
    %(4.25,0.5) -- (4.25,-2.5)
 %   ;
 \end{tikzpicture}
+\end{comment}
 \end{document}
