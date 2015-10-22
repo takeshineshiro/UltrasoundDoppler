@@ -1,0 +1,75 @@
+---------------------------------------------------
+Report for cell BeamScanner
+   Instance path: BeamScanner
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     545.00        100.0
+                                  LUT4	     461.00        100.0
+                                 IOBUF	         38        100.0
+                                PFUREG	        717        100.0
+                                RIPPLE	         21        100.0
+                                   EBR	          2        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                               sr24bit	          1         2.1
+                              cmp16bit	          1         0.3
+                             flag_ctrl	          1         0.4
+                             fifo24bit	          1        93.4
+                              cnt16bit	          1         1.5
+                              DataFIFO	          1         0.0
+                               CLK_gen	          1         1.5
+---------------------------------------------------
+Report for cell cmp16bit
+   Instance path: BeamScanner/Ctrl_Comparator
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.83         0.3
+                                  LUT4	       1.00         0.2
+                                RIPPLE	          4        19.0
+---------------------------------------------------
+Report for cell cnt16bit
+   Instance path: BeamScanner/Ctrl_Counter
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       8.00         1.5
+                                PFUREG	         16         2.2
+                                RIPPLE	          8        38.1
+---------------------------------------------------
+Report for cell sr24bit
+   Instance path: BeamScanner/SPI_Interface
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      11.50         2.1
+                                PFUREG	         24         3.3
+---------------------------------------------------
+Report for cell fifo24bit
+   Instance path: BeamScanner/Ctrl_Fifo
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     509.10        93.4
+                                  LUT4	     437.00        94.8
+                                PFUREG	        661        92.2
+                                RIPPLE	          6        28.6
+---------------------------------------------------
+Report for cell CLK_gen
+   Instance path: BeamScanner/I212
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       8.27         1.5
+                                  LUT4	      10.00         2.2
+                                PFUREG	         12         1.7
+                                RIPPLE	          3        14.3
+---------------------------------------------------
+Report for cell DataFIFO
+   Instance path: BeamScanner/I213
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          2        100.0
+---------------------------------------------------
+Report for cell flag_ctrl
+   Instance path: BeamScanner/I216
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.08         0.4
+                                  LUT4	       2.00         0.4
+                                PFUREG	          3         0.4

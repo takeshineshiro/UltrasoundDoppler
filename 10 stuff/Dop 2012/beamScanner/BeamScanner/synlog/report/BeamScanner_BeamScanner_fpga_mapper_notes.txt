@@ -1,0 +1,104 @@
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled 
+@N: FX493 |Applying initial value "000000000000000000000000" on instance SPI_Interface.Q[23:0] 
+@N: MF179 :"e:\backup download\usd\beamscanner\cmp16bit.v":39:9:39:23|Found 16 bit by 16 bit '==' comparator, 'Ctrl_Comparator.AeqB'
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_0_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_0_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_0_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_1_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_1_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_1_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_2_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_2_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_2_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_3_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_3_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_3_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_4_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_4_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_4_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_5_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_5_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_5_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_6_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_6_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_6_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_7_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_7_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_7_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_8_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_8_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_8_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_9_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_9_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_9_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_10_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_10_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_10_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_11_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_11_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_11_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_12_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_12_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_12_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_13_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_13_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_13_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_14_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_14_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_14_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_15_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_15_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_15_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_16_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_16_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_16_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_17_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_17_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_17_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_18_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_18_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_18_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_19_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_19_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_19_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_20_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_20_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_20_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_21_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_21_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_21_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_22_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_22_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_22_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_23_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_23_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_23_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_24_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_24_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_24_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_25_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_25_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_25_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_26_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_26_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_26_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_27_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_27_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_27_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_28_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_28_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_28_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_29_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_29_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_29_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_30_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_30_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_30_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: MF179 :"e:\backup download\usd\beamscanner\fifo24bit.v":52:11:52:27|Found 5 bit by 5 bit '==' comparator, 'E_FLAG'
+@N: FX164 |The option to pack flops in the IOB has not been specified 
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.

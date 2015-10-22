@@ -1,0 +1,965 @@
+<HTML>
+<HEAD><TITLE>Synthesis Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Syn"></A><B><U><big>Synthesis Report</big></U></B>
+#Build: Synplify Pro I-2013.09L , Build 064R, Nov 15 2013
+#install: C:\lscc\diamond\3.1_x64\synpbase
+#OS: Windows 7 6.2
+#Hostname: YOGA13
+
+#Implementation: BeamScanner
+
+$ Start of Compile
+#Wed Jul 30 08:59:05 2014
+
+Synopsys Verilog Compiler, version comp201309rc, Build 136R, built Nov 18 2013
+@N|Running in 64-bit mode
+Copyright (C) 1994-2013 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+
+@I::"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v"
+@I::"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\pmi_def.v"
+@I::"C:\lscc\diamond\3.1_x64\synpbase\lib\vlog\umr_capim.v"
+@I::"C:\lscc\diamond\3.1_x64\synpbase\lib\vlog\scemi_objects.v"
+@I::"C:\lscc\diamond\3.1_x64\synpbase\lib\vlog\scemi_pipes.svh"
+@I::"C:\lscc\diamond\3.1_x64\synpbase\lib\vlog\hypermods.v"
+@I::"E:\backup download\usd\beamScanner\cmp16bit.v"
+@I::"E:\backup download\usd\beamScanner\cnt16bit.v"
+@I::"E:\backup download\usd\beamScanner\BeamScanner\BeamScanner.v"
+@I::"E:\backup download\usd\beamScanner\sr24bit.v"
+@I::"E:\backup download\usd\beamScanner\fifo24bit.v"
+@I::"E:\backup download\usd\beamScanner\splitter24_16_8.v"
+@I::"E:\backup download\usd\beamScanner\CLK_gen.v"
+@I::"E:\backup download\usd\beamScanner\DataFIFO.v"
+@N: CG334 :"E:\backup download\usd\beamScanner\DataFIFO.v":28:16:28:28|Read directive translate_off 
+@N: CG333 :"E:\backup download\usd\beamScanner\DataFIFO.v":41:16:41:27|Read directive translate_on 
+@N: CG334 :"E:\backup download\usd\beamScanner\DataFIFO.v":76:16:76:28|Read directive translate_off 
+@N: CG333 :"E:\backup download\usd\beamScanner\DataFIFO.v":89:16:89:27|Read directive translate_on 
+@I::"E:\backup download\usd\beamScanner\flag_ctrl.v"
+Verilog syntax check successful!
+File E:\backup download\usd\beamScanner\fifo24bit.v changed - recompiling
+Selecting top level module BeamScanner
+@N: CG364 :"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v":817:7:817:9|Synthesizing module OR2
+
+@N: CG364 :"E:\backup download\usd\beamScanner\flag_ctrl.v":15:7:15:15|Synthesizing module flag_ctrl
+
+@N: CG364 :"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v":1303:7:1303:13|Synthesizing module FIFO8KA
+
+@N: CG364 :"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v":989:7:989:9|Synthesizing module VHI
+
+@N: CG364 :"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v":994:7:994:9|Synthesizing module VLO
+
+@N: CG364 :"E:\backup download\usd\beamScanner\DataFIFO.v":8:7:8:14|Synthesizing module DataFIFO
+
+@N: CG364 :"E:\backup download\usd\beamScanner\CLK_gen.v":4:7:4:13|Synthesizing module CLK_gen
+
+@N: CG364 :"E:\backup download\usd\beamScanner\splitter24_16_8.v":11:7:11:21|Synthesizing module splitter24_16_8
+
+@N: CG364 :"E:\backup download\usd\beamScanner\fifo24bit.v":16:7:16:15|Synthesizing module fifo24bit
+
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_31_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_30_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_29_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_28_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_27_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_26_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_25_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_24_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_23_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_22_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_21_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_20_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_19_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_18_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_17_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_16_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_15_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_14_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_13_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_12_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_11_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_10_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_9_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_8_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_7_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_6_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_5_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_4_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_3_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_2_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_1_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_0_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[0] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[1] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[2] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[3] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[4] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[5] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[6] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[7] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[8] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[9] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[10] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[11] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[12] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[13] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[14] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[15] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[16] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[17] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[18] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[19] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[20] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[21] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[22] is always 0, optimizing ...
+@W: CL189 :"E:\backup download\usd\beamScanner\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[23] is always 0, optimizing ...
+@N: CG364 :"E:\backup download\usd\beamScanner\sr24bit.v":17:7:17:13|Synthesizing module sr24bit
+
+@N: CG364 :"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v":919:7:919:9|Synthesizing module PUR
+
+@N: CG364 :"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v":587:7:587:9|Synthesizing module GSR
+
+@N: CG364 :"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v":411:7:411:12|Synthesizing module FD1S1D
+
+@N: CG364 :"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v":209:8:209:11|Synthesizing module AND3
+
+@N: CG364 :"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v":203:7:203:10|Synthesizing module AND2
+
+@N: CG364 :"E:\backup download\usd\beamScanner\cnt16bit.v":16:7:16:14|Synthesizing module cnt16bit
+
+@N: CG179 :"E:\backup download\usd\beamScanner\cnt16bit.v":40:7:40:7|Removing redundant assignment
+@N: CG364 :"E:\backup download\usd\beamScanner\cmp16bit.v":15:7:15:14|Synthesizing module cmp16bit
+
+@N: CG364 :"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v":600:7:600:8|Synthesizing module IB
+
+@N: CG364 :"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v":615:7:615:9|Synthesizing module INV
+
+@N: CG364 :"E:\backup download\usd\beamScanner\BeamScanner\BeamScanner.v":3:7:3:17|Synthesizing module BeamScanner
+
+@W: CG781 :"E:\backup download\usd\beamScanner\BeamScanner\BeamScanner.v":63:9:63:12|Undriven input RPReset on instance I213, tying to 0
+@END
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 76MB peak: 76MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Jul 30 08:59:06 2014
+
+###########################################################]
+Premap Report
+
+Synopsys Lattice Technology Pre-mapping, Version maplat, Build 800R, Built Nov 18 2013 10:58:25
+Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Product Version I-2013.09L 
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+Reading constraint file: E:\backup download\usd\beamScanner\Timing.sdc
+@L: E:\backup download\usd\beamScanner\BeamScanner\BeamScanner_BeamScanner_scck.rpt 
+Printing clock  summary report in "E:\backup download\usd\beamScanner\BeamScanner\BeamScanner_BeamScanner_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 115MB peak: 115MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 115MB peak: 117MB)
+
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@W: MT462 :"e:\backup download\usd\beamscanner\beamscanner\beamscanner.v":94:5:94:7|Net WR_ctrlFF appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"e:\backup download\usd\beamscanner\beamscanner\beamscanner.v":93:5:93:7|Net WR_Freq appears to be an unidentified clock source. Assuming default frequency. 
+syn_allowed_resources : blockrams=3  set on top level netlist BeamScanner
+
+
+Clock Summary
+**************
+
+Start                                    Requested     Requested     Clock        Clock              
+Clock                                    Frequency     Period        Type         Group              
+-----------------------------------------------------------------------------------------------------
+BeamScanner|RD_ctrlFF_inferred_clock     1.0 MHz       1000.000      inferred     Inferred_clkgroup_1
+BeamScanner|SRCLK                        1.0 MHz       1000.000      inferred     Inferred_clkgroup_0
+CLK_64MHz                                64.0 MHz      15.625        declared     default_clkgroup_0 
+System                                   1.0 MHz       1000.000      system       system_clkgroup    
+=====================================================================================================
+
+@W: MT531 :"e:\backup download\usd\beamscanner\clk_gen.v":41:0:41:5|Found signal identified as System clock which controls 752 sequential elements including I212.Freq2.  Using this clock, which has no specified timing constraint, can prevent conversion of gated or generated clocks and can adversely impact design performance. 
+@W: MT529 :"e:\backup download\usd\beamscanner\sr24bit.v":41:0:41:5|Found inferred clock BeamScanner|SRCLK which controls 24 sequential elements including SPI_Interface.Q[0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"e:\backup download\usd\beamscanner\fifo24bit.v":58:0:58:5|Found inferred clock BeamScanner|RD_ctrlFF_inferred_clock which controls 5 sequential elements including Ctrl_Fifo.RD_PTR[4:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 79MB peak: 143MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Jul 30 08:59:08 2014
+
+###########################################################]
+Map & Optimize Report
+
+Synopsys Lattice Technology Mapper, Version maplat, Build 800R, Built Nov 18 2013 10:58:25
+Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Product Version I-2013.09L 
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 114MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 114MB peak: 116MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 143MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@W: MT462 :"e:\backup download\usd\beamscanner\beamscanner\beamscanner.v":94:5:94:7|Net WR_ctrlFF appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"e:\backup download\usd\beamscanner\beamscanner\beamscanner.v":93:5:93:7|Net WR_Freq appears to be an unidentified clock source. Assuming default frequency. 
+@N: FX493 |Applying initial value "000000000000000000000000" on instance SPI_Interface.Q[23:0] 
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 141MB peak: 143MB)
+
+@N:"e:\backup download\usd\beamscanner\cnt16bit.v":35:0:35:5|Found counter in view:work.BeamScanner(verilog) inst Ctrl_Counter.Q[15:0]
+@N: MF179 :"e:\backup download\usd\beamscanner\cmp16bit.v":39:9:39:23|Found 16 bit by 16 bit '==' comparator, 'Ctrl_Comparator.AeqB'
+@N:"e:\backup download\usd\beamscanner\clk_gen.v":49:0:49:5|Found counter in view:work.CLK_gen(verilog) inst SYNCcnt[4:0]
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_0_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_0_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_0_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_1_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_1_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_1_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_2_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_2_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_2_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_3_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_3_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_3_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_4_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_4_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_4_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_5_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_5_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_5_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_6_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_6_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_6_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_7_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_7_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_7_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_8_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_8_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_8_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_9_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_9_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_9_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_10_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_10_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_10_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_11_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_11_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_11_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_12_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_12_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_12_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_13_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_13_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_13_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_14_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_14_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_14_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_15_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_15_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_15_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_16_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_16_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_16_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_17_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_17_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_17_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_18_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_18_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_18_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_19_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_19_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_19_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_20_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_20_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_20_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_21_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_21_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_21_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_22_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_22_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_22_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_23_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_23_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_23_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_24_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_24_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_24_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_25_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_25_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_25_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_26_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_26_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_26_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_27_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_27_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_27_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_28_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_28_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_28_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_29_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_29_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_29_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_30_[23] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_30_[22] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N: BN362 :"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Removing sequential instance FF_MEM_30_[21] in hierarchy view:work.fifo24bit(verilog) because there are no references to its outputs 
+@N:"e:\backup download\usd\beamscanner\fifo24bit.v":58:0:58:5|Found counter in view:work.fifo24bit(verilog) inst RD_PTR[4:0]
+@N:"e:\backup download\usd\beamscanner\fifo24bit.v":65:0:65:5|Found counter in view:work.fifo24bit(verilog) inst WR_PTR[4:0]
+@N: MF179 :"e:\backup download\usd\beamscanner\fifo24bit.v":52:11:52:27|Found 5 bit by 5 bit '==' comparator, 'E_FLAG'
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 144MB peak: 144MB)
+
+
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 145MB peak: 146MB)
+
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 150MB peak: 151MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 150MB peak: 151MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 150MB peak: 151MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 150MB peak: 151MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 150MB peak: 151MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 149MB peak: 151MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+------------------------------------------------------------
+
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 149MB peak: 151MB)
+
+@N: FX164 |The option to pack flops in the IOB has not been specified 
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 149MB peak: 151MB)
+
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+4 non-gated/non-generated clock tree(s) driving 712 clock pin(s) of sequential element(s)
+1 gated/generated clock tree(s) driving 5 clock pin(s) of sequential element(s)
+0 instances converted, 5 sequential instances remain driven by gated/generated clocks
+
+=============================== Non-Gated/Non-Generated Clocks ================================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance        
+-----------------------------------------------------------------------------------------------
+@K:CKID0002       SRCLK               port                   24         SPI_Interface.Q[23]    
+@K:CKID0003       I49                 AND2                   656        Ctrl_Fifo.FF_MEM_0_[20]
+@K:CKID0004       I59                 AND2                   3          I212.Freq2             
+@K:CKID0005       CLK_64MHz           port                   29         I45                    
+===============================================================================================
+=================================================================================================== Gated/Generated Clocks ===================================================================================================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance         Explanation                                                                                                                   
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0001       I46                 AND3                   5          Ctrl_Fifo.RD_PTR[4]     Gating structure creates improper gating logic. See the Gated Clocks description in the user guide for conversion requirements
+==============================================================================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
+Writing Analyst data base E:\backup download\usd\beamScanner\BeamScanner\BeamScanner_BeamScanner.srm
+@W: MT462 :"e:\backup download\usd\beamscanner\beamscanner\beamscanner.v":94:5:94:7|Net WR_ctrlFF appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"e:\backup download\usd\beamscanner\beamscanner\beamscanner.v":93:5:93:7|Net WR_Freq appears to be an unidentified clock source. Assuming default frequency. 
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 148MB peak: 151MB)
+
+Writing EDIF Netlist and constraint files
+@W: MT462 :"e:\backup download\usd\beamscanner\beamscanner\beamscanner.v":94:5:94:7|Net WR_ctrlFF appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"e:\backup download\usd\beamscanner\beamscanner\beamscanner.v":93:5:93:7|Net WR_Freq appears to be an unidentified clock source. Assuming default frequency. 
+I-2013.09L 
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+@W: BW261 |Block-path constraint from CLKNET "BeamScanner|RD_ctrlFF_inferred_clock" to PORT "CLK_64MHz" not forward annotated in -lpf file. 
+@W: BW261 |Block-path constraint from CLKNET "BeamScanner|RD_ctrlFF_inferred_clock" to PORT "BeamScanner|SRCLK" not forward annotated in -lpf file. 
+@W: BW261 |Block-path constraint from PORT "CLK_64MHz" to CLKNET "BeamScanner|RD_ctrlFF_inferred_clock" not forward annotated in -lpf file. 
+@W: BW261 |Block-path constraint from PORT "BeamScanner|SRCLK" to CLKNET "BeamScanner|RD_ctrlFF_inferred_clock" not forward annotated in -lpf file. 
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 153MB peak: 155MB)
+
+@W: MT246 :"e:\backup download\usd\beamscanner\beamscanner\beamscanner.v":85:5:85:7|Blackbox AND3 is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT246 :"e:\backup download\usd\beamscanner\datafifo.v":90:12:90:23|Blackbox FIFO8KA is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+Found clock CLK_64MHz with period 15.63ns 
+@W: MT420 |Found inferred clock BeamScanner|SRCLK with period 1000.00ns. Please declare a user-defined clock on object "p:SRCLK"
+
+@W: MT420 |Found inferred clock BeamScanner|RD_ctrlFF_inferred_clock with period 1000.00ns. Please declare a user-defined clock on object "n:RD_ctrlFF"
+
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Wed Jul 30 08:59:12 2014
+#
+
+
+Top view:               BeamScanner
+Requested Frequency:    1.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    E:\backup download\usd\beamScanner\Timing.sdc
+                       
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
+
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: 5.769
+
+                                         Requested     Estimated     Requested     Estimated                 Clock        Clock              
+Starting Clock                           Frequency     Frequency     Period        Period        Slack       Type         Group              
+---------------------------------------------------------------------------------------------------------------------------------------------
+BeamScanner|RD_ctrlFF_inferred_clock     1.0 MHz       188.3 MHz     1000.000      5.310         994.690     inferred     Inferred_clkgroup_1
+BeamScanner|SRCLK                        1.0 MHz       464.0 MHz     1000.000      2.155         997.845     inferred     Inferred_clkgroup_0
+CLK_64MHz                                64.0 MHz      179.0 MHz     15.625        5.588         10.037      declared     default_clkgroup_0 
+System                                   1.0 MHz       174.7 MHz     1000.000      5.724         994.276     system       system_clkgroup    
+=============================================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                      |    rise  to  rise     |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                              Ending                                |  constraint  slack    |  constraint  slack  |  constraint  slack  |  constraint  slack
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                System                                |  1000.000    994.276  |  No paths    -      |  No paths    -      |  No paths    -    
+System                                CLK_64MHz                             |  15.625      5.769    |  No paths    -      |  No paths    -      |  No paths    -    
+System                                BeamScanner|RD_ctrlFF_inferred_clock  |  1000.000    995.241  |  No paths    -      |  No paths    -      |  No paths    -    
+CLK_64MHz                             System                                |  15.625      14.073   |  No paths    -      |  No paths    -      |  No paths    -    
+CLK_64MHz                             CLK_64MHz                             |  15.625      10.037   |  No paths    -      |  No paths    -      |  No paths    -    
+BeamScanner|SRCLK                     System                                |  1000.000    997.845  |  No paths    -      |  No paths    -      |  No paths    -    
+BeamScanner|SRCLK                     BeamScanner|SRCLK                     |  1000.000    997.845  |  No paths    -      |  No paths    -      |  No paths    -    
+BeamScanner|RD_ctrlFF_inferred_clock  System                                |  1000.000    993.012  |  No paths    -      |  No paths    -      |  No paths    -    
+BeamScanner|RD_ctrlFF_inferred_clock  CLK_64MHz                             |  Diff grp    -        |  No paths    -      |  No paths    -      |  No paths    -    
+BeamScanner|RD_ctrlFF_inferred_clock  BeamScanner|RD_ctrlFF_inferred_clock  |  1000.000    994.690  |  No paths    -      |  No paths    -      |  No paths    -    
+====================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: BeamScanner|RD_ctrlFF_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                        Starting                                                                   Arrival            
+Instance                Reference                                Type        Pin     Net           Time        Slack  
+                        Clock                                                                                         
+----------------------------------------------------------------------------------------------------------------------
+Ctrl_Fifo.RD_PTR[4]     BeamScanner|RD_ctrlFF_inferred_clock     FD1P3DX     Q       RD_PTR[4]     2.612       993.012
+Ctrl_Fifo.RD_PTR[3]     BeamScanner|RD_ctrlFF_inferred_clock     FD1P3DX     Q       RD_PTR[3]     2.208       993.534
+Ctrl_Fifo.RD_PTR[1]     BeamScanner|RD_ctrlFF_inferred_clock     FD1P3DX     Q       RD_PTR[1]     1.906       994.865
+Ctrl_Fifo.RD_PTR[2]     BeamScanner|RD_ctrlFF_inferred_clock     FD1P3DX     Q       RD_PTR[2]     2.007       994.892
+Ctrl_Fifo.RD_PTR[0]     BeamScanner|RD_ctrlFF_inferred_clock     FD1P3DX     Q       RD_PTR[0]     1.828       994.943
+======================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                        Starting                                                                     Required            
+Instance                Reference                                Type        Pin     Net             Time         Slack  
+                        Clock                                                                                            
+-------------------------------------------------------------------------------------------------------------------------
+I42                     BeamScanner|RD_ctrlFF_inferred_clock     AND2        A       X[16]           1000.000     993.012
+I43                     BeamScanner|RD_ctrlFF_inferred_clock     AND2        A       X[17]           1000.000     993.012
+I44                     BeamScanner|RD_ctrlFF_inferred_clock     AND2        A       X[19]           1000.000     993.012
+I74                     BeamScanner|RD_ctrlFF_inferred_clock     AND2        A       X[18]           1000.000     993.012
+I225                    BeamScanner|RD_ctrlFF_inferred_clock     AND2        A       X[20]           1000.000     993.012
+Ctrl_Fifo.RD_PTR[4]     BeamScanner|RD_ctrlFF_inferred_clock     FD1P3DX     D       RD_PTR_s[4]     1000.425     994.690
+Ctrl_Fifo.RD_PTR[0]     BeamScanner|RD_ctrlFF_inferred_clock     FD1P3DX     SP      E_FLAG_NE       999.807      994.908
+Ctrl_Fifo.RD_PTR[1]     BeamScanner|RD_ctrlFF_inferred_clock     FD1P3DX     SP      E_FLAG_NE       999.807      994.908
+Ctrl_Fifo.RD_PTR[2]     BeamScanner|RD_ctrlFF_inferred_clock     FD1P3DX     SP      E_FLAG_NE       999.807      994.908
+Ctrl_Fifo.RD_PTR[3]     BeamScanner|RD_ctrlFF_inferred_clock     FD1P3DX     SP      E_FLAG_NE       999.807      994.908
+=========================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      1000.000
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    + Estimated clock delay at ending point: 0.000
+    = Required time:                         1000.000
+
+    - Propagation time:                      6.988
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 993.012
+
+    Number of logic level(s):                5
+    Starting point:                          Ctrl_Fifo.RD_PTR[4] / Q
+    Ending point:                            I42 / A
+    The start point is clocked by            BeamScanner|RD_ctrlFF_inferred_clock [rising] on pin CK
+    The end   point is clocked by            System [rising]
+
+Instance / Net                        Pin      Pin               Arrival     No. of    
+Name                     Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------
+Ctrl_Fifo.RD_PTR[4]      FD1P3DX      Q        Out     2.612     2.612       -         
+RD_PTR[4]                Net          -        -       -         -           338       
+Ctrl_Fifo.Q_3_am[16]     ORCALUT4     C        In      0.000     2.612       -         
+Ctrl_Fifo.Q_3_am[16]     ORCALUT4     Z        Out     1.189     3.801       -         
+Q_3_am[16]               Net          -        -       -         -           1         
+Ctrl_Fifo.Q_3[16]        PFUMX        BLUT     In      0.000     3.801       -         
+Ctrl_Fifo.Q_3[16]        PFUMX        Z        Out     0.236     4.037       -         
+Q_3[16]                  Net          -        -       -         -           1         
+Ctrl_Fifo.Q_7[16]        L6MUX21      D0       In      0.000     4.037       -         
+Ctrl_Fifo.Q_7[16]        L6MUX21      Z        Out     1.307     5.344       -         
+Q_7[16]                  Net          -        -       -         -           1         
+Ctrl_Fifo.Q_15[16]       L6MUX21      D0       In      0.000     5.344       -         
+Ctrl_Fifo.Q_15[16]       L6MUX21      Z        Out     1.307     6.651       -         
+Q_15[16]                 Net          -        -       -         -           1         
+Ctrl_Fifo.Q_31[16]       ORCALUT4     A        In      0.000     6.651       -         
+Ctrl_Fifo.Q_31[16]       ORCALUT4     Z        Out     0.337     6.988       -         
+X[16]                    Net          -        -       -         -           1         
+I42                      AND2         A        In      0.000     6.988       -         
+=======================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: BeamScanner|SRCLK
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                       Starting                                               Arrival            
+Instance               Reference             Type        Pin     Net          Time        Slack  
+                       Clock                                                                     
+-------------------------------------------------------------------------------------------------
+SPI_Interface.Q[1]     BeamScanner|SRCLK     FD1P3AX     Q       SRBUS[1]     1.872       997.845
+SPI_Interface.Q[2]     BeamScanner|SRCLK     FD1P3AX     Q       SRBUS[2]     1.872       997.845
+SPI_Interface.Q[3]     BeamScanner|SRCLK     FD1P3AX     Q       SRBUS[3]     1.872       997.845
+SPI_Interface.Q[0]     BeamScanner|SRCLK     FD1P3AX     Q       SRBUS[0]     1.869       997.848
+SPI_Interface.Q[4]     BeamScanner|SRCLK     FD1P3AX     Q       SRBUS[4]     1.869       997.848
+SPI_Interface.Q[5]     BeamScanner|SRCLK     FD1P3AX     Q       SRBUS[5]     1.869       997.848
+SPI_Interface.Q[6]     BeamScanner|SRCLK     FD1P3AX     Q       SRBUS[6]     1.869       997.848
+SPI_Interface.Q[7]     BeamScanner|SRCLK     FD1P3AX     Q       SRBUS[7]     1.869       997.848
+SPI_Interface.Q[8]     BeamScanner|SRCLK     FD1P3AX     Q       SRBUS[8]     1.869       997.848
+SPI_Interface.Q[9]     BeamScanner|SRCLK     FD1P3AX     Q       SRBUS[9]     1.869       997.848
+=================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                           Starting                                               Required            
+Instance                   Reference             Type        Pin     Net          Time         Slack  
+                           Clock                                                                      
+------------------------------------------------------------------------------------------------------
+Ctrl_Fifo.FF_MEM_0_[1]     BeamScanner|SRCLK     FD1P3AX     D       SRBUS[1]     999.717      997.845
+Ctrl_Fifo.FF_MEM_0_[2]     BeamScanner|SRCLK     FD1P3AX     D       SRBUS[2]     999.717      997.845
+Ctrl_Fifo.FF_MEM_0_[3]     BeamScanner|SRCLK     FD1P3AX     D       SRBUS[3]     999.717      997.845
+Ctrl_Fifo.FF_MEM_1_[1]     BeamScanner|SRCLK     FD1P3AX     D       SRBUS[1]     999.717      997.845
+Ctrl_Fifo.FF_MEM_1_[2]     BeamScanner|SRCLK     FD1P3AX     D       SRBUS[2]     999.717      997.845
+Ctrl_Fifo.FF_MEM_1_[3]     BeamScanner|SRCLK     FD1P3AX     D       SRBUS[3]     999.717      997.845
+Ctrl_Fifo.FF_MEM_2_[1]     BeamScanner|SRCLK     FD1P3AX     D       SRBUS[1]     999.717      997.845
+Ctrl_Fifo.FF_MEM_2_[2]     BeamScanner|SRCLK     FD1P3AX     D       SRBUS[2]     999.717      997.845
+Ctrl_Fifo.FF_MEM_2_[3]     BeamScanner|SRCLK     FD1P3AX     D       SRBUS[3]     999.717      997.845
+Ctrl_Fifo.FF_MEM_3_[1]     BeamScanner|SRCLK     FD1P3AX     D       SRBUS[1]     999.717      997.845
+======================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      1000.000
+    - Setup time:                            0.283
+    + Clock delay at ending point:           0.000 (ideal)
+    + Estimated clock delay at ending point: 0.000
+    = Required time:                         999.717
+
+    - Propagation time:                      1.872
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 997.845
+
+    Number of logic level(s):                0
+    Starting point:                          SPI_Interface.Q[1] / Q
+    Ending point:                            Ctrl_Fifo.FF_MEM_0_[1] / D
+    The start point is clocked by            BeamScanner|SRCLK [rising] on pin CK
+    The end   point is clocked by            System [rising] on pin CK
+
+Instance / Net                         Pin      Pin               Arrival     No. of    
+Name                       Type        Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------
+SPI_Interface.Q[1]         FD1P3AX     Q        Out     1.872     1.872       -         
+SRBUS[1]                   Net         -        -       -         -           33        
+Ctrl_Fifo.FF_MEM_0_[1]     FD1P3AX     D        In      0.000     1.872       -         
+========================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: CLK_64MHz
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                      Starting                                     Arrival           
+Instance              Reference     Type        Pin     Net        Time        Slack 
+                      Clock                                                          
+-------------------------------------------------------------------------------------
+Ctrl_Counter.Q[0]     CLK_64MHz     FD1P3DX     Q       CNT[0]     1.456       10.037
+Ctrl_Counter.Q[1]     CLK_64MHz     FD1P3DX     Q       CNT[1]     1.456       10.037
+Ctrl_Counter.Q[2]     CLK_64MHz     FD1P3DX     Q       CNT[2]     1.456       10.037
+Ctrl_Counter.Q[3]     CLK_64MHz     FD1P3DX     Q       CNT[3]     1.456       10.037
+Ctrl_Counter.Q[4]     CLK_64MHz     FD1P3DX     Q       CNT[4]     1.456       10.165
+Ctrl_Counter.Q[5]     CLK_64MHz     FD1P3DX     Q       CNT[5]     1.456       10.165
+Ctrl_Counter.Q[6]     CLK_64MHz     FD1P3DX     Q       CNT[6]     1.456       10.165
+Ctrl_Counter.Q[7]     CLK_64MHz     FD1P3DX     Q       CNT[7]     1.456       10.165
+Ctrl_Counter.Q[8]     CLK_64MHz     FD1P3DX     Q       CNT[8]     1.456       10.293
+Ctrl_Counter.Q[9]     CLK_64MHz     FD1P3DX     Q       CNT[9]     1.456       10.293
+=====================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                       Starting                                                                   Required           
+Instance               Reference     Type        Pin     Net                                      Time         Slack 
+                       Clock                                                                                         
+---------------------------------------------------------------------------------------------------------------------
+I45                    CLK_64MHz     FD1S1D      D       Ctrl_Comparator.AeqB_0_data_tmp_i[7]     15.342       10.037
+Ctrl_Counter.Q[14]     CLK_64MHz     FD1P3DX     D       Q_s[14]                                  16.050       10.300
+Ctrl_Counter.Q[15]     CLK_64MHz     FD1P3DX     D       Q_s[15]                                  16.050       10.300
+Ctrl_Counter.Q[12]     CLK_64MHz     FD1P3DX     D       Q_s[12]                                  16.050       10.428
+Ctrl_Counter.Q[13]     CLK_64MHz     FD1P3DX     D       Q_s[13]                                  16.050       10.428
+Ctrl_Counter.Q[10]     CLK_64MHz     FD1P3DX     D       Q_s[10]                                  16.050       10.556
+Ctrl_Counter.Q[11]     CLK_64MHz     FD1P3DX     D       Q_s[11]                                  16.050       10.556
+Ctrl_Counter.Q[8]      CLK_64MHz     FD1P3DX     D       Q_s[8]                                   16.050       10.684
+Ctrl_Counter.Q[9]      CLK_64MHz     FD1P3DX     D       Q_s[9]                                   16.050       10.684
+Ctrl_Counter.Q[6]      CLK_64MHz     FD1P3DX     D       Q_s[6]                                   16.050       10.812
+=====================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      15.625
+    - Setup time:                            0.283
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         15.342
+
+    - Propagation time:                      5.305
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 10.037
+
+    Number of logic level(s):                5
+    Starting point:                          Ctrl_Counter.Q[0] / Q
+    Ending point:                            I45 / D
+    The start point is clocked by            CLK_64MHz [rising] on pin CK
+    The end   point is clocked by            CLK_64MHz [rising] on pin CK
+
+Instance / Net                                        Pin       Pin               Arrival     No. of    
+Name                                      Type        Name      Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------
+Ctrl_Counter.Q[0]                         FD1P3DX     Q         Out     1.456     1.456       -         
+CNT[0]                                    Net         -         -       -         -           2         
+Ctrl_Comparator.AeqB_0_I_1_0              CCU2        A0        In      0.000     1.456       -         
+Ctrl_Comparator.AeqB_0_I_1_0              CCU2        COUT1     Out     1.761     3.217       -         
+AeqB_0_data_tmp[1]                        Net         -         -       -         -           1         
+Ctrl_Comparator.AeqB_0_I_15_0             CCU2        CIN       In      0.000     3.217       -         
+Ctrl_Comparator.AeqB_0_I_15_0             CCU2        COUT1     Out     0.128     3.345       -         
+AeqB_0_data_tmp[3]                        Net         -         -       -         -           1         
+Ctrl_Comparator.AeqB_0_I_45_0             CCU2        CIN       In      0.000     3.345       -         
+Ctrl_Comparator.AeqB_0_I_45_0             CCU2        COUT1     Out     0.128     3.473       -         
+AeqB_0_data_tmp[5]                        Net         -         -       -         -           1         
+Ctrl_Comparator.AeqB_0_I_39_0             CCU2        CIN       In      0.000     3.473       -         
+Ctrl_Comparator.AeqB_0_I_39_0             CCU2        COUT1     Out     0.980     4.453       -         
+AeqB_0_data_tmp[7]                        Net         -         -       -         -           1         
+Ctrl_Comparator.AeqB_0_I_39_0_RNI4ODC     INV         A         In      0.000     4.453       -         
+Ctrl_Comparator.AeqB_0_I_39_0_RNI4ODC     INV         Z         Out     0.852     5.305       -         
+AeqB_0_data_tmp_i[7]                      Net         -         -       -         -           1         
+I45                                       FD1S1D      D         In      0.000     5.305       -         
+========================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                           Starting                                           Arrival          
+Instance                   Reference     Type        Pin     Net              Time        Slack
+                           Clock                                                               
+-----------------------------------------------------------------------------------------------
+Ctrl_Fifo.FF_MEM_0_[0]     System        FD1P3AX     Q       FF_MEM_0_[0]     1.348       5.769
+Ctrl_Fifo.FF_MEM_0_[1]     System        FD1P3AX     Q       FF_MEM_0_[1]     1.348       5.769
+Ctrl_Fifo.FF_MEM_0_[2]     System        FD1P3AX     Q       FF_MEM_0_[2]     1.348       5.769
+Ctrl_Fifo.FF_MEM_0_[3]     System        FD1P3AX     Q       FF_MEM_0_[3]     1.348       5.769
+Ctrl_Fifo.FF_MEM_2_[0]     System        FD1P3AX     Q       FF_MEM_2_[0]     1.348       5.769
+Ctrl_Fifo.FF_MEM_2_[1]     System        FD1P3AX     Q       FF_MEM_2_[1]     1.348       5.769
+Ctrl_Fifo.FF_MEM_2_[2]     System        FD1P3AX     Q       FF_MEM_2_[2]     1.348       5.769
+Ctrl_Fifo.FF_MEM_2_[3]     System        FD1P3AX     Q       FF_MEM_2_[3]     1.348       5.769
+Ctrl_Fifo.FF_MEM_4_[0]     System        FD1P3AX     Q       FF_MEM_4_[0]     1.348       5.769
+Ctrl_Fifo.FF_MEM_4_[1]     System        FD1P3AX     Q       FF_MEM_4_[1]     1.348       5.769
+===============================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                    Starting                                                                   Required           
+Instance            Reference     Type        Pin     Net                                      Time         Slack 
+                    Clock                                                                                         
+------------------------------------------------------------------------------------------------------------------
+I45                 System        FD1S1D      D       Ctrl_Comparator.AeqB_0_data_tmp_i[7]     15.342       5.769 
+I212.SYNCcnt[4]     System        FD1S3AX     D       SYNCcnt_s[4]                             16.050       10.883
+I212.SYNCcnt[2]     System        FD1S3AX     D       SYNCcnt_s[2]                             16.050       11.011
+I212.SYNCcnt[3]     System        FD1S3AX     D       SYNCcnt_s[3]                             16.050       11.011
+I212.SYNCcnt[0]     System        FD1S3AX     D       SYNCcnt_s[0]                             16.050       12.455
+I212.SYNCcnt[1]     System        FD1S3AX     D       SYNCcnt_s[1]                             16.050       12.455
+I216.read           System        FD1S3IX     D       fb_0                                     14.622       13.865
+I216.read           System        FD1S3IX     CD      read6                                    15.432       14.675
+I216.oldAE          System        FD1S3AX     D       N_33                                     15.342       15.342
+I216.oldAF          System        FD1S3AX     D       N_32                                     15.342       15.342
+==================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      15.625
+    - Setup time:                            0.283
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         15.342
+
+    - Propagation time:                      9.573
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (critical) :                     5.769
+
+    Number of logic level(s):                10
+    Starting point:                          Ctrl_Fifo.FF_MEM_0_[0] / Q
+    Ending point:                            I45 / D
+    The start point is clocked by            System [rising] on pin CK
+    The end   point is clocked by            CLK_64MHz [rising] on pin CK
+
+Instance / Net                                         Pin       Pin               Arrival     No. of    
+Name                                      Type         Name      Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------
+Ctrl_Fifo.FF_MEM_0_[0]                    FD1P3AX      Q         Out     1.348     1.348       -         
+FF_MEM_0_[0]                              Net          -         -       -         -           1         
+Ctrl_Fifo.Q_3_am[0]                       ORCALUT4     A         In      0.000     1.348       -         
+Ctrl_Fifo.Q_3_am[0]                       ORCALUT4     Z         Out     1.189     2.537       -         
+Q_3_am[0]                                 Net          -         -       -         -           1         
+Ctrl_Fifo.Q_3[0]                          PFUMX        BLUT      In      0.000     2.537       -         
+Ctrl_Fifo.Q_3[0]                          PFUMX        Z         Out     0.236     2.773       -         
+Q_3[0]                                    Net          -         -       -         -           1         
+Ctrl_Fifo.Q_7[0]                          L6MUX21      D0        In      0.000     2.773       -         
+Ctrl_Fifo.Q_7[0]                          L6MUX21      Z         Out     1.307     4.080       -         
+Q_7[0]                                    Net          -         -       -         -           1         
+Ctrl_Fifo.Q_15[0]                         L6MUX21      D0        In      0.000     4.080       -         
+Ctrl_Fifo.Q_15[0]                         L6MUX21      Z         Out     1.307     5.387       -         
+Q_15[0]                                   Net          -         -       -         -           1         
+Ctrl_Fifo.Q_31[0]                         ORCALUT4     A         In      0.000     5.387       -         
+Ctrl_Fifo.Q_31[0]                         ORCALUT4     Z         Out     0.337     5.724       -         
+X[0]                                      Net          -         -       -         -           1         
+Ctrl_Comparator.AeqB_0_I_1_0              CCU2         C0        In      0.000     5.724       -         
+Ctrl_Comparator.AeqB_0_I_1_0              CCU2         COUT1     Out     1.761     7.485       -         
+AeqB_0_data_tmp[1]                        Net          -         -       -         -           1         
+Ctrl_Comparator.AeqB_0_I_15_0             CCU2         CIN       In      0.000     7.485       -         
+Ctrl_Comparator.AeqB_0_I_15_0             CCU2         COUT1     Out     0.128     7.613       -         
+AeqB_0_data_tmp[3]                        Net          -         -       -         -           1         
+Ctrl_Comparator.AeqB_0_I_45_0             CCU2         CIN       In      0.000     7.613       -         
+Ctrl_Comparator.AeqB_0_I_45_0             CCU2         COUT1     Out     0.128     7.741       -         
+AeqB_0_data_tmp[5]                        Net          -         -       -         -           1         
+Ctrl_Comparator.AeqB_0_I_39_0             CCU2         CIN       In      0.000     7.741       -         
+Ctrl_Comparator.AeqB_0_I_39_0             CCU2         COUT1     Out     0.980     8.721       -         
+AeqB_0_data_tmp[7]                        Net          -         -       -         -           1         
+Ctrl_Comparator.AeqB_0_I_39_0_RNI4ODC     INV          A         In      0.000     8.721       -         
+Ctrl_Comparator.AeqB_0_I_39_0_RNI4ODC     INV          Z         Out     0.852     9.573       -         
+AeqB_0_data_tmp_i[7]                      Net          -         -       -         -           1         
+I45                                       FD1S1D       D         In      0.000     9.573       -         
+=========================================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+---------------------------------------
+Resource Usage Report
+Part: lcmxo2280c-3
+
+Register bits: 716 of 2280 (31%)
+Latch bits:      1
+PIC Latch:       0
+I/O cells:       38
+
+
+Details:
+AND2:           10
+AND3:           2
+CCU2:           21
+FD1P3AX:        675
+FD1P3DX:        26
+FD1S1D:         1
+FD1S3AX:        14
+FD1S3IX:        1
+FIFO8KA:        2
+GSR:            1
+IB:             22
+INV:            13
+L6MUX21:        63
+OB:             16
+OR2:            1
+ORCALUT4:       453
+PFUMX:          168
+PUR:            1
+VHI:            7
+VLO:            7
+false:          1
+true:           1
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:03s; Memory used current: 54MB peak: 155MB)
+
+Process took 0h:00m:04s realtime, 0h:00m:03s cputime
+# Wed Jul 30 08:59:12 2014
+
+###########################################################]
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

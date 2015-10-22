@@ -1,0 +1,14 @@
+CLK64  i
+RES_n  i
+F8  i
+F4  i
+F2  i
+WR_Freq  i
+BURST_EN  i
+ADC_EN  i
+SMPL_EN  i
+CLK_4MHz  o
+BURST_P  o
+BURST_N  o
+CLK_ADC  o
+CLK_SMPL  o

@@ -1,0 +1,1 @@
+run_tcl -fg BeamScanner_BeamScanner_synplify.tcl

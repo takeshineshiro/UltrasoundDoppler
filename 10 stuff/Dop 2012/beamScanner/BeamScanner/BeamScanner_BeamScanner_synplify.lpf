@@ -1,0 +1,25 @@
+#
+# Logical Preferences generated for Lattice by Synplify maplat, Build 800R.
+#
+
+# Period Constraints 
+FREQUENCY PORT "CLK_64MHz" 64.0 MHz;
+FREQUENCY PORT "SRCLK" 1.0 MHz;
+FREQUENCY NET "RD_ctrlFF" 1.0 MHz;
+
+
+# Output Constraints 
+
+# Input Constraints 
+
+# Point-to-point Delay Constraints 
+
+
+
+# Block Path Constraints 
+BLOCK PATH FROM PORT "CLK_64MHz" TO PORT "SRCLK";
+BLOCK PATH FROM PORT "SRCLK" TO PORT "CLK_64MHz";
+
+BLOCK ASYNCPATHS;
+
+# End of generated Logical Preferences.

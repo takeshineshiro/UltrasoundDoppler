@@ -1,0 +1,31 @@
+# Synospys Constraint Checker(syntax only), version maplat, Build 800R, built Nov 18 2013
+# Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+
+# Written on Wed Jul 30 08:59:07 2014
+
+
+##### DESIGN INFO #######################################################
+
+Top View:                "BeamScanner"
+Constraint File(s):      "E:\backup download\usd\beamScanner\Timing.sdc"
+
+#Run constraint checker to find more issues with constraints.
+#########################################################################
+
+
+
+No issues found in constraint syntax.
+
+
+
+Clock Summary
+**************
+
+Start                                    Requested     Requested     Clock        Clock              
+Clock                                    Frequency     Period        Type         Group              
+-----------------------------------------------------------------------------------------------------
+BeamScanner|RD_ctrlFF_inferred_clock     1.0 MHz       1000.000      inferred     Inferred_clkgroup_1
+BeamScanner|SRCLK                        1.0 MHz       1000.000      inferred     Inferred_clkgroup_0
+CLK_64MHz                                64.0 MHz      15.625        declared     default_clkgroup_0 
+System                                   1.0 MHz       1000.000      system       system_clkgroup    
+=====================================================================================================

@@ -1,0 +1,51 @@
+@P:  Worst Slack : 5.769
+@P:  BeamScanner|RD_ctrlFF_inferred_clock - Estimated Frequency : 188.3 MHz
+@P:  BeamScanner|RD_ctrlFF_inferred_clock - Requested Frequency : 1.0 MHz
+@P:  BeamScanner|RD_ctrlFF_inferred_clock - Estimated Period : 5.310
+@P:  BeamScanner|RD_ctrlFF_inferred_clock - Requested Period : 1000.000
+@P:  BeamScanner|RD_ctrlFF_inferred_clock - Slack : 994.690
+@P:  BeamScanner|SRCLK - Estimated Frequency : 464.0 MHz
+@P:  BeamScanner|SRCLK - Requested Frequency : 1.0 MHz
+@P:  BeamScanner|SRCLK - Estimated Period : 2.155
+@P:  BeamScanner|SRCLK - Requested Period : 1000.000
+@P:  BeamScanner|SRCLK - Slack : 997.845
+@P:  CLK_64MHz - Estimated Frequency : 179.0 MHz
+@P:  CLK_64MHz - Requested Frequency : 64.0 MHz
+@P:  CLK_64MHz - Estimated Period : 5.588
+@P:  CLK_64MHz - Requested Period : 15.625
+@P:  CLK_64MHz - Slack : 10.037
+@P:  System - Estimated Frequency : 174.7 MHz
+@P:  System - Requested Frequency : 1.0 MHz
+@P:  System - Estimated Period : 5.724
+@P:  System - Requested Period : 1000.000
+@P:  System - Slack : 994.276
+@P:  Worst Slack(min analysis) : -0.198
+@P:  BeamScanner|RD_ctrlFF_inferred_clock - Estimated Frequency(min analysis) : 188.3 MHz
+@P:  BeamScanner|RD_ctrlFF_inferred_clock - Requested Frequency(min analysis) : 1.0 MHz
+@P:  BeamScanner|RD_ctrlFF_inferred_clock - Estimated Period(min analysis) : 5.310
+@P:  BeamScanner|RD_ctrlFF_inferred_clock - Requested Period(min analysis) : 1000.000
+@P:  BeamScanner|RD_ctrlFF_inferred_clock - Slack(min analysis) : 994.690
+@P:  BeamScanner|SRCLK - Estimated Frequency(min analysis) : 464.0 MHz
+@P:  BeamScanner|SRCLK - Requested Frequency(min analysis) : 1.0 MHz
+@P:  BeamScanner|SRCLK - Estimated Period(min analysis) : 2.155
+@P:  BeamScanner|SRCLK - Requested Period(min analysis) : 1000.000
+@P:  BeamScanner|SRCLK - Slack(min analysis) : 997.845
+@P:  CLK_64MHz - Estimated Frequency(min analysis) : 179.0 MHz
+@P:  CLK_64MHz - Requested Frequency(min analysis) : 64.0 MHz
+@P:  CLK_64MHz - Estimated Period(min analysis) : 5.588
+@P:  CLK_64MHz - Requested Period(min analysis) : 15.625
+@P:  CLK_64MHz - Slack(min analysis) : 10.037
+@P:  System - Estimated Frequency(min analysis) : 174.7 MHz
+@P:  System - Requested Frequency(min analysis) : 1.0 MHz
+@P:  System - Estimated Period(min analysis) : 5.724
+@P:  System - Requested Period(min analysis) : 1000.000
+@P:  System - Slack(min analysis) : 994.276
+@P:  Total Area : 466.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  CPU Time : 0h:00m:03s

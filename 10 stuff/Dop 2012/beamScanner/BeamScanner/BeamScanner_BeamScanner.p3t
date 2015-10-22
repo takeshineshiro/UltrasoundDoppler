@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "BeamScanner_BeamScanner.log"
+-o "BeamScanner_BeamScanner.csv"
+-pr "BeamScanner_BeamScanner.prf"

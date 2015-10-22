@@ -1,0 +1,39 @@
+[Device]
+Family=machxo
+PartType=LCMXO2280C
+PartName=LCMXO2280C-3T100C
+SpeedGrade=3
+Package=TQFP100
+OperatingCondition=COM
+Status=S
+
+[IP]
+VendorName=Lattice Semiconductor Corporation
+CoreType=LPM
+CoreStatus=Demo
+CoreName=Adder
+CoreRevision=3.4
+ModuleName=add32
+SourceFormat=Verilog HDL
+ParameterFileVersion=1.0
+Date=03/05/2015
+Time=11:33:44
+
+[Parameters]
+Verilog=1
+VHDL=0
+EDIF=1
+Destination=Synplicity
+Expression=BusA(0 to 7)
+Order=Big Endian [MSB:LSB]
+IO=0
+InputWidth=32
+Representation=Signed
+UseCIport=0
+COport=None
+OutReg=0
+Complex=0
+Stage=0
+
+[Command]
+cmd_line= -w -n add32 -lang verilog -synth synplify -bus_exp 7 -bb -arch mj5g00 -type mgaddsub -width 32 -signed -pipeline 0

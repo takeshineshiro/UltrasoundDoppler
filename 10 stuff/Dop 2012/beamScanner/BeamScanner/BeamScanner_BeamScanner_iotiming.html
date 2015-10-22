@@ -1,0 +1,170 @@
+<HTML>
+<HEAD><TITLE>I/O Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Top"></A><B><U><big>I/O Timing Report</big></U></B>
+9 potential circuit loops found in timing analysis.
+Loading design for application iotiming from file beamscanner_beamscanner.ncd.
+Design name: BeamScanner
+NCD version: 3.2
+Vendor:      LATTICE
+Device:      LCMXO2280C
+Package:     TQFP100
+Performance: 4
+Package Status:                     Final          Version 1.26
+Performance Hardware Data Status: Version 1.91
+Loading design for application iotiming from file beamscanner_beamscanner.ncd.
+Design name: BeamScanner
+NCD version: 3.2
+Vendor:      LATTICE
+Device:      LCMXO2280C
+Package:     TQFP100
+Performance: 5
+Package Status:                     Final          Version 1.26
+Performance Hardware Data Status: Version 1.91
+Loading design for application iotiming from file beamscanner_beamscanner.ncd.
+Design name: BeamScanner
+NCD version: 3.2
+Vendor:      LATTICE
+Device:      LCMXO2280C
+Package:     TQFP100
+Performance: M
+Package Status:                     Final          Version 1.26
+Performance Hardware Data Status: Version 1.91
+// Design: BeamScanner
+// Package: TQFP100
+// ncd File: beamscanner_beamscanner.ncd
+// Version: Diamond (64-bit) 3.1.0.96
+// Written on Fri Jul 04 00:45:41 2014
+// M: Minimum Performance Grade
+// iotiming BeamScanner_BeamScanner.ncd BeamScanner_BeamScanner.prf -gui
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 5, 4, 3):
+
+// Input Setup and Hold Times
+
+Port        Clock     Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+ADC_OUT[0]  CLK_64MHz R    -1.000      M      11.069     3
+ADC_OUT[0]  nENABLE   R    -0.958      M      10.970     3
+ADC_OUT[10] CLK_64MHz R    -0.745      M      10.148     3
+ADC_OUT[10] nENABLE   R    -0.703      M      10.049     3
+ADC_OUT[11] CLK_64MHz R    -0.737      M      10.139     3
+ADC_OUT[11] nENABLE   R    -0.695      M      10.040     3
+ADC_OUT[12] CLK_64MHz R    -0.667      M       9.780     3
+ADC_OUT[12] nENABLE   R    -0.625      M       9.681     3
+ADC_OUT[13] CLK_64MHz R    -0.754      M      10.363     3
+ADC_OUT[13] nENABLE   R    -0.712      M      10.264     3
+ADC_OUT[1]  CLK_64MHz R    -0.952      M      10.863     3
+ADC_OUT[1]  nENABLE   R    -0.910      M      10.764     3
+ADC_OUT[2]  CLK_64MHz R    -1.089      M      11.358     3
+ADC_OUT[2]  nENABLE   R    -1.047      M      11.259     3
+ADC_OUT[3]  CLK_64MHz R    -0.952      M      10.863     3
+ADC_OUT[3]  nENABLE   R    -0.910      M      10.764     3
+ADC_OUT[4]  CLK_64MHz R    -0.871      M      10.512     3
+ADC_OUT[4]  nENABLE   R    -0.829      M      10.413     3
+ADC_OUT[5]  CLK_64MHz R    -0.897      M      10.587     3
+ADC_OUT[5]  nENABLE   R    -0.855      M      10.488     3
+ADC_OUT[6]  CLK_64MHz R    -0.871      M      10.512     3
+ADC_OUT[6]  nENABLE   R    -0.829      M      10.413     3
+ADC_OUT[7]  CLK_64MHz R    -0.897      M      10.587     3
+ADC_OUT[7]  nENABLE   R    -0.855      M      10.488     3
+ADC_OUT[8]  CLK_64MHz R    -0.952      M      10.863     3
+ADC_OUT[8]  nENABLE   R    -0.910      M      10.764     3
+ADC_OUT[9]  CLK_64MHz R    -0.952      M      10.863     3
+ADC_OUT[9]  nENABLE   R    -0.910      M      10.764     3
+SRDATA      SRCLK     R     1.050      3       0.327     3
+SWR         nENABLE   R     2.761      3       0.479     3
+nENABLE     CLK_64MHz R     9.322      3       7.043     3
+nENABLE     SPP_RDCLK R     2.570      3      -0.136     M
+nRESET      CLK_64MHz R     5.825      3      -0.863     M
+nRESET      nENABLE   R    -0.109      M       0.000     3
+nSRSYNC     SRCLK     R     3.778      3       0.263     3
+
+
+// Clock to Output Delay
+
+Port        Clock     Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+ADC_CLK     nENABLE   R    16.272         3        2.571          M
+ADC_CLK     SWR       R    17.750         3        3.060          M
+CLK_PIC     CLK_64MHz R     7.343         3        1.509          M
+RD_DATA     CLK_64MHz R     8.433         3        1.735          M
+SPP_DATA[0] SPP_RDCLK R    10.609         3        2.256          M
+SPP_DATA[1] SPP_RDCLK R    11.070         3        2.355          M
+SPP_DATA[2] SPP_RDCLK R    11.070         3        2.355          M
+SPP_DATA[3] SPP_RDCLK R    11.586         3        2.462          M
+SPP_DATA[4] SPP_RDCLK R     9.671         3        2.054          M
+SPP_DATA[5] SPP_RDCLK R     9.778         3        2.071          M
+SPP_DATA[6] SPP_RDCLK R    10.132         3        2.153          M
+SPP_DATA[7] SPP_RDCLK R    10.187         3        2.161          M
+neg_burst   CLK_64MHz R    14.368         3        2.454          M
+neg_burst   nENABLE   R    19.523         3        3.220          M
+neg_burst   SWR       R    20.776         3        2.986          M
+pos_burst   CLK_64MHz R    13.241         3        2.214          M
+pos_burst   nENABLE   R    20.078         3        3.345          M
+pos_burst   SWR       R    21.331         3        2.746          M
+WARNING: you must also run trce with hold speed: 3
+WARNING: you must also run trce with setup speed: M
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

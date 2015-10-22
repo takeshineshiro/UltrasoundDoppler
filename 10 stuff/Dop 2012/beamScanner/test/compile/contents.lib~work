@@ -1,0 +1,7 @@
+91
+~M 0 "" 0 $root
+~A 1 "" 0 $root
+~M 1 "./../../spi_slave.v" 5 SPI_slave
+~A 1 "./../../spi_slave.v" 5 SPI_slave
+~M 3 "./../../tb_spi_slave.v" 3 tbslave
+~A 1 "./../../tb_spi_slave.v" 3 tbslave

@@ -1,0 +1,44 @@
+[Device]
+Family=machxo
+PartType=LCMXO2280C
+PartName=LCMXO2280C-3T100C
+SpeedGrade=3
+Package=TQFP100
+OperatingCondition=COM
+Status=S
+
+[IP]
+VendorName=Lattice Semiconductor Corporation
+CoreType=LPM
+CoreStatus=Demo
+CoreName=Multiplier
+CoreRevision=4.8
+ModuleName=multiply
+SourceFormat=Verilog HDL
+ParameterFileVersion=1.0
+Date=03/05/2015
+Time=11:22:52
+
+[Parameters]
+Verilog=1
+VHDL=0
+EDIF=1
+Destination=Synplicity
+Expression=BusA(0 to 7)
+Order=Big Endian [MSB:LSB]
+IO=0
+pmi_implemenntation=LUT
+pmi_const_coeff=No
+pmi_coeff_value=2
+pmi_ram_mult=No
+pmi_dataa_width=8
+pmi_datab_width=14
+pmi_datap_width=22
+pmi_signa=Signed
+pmi_signb=Signed
+pmi_additional_pipeline=1
+pmi_input_reg=Yes
+pmi_output_reg=Yes
+
+[Command]
+cmd_line= -w -n multiply -lang verilog -synth synplify -bus_exp 7 -bb -arch mj5g00 -type dspmult -simple_portname -pfu_mult -widtha 8 -widthb 14 -widthp 22 -signed -PL_stages 1 -input_reg -output_reg -clk0 -ce0 -rst0

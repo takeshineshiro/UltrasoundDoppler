@@ -1,0 +1,27 @@
+@N|Running in 64-bit mode
+@N: CG334 :"E:\backup download\usd\beamScanner\DataFIFO.v":28:16:28:28|Read directive translate_off 
+@N: CG333 :"E:\backup download\usd\beamScanner\DataFIFO.v":41:16:41:27|Read directive translate_on 
+@N: CG334 :"E:\backup download\usd\beamScanner\DataFIFO.v":76:16:76:28|Read directive translate_off 
+@N: CG333 :"E:\backup download\usd\beamScanner\DataFIFO.v":89:16:89:27|Read directive translate_on 
+@N: CG364 :"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v":817:7:817:9|Synthesizing module OR2
+@N: CG364 :"E:\backup download\usd\beamScanner\flag_ctrl.v":15:7:15:15|Synthesizing module flag_ctrl
+@N: CG364 :"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v":1303:7:1303:13|Synthesizing module FIFO8KA
+@N: CG364 :"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v":989:7:989:9|Synthesizing module VHI
+@N: CG364 :"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v":994:7:994:9|Synthesizing module VLO
+@N: CG364 :"E:\backup download\usd\beamScanner\DataFIFO.v":8:7:8:14|Synthesizing module DataFIFO
+@N: CG364 :"E:\backup download\usd\beamScanner\CLK_gen.v":4:7:4:13|Synthesizing module CLK_gen
+@N: CG364 :"E:\backup download\usd\beamScanner\splitter24_16_8.v":11:7:11:21|Synthesizing module splitter24_16_8
+@N: CG364 :"E:\backup download\usd\beamScanner\fifo24bit.v":16:7:16:15|Synthesizing module fifo24bit
+@N: CG364 :"E:\backup download\usd\beamScanner\sr24bit.v":17:7:17:13|Synthesizing module sr24bit
+@N: CG364 :"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v":919:7:919:9|Synthesizing module PUR
+@N: CG364 :"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v":587:7:587:9|Synthesizing module GSR
+@N: CG364 :"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v":411:7:411:12|Synthesizing module FD1S1D
+@N: CG364 :"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v":209:8:209:11|Synthesizing module AND3
+@N: CG364 :"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v":203:7:203:10|Synthesizing module AND2
+@N: CG364 :"E:\backup download\usd\beamScanner\cnt16bit.v":16:7:16:14|Synthesizing module cnt16bit
+@N: CG179 :"E:\backup download\usd\beamScanner\cnt16bit.v":40:7:40:7|Removing redundant assignment
+@N: CG364 :"E:\backup download\usd\beamScanner\cmp16bit.v":15:7:15:14|Synthesizing module cmp16bit
+@N: CG364 :"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v":600:7:600:8|Synthesizing module IB
+@N: CG364 :"C:\lscc\diamond\3.1_x64\synpbase\lib\lucent\machxo.v":615:7:615:9|Synthesizing module INV
+@N: CG364 :"E:\backup download\usd\beamScanner\BeamScanner\BeamScanner.v":3:7:3:17|Synthesizing module BeamScanner
+

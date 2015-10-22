@@ -1,0 +1,40 @@
+BITGEN: Bitstream Generator Diamond (64-bit) 3.1.0.96
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2014 Lattice Semiconductor Corporation,  All rights reserved.
+
+Command: bitgen -w -g ES:No -gui BeamScanner_BeamScanner.ncd BeamScanner_BeamScanner.prf 
+
+Loading design for application Bitgen from file BeamScanner_BeamScanner.ncd.
+Design name: BeamScanner
+NCD version: 3.2
+Vendor:      LATTICE
+Device:      LCMXO2280C
+Package:     TQFP100
+Performance: 3
+Loading device for application Bitgen from file 'mj5g21x17.nph' in environment: C:/lscc/diamond/3.1_x64/ispfpga.
+Package Status:                     Final          Version 1.26
+Performance Hardware Data Status: Version 1.91
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from BeamScanner_BeamScanner.prf...
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                           ON**  |
++---------------------------------+---------------------------------+
+|                             ES  |                           No**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+Saving bit stream in "BeamScanner_BeamScanner.bit".

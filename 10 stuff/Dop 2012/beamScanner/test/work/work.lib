@@ -1,0 +1,37 @@
+timestamp=1401478201291
+
+[$root]
+A/$root=22|""|0|1*10934
+BinI32/$root=3*8569
+Version=9.3.2744.4995  (Windows)|0000000b789cd3cd5128cf2fca56d0f537020014ad034b
+
+[SPI_slave]
+A/SPI_slave=22|./../../spi_slave.v|5|1*11324
+BinI32/SPI_slave=3*8697
+R=./../../spi_slave.v|5
+Version=9.3.2744.4995  (Windows)|0000000b789cd3cd5128cf2fca56d0f537020014ad034b
+
+[tbslave]
+A/tbslave=22|./../../tb_spi_slave.v|3|1*14066
+BinI32/tbslave=3*10509
+R=./../../tb_spi_slave.v|3
+Version=9.3.2744.4995  (Windows)|0000000b789cd3cd5128cf2fca56d0f537020014ad034b
+
+[~A]
+C:/Users/Andreas/Desktop/usd/beamScanner/spi_slave.v=0*587*1447
+C:/Users/Andreas/Desktop/usd/beamScanner/spi_slave.v_tb_spi_slave.v=0*6921*8325
+C:/Users/Andreas/Desktop/usd/beamScanner/tb_spi_slave.v=0*2212*3059
+LastVerilogToplevel=tbslave
+ModifyID=91
+Version=73
+
+[~MFT]
+0=19|0work.mgf|8325|1920
+1=16|1work.mgf|14066|10934
+3=16|3work.mgf|10509|8569
+
+[~U]
+$root=12|0*6202|
+SPI_slave=12|0*6368|
+tbslave=12|0*6807||0x10
+

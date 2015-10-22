@@ -1,0 +1,8 @@
+#Start recording tcl command: 7/28/2014 20:40:08
+#Project Location: E:/backup download/usd/beamScanner; Project name: BeamScanner
+prj_project open "E:/backup download/usd/beamScanner/BeamScanner.ldf"
+prj_run Synthesis -impl BeamScanner -task Synplify_Synthesis
+prj_run Translate -impl BeamScanner
+prj_run Map -impl BeamScanner
+prj_run PAR -impl BeamScanner -task PARTrace
+#Stop recording: 7/28/2014 22:32:22

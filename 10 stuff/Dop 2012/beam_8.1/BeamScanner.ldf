@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.0" title="BeamScanner" device="LCMXO2280C-3T100C" default_implementation="BeamScanner">
+    <Options/>
+    <Implementation title="BeamScanner" dir="BeamScanner" description="BeamScanner" synthesis="lse" default_strategy="Strategy1">
+        <Options def_top="sr24bit"/>
+        <Source name="CLK_gen.v" type="Verilog" type_short="Verilog">
+            <Options top_module="CLK_gen"/>
+        </Source>
+        <Source name="cmp16bit.v" type="Verilog" type_short="Verilog">
+            <Options top_module="cmp16bit"/>
+        </Source>
+        <Source name="cnt16bit.v" type="Verilog" type_short="Verilog">
+            <Options top_module="cnt16bit"/>
+        </Source>
+        <Source name="DataFIFO.v" type="Verilog" type_short="Verilog">
+            <Options top_module="DataFIFO"/>
+        </Source>
+        <Source name="fifo24bit.v" type="Verilog" type_short="Verilog">
+            <Options top_module="fifo24bit"/>
+        </Source>
+        <Source name="flag_ctrl.v" type="Verilog" type_short="Verilog">
+            <Options top_module="flag_ctrl"/>
+        </Source>
+        <Source name="splitter24_16_8.v" type="Verilog" type_short="Verilog">
+            <Options top_module="splitter24_16_8"/>
+        </Source>
+        <Source name="sr24bit.v" type="Verilog" type_short="Verilog">
+            <Options top_module="sr24bit"/>
+        </Source>
+        <Source name="BeamScanner.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="BeamScanner1.sty"/>
+</BaliProject>

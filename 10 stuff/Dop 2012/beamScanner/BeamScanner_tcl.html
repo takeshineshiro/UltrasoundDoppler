@@ -1,0 +1,186 @@
+<HTML>
+<HEAD><TITLE>Lattice TCL Log</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="pn140508130548"></A><B><U><big>pn140508130548</big></U></B>
+#Start recording tcl command: 5/8/2014 13:01:04
+#Project Location: C:/Users/Andreas/Desktop/usd/beamScanner; Project name: BeamScanner
+prj_project open "C:/Users/Andreas/Desktop/usd/beamScanner/BeamScanner.ldf"
+#Stop recording: 5/8/2014 13:05:48
+
+
+
+<A name="pn140508160401"></A><B><U><big>pn140508160401</big></U></B>
+#Start recording tcl command: 5/8/2014 13:13:53
+#Project Location: C:/Users/Andreas/Desktop/usd/beamScanner; Project name: BeamScanner
+prj_project open "C:/Users/Andreas/Desktop/usd/beamScanner/BeamScanner.ldf"
+#Stop recording: 5/8/2014 16:04:01
+
+
+
+<A name="pn140518091523"></A><B><U><big>pn140518091523</big></U></B>
+#Start recording tcl command: 5/18/2014 08:08:33
+#Project Location: C:/Users/Andreas/Desktop/usd/beamScanner; Project name: BeamScanner
+prj_project open "C:/Users/Andreas/Desktop/usd/beamScanner/BeamScanner.ldf"
+#Stop recording: 5/18/2014 09:15:23
+
+
+
+<A name="pn140518142313"></A><B><U><big>pn140518142313</big></U></B>
+#Start recording tcl command: 5/18/2014 10:15:53
+#Project Location: C:/Users/Andreas/Desktop/usd/beamScanner; Project name: BeamScanner
+prj_project open "C:/Users/Andreas/Desktop/usd/beamScanner/BeamScanner.ldf"
+#Stop recording: 5/18/2014 14:23:13
+
+
+
+<A name="pn140601104658"></A><B><U><big>pn140601104658</big></U></B>
+#Start recording tcl command: 5/30/2014 16:05:18
+#Project Location: C:/Users/Andreas/Desktop/usd/beamScanner; Project name: BeamScanner
+prj_project open "C:/Users/Andreas/Desktop/usd/beamScanner/BeamScanner.ldf"
+prj_src add "C:/Users/Andreas/Desktop/usd/beamScanner/CmdReg.v"
+prj_run Synthesis -impl BeamScanner
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/CmdReg.v" SynthesisOnly
+source "C:/Users/Andreas/Desktop/usd/beamScanner/hdle_generate_Symbol.tcl"
+prj_src exclude "C:/Users/Andreas/Desktop/usd/beamScanner/CmdReg.v"
+prj_src remove "C:/Users/Andreas/Desktop/usd/beamScanner/CmdReg.v"
+prj_src add "C:/Users/Andreas/Desktop/usd/beamScanner/USDCoreLayer.v"
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/USDCoreLayer.v" SynthesisOnly
+source "C:/Users/Andreas/Desktop/usd/beamScanner/hdle_generate_Symbol.tcl"
+source "C:/Users/Andreas/Desktop/usd/beamScanner/hdle_generate_Symbol.tcl"
+source "C:/Users/Andreas/Desktop/usd/beamScanner/hdle_generate_Symbol.tcl"
+prj_run Synthesis -impl BeamScanner
+prj_src add "C:/Users/Andreas/Desktop/usd/beamScanner/USD.sch"
+source "C:/Users/Andreas/Desktop/usd/beamScanner/hdle_generate_Symbol.tcl"
+prj_src add "C:/Users/Andreas/Desktop/usd/beamScanner/tb_spi_slave.v" "C:/Users/Andreas/Desktop/usd/beamScanner/spi_slave.v"
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/spi_slave.v" SynthesisOnly
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/tb_spi_slave.v" SimulateOnly
+prj_src add "C:/Users/Andreas/Desktop/usd/beamScanner/test/test.spf"
+prj_src remove "C:/Users/Andreas/Desktop/usd/beamScanner/test/test.spf"
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/cnt16bit.v" SynthesisOnly
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/cmp16bit.v" SynthesisOnly
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/sr24bit.v" SynthesisOnly
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/fifo24bit.v" SynthesisOnly
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/splitter24_16_8.v" SynthesisOnly
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/CLK_gen.v" SimulateOnly
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/CLK_gen.v" SynthesisOnly
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/flag_ctrl.v" SynthesisOnly
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/USD.sch" SynthesisOnly
+prj_src add "C:/Users/Andreas/Desktop/usd/beamScanner/test/test.spf"
+prj_src add "C:/Users/Andreas/Desktop/usd/beamScanner/CommunicationLayer.v"
+source "C:/Users/Andreas/Desktop/usd/beamScanner/hdle_generate_Symbol.tcl"
+source "C:/Users/Andreas/Desktop/usd/beamScanner/hdle_generate_Symbol.tcl"
+prj_src add "C:/Users/Andreas/Desktop/usd/beamScanner/USD_TopLevel.v"
+prj_run Synthesis -impl BeamScanner
+prj_run Synthesis -impl BeamScanner
+prj_src remove "C:/Users/Andreas/Desktop/usd/beamScanner/USD_TopLevel.v" "C:/Users/Andreas/Desktop/usd/beamScanner/CommunicationLayer.v" "C:/Users/Andreas/Desktop/usd/beamScanner/USD.sch" "C:/Users/Andreas/Desktop/usd/beamScanner/USDCoreLayer.v" "C:/Users/Andreas/Desktop/usd/beamScanner/spi_slave.v" "C:/Users/Andreas/Desktop/usd/beamScanner/tb_spi_slave.v"
+prj_run Synthesis -impl BeamScanner
+#Stop recording: 6/1/2014 10:46:58
+
+
+
+<A name="pn140609143450"></A><B><U><big>pn140609143450</big></U></B>
+#Start recording tcl command: 6/6/2014 16:27:26
+#Project Location: C:/Users/Andreas/Desktop/usd/beamScanner; Project name: BeamScanner
+prj_project open "C:/Users/Andreas/Desktop/usd/beamScanner/BeamScanner.ldf"
+prj_run PAR -impl BeamScanner
+#Stop recording: 6/9/2014 14:34:50
+
+
+
+<A name="pn140610155815"></A><B><U><big>pn140610155815</big></U></B>
+#Start recording tcl command: 6/10/2014 15:00:38
+#Project Location: C:/Users/Andreas/Desktop/usd/beamScanner; Project name: BeamScanner
+prj_project open "C:/Users/Andreas/Desktop/usd/beamScanner/BeamScanner.ldf"
+#Stop recording: 6/10/2014 15:58:15
+
+
+
+<A name="pn140704024533"></A><B><U><big>pn140704024533</big></U></B>
+#Start recording tcl command: 7/4/2014 00:41:47
+#Project Location: C:/Users/Andreas/Desktop/usd/beamScanner; Project name: BeamScanner
+prj_project open "C:/Users/Andreas/Desktop/usd/beamScanner/BeamScanner.ldf"
+prj_src add "C:/Users/Andreas/Desktop/usd/beamScanner/Timing.sdc"
+prj_run Synthesis -impl BeamScanner
+prj_run PAR -impl BeamScanner -task IOTiming
+#Stop recording: 7/4/2014 02:45:33
+
+
+
+<A name="pn140724232846"></A><B><U><big>pn140724232846</big></U></B>
+#Start recording tcl command: 7/23/2014 11:30:28
+#Project Location: E:/backup download/usd/beamScanner; Project name: BeamScanner
+prj_project open "E:/backup download/usd/beamScanner/BeamScanner.ldf"
+#Stop recording: 7/24/2014 23:28:46
+
+
+
+<A name="pn140728223222"></A><B><U><big>pn140728223222</big></U></B>
+#Start recording tcl command: 7/28/2014 20:40:08
+#Project Location: E:/backup download/usd/beamScanner; Project name: BeamScanner
+prj_project open "E:/backup download/usd/beamScanner/BeamScanner.ldf"
+prj_run Synthesis -impl BeamScanner -task Synplify_Synthesis
+prj_run Translate -impl BeamScanner
+prj_run Map -impl BeamScanner
+prj_run PAR -impl BeamScanner -task PARTrace
+#Stop recording: 7/28/2014 22:32:22
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

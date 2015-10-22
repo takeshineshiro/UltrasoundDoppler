@@ -1,0 +1,53 @@
+Synopsys Lattice Technology Pre-mapping, Version maplat, Build 800R, Built Nov 18 2013 10:58:25
+Copyright (C) 1994-2013, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use or distribution of the software is strictly prohibited.
+Product Version I-2013.09L 
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+Reading constraint file: E:\backup download\usd\beamScanner\Timing.sdc
+@L: E:\backup download\usd\beamScanner\BeamScanner\BeamScanner_BeamScanner_scck.rpt 
+Printing clock  summary report in "E:\backup download\usd\beamScanner\BeamScanner\BeamScanner_BeamScanner_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 115MB peak: 115MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 115MB peak: 117MB)
+
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@W: MT462 :"e:\backup download\usd\beamscanner\beamscanner\beamscanner.v":94:5:94:7|Net WR_ctrlFF appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"e:\backup download\usd\beamscanner\beamscanner\beamscanner.v":93:5:93:7|Net WR_Freq appears to be an unidentified clock source. Assuming default frequency. 
+syn_allowed_resources : blockrams=3  set on top level netlist BeamScanner
+
+
+Clock Summary
+**************
+
+Start                                    Requested     Requested     Clock        Clock              
+Clock                                    Frequency     Period        Type         Group              
+-----------------------------------------------------------------------------------------------------
+BeamScanner|RD_ctrlFF_inferred_clock     1.0 MHz       1000.000      inferred     Inferred_clkgroup_1
+BeamScanner|SRCLK                        1.0 MHz       1000.000      inferred     Inferred_clkgroup_0
+CLK_64MHz                                64.0 MHz      15.625        declared     default_clkgroup_0 
+System                                   1.0 MHz       1000.000      system       system_clkgroup    
+=====================================================================================================
+
+@W: MT531 :"e:\backup download\usd\beamscanner\clk_gen.v":41:0:41:5|Found signal identified as System clock which controls 752 sequential elements including I212.Freq2.  Using this clock, which has no specified timing constraint, can prevent conversion of gated or generated clocks and can adversely impact design performance. 
+@W: MT529 :"e:\backup download\usd\beamscanner\sr24bit.v":41:0:41:5|Found inferred clock BeamScanner|SRCLK which controls 24 sequential elements including SPI_Interface.Q[0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"e:\backup download\usd\beamscanner\fifo24bit.v":58:0:58:5|Found inferred clock BeamScanner|RD_ctrlFF_inferred_clock which controls 5 sequential elements including Ctrl_Fifo.RD_PTR[4:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 79MB peak: 143MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Jul 30 08:59:08 2014
+
+###########################################################]

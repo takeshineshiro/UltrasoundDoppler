@@ -1,0 +1,46 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Wed May 07 11:12:10 2014 *
+NOTE DESIGN NAME: BeamScanner *
+NOTE DEVICE NAME: LCMXO2280C-3TQFP100 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS ADC_CLK : 21 : out *
+NOTE PINS ADC_OUT[10] : 5 : in *
+NOTE PINS SWR : 45 : in *
+NOTE PINS SRDATA : 43 : in *
+NOTE PINS SRCLK : 40 : in *
+NOTE PINS SPP_RDCLK : 69 : in *
+NOTE PINS SPP_DATA[7] : 67 : out *
+NOTE PINS SPP_DATA[6] : 65 : out *
+NOTE PINS SPP_DATA[5] : 64 : out *
+NOTE PINS SPP_DATA[4] : 63 : out *
+NOTE PINS SPP_DATA[3] : 62 : out *
+NOTE PINS SPP_DATA[2] : 61 : out *
+NOTE PINS SPP_DATA[1] : 60 : out *
+NOTE PINS SPP_DATA[0] : 58 : out *
+NOTE PINS RD_DATA : 68 : out *
+NOTE PINS pos_burst : 24 : out *
+NOTE PINS PDWN_1 : 25 : out *
+NOTE PINS PDWN_0 : 22 : out *
+NOTE PINS nSRSYNC : 42 : in *
+NOTE PINS nRESET : 46 : in *
+NOTE PINS nENABLE : 39 : in *
+NOTE PINS neg_burst : 23 : out *
+NOTE PINS CLK_PIC : 78 : out *
+NOTE PINS CLK_64MHz : 87 : in *
+NOTE PINS ADC_PWDN : 19 : out *
+NOTE PINS ADC_OUT[13] : 2 : in *
+NOTE PINS ADC_OUT[12] : 3 : in *
+NOTE PINS ADC_OUT[11] : 4 : in *
+NOTE PINS ADC_OUT[0] : 18 : in *
+NOTE PINS ADC_OUT[1] : 16 : in *
+NOTE PINS ADC_OUT[2] : 15 : in *
+NOTE PINS ADC_OUT[3] : 14 : in *
+NOTE PINS ADC_OUT[4] : 13 : in *
+NOTE PINS ADC_OUT[5] : 12 : in *
+NOTE PINS ADC_OUT[6] : 11 : in *
+NOTE PINS ADC_OUT[7] : 10 : in *
+NOTE PINS ADC_OUT[8] : 8 : in *
+NOTE PINS ADC_OUT[9] : 7 : in *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: off *

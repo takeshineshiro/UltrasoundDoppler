@@ -1,0 +1,1 @@
+ -erf "C:\Users\Andreas\Desktop\usd\beamScanner\test\compile\test.erf" -work work -lc C:/Users/Andreas/Desktop/usd/beamScanner/test/library.cfg -fl C:/Users/Andreas/Desktop/usd/beamScanner/test/projlib.cfg -o C:/Users/Andreas/Desktop/usd/beamScanner/test/compile -l "work" -sve   -O2

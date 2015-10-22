@@ -1,0 +1,4 @@
+#Start recording tcl command: 5/8/2014 13:13:53
+#Project Location: C:/Users/Andreas/Desktop/usd/beamScanner; Project name: BeamScanner
+prj_project open "C:/Users/Andreas/Desktop/usd/beamScanner/BeamScanner.ldf"
+#Stop recording: 5/8/2014 16:04:01

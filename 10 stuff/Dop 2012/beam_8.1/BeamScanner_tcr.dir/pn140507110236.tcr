@@ -1,0 +1,10 @@
+#Start recording tcl command: 5/7/2014 11:01:33
+#Project Location: C:/Users/Andreas/Desktop/usd/beam_8.1; Project name: BeamScanner
+prj_project open "C:/Users/Andreas/Desktop/usd/beam_8.1/BeamScanner.ldf"
+prj_src add "C:/Users/Andreas/Desktop/usd/beam_8.1/CLK_gen.v" "C:/Users/Andreas/Desktop/usd/beam_8.1/cmp16bit.v" "C:/Users/Andreas/Desktop/usd/beam_8.1/cnt16bit.v" "C:/Users/Andreas/Desktop/usd/beam_8.1/DataFIFO.v" "C:/Users/Andreas/Desktop/usd/beam_8.1/fifo24bit.v" "C:/Users/Andreas/Desktop/usd/beam_8.1/flag_ctrl.v" "C:/Users/Andreas/Desktop/usd/beam_8.1/splitter24_16_8.v" "C:/Users/Andreas/Desktop/usd/beam_8.1/sr24bit.v"
+source "C:/Users/Andreas/Desktop/usd/beam_8.1/hdle_generate_Symbol.tcl"
+source "C:/Users/Andreas/Desktop/usd/beam_8.1/hdle_generate_Symbol.tcl"
+source "C:/Users/Andreas/Desktop/usd/beam_8.1/hdle_generate_Symbol.tcl"
+source "C:/Users/Andreas/Desktop/usd/beam_8.1/hdle_generate_Symbol.tcl"
+source "C:/Users/Andreas/Desktop/usd/beam_8.1/hdle_generate_Symbol.tcl"
+#Stop recording: 5/7/2014 11:02:36

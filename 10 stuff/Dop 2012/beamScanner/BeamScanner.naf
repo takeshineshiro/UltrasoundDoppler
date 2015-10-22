@@ -1,0 +1,14 @@
+ADC_CLK  o
+ADC_PWDN  o
+CLK_PIC  o
+neg_burst  o
+nENABLE  i
+nRESET  i
+nSRSYNC  i
+PDWN_0  o
+PDWN_1  o
+pos_burst  o
+SRCLK  i
+SRDATA  i
+SWR  i
+Xin  i

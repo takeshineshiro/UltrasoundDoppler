@@ -1,0 +1,5 @@
+CKID0001:@|S:I46@|E:Ctrl_Fifo.RD_PTR[4]@|F:@syn_sample_clock_path==CKID0001@|M:ClockId0001 
+CKID0002:@|S:SRCLK@|E:SPI_Interface.Q[23]@|F:@syn_sample_clock_path==CKID0002@|M:ClockId0002 
+CKID0003:@|S:I49@|E:Ctrl_Fifo.FF_MEM_0_[20]@|F:@syn_sample_clock_path==CKID0003@|M:ClockId0003 
+CKID0004:@|S:I59@|E:I212.Freq2@|F:@syn_sample_clock_path==CKID0004@|M:ClockId0004 
+CKID0005:@|S:CLK_64MHz@|E:I45@|F:@syn_sample_clock_path==CKID0005@|M:ClockId0005 

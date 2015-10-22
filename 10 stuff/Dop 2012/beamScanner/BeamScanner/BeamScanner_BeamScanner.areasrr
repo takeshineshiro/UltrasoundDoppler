@@ -1,0 +1,119 @@
+----------------------------------------------------------------------
+Report for cell BeamScanner.verilog
+
+Register bits: 716 of 2280 (31%)
+Latch bits:      1
+PIC Latch:       0
+I/O cells:       38
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                               AND2       10       100.0
+                               AND3        2       100.0
+                               CCU2       21       100.0
+                            FD1P3AX      675       100.0
+                            FD1P3DX       26       100.0
+                             FD1S1D        1       100.0
+                            FD1S3AX       14       100.0
+                            FD1S3IX        1       100.0
+                            FIFO8KA        2       100.0
+                                GSR        1       100.0
+                                 IB       22       100.0
+                                INV       13       100.0
+                            L6MUX21       63       100.0
+                                 OB       16       100.0
+                                OR2        1       100.0
+                           ORCALUT4      453       100.0
+                              PFUMX      168       100.0
+                                PUR        1       100.0
+                                VHI        7       100.0
+                                VLO        7       100.0
+SUB MODULES 
+                            CLK_gen        1       100.0
+                           DataFIFO        1       100.0
+                           cmp16bit        1       100.0
+                           cnt16bit        1       100.0
+                          fifo24bit        1       100.0
+                          flag_ctrl        1       100.0
+                            sr24bit        1       100.0
+                            
+                         TOTAL          1511           
+----------------------------------------------------------------------
+Report for cell cmp16bit.netlist
+     Instance path:  Ctrl_Comparator
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                               CCU2        4        19.0
+                                INV        1         7.7
+                                VLO        1        14.3
+                            
+                         TOTAL             6           
+----------------------------------------------------------------------
+Report for cell cnt16bit.netlist
+     Instance path:  Ctrl_Counter
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                               CCU2        8        38.1
+                            FD1P3DX       16        61.5
+                                VHI        1        14.3
+                                VLO        1        14.3
+                            
+                         TOTAL            26           
+----------------------------------------------------------------------
+Report for cell sr24bit.netlist
+     Instance path:  SPI_Interface
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                            FD1P3AX       24         3.6
+                                VHI        1        14.3
+                            
+                         TOTAL            25           
+----------------------------------------------------------------------
+Report for cell fifo24bit.netlist
+     Instance path:  Ctrl_Fifo
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                               CCU2        6        28.6
+                            FD1P3AX      651        96.4
+                            FD1P3DX       10        38.5
+                            L6MUX21       63       100.0
+                           ORCALUT4      441        97.4
+                              PFUMX      168       100.0
+                                VHI        1        14.3
+                                VLO        1        14.3
+                            
+                         TOTAL          1341           
+----------------------------------------------------------------------
+Report for cell CLK_gen.netlist
+     Instance path:  I212
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                               CCU2        3        14.3
+                            FD1S3AX       12        85.7
+                                INV        1         7.7
+                           ORCALUT4       10         2.2
+                                VHI        1        14.3
+                                VLO        1        14.3
+                            
+                         TOTAL            28           
+----------------------------------------------------------------------
+Report for cell DataFIFO.netlist
+     Instance path:  I213
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                            FIFO8KA        2       100.0
+                                VHI        1        14.3
+                                VLO        1        14.3
+                            
+                         TOTAL             4           
+----------------------------------------------------------------------
+Report for cell flag_ctrl.netlist
+     Instance path:  I216
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                            FD1S3AX        2        14.3
+                            FD1S3IX        1       100.0
+                           ORCALUT4        2         0.4
+                                VHI        1        14.3
+                                VLO        1        14.3
+                            
+                         TOTAL             7           

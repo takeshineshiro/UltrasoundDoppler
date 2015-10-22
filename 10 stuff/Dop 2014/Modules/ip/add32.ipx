@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="add32" module="Adder" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2015 03 05 11:33:46.236" version="3.4" type="Module" synthesis="synplify" source_format="Verilog">
+  <Package>
+		<File name="add32.lpc" type="lpc" modified="2015 03 05 11:33:44.054"/>
+		<File name="add32.v" type="top_level_verilog" modified="2015 03 05 11:33:44.124"/>
+		<File name="add32_tmpl.v" type="template_verilog" modified="2015 03 05 11:33:44.127"/>
+		<File name="tb_add32_tmpl.v" type="testbench_verilog" modified="2015 03 05 11:33:44.145"/>
+  </Package>
+</DiamondModule>

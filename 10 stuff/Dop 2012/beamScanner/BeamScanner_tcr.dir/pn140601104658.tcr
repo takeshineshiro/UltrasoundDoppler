@@ -1,0 +1,41 @@
+#Start recording tcl command: 5/30/2014 16:05:18
+#Project Location: C:/Users/Andreas/Desktop/usd/beamScanner; Project name: BeamScanner
+prj_project open "C:/Users/Andreas/Desktop/usd/beamScanner/BeamScanner.ldf"
+prj_src add "C:/Users/Andreas/Desktop/usd/beamScanner/CmdReg.v"
+prj_run Synthesis -impl BeamScanner
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/CmdReg.v" SynthesisOnly
+source "C:/Users/Andreas/Desktop/usd/beamScanner/hdle_generate_Symbol.tcl"
+prj_src exclude "C:/Users/Andreas/Desktop/usd/beamScanner/CmdReg.v"
+prj_src remove "C:/Users/Andreas/Desktop/usd/beamScanner/CmdReg.v"
+prj_src add "C:/Users/Andreas/Desktop/usd/beamScanner/USDCoreLayer.v"
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/USDCoreLayer.v" SynthesisOnly
+source "C:/Users/Andreas/Desktop/usd/beamScanner/hdle_generate_Symbol.tcl"
+source "C:/Users/Andreas/Desktop/usd/beamScanner/hdle_generate_Symbol.tcl"
+source "C:/Users/Andreas/Desktop/usd/beamScanner/hdle_generate_Symbol.tcl"
+prj_run Synthesis -impl BeamScanner
+prj_src add "C:/Users/Andreas/Desktop/usd/beamScanner/USD.sch"
+source "C:/Users/Andreas/Desktop/usd/beamScanner/hdle_generate_Symbol.tcl"
+prj_src add "C:/Users/Andreas/Desktop/usd/beamScanner/tb_spi_slave.v" "C:/Users/Andreas/Desktop/usd/beamScanner/spi_slave.v"
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/spi_slave.v" SynthesisOnly
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/tb_spi_slave.v" SimulateOnly
+prj_src add "C:/Users/Andreas/Desktop/usd/beamScanner/test/test.spf"
+prj_src remove "C:/Users/Andreas/Desktop/usd/beamScanner/test/test.spf"
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/cnt16bit.v" SynthesisOnly
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/cmp16bit.v" SynthesisOnly
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/sr24bit.v" SynthesisOnly
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/fifo24bit.v" SynthesisOnly
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/splitter24_16_8.v" SynthesisOnly
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/CLK_gen.v" SimulateOnly
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/CLK_gen.v" SynthesisOnly
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/flag_ctrl.v" SynthesisOnly
+prj_src syn_sim -src "C:/Users/Andreas/Desktop/usd/beamScanner/USD.sch" SynthesisOnly
+prj_src add "C:/Users/Andreas/Desktop/usd/beamScanner/test/test.spf"
+prj_src add "C:/Users/Andreas/Desktop/usd/beamScanner/CommunicationLayer.v"
+source "C:/Users/Andreas/Desktop/usd/beamScanner/hdle_generate_Symbol.tcl"
+source "C:/Users/Andreas/Desktop/usd/beamScanner/hdle_generate_Symbol.tcl"
+prj_src add "C:/Users/Andreas/Desktop/usd/beamScanner/USD_TopLevel.v"
+prj_run Synthesis -impl BeamScanner
+prj_run Synthesis -impl BeamScanner
+prj_src remove "C:/Users/Andreas/Desktop/usd/beamScanner/USD_TopLevel.v" "C:/Users/Andreas/Desktop/usd/beamScanner/CommunicationLayer.v" "C:/Users/Andreas/Desktop/usd/beamScanner/USD.sch" "C:/Users/Andreas/Desktop/usd/beamScanner/USDCoreLayer.v" "C:/Users/Andreas/Desktop/usd/beamScanner/spi_slave.v" "C:/Users/Andreas/Desktop/usd/beamScanner/tb_spi_slave.v"
+prj_run Synthesis -impl BeamScanner
+#Stop recording: 6/1/2014 10:46:58

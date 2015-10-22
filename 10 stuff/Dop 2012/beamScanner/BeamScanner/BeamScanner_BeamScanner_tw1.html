@@ -1,0 +1,373 @@
+<HTML>
+<HEAD><TITLE>Lattice Map TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Map TRACE Report</big></U></B>
+
+Loading design for application trce from file beamscanner_beamscanner_map.ncd.
+Design name: BeamScanner
+NCD version: 3.2
+Vendor:      LATTICE
+Device:      LCMXO2280C
+Package:     TQFP100
+Performance: 3
+Loading device for application trce from file 'mj5g21x17.nph' in environment: C:/lscc/diamond/3.1_x64/ispfpga.
+Package Status:                     Final          Version 1.26
+Performance Hardware Data Status: Version 1.91
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.1.0.96</big></U></B>
+Mon Jul 28 22:30:30 2014
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2014 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o BeamScanner_BeamScanner.tw1 -gui BeamScanner_BeamScanner_map.ncd BeamScanner_BeamScanner.prf 
+Design file:     beamscanner_beamscanner_map.ncd
+Preference file: beamscanner_beamscanner.prf
+Device,speed:    LCMXO2280C,3
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#map_twr_pref_0_0' Target='right'>FREQUENCY PORT "CLK_64MHz" 64.000000 MHz (0 errors)</A></LI>            1762 items scored, 0 timing errors detected.
+Report:   83.195MHz is the maximum frequency for this preference.
+
+9 potential circuit loops found in timing analysis.
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_0_0"></A>Preference: FREQUENCY PORT "CLK_64MHz" 64.000000 MHz ;
+            1762 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 3.605ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              Ctrl_Fifo/RD_PTR[4]  (from RD_ctrlFF +)
+   Destination:    FF         Data in        I212/SYNCcnt[4]  (to CLK_64MHz_c +)
+
+   Delay:              11.450ns  (32.2% logic, 67.8% route), 8 logic levels.
+
+ Constraint Details:
+
+     11.450ns physical path delay Ctrl_Fifo/SLICE_12 to SLICE_19 meets
+     15.625ns delay constraint less
+      0.570ns FCI_SET requirement (totaling 15.055ns) by 3.605ns
+
+ Physical Path Details:
+
+      Data path Ctrl_Fifo/SLICE_12 to SLICE_19:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.560 */SLICE_12.CLK to *o/SLICE_12.Q0 Ctrl_Fifo/SLICE_12 (from RD_ctrlFF)
+ROUTE       338   e 1.441 *o/SLICE_12.Q0 to */SLICE_568.C1 Ctrl_Fifo/RD_PTR[4]
+CTOF_DEL    ---     0.371 */SLICE_568.C1 to */SLICE_568.F1 Ctrl_Fifo/SLICE_568
+ROUTE         1   e 0.561 */SLICE_568.F1 to */SLICE_568.B0 Ctrl_Fifo/Q_26[17]
+CTOF_DEL    ---     0.371 */SLICE_568.B0 to */SLICE_568.F0 Ctrl_Fifo/SLICE_568
+ROUTE         1   e 1.441 */SLICE_568.F0 to */SLICE_401.C1 Ctrl_Fifo/Q_28[17]
+CTOOFX_DEL  ---     0.615 */SLICE_401.C1 to *LICE_401.OFX0 Ctrl_Fifo/Q_30[17]/SLICE_401
+ROUTE         1   e 1.441 *LICE_401.OFX0 to   SLICE_580.B1 Ctrl_Fifo/Q_30[17]
+CTOF_DEL    ---     0.371   SLICE_580.B1 to   SLICE_580.F1 SLICE_580
+ROUTE         3   e 1.441   SLICE_580.F1 to   SLICE_382.B0 BURST
+CTOF_DEL    ---     0.371   SLICE_382.B0 to   SLICE_382.F0 SLICE_382
+ROUTE         6   e 1.441   SLICE_382.F0 to *2/SLICE_18.A0 I212/SYNCcnt
+A0TOFCO_DE  ---     0.882 *2/SLICE_18.A0 to */SLICE_18.FCO I212/SLICE_18
+ROUTE         1   e 0.001 */SLICE_18.FCO to */SLICE_20.FCI I212/SYNCcnt_cry[1]
+FCITOFCO_D  ---     0.141 */SLICE_20.FCI to */SLICE_20.FCO I212/SLICE_20
+ROUTE         1   e 0.001 */SLICE_20.FCO to   SLICE_19.FCI I212/SYNCcnt_cry[3] (to CLK_64MHz_c)
+                  --------
+                   11.450   (32.2% logic, 67.8% route), 8 logic levels.
+
+Report:   83.195MHz is the maximum frequency for this preference.
+
+<A name="mtw1_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "CLK_64MHz" 64.000000    |             |             |
+MHz ;                                   |   64.000 MHz|   83.195 MHz|   8  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="mtw1_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 7 clocks:
+
+Clock Domain: CLK_64MHz_c   Source: CLK_64MHz.PAD   Loads: 18
+   Covered under: FREQUENCY PORT "CLK_64MHz" 64.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: RD_ctrlFF   Source: SLICE_21.F1
+      Covered under: FREQUENCY PORT "CLK_64MHz" 64.000000 MHz ;   Transfers: 5
+
+   Clock Domain: WR_ctrlFF   Source: SLICE_607.F1
+      Not reported because source and destination domains are unrelated.
+
+   Clock Domain: SAMPLE   Source: SLICE_583.F0
+      Covered under: FREQUENCY PORT "CLK_64MHz" 64.000000 MHz ;   Transfers: 1
+
+   Clock Domain: SPP_RDCLK_c   Source: SPP_RDCLK.PAD
+      Not reported because source and destination domains are unrelated.
+      To report these transfers please refer to preference CLKSKEWDIFF to define
+      external clock skew between clock ports.
+
+Clock Domain: SRCLK_c   Source: SRCLK.PAD   Loads: 12
+   No transfer within this clock domain is found
+
+Clock Domain: RD_ctrlFF   Source: SLICE_21.F1   Loads: 3
+   Covered under: FREQUENCY PORT "CLK_64MHz" 64.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: SRCLK_c   Source: SRCLK.PAD
+      Not reported because source and destination domains are unrelated.
+
+   Clock Domain: WR_ctrlFF   Source: SLICE_607.F1
+      Not reported because source and destination domains are unrelated.
+
+Clock Domain: WR_ctrlFF   Source: SLICE_607.F1   Loads: 344
+   No transfer within this clock domain is found
+
+Clock Domain: WR_Freq   Source: SLICE_607.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: SAMPLE   Source: SLICE_583.F0   Loads: 4
+   Covered under: FREQUENCY PORT "CLK_64MHz" 64.000000 MHz ;
+
+Clock Domain: SPP_RDCLK_c   Source: SPP_RDCLK.PAD   Loads: 4
+   No transfer within this clock domain is found
+
+
+<A name="mtw1_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1762 paths, 6 nets, and 1059 connections (31.5% coverage)
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.1.0.96</big></U></B>
+Mon Jul 28 22:30:30 2014
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2014 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_hold_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o BeamScanner_BeamScanner.tw1 -gui BeamScanner_BeamScanner_map.ncd BeamScanner_BeamScanner.prf 
+Design file:     beamscanner_beamscanner_map.ncd
+Preference file: beamscanner_beamscanner.prf
+Device,speed:    LCMXO2280C,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#map_twr_pref_1_0' Target='right'>FREQUENCY PORT "CLK_64MHz" 64.000000 MHz (0 errors)</A></LI>            1762 items scored, 0 timing errors detected.
+
+9 potential circuit loops found in timing analysis.
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_1_0"></A>Preference: FREQUENCY PORT "CLK_64MHz" 64.000000 MHz ;
+            1762 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.320ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FIFO8KA    Port           I213/DataFIFO_0_1(ASIC)  (from SAMPLE +)
+   Destination:    FIFO8KA    Port           I213/DataFIFO_0_1(ASIC)  (to SAMPLE +)
+
+   Delay:               0.419ns  (52.5% logic, 47.5% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.419ns physical path delay I213/DataFIFO_0_1 to I213/DataFIFO_0_1 meets
+      0.099ns CS_HLD and
+      0.000ns delay constraint requirement (totaling 0.099ns) by 0.320ns
+
+ Physical Path Details:
+
+      Data path I213/DataFIFO_0_1 to I213/DataFIFO_0_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+C2Q_DEL     ---     0.220 *FIFO_0_1.CLKW to *taFIFO_0_1.FF I213/DataFIFO_0_1 (from SAMPLE)
+ROUTE         2   e 0.199 *taFIFO_0_1.FF to *IFO_0_1.FULLI I213/Full (to SAMPLE)
+                  --------
+                    0.419   (52.5% logic, 47.5% route), 1 logic levels.
+
+<A name="mtw1_hold_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "CLK_64MHz" 64.000000    |             |             |
+MHz ;                                   |            -|            -|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="mtw1_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 7 clocks:
+
+Clock Domain: CLK_64MHz_c   Source: CLK_64MHz.PAD   Loads: 18
+   Covered under: FREQUENCY PORT "CLK_64MHz" 64.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: RD_ctrlFF   Source: SLICE_21.F1
+      Covered under: FREQUENCY PORT "CLK_64MHz" 64.000000 MHz ;   Transfers: 5
+
+   Clock Domain: WR_ctrlFF   Source: SLICE_607.F1
+      Not reported because source and destination domains are unrelated.
+
+   Clock Domain: SAMPLE   Source: SLICE_583.F0
+      Covered under: FREQUENCY PORT "CLK_64MHz" 64.000000 MHz ;   Transfers: 1
+
+   Clock Domain: SPP_RDCLK_c   Source: SPP_RDCLK.PAD
+      Not reported because source and destination domains are unrelated.
+      To report these transfers please refer to preference CLKSKEWDIFF to define
+      external clock skew between clock ports.
+
+Clock Domain: SRCLK_c   Source: SRCLK.PAD   Loads: 12
+   No transfer within this clock domain is found
+
+Clock Domain: RD_ctrlFF   Source: SLICE_21.F1   Loads: 3
+   Covered under: FREQUENCY PORT "CLK_64MHz" 64.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: SRCLK_c   Source: SRCLK.PAD
+      Not reported because source and destination domains are unrelated.
+
+   Clock Domain: WR_ctrlFF   Source: SLICE_607.F1
+      Not reported because source and destination domains are unrelated.
+
+Clock Domain: WR_ctrlFF   Source: SLICE_607.F1   Loads: 344
+   No transfer within this clock domain is found
+
+Clock Domain: WR_Freq   Source: SLICE_607.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: SAMPLE   Source: SLICE_583.F0   Loads: 4
+   Covered under: FREQUENCY PORT "CLK_64MHz" 64.000000 MHz ;
+
+Clock Domain: SPP_RDCLK_c   Source: SPP_RDCLK.PAD   Loads: 4
+   No transfer within this clock domain is found
+
+
+<A name="mtw1_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1762 paths, 6 nets, and 1059 connections (31.5% coverage)
+
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

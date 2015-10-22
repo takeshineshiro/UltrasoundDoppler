@@ -1,0 +1,7 @@
+#Start recording tcl command: 7/4/2014 00:41:47
+#Project Location: C:/Users/Andreas/Desktop/usd/beamScanner; Project name: BeamScanner
+prj_project open "C:/Users/Andreas/Desktop/usd/beamScanner/BeamScanner.ldf"
+prj_src add "C:/Users/Andreas/Desktop/usd/beamScanner/Timing.sdc"
+prj_run Synthesis -impl BeamScanner
+prj_run PAR -impl BeamScanner -task IOTiming
+#Stop recording: 7/4/2014 02:45:33

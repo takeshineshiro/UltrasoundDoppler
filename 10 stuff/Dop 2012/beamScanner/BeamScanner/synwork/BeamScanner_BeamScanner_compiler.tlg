@@ -1,0 +1,98 @@
+Selecting top level module BeamScanner
+@N: CG364 :"C:\eda\lscc\diamond\2.2\cae_library\synthesis\verilog\machxo.v":817:7:817:9|Synthesizing module OR2
+
+@N: CG364 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\flag_ctrl.v":15:7:15:15|Synthesizing module flag_ctrl
+
+@N: CG364 :"C:\eda\lscc\diamond\2.2\cae_library\synthesis\verilog\machxo.v":1303:7:1303:13|Synthesizing module FIFO8KA
+
+@N: CG364 :"C:\eda\lscc\diamond\2.2\cae_library\synthesis\verilog\machxo.v":989:7:989:9|Synthesizing module VHI
+
+@N: CG364 :"C:\eda\lscc\diamond\2.2\cae_library\synthesis\verilog\machxo.v":994:7:994:9|Synthesizing module VLO
+
+@N: CG364 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\DataFIFO.v":8:7:8:14|Synthesizing module DataFIFO
+
+@N: CG364 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\CLK_gen.v":4:7:4:13|Synthesizing module CLK_gen
+
+@N: CG364 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\splitter24_16_8.v":11:7:11:21|Synthesizing module splitter24_16_8
+
+@N: CG364 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":16:7:16:15|Synthesizing module fifo24bit
+
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_31_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_30_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_29_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_28_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_27_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_26_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_25_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_24_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_23_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_22_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_21_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_20_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_19_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_18_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_17_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_16_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_15_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_14_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_13_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_12_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_11_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_10_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_9_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_8_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_7_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_6_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_5_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_4_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_3_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_2_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_1_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@A: CL282 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Feedback mux created for signal FF_MEM_0_[23:0] -- possible set/reset assignment for signal missing. Specifying a reset value will improve timing and area.
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[0] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[1] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[2] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[3] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[4] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[5] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[6] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[7] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[8] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[9] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[10] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[11] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[12] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[13] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[14] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[15] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[16] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[17] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[18] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[19] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[20] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[21] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[22] is always 0, optimizing ...
+@W: CL189 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\fifo24bit.v":65:0:65:5|Register bit FF_MEM_31_[23] is always 0, optimizing ...
+@N: CG364 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\sr24bit.v":17:7:17:13|Synthesizing module sr24bit
+
+@N: CG364 :"C:\eda\lscc\diamond\2.2\cae_library\synthesis\verilog\machxo.v":919:7:919:9|Synthesizing module PUR
+
+@N: CG364 :"C:\eda\lscc\diamond\2.2\cae_library\synthesis\verilog\machxo.v":587:7:587:9|Synthesizing module GSR
+
+@N: CG364 :"C:\eda\lscc\diamond\2.2\cae_library\synthesis\verilog\machxo.v":411:7:411:12|Synthesizing module FD1S1D
+
+@N: CG364 :"C:\eda\lscc\diamond\2.2\cae_library\synthesis\verilog\machxo.v":209:8:209:11|Synthesizing module AND3
+
+@N: CG364 :"C:\eda\lscc\diamond\2.2\cae_library\synthesis\verilog\machxo.v":203:7:203:10|Synthesizing module AND2
+
+@N: CG364 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\cnt16bit.v":16:7:16:14|Synthesizing module cnt16bit
+
+@N: CG179 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\cnt16bit.v":40:7:40:7|Removing redundant assignment
+@N: CG364 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\cmp16bit.v":15:7:15:14|Synthesizing module cmp16bit
+
+@N: CG364 :"C:\eda\lscc\diamond\2.2\cae_library\synthesis\verilog\machxo.v":615:7:615:9|Synthesizing module INV
+
+@N: CG364 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\BeamScanner\BeamScanner.v":3:7:3:17|Synthesizing module BeamScanner
+
+@W: CG781 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\BeamScanner\BeamScanner.v":89:9:89:12|Undriven input RPReset on instance I213, tying to 0
+@W: CL156 :"I:\Projekte\P_05\VSK\BeamScanner\Diamond\BeamScanner\BeamScanner.v":33:14:33:21|*Input ADC_OUT_[15:0] to expression [instance] has undriven bits that are tied to 0 -- simulation mismatch possible.

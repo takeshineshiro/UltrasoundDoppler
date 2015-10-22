@@ -1,0 +1,1 @@
+ -u "C:\lscc\diamond\3.1_x64\active-hdl\bin/systf.dll" -v2k5  "C:\Users\Andreas\Desktop\usd\beamScanner\spi_slave.v" -v2k5  "C:\Users\Andreas\Desktop\usd\beamScanner\tb_spi_slave.v"  -cs  -g 5  -r -li "C:\Users\Andreas\Desktop\usd\beamScanner\test\compile\test.epr" -p "C:\Users\Andreas\Desktop\usd\beamScanner\test\work" 

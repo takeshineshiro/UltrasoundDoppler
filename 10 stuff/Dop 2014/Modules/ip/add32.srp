@@ -1,0 +1,30 @@
+SCUBA, Version Diamond (64-bit) 3.4.0.80
+Thu Mar 05 11:33:44 2015
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2014 Lattice Semiconductor Corporation,  All rights reserved.
+
+    Issued command   : C:\lscc\diamond\3.4_x64\ispfpga\bin\nt64\scuba.exe -w -n add32 -lang verilog -synth synplify -bus_exp 7 -bb -arch mj5g00 -type mgaddsub -width 32 -signed -pipeline 0 
+    Circuit name     : add32
+    Module type      : add
+    Module Version   : 3.4
+    Width            : 32
+    Ports            : 
+	Inputs       : DataA[31:0], DataB[31:0]
+	Outputs      : Result[31:0]
+    I/O buffer       : not inserted
+    Representation   : signed number
+    EDIF output      : add32.edn
+    Verilog output   : add32.v
+    Verilog template : add32_tmpl.v
+    Verilog testbench: tb_add32_tmpl.v
+    Verilog purpose  : for synthesis and simulation
+    Bus notation     : big endian
+    Report output    : add32.srp
+    Element Usage    :
+          FADD2 : 16
+    Estimated Resource Usage:
+            LUT : 32

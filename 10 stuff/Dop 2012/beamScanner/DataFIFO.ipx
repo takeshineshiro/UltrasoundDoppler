@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="DataFIFO" module="DataFIFO" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2014 02 07 08:39:50.911" version="5.5" type="Module" synthesis="synplify" source_format="Verilog HDL">
+  <Package>
+		<File name="DataFIFO.lpc" type="lpc" modified="2014 02 07 08:39:47.067"/>
+		<File name="DataFIFO.v" type="top_level_verilog" modified="2014 02 07 08:39:47.114"/>
+		<File name="DataFIFO_tmpl.v" type="template_verilog" modified="2014 02 07 08:39:47.114"/>
+		<File name="tb_DataFIFO_tmpl.v" type="testbench_verilog" modified="2014 02 07 08:39:47.129"/>
+  </Package>
+</DiamondModule>

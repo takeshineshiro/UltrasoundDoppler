@@ -1,0 +1,479 @@
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Wed Jul 30 08:59:12 2014
+#
+
+
+Top view:               BeamScanner
+Requested Frequency:    1.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    E:\backup download\usd\beamScanner\Timing.sdc
+                       
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
+
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: -0.198
+
+                                         Requested     Estimated     Requested     Estimated                 Clock        Clock              
+Starting Clock                           Frequency     Frequency     Period        Period        Slack       Type         Group              
+---------------------------------------------------------------------------------------------------------------------------------------------
+BeamScanner|RD_ctrlFF_inferred_clock     1.0 MHz       188.3 MHz     1000.000      5.310         994.690     inferred     Inferred_clkgroup_1
+BeamScanner|SRCLK                        1.0 MHz       464.0 MHz     1000.000      2.155         997.845     inferred     Inferred_clkgroup_0
+CLK_64MHz                                64.0 MHz      179.0 MHz     15.625        5.588         10.037      declared     default_clkgroup_0 
+System                                   1.0 MHz       174.7 MHz     1000.000      5.724         994.276     system       system_clkgroup    
+=============================================================================================================================================
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                      |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                              Ending                                |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                System                                |  0.000       0.000   |  No paths    -      |  No paths    -      |  No paths    -    
+System                                CLK_64MHz                             |  0.000       -0.198  |  No paths    -      |  No paths    -      |  No paths    -    
+System                                BeamScanner|RD_ctrlFF_inferred_clock  |  0.000       2.228   |  No paths    -      |  No paths    -      |  No paths    -    
+CLK_64MHz                             System                                |  0.000       0.944   |  No paths    -      |  No paths    -      |  No paths    -    
+CLK_64MHz                             CLK_64MHz                             |  0.000       0.771   |  No paths    -      |  No paths    -      |  No paths    -    
+BeamScanner|SRCLK                     System                                |  0.000       0.944   |  No paths    -      |  No paths    -      |  No paths    -    
+BeamScanner|SRCLK                     BeamScanner|SRCLK                     |  0.000       0.821   |  No paths    -      |  No paths    -      |  No paths    -    
+BeamScanner|RD_ctrlFF_inferred_clock  System                                |  0.000       1.516   |  No paths    -      |  No paths    -      |  No paths    -    
+BeamScanner|RD_ctrlFF_inferred_clock  CLK_64MHz                             |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+BeamScanner|RD_ctrlFF_inferred_clock  BeamScanner|RD_ctrlFF_inferred_clock  |  0.000       2.743   |  No paths    -      |  No paths    -      |  No paths    -    
+===================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: BeamScanner|RD_ctrlFF_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                        Starting                                                                   Arrival          
+Instance                Reference                                Type        Pin     Net           Time        Slack
+                        Clock                                                                                       
+--------------------------------------------------------------------------------------------------------------------
+Ctrl_Fifo.RD_PTR[0]     BeamScanner|RD_ctrlFF_inferred_clock     FD1P3DX     Q       RD_PTR[0]     1.280       1.516
+Ctrl_Fifo.RD_PTR[1]     BeamScanner|RD_ctrlFF_inferred_clock     FD1P3DX     Q       RD_PTR[1]     1.334       2.485
+Ctrl_Fifo.RD_PTR[2]     BeamScanner|RD_ctrlFF_inferred_clock     FD1P3DX     Q       RD_PTR[2]     1.405       2.538
+Ctrl_Fifo.RD_PTR[4]     BeamScanner|RD_ctrlFF_inferred_clock     FD1P3DX     Q       RD_PTR[4]     1.828       2.743
+Ctrl_Fifo.RD_PTR[3]     BeamScanner|RD_ctrlFF_inferred_clock     FD1P3DX     Q       RD_PTR[3]     1.546       3.293
+====================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                        Starting                                                                   Required          
+Instance                Reference                                Type        Pin     Net           Time         Slack
+                        Clock                                                                                        
+---------------------------------------------------------------------------------------------------------------------
+I42                     BeamScanner|RD_ctrlFF_inferred_clock     AND2        A       X[16]         0.000        1.516
+I43                     BeamScanner|RD_ctrlFF_inferred_clock     AND2        A       X[17]         0.000        1.516
+I44                     BeamScanner|RD_ctrlFF_inferred_clock     AND2        A       X[19]         0.000        1.516
+I74                     BeamScanner|RD_ctrlFF_inferred_clock     AND2        A       X[18]         0.000        1.516
+I225                    BeamScanner|RD_ctrlFF_inferred_clock     AND2        A       X[20]         0.000        1.516
+Ctrl_Fifo.RD_PTR[0]     BeamScanner|RD_ctrlFF_inferred_clock     FD1P3DX     SP      E_FLAG_NE     0.136        2.743
+Ctrl_Fifo.RD_PTR[1]     BeamScanner|RD_ctrlFF_inferred_clock     FD1P3DX     SP      E_FLAG_NE     0.136        2.743
+Ctrl_Fifo.RD_PTR[2]     BeamScanner|RD_ctrlFF_inferred_clock     FD1P3DX     SP      E_FLAG_NE     0.136        2.743
+Ctrl_Fifo.RD_PTR[3]     BeamScanner|RD_ctrlFF_inferred_clock     FD1P3DX     SP      E_FLAG_NE     0.136        2.743
+Ctrl_Fifo.RD_PTR[4]     BeamScanner|RD_ctrlFF_inferred_clock     FD1P3DX     SP      E_FLAG_NE     0.136        2.743
+=====================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Propagation time:                        1.516
+    + Clock delay at starting point:         0.000 (ideal)
+    - Requested Period:                      0.000
+    - Hold time:                             0.000
+    - Clock delay at ending point:           0.000 (ideal)
+0.000
+    = Slack (non-critical) :                 1.516
+
+    Number of logic level(s):                1
+    Starting point:                          Ctrl_Fifo.RD_PTR[0] / Q
+    Ending point:                            I42 / A
+    The start point is clocked by            BeamScanner|RD_ctrlFF_inferred_clock [rising] on pin CK
+    The end   point is clocked by            System [rising]
+
+Instance / Net                       Pin      Pin               Arrival     No. of    
+Name                    Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------
+Ctrl_Fifo.RD_PTR[0]     FD1P3DX      Q        Out     1.280     1.280       -         
+RD_PTR[0]               Net          -        -       -         -           23        
+Ctrl_Fifo.Q_31[16]      ORCALUT4     C        In      0.000     1.280       -         
+Ctrl_Fifo.Q_31[16]      ORCALUT4     Z        Out     0.236     1.516       -         
+X[16]                   Net          -        -       -         -           1         
+I42                     AND2         A        In      0.000     1.516       -         
+======================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: BeamScanner|SRCLK
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                        Starting                                                Arrival          
+Instance                Reference             Type        Pin     Net           Time        Slack
+                        Clock                                                                    
+-------------------------------------------------------------------------------------------------
+SPI_Interface.Q[21]     BeamScanner|SRCLK     FD1P3AX     Q       SRBUS[21]     1.019       0.821
+SPI_Interface.Q[22]     BeamScanner|SRCLK     FD1P3AX     Q       SRBUS[22]     1.019       0.821
+SPI_Interface.Q[23]     BeamScanner|SRCLK     FD1P3AX     Q       SRBUS[23]     0.944       0.944
+SPI_Interface.Q[0]      BeamScanner|SRCLK     FD1P3AX     Q       SRBUS[0]      1.308       1.110
+SPI_Interface.Q[4]      BeamScanner|SRCLK     FD1P3AX     Q       SRBUS[4]      1.308       1.110
+SPI_Interface.Q[5]      BeamScanner|SRCLK     FD1P3AX     Q       SRBUS[5]      1.308       1.110
+SPI_Interface.Q[6]      BeamScanner|SRCLK     FD1P3AX     Q       SRBUS[6]      1.308       1.110
+SPI_Interface.Q[7]      BeamScanner|SRCLK     FD1P3AX     Q       SRBUS[7]      1.308       1.110
+SPI_Interface.Q[8]      BeamScanner|SRCLK     FD1P3AX     Q       SRBUS[8]      1.308       1.110
+SPI_Interface.Q[9]      BeamScanner|SRCLK     FD1P3AX     Q       SRBUS[9]      1.308       1.110
+=================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                           Starting                                                Required          
+Instance                   Reference             Type        Pin     Net           Time         Slack
+                           Clock                                                                     
+-----------------------------------------------------------------------------------------------------
+SPI_Interface.Q[22]        BeamScanner|SRCLK     FD1P3AX     D       SRBUS[21]     0.198        0.821
+SPI_Interface.Q[23]        BeamScanner|SRCLK     FD1P3AX     D       SRBUS[22]     0.198        0.821
+I50                        BeamScanner|SRCLK     AND2        A       SRBUS[23]     0.000        0.944
+I49                        BeamScanner|SRCLK     AND2        A       SRBUS[22]     0.000        1.019
+I59                        BeamScanner|SRCLK     AND2        A       SRBUS[21]     0.000        1.019
+Ctrl_Fifo.FF_MEM_0_[0]     BeamScanner|SRCLK     FD1P3AX     D       SRBUS[0]      0.198        1.110
+Ctrl_Fifo.FF_MEM_0_[4]     BeamScanner|SRCLK     FD1P3AX     D       SRBUS[4]      0.198        1.110
+Ctrl_Fifo.FF_MEM_0_[5]     BeamScanner|SRCLK     FD1P3AX     D       SRBUS[5]      0.198        1.110
+Ctrl_Fifo.FF_MEM_0_[6]     BeamScanner|SRCLK     FD1P3AX     D       SRBUS[6]      0.198        1.110
+Ctrl_Fifo.FF_MEM_0_[7]     BeamScanner|SRCLK     FD1P3AX     D       SRBUS[7]      0.198        1.110
+=====================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Propagation time:                        1.019
+    + Clock delay at starting point:         0.000 (ideal)
+    - Requested Period:                      0.000
+    - Hold time:                             0.198
+    - Clock delay at ending point:           0.000 (ideal)
+    = Slack (non-critical) :                 0.821
+
+    Number of logic level(s):                0
+    Starting point:                          SPI_Interface.Q[21] / Q
+    Ending point:                            SPI_Interface.Q[22] / D
+    The start point is clocked by            BeamScanner|SRCLK [rising] on pin CK
+    The end   point is clocked by            BeamScanner|SRCLK [rising] on pin CK
+
+Instance / Net                      Pin      Pin               Arrival     No. of    
+Name                    Type        Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------
+SPI_Interface.Q[21]     FD1P3AX     Q        Out     1.019     1.019       -         
+SRBUS[21]               Net         -        -       -         -           2         
+SPI_Interface.Q[22]     FD1P3AX     D        In      0.000     1.019       -         
+=====================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: CLK_64MHz
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                    Starting                                         Arrival          
+Instance            Reference     Type        Pin     Net            Time        Slack
+                    Clock                                                             
+--------------------------------------------------------------------------------------
+I216.oldAF          CLK_64MHz     FD1S3AX     Q       oldAF          0.944       0.771
+I212.PICcnt[2]      CLK_64MHz     FD1S3AX     Q       PICcnt[2]      1.019       0.847
+I212.PICcnt[3]      CLK_64MHz     FD1S3AX     Q       CLK_PIC_c      1.019       0.847
+I212.PICcnt[1]      CLK_64MHz     FD1S3AX     Q       PICcnt[1]      1.086       0.914
+I216.read           CLK_64MHz     FD1S3IX     Q       RD_DATA_c      1.086       0.914
+I45                 CLK_64MHz     FD1S1D      Q       AeqB           0.944       0.944
+I212.PICcnt[0]      CLK_64MHz     FD1S3AX     Q       PICcnt[0]      1.128       0.956
+I216.oldAE          CLK_64MHz     FD1S3AX     Q       oldAE          0.944       1.338
+I212.SYNCcnt[0]     CLK_64MHz     FD1S3AX     Q       SYNCcnt[0]     0.944       2.698
+I212.SYNCcnt[1]     CLK_64MHz     FD1S3AX     Q       SYNCcnt[1]     0.944       2.698
+======================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                    Starting                                           Required          
+Instance            Reference     Type        Pin     Net              Time         Slack
+                    Clock                                                                
+-----------------------------------------------------------------------------------------
+I216.read           CLK_64MHz     FD1S3IX     D       fb_0             0.702        0.771
+I212.PICcnt[2]      CLK_64MHz     FD1S3AX     D       PICcnt_1[2]      0.702        0.847
+I212.PICcnt[3]      CLK_64MHz     FD1S3AX     D       PICcnt_1[3]      0.702        0.847
+I212.PICcnt[1]      CLK_64MHz     FD1S3AX     D       PICcnt_1[1]      0.702        0.914
+I46                 CLK_64MHz     AND3        A       AeqB             0.000        0.944
+I226                CLK_64MHz     AND2        A       RD_DATA_c        0.000        1.086
+I216.read           CLK_64MHz     FD1S3IX     CD      read6            0.136        1.338
+I212.PICcnt[0]      CLK_64MHz     FD1S3AX     D       PICcnt_i[0]      0.198        1.527
+I212.SYNCcnt[0]     CLK_64MHz     FD1S3AX     D       SYNCcnt_s[0]     -0.297       2.698
+I212.SYNCcnt[1]     CLK_64MHz     FD1S3AX     D       SYNCcnt_s[1]     -0.297       2.698
+=========================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Propagation time:                        1.474
+    + Clock delay at starting point:         0.000 (ideal)
+    - Requested Period:                      0.000
+    - Hold time:                             0.702
+    - Clock delay at ending point:           0.000 (ideal)
+    = Slack (non-critical) :                 0.771
+
+    Number of logic level(s):                1
+    Starting point:                          I216.oldAF / Q
+    Ending point:                            I216.read / D
+    The start point is clocked by            CLK_64MHz [rising] on pin CK
+    The end   point is clocked by            CLK_64MHz [rising] on pin CK
+
+Instance / Net                  Pin      Pin               Arrival     No. of    
+Name               Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------
+I216.oldAF         FD1S3AX      Q        Out     0.944     0.944       -         
+oldAF              Net          -        -       -         -           1         
+I216.read.fb       ORCALUT4     C        In      0.000     0.944       -         
+I216.read.fb       ORCALUT4     Z        Out     0.530     1.474       -         
+fb_0               Net          -        -       -         -           1         
+I216.read          FD1S3IX      D        In      0.000     1.474       -         
+=================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                        Starting                                        Arrival           
+Instance                Reference     Type        Pin     Net           Time        Slack 
+                        Clock                                                             
+------------------------------------------------------------------------------------------
+I213.DataFIFO_0_1       System        FIFO8KA     AEF     N_33          0.000       -0.198
+I213.DataFIFO_0_1       System        FIFO8KA     AFF     N_32          0.000       -0.198
+I224                    System        OR2         Z       N_30          0.000       -0.136
+I213.DataFIFO_0_1       System        FIFO8KA     EF      Empty         0.000       0.000 
+I213.DataFIFO_0_1       System        FIFO8KA     FF      Full          0.000       0.000 
+I42                     System        AND2        Z       FF_RT         0.000       0.000 
+I225                    System        AND2        Z       HALT          0.000       0.000 
+I226                    System        AND2        Z       N_29          0.000       0.000 
+I47                     System        AND3        Z       RT_ctrlFF     0.000       0.596 
+Ctrl_Fifo.WR_PTR[0]     System        FD1P3DX     Q       WR_PTR[0]     1.162       2.077 
+==========================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                      Starting                                     Required           
+Instance              Reference     Type        Pin     Net        Time         Slack 
+                      Clock                                                           
+--------------------------------------------------------------------------------------
+I216.oldAE            System        FD1S3AX     D       N_33       0.198        -0.198
+I216.oldAF            System        FD1S3AX     D       N_32       0.198        -0.198
+I216.read             System        FD1S3IX     D       fb_0       0.702        -0.172
+Ctrl_Counter.Q[0]     System        FD1P3DX     SP      N_30_i     0.136        -0.136
+Ctrl_Counter.Q[1]     System        FD1P3DX     SP      N_30_i     0.136        -0.136
+Ctrl_Counter.Q[2]     System        FD1P3DX     SP      N_30_i     0.136        -0.136
+Ctrl_Counter.Q[3]     System        FD1P3DX     SP      N_30_i     0.136        -0.136
+Ctrl_Counter.Q[4]     System        FD1P3DX     SP      N_30_i     0.136        -0.136
+Ctrl_Counter.Q[5]     System        FD1P3DX     SP      N_30_i     0.136        -0.136
+Ctrl_Counter.Q[6]     System        FD1P3DX     SP      N_30_i     0.136        -0.136
+======================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Propagation time:                        0.000
+    + Clock delay at starting point:         0.000 (ideal)
+-0.000
+    - Requested Period:                      0.000
+    - Hold time:                             0.198
+    - Clock delay at ending point:           0.000 (ideal)
+    = Slack (critical) :                     -0.198
+
+    Number of logic level(s):                0
+    Starting point:                          I213.DataFIFO_0_1 / AEF
+    Ending point:                            I216.oldAE / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            CLK_64MHz [rising] on pin CK
+
+Instance / Net                    Pin      Pin               Arrival     No. of    
+Name                  Type        Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------
+I213.DataFIFO_0_1     FIFO8KA     AEF      Out     0.000     0.000       -         
+N_33                  Net         -        -       -         -           2         
+I216.oldAE            FD1S3AX     D        In      0.000     0.000       -         
+===================================================================================
+
+
+Path information for path number 2: 
+    Propagation time:                        0.000
+    + Clock delay at starting point:         0.000 (ideal)
+-0.000
+    - Requested Period:                      0.000
+    - Hold time:                             0.198
+    - Clock delay at ending point:           0.000 (ideal)
+    = Slack (critical) :                     -0.198
+
+    Number of logic level(s):                0
+    Starting point:                          I213.DataFIFO_0_1 / AFF
+    Ending point:                            I216.oldAF / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            CLK_64MHz [rising] on pin CK
+
+Instance / Net                    Pin      Pin               Arrival     No. of    
+Name                  Type        Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------
+I213.DataFIFO_0_1     FIFO8KA     AFF      Out     0.000     0.000       -         
+N_32                  Net         -        -       -         -           2         
+I216.oldAF            FD1S3AX     D        In      0.000     0.000       -         
+===================================================================================
+
+
+Path information for path number 3: 
+    Propagation time:                        0.530
+    + Clock delay at starting point:         0.000 (ideal)
+-0.000
+    - Requested Period:                      0.000
+    - Hold time:                             0.702
+    - Clock delay at ending point:           0.000 (ideal)
+    = Slack (non-critical) :                 -0.172
+
+    Number of logic level(s):                1
+    Starting point:                          I213.DataFIFO_0_1 / AFF
+    Ending point:                            I216.read / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            CLK_64MHz [rising] on pin CK
+
+Instance / Net                     Pin      Pin               Arrival     No. of    
+Name                  Type         Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------
+I213.DataFIFO_0_1     FIFO8KA      AFF      Out     0.000     0.000       -         
+N_32                  Net          -        -       -         -           2         
+I216.read.fb          ORCALUT4     B        In      0.000     0.000       -         
+I216.read.fb          ORCALUT4     Z        Out     0.530     0.530       -         
+fb_0                  Net          -        -       -         -           1         
+I216.read             FD1S3IX      D        In      0.000     0.530       -         
+====================================================================================
+
+
+Path information for path number 4: 
+    Propagation time:                        0.000
+    + Clock delay at starting point:         0.000 (ideal)
+-0.000
+    - Requested Period:                      0.000
+    - Hold time:                             0.136
+    - Clock delay at ending point:           0.000 (ideal)
+    = Slack (non-critical) :                 -0.136
+
+    Number of logic level(s):                1
+    Starting point:                          I224 / Z
+    Ending point:                            Ctrl_Counter.Q[0] / SP
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            CLK_64MHz [rising] on pin CK
+
+Instance / Net                    Pin      Pin               Arrival     No. of    
+Name                  Type        Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------
+I224                  OR2         Z        Out     0.000     0.000       -         
+N_30                  Net         -        -       -         -           1         
+I224_RNI1OO1          INV         A        In      0.000     0.000       -         
+I224_RNI1OO1          INV         Z        Out     0.000     0.000       -         
+N_30_i                Net         -        -       -         -           16        
+Ctrl_Counter.Q[0]     FD1P3DX     SP       In      0.000     0.000       -         
+===================================================================================
+
+
+Path information for path number 5: 
+    Propagation time:                        0.000
+    + Clock delay at starting point:         0.000 (ideal)
+-0.000
+    - Requested Period:                      0.000
+    - Hold time:                             0.136
+    - Clock delay at ending point:           0.000 (ideal)
+    = Slack (non-critical) :                 -0.136
+
+    Number of logic level(s):                1
+    Starting point:                          I224 / Z
+    Ending point:                            Ctrl_Counter.Q[15] / SP
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            CLK_64MHz [rising] on pin CK
+
+Instance / Net                     Pin      Pin               Arrival     No. of    
+Name                   Type        Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------
+I224                   OR2         Z        Out     0.000     0.000       -         
+N_30                   Net         -        -       -         -           1         
+I224_RNI1OO1           INV         A        In      0.000     0.000       -         
+I224_RNI1OO1           INV         Z        Out     0.000     0.000       -         
+N_30_i                 Net         -        -       -         -           16        
+Ctrl_Counter.Q[15]     FD1P3DX     SP       In      0.000     0.000       -         
+====================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+

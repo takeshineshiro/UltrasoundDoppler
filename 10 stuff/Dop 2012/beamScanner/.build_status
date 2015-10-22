@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Convert_HDL" build_result="2" build_time="1377779017">
+            <Task name="HDL_Conv" build_result="2" update_result="0" update_time="1377779017"/>
+        </Milestone>
+        <Milestone name="Export" build_result="0" build_time="0">
+            <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
+            <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
+            <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
+            <Task name="Bitgen" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="Generate_HDL" build_result="2" build_time="1377779017">
+            <Task name="HDL_Gen" build_result="2" update_result="0" update_time="1377779017"/>
+        </Milestone>
+        <Milestone name="Map" build_result="0" build_time="0">
+            <Task name="Map" build_result="0" update_result="3" update_time="0"/>
+            <Task name="MapEqu" build_result="0" update_result="3" update_time="0"/>
+            <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
+            <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
+            <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="0" build_time="0">
+            <Task name="PAR" build_result="0" update_result="3" update_time="0"/>
+            <Task name="PARTrace" build_result="0" update_result="3" update_time="0"/>
+            <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="0" build_time="0">
+            <Task name="Synplify_Synthesis" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="TOOL_Report" build_result="0" build_time="0">
+            <Task name="HDLE" build_result="2" update_result="0" update_time="1377779017"/>
+        </Milestone>
+        <Milestone name="Translate" build_result="0" build_time="0">
+            <Task name="Translate" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Report name="BeamScanner.v" last_build_time="1377779017" last_build_size="2653"/>
+    </Strategy>
+</BuildStatus>

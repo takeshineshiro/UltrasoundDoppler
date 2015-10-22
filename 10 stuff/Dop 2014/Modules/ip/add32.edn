@@ -1,0 +1,572 @@
+(edif add32
+  (edifVersion 2 0 0)
+  (edifLevel 0)
+  (keywordMap (keywordLevel 0))
+  (status
+    (written
+      (timestamp 2015 3 5 11 33 44)
+      (program "SCUBA" (version "Diamond (64-bit) 3.4.0.80"))))
+      (comment "C:\lscc\diamond\3.4_x64\ispfpga\bin\nt64\scuba.exe -w -n add32 -lang verilog -synth synplify -bus_exp 7 -bb -arch mj5g00 -type add -width 32 -signed -pipeline 0 ")
+  (library ORCLIB
+    (edifLevel 0)
+    (technology
+      (numberDefinition))
+    (cell FADD2
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port A1
+            (direction INPUT))
+          (port A0
+            (direction INPUT))
+          (port B1
+            (direction INPUT))
+          (port B0
+            (direction INPUT))
+          (port CI
+            (direction INPUT))
+          (port COUT1
+            (direction OUTPUT))
+          (port COUT0
+            (direction OUTPUT))
+          (port S1
+            (direction OUTPUT))
+          (port S0
+            (direction OUTPUT)))))
+    (cell VHI
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port Z
+            (direction OUTPUT)))))
+    (cell VLO
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port Z
+            (direction OUTPUT)))))
+    (cell add32
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port (array (rename DataA "DataA(31:0)") 32)
+            (direction INPUT))
+          (port (array (rename DataB "DataB(31:0)") 32)
+            (direction INPUT))
+          (port (array (rename Result "Result(31:0)") 32)
+            (direction OUTPUT)))
+        (property NGD_DRC_MASK (integer 1))
+        (contents
+          (instance scuba_vhi_inst
+            (viewRef view1 
+              (cellRef VHI)))
+          (instance scuba_vlo_inst
+            (viewRef view1 
+              (cellRef VLO)))
+          (instance addsub_0
+            (viewRef view1 
+              (cellRef FADD2)))
+          (instance addsub_1
+            (viewRef view1 
+              (cellRef FADD2)))
+          (instance addsub_2
+            (viewRef view1 
+              (cellRef FADD2)))
+          (instance addsub_3
+            (viewRef view1 
+              (cellRef FADD2)))
+          (instance addsub_4
+            (viewRef view1 
+              (cellRef FADD2)))
+          (instance addsub_5
+            (viewRef view1 
+              (cellRef FADD2)))
+          (instance addsub_6
+            (viewRef view1 
+              (cellRef FADD2)))
+          (instance addsub_7
+            (viewRef view1 
+              (cellRef FADD2)))
+          (instance addsub_8
+            (viewRef view1 
+              (cellRef FADD2)))
+          (instance addsub_9
+            (viewRef view1 
+              (cellRef FADD2)))
+          (instance addsub_10
+            (viewRef view1 
+              (cellRef FADD2)))
+          (instance addsub_11
+            (viewRef view1 
+              (cellRef FADD2)))
+          (instance addsub_12
+            (viewRef view1 
+              (cellRef FADD2)))
+          (instance addsub_13
+            (viewRef view1 
+              (cellRef FADD2)))
+          (instance addsub_14
+            (viewRef view1 
+              (cellRef FADD2)))
+          (instance addsub_15
+            (viewRef view1 
+              (cellRef FADD2)))
+          (net scuba_vhi
+            (joined
+              (portRef Z (instanceRef scuba_vhi_inst))))
+          (net scuba_vlo
+            (joined
+              (portRef Z (instanceRef scuba_vlo_inst))
+              (portRef CI (instanceRef addsub_0))))
+          (net co0
+            (joined
+              (portRef CI (instanceRef addsub_1))
+              (portRef COUT1 (instanceRef addsub_0))))
+          (net co1
+            (joined
+              (portRef CI (instanceRef addsub_2))
+              (portRef COUT1 (instanceRef addsub_1))))
+          (net co2
+            (joined
+              (portRef CI (instanceRef addsub_3))
+              (portRef COUT1 (instanceRef addsub_2))))
+          (net co3
+            (joined
+              (portRef CI (instanceRef addsub_4))
+              (portRef COUT1 (instanceRef addsub_3))))
+          (net co4
+            (joined
+              (portRef CI (instanceRef addsub_5))
+              (portRef COUT1 (instanceRef addsub_4))))
+          (net co5
+            (joined
+              (portRef CI (instanceRef addsub_6))
+              (portRef COUT1 (instanceRef addsub_5))))
+          (net co6
+            (joined
+              (portRef CI (instanceRef addsub_7))
+              (portRef COUT1 (instanceRef addsub_6))))
+          (net co7
+            (joined
+              (portRef CI (instanceRef addsub_8))
+              (portRef COUT1 (instanceRef addsub_7))))
+          (net co8
+            (joined
+              (portRef CI (instanceRef addsub_9))
+              (portRef COUT1 (instanceRef addsub_8))))
+          (net co9
+            (joined
+              (portRef CI (instanceRef addsub_10))
+              (portRef COUT1 (instanceRef addsub_9))))
+          (net co10
+            (joined
+              (portRef CI (instanceRef addsub_11))
+              (portRef COUT1 (instanceRef addsub_10))))
+          (net co11
+            (joined
+              (portRef CI (instanceRef addsub_12))
+              (portRef COUT1 (instanceRef addsub_11))))
+          (net co12
+            (joined
+              (portRef CI (instanceRef addsub_13))
+              (portRef COUT1 (instanceRef addsub_12))))
+          (net co13
+            (joined
+              (portRef CI (instanceRef addsub_14))
+              (portRef COUT1 (instanceRef addsub_13))))
+          (net co14
+            (joined
+              (portRef CI (instanceRef addsub_15))
+              (portRef COUT1 (instanceRef addsub_14))))
+          (net sum31
+            (joined
+              (portRef (member Result 0))
+              (portRef S1 (instanceRef addsub_15))))
+          (net sum30
+            (joined
+              (portRef (member Result 1))
+              (portRef S0 (instanceRef addsub_15))))
+          (net sum29
+            (joined
+              (portRef (member Result 2))
+              (portRef S1 (instanceRef addsub_14))))
+          (net sum28
+            (joined
+              (portRef (member Result 3))
+              (portRef S0 (instanceRef addsub_14))))
+          (net sum27
+            (joined
+              (portRef (member Result 4))
+              (portRef S1 (instanceRef addsub_13))))
+          (net sum26
+            (joined
+              (portRef (member Result 5))
+              (portRef S0 (instanceRef addsub_13))))
+          (net sum25
+            (joined
+              (portRef (member Result 6))
+              (portRef S1 (instanceRef addsub_12))))
+          (net sum24
+            (joined
+              (portRef (member Result 7))
+              (portRef S0 (instanceRef addsub_12))))
+          (net sum23
+            (joined
+              (portRef (member Result 8))
+              (portRef S1 (instanceRef addsub_11))))
+          (net sum22
+            (joined
+              (portRef (member Result 9))
+              (portRef S0 (instanceRef addsub_11))))
+          (net sum21
+            (joined
+              (portRef (member Result 10))
+              (portRef S1 (instanceRef addsub_10))))
+          (net sum20
+            (joined
+              (portRef (member Result 11))
+              (portRef S0 (instanceRef addsub_10))))
+          (net sum19
+            (joined
+              (portRef (member Result 12))
+              (portRef S1 (instanceRef addsub_9))))
+          (net sum18
+            (joined
+              (portRef (member Result 13))
+              (portRef S0 (instanceRef addsub_9))))
+          (net sum17
+            (joined
+              (portRef (member Result 14))
+              (portRef S1 (instanceRef addsub_8))))
+          (net sum16
+            (joined
+              (portRef (member Result 15))
+              (portRef S0 (instanceRef addsub_8))))
+          (net sum15
+            (joined
+              (portRef (member Result 16))
+              (portRef S1 (instanceRef addsub_7))))
+          (net sum14
+            (joined
+              (portRef (member Result 17))
+              (portRef S0 (instanceRef addsub_7))))
+          (net sum13
+            (joined
+              (portRef (member Result 18))
+              (portRef S1 (instanceRef addsub_6))))
+          (net sum12
+            (joined
+              (portRef (member Result 19))
+              (portRef S0 (instanceRef addsub_6))))
+          (net sum11
+            (joined
+              (portRef (member Result 20))
+              (portRef S1 (instanceRef addsub_5))))
+          (net sum10
+            (joined
+              (portRef (member Result 21))
+              (portRef S0 (instanceRef addsub_5))))
+          (net sum9
+            (joined
+              (portRef (member Result 22))
+              (portRef S1 (instanceRef addsub_4))))
+          (net sum8
+            (joined
+              (portRef (member Result 23))
+              (portRef S0 (instanceRef addsub_4))))
+          (net sum7
+            (joined
+              (portRef (member Result 24))
+              (portRef S1 (instanceRef addsub_3))))
+          (net sum6
+            (joined
+              (portRef (member Result 25))
+              (portRef S0 (instanceRef addsub_3))))
+          (net sum5
+            (joined
+              (portRef (member Result 26))
+              (portRef S1 (instanceRef addsub_2))))
+          (net sum4
+            (joined
+              (portRef (member Result 27))
+              (portRef S0 (instanceRef addsub_2))))
+          (net sum3
+            (joined
+              (portRef (member Result 28))
+              (portRef S1 (instanceRef addsub_1))))
+          (net sum2
+            (joined
+              (portRef (member Result 29))
+              (portRef S0 (instanceRef addsub_1))))
+          (net sum1
+            (joined
+              (portRef (member Result 30))
+              (portRef S1 (instanceRef addsub_0))))
+          (net sum0
+            (joined
+              (portRef (member Result 31))
+              (portRef S0 (instanceRef addsub_0))))
+          (net b31
+            (joined
+              (portRef (member DataB 0))
+              (portRef B1 (instanceRef addsub_15))))
+          (net b30
+            (joined
+              (portRef (member DataB 1))
+              (portRef B0 (instanceRef addsub_15))))
+          (net b29
+            (joined
+              (portRef (member DataB 2))
+              (portRef B1 (instanceRef addsub_14))))
+          (net b28
+            (joined
+              (portRef (member DataB 3))
+              (portRef B0 (instanceRef addsub_14))))
+          (net b27
+            (joined
+              (portRef (member DataB 4))
+              (portRef B1 (instanceRef addsub_13))))
+          (net b26
+            (joined
+              (portRef (member DataB 5))
+              (portRef B0 (instanceRef addsub_13))))
+          (net b25
+            (joined
+              (portRef (member DataB 6))
+              (portRef B1 (instanceRef addsub_12))))
+          (net b24
+            (joined
+              (portRef (member DataB 7))
+              (portRef B0 (instanceRef addsub_12))))
+          (net b23
+            (joined
+              (portRef (member DataB 8))
+              (portRef B1 (instanceRef addsub_11))))
+          (net b22
+            (joined
+              (portRef (member DataB 9))
+              (portRef B0 (instanceRef addsub_11))))
+          (net b21
+            (joined
+              (portRef (member DataB 10))
+              (portRef B1 (instanceRef addsub_10))))
+          (net b20
+            (joined
+              (portRef (member DataB 11))
+              (portRef B0 (instanceRef addsub_10))))
+          (net b19
+            (joined
+              (portRef (member DataB 12))
+              (portRef B1 (instanceRef addsub_9))))
+          (net b18
+            (joined
+              (portRef (member DataB 13))
+              (portRef B0 (instanceRef addsub_9))))
+          (net b17
+            (joined
+              (portRef (member DataB 14))
+              (portRef B1 (instanceRef addsub_8))))
+          (net b16
+            (joined
+              (portRef (member DataB 15))
+              (portRef B0 (instanceRef addsub_8))))
+          (net b15
+            (joined
+              (portRef (member DataB 16))
+              (portRef B1 (instanceRef addsub_7))))
+          (net b14
+            (joined
+              (portRef (member DataB 17))
+              (portRef B0 (instanceRef addsub_7))))
+          (net b13
+            (joined
+              (portRef (member DataB 18))
+              (portRef B1 (instanceRef addsub_6))))
+          (net b12
+            (joined
+              (portRef (member DataB 19))
+              (portRef B0 (instanceRef addsub_6))))
+          (net b11
+            (joined
+              (portRef (member DataB 20))
+              (portRef B1 (instanceRef addsub_5))))
+          (net b10
+            (joined
+              (portRef (member DataB 21))
+              (portRef B0 (instanceRef addsub_5))))
+          (net b9
+            (joined
+              (portRef (member DataB 22))
+              (portRef B1 (instanceRef addsub_4))))
+          (net b8
+            (joined
+              (portRef (member DataB 23))
+              (portRef B0 (instanceRef addsub_4))))
+          (net b7
+            (joined
+              (portRef (member DataB 24))
+              (portRef B1 (instanceRef addsub_3))))
+          (net b6
+            (joined
+              (portRef (member DataB 25))
+              (portRef B0 (instanceRef addsub_3))))
+          (net b5
+            (joined
+              (portRef (member DataB 26))
+              (portRef B1 (instanceRef addsub_2))))
+          (net b4
+            (joined
+              (portRef (member DataB 27))
+              (portRef B0 (instanceRef addsub_2))))
+          (net b3
+            (joined
+              (portRef (member DataB 28))
+              (portRef B1 (instanceRef addsub_1))))
+          (net b2
+            (joined
+              (portRef (member DataB 29))
+              (portRef B0 (instanceRef addsub_1))))
+          (net b1
+            (joined
+              (portRef (member DataB 30))
+              (portRef B1 (instanceRef addsub_0))))
+          (net b0
+            (joined
+              (portRef (member DataB 31))
+              (portRef B0 (instanceRef addsub_0))))
+          (net a31
+            (joined
+              (portRef (member DataA 0))
+              (portRef A1 (instanceRef addsub_15))))
+          (net a30
+            (joined
+              (portRef (member DataA 1))
+              (portRef A0 (instanceRef addsub_15))))
+          (net a29
+            (joined
+              (portRef (member DataA 2))
+              (portRef A1 (instanceRef addsub_14))))
+          (net a28
+            (joined
+              (portRef (member DataA 3))
+              (portRef A0 (instanceRef addsub_14))))
+          (net a27
+            (joined
+              (portRef (member DataA 4))
+              (portRef A1 (instanceRef addsub_13))))
+          (net a26
+            (joined
+              (portRef (member DataA 5))
+              (portRef A0 (instanceRef addsub_13))))
+          (net a25
+            (joined
+              (portRef (member DataA 6))
+              (portRef A1 (instanceRef addsub_12))))
+          (net a24
+            (joined
+              (portRef (member DataA 7))
+              (portRef A0 (instanceRef addsub_12))))
+          (net a23
+            (joined
+              (portRef (member DataA 8))
+              (portRef A1 (instanceRef addsub_11))))
+          (net a22
+            (joined
+              (portRef (member DataA 9))
+              (portRef A0 (instanceRef addsub_11))))
+          (net a21
+            (joined
+              (portRef (member DataA 10))
+              (portRef A1 (instanceRef addsub_10))))
+          (net a20
+            (joined
+              (portRef (member DataA 11))
+              (portRef A0 (instanceRef addsub_10))))
+          (net a19
+            (joined
+              (portRef (member DataA 12))
+              (portRef A1 (instanceRef addsub_9))))
+          (net a18
+            (joined
+              (portRef (member DataA 13))
+              (portRef A0 (instanceRef addsub_9))))
+          (net a17
+            (joined
+              (portRef (member DataA 14))
+              (portRef A1 (instanceRef addsub_8))))
+          (net a16
+            (joined
+              (portRef (member DataA 15))
+              (portRef A0 (instanceRef addsub_8))))
+          (net a15
+            (joined
+              (portRef (member DataA 16))
+              (portRef A1 (instanceRef addsub_7))))
+          (net a14
+            (joined
+              (portRef (member DataA 17))
+              (portRef A0 (instanceRef addsub_7))))
+          (net a13
+            (joined
+              (portRef (member DataA 18))
+              (portRef A1 (instanceRef addsub_6))))
+          (net a12
+            (joined
+              (portRef (member DataA 19))
+              (portRef A0 (instanceRef addsub_6))))
+          (net a11
+            (joined
+              (portRef (member DataA 20))
+              (portRef A1 (instanceRef addsub_5))))
+          (net a10
+            (joined
+              (portRef (member DataA 21))
+              (portRef A0 (instanceRef addsub_5))))
+          (net a9
+            (joined
+              (portRef (member DataA 22))
+              (portRef A1 (instanceRef addsub_4))))
+          (net a8
+            (joined
+              (portRef (member DataA 23))
+              (portRef A0 (instanceRef addsub_4))))
+          (net a7
+            (joined
+              (portRef (member DataA 24))
+              (portRef A1 (instanceRef addsub_3))))
+          (net a6
+            (joined
+              (portRef (member DataA 25))
+              (portRef A0 (instanceRef addsub_3))))
+          (net a5
+            (joined
+              (portRef (member DataA 26))
+              (portRef A1 (instanceRef addsub_2))))
+          (net a4
+            (joined
+              (portRef (member DataA 27))
+              (portRef A0 (instanceRef addsub_2))))
+          (net a3
+            (joined
+              (portRef (member DataA 28))
+              (portRef A1 (instanceRef addsub_1))))
+          (net a2
+            (joined
+              (portRef (member DataA 29))
+              (portRef A0 (instanceRef addsub_1))))
+          (net a1
+            (joined
+              (portRef (member DataA 30))
+              (portRef A1 (instanceRef addsub_0))))
+          (net a0
+            (joined
+              (portRef (member DataA 31))
+              (portRef A0 (instanceRef addsub_0))))))))
+  (design add32
+    (cellRef add32
+      (libraryRef ORCLIB)))
+)

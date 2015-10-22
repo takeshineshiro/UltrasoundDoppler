@@ -1,0 +1,14 @@
+@W: MT462 :"e:\backup download\usd\beamscanner\beamscanner\beamscanner.v":94:5:94:7|Net WR_ctrlFF appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"e:\backup download\usd\beamscanner\beamscanner\beamscanner.v":93:5:93:7|Net WR_Freq appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"e:\backup download\usd\beamscanner\beamscanner\beamscanner.v":94:5:94:7|Net WR_ctrlFF appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"e:\backup download\usd\beamscanner\beamscanner\beamscanner.v":93:5:93:7|Net WR_Freq appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"e:\backup download\usd\beamscanner\beamscanner\beamscanner.v":94:5:94:7|Net WR_ctrlFF appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"e:\backup download\usd\beamscanner\beamscanner\beamscanner.v":93:5:93:7|Net WR_Freq appears to be an unidentified clock source. Assuming default frequency. 
+@W: BW261 |Block-path constraint from CLKNET "BeamScanner|RD_ctrlFF_inferred_clock" to PORT "CLK_64MHz" not forward annotated in -lpf file. 
+@W: BW261 |Block-path constraint from CLKNET "BeamScanner|RD_ctrlFF_inferred_clock" to PORT "BeamScanner|SRCLK" not forward annotated in -lpf file. 
+@W: BW261 |Block-path constraint from PORT "CLK_64MHz" to CLKNET "BeamScanner|RD_ctrlFF_inferred_clock" not forward annotated in -lpf file. 
+@W: BW261 |Block-path constraint from PORT "BeamScanner|SRCLK" to CLKNET "BeamScanner|RD_ctrlFF_inferred_clock" not forward annotated in -lpf file. 
+@W: MT246 :"e:\backup download\usd\beamscanner\beamscanner\beamscanner.v":85:5:85:7|Blackbox AND3 is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT246 :"e:\backup download\usd\beamscanner\datafifo.v":90:12:90:23|Blackbox FIFO8KA is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT420 |Found inferred clock BeamScanner|SRCLK with period 1000.00ns. Please declare a user-defined clock on object "p:SRCLK"
+@W: MT420 |Found inferred clock BeamScanner|RD_ctrlFF_inferred_clock with period 1000.00ns. Please declare a user-defined clock on object "n:RD_ctrlFF"

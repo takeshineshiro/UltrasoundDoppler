@@ -1,0 +1,48 @@
+[Device]
+Family=machxo
+PartType=LCMXO2280C
+PartName=LCMXO2280C-3T100C
+SpeedGrade=3
+Package=TQFP100
+OperatingCondition=COM
+Status=S
+
+[IP]
+VendorName=Lattice Semiconductor Corporation
+CoreType=LPM
+CoreStatus=Demo
+CoreName=FIFO_DC
+CoreRevision=5.5
+ModuleName=DataFIFO
+SourceFormat=Verilog HDL
+ParameterFileVersion=1.0
+Date=02/07/2014
+Time=08:39:47
+
+[Parameters]
+Verilog=1
+VHDL=0
+EDIF=1
+Destination=Synplicity
+Expression=BusA(0 to 7)
+Order=Big Endian [MSB:LSB]
+IO=0
+FIFOImp=EBR Only
+RDepth=2048
+RWidth=8
+WDepth=1024
+WWidth=16
+regout=1
+CtrlByRdEn=1
+EmpFlg=1
+PeMode=Static - Single Threshold
+PeAssert=639
+PeDeassert=12
+FullFlg=1
+PfMode=Static - Single Threshold
+PfAssert=640
+PfDeassert=250
+Reset=Async
+RDataCount=0
+WDataCount=0
+EnECC=0

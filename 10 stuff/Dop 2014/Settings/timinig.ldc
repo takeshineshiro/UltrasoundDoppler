@@ -1,0 +1,5 @@
+create_clock -period 500.000000 -name SPI_Transfered [get_ports TRIGGER ]
+create_clock -period 27.777000 -name SPI_Clock [get_ports SPI[0] ]
+create_clock -period 15.625000 -name Quarz [get_ports CLK_64MHz ]
+set_input_delay 1.200000 -clock Quarz [all_inputs]
+set_output_delay 1.200000 -clock Quarz [all_outputs]

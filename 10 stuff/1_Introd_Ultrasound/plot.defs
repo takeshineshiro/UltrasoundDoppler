@@ -1,0 +1,10 @@
+* File: C:\eda\LTC\LTspiceIV\plot.defs
+*
+* Define parameters and functions that you whish to be able to use in
+* data plots in this file with .param and .func statements.
+
+.func Z_(V,I) = {V/I}
+.func Y_(I,V) = {I/V}
+
+.func F_(Vout,Vin) = {Vout/Vin}
+.func A_(Vin,Vout) = {Vin/Vout}

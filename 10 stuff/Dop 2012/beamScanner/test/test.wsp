@@ -1,0 +1,17 @@
+[COMPILESTATUS|.\..\tb_spi_slave.v]
+FileTimeLow=30374974
+Status=Modified
+
+[General]
+CurrentVersion=103
+
+[CACHEDOC|Aldec.Project.Generic.7|.\test.adf|]
+Path=/tbslave
+
+[Gui config]
+RunFor=100 ns
+
+[COMPILESTATUS|.\..\spi_slave.v]
+FileTimeLow=30374976
+Status=Modified
+

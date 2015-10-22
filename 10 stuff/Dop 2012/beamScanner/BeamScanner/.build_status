@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Convert_HDL" build_result="2" build_time="1401561849">
+            <Task name="HDL_Conv" build_result="2" update_result="0" update_time="1401561849"/>
+        </Milestone>
+        <Milestone name="Export" build_result="0" build_time="0">
+            <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
+            <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
+            <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
+            <Task name="Bitgen" build_result="0" update_result="2" update_time="1399453947"/>
+        </Milestone>
+        <Milestone name="Generate_HDL" build_result="2" build_time="1401561849">
+            <Task name="HDL_Gen" build_result="2" update_result="0" update_time="1401561849"/>
+        </Milestone>
+        <Milestone name="Map" build_result="0" build_time="1406579429">
+            <Task name="Map" build_result="0" update_result="2" update_time="1406579429"/>
+            <Task name="MapEqu" build_result="0" update_result="2" update_time="1406579430"/>
+            <Task name="MapTrace" build_result="0" update_result="2" update_time="1406579431"/>
+            <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
+            <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="0" build_time="1406579466">
+            <Task name="PAR" build_result="0" update_result="2" update_time="1406579466"/>
+            <Task name="PARTrace" build_result="0" update_result="2" update_time="1406579467"/>
+            <Task name="IOTiming" build_result="0" update_result="2" update_time="1404427541"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1406703557">
+            <Task name="Synplify_Synthesis" build_result="2" update_result="0" update_time="1406703557"/>
+        </Milestone>
+        <Milestone name="TOOL_Report" build_result="0" build_time="0">
+            <Task name="HDLE" build_result="2" update_result="0" update_time="1406579506"/>
+            <Task name="BKM" build_result="0" update_result="2" update_time="1401481065"/>
+            <Task name="SSO" build_result="0" update_result="2" update_time="0"/>
+            <Task name="PIODRC" build_result="0" update_result="2" update_time="0"/>
+        </Milestone>
+        <Milestone name="Translate" build_result="0" build_time="1406579421">
+            <Task name="Translate" build_result="0" update_result="2" update_time="1406579421"/>
+        </Milestone>
+        <Report name="BeamScanner.v" last_build_time="1401561848" last_build_size="4279"/>
+        <Report name="BeamScanner_BeamScanner.bgn" last_build_time="1399453931" last_build_size="1839"/>
+        <Report name="BeamScanner_BeamScanner.edi" last_build_time="1406703552" last_build_size="682586"/>
+        <Report name="BeamScanner_BeamScanner.ior" last_build_time="1404427541" last_build_size="5220"/>
+        <Report name="BeamScanner_BeamScanner.jed" last_build_time="1399453946" last_build_size="501839"/>
+        <Report name="BeamScanner_BeamScanner.n2e" last_build_time="1406579430" last_build_size="203525"/>
+        <Report name="BeamScanner_BeamScanner.ncd" last_build_time="1406579466" last_build_size="745102"/>
+        <Report name="BeamScanner_BeamScanner.ngd" last_build_time="1406579421" last_build_size="715324"/>
+        <Report name="BeamScanner_BeamScanner.tw1" last_build_time="1406579431" last_build_size="12220"/>
+        <Report name="BeamScanner_BeamScanner.twr" last_build_time="1406579467" last_build_size="60416"/>
+        <Report name="BeamScanner_BeamScanner_map.ncd" last_build_time="1406579429" last_build_size="493681"/>
+        <Report name="USD.v" last_build_time="1401561849" last_build_size="2045"/>
+    </Strategy>
+</BuildStatus>

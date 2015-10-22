@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="quad_table" module="Sin-Cos_Table" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2015 03 05 14:17:06.689" version="1.5" type="Module" synthesis="synplify" source_format="Verilog">
+  <Package>
+		<File name="quad_table.lpc" type="lpc" modified="2015 03 05 14:17:05.338"/>
+		<File name="quad_table.v" type="top_level_verilog" modified="2015 03 05 14:17:05.395"/>
+		<File name="quad_table_tmpl.v" type="template_verilog" modified="2015 03 05 14:17:05.397"/>
+		<File name="tb_quad_table_tmpl.v" type="testbench_verilog" modified="2015 03 05 14:17:05.408"/>
+  </Package>
+</DiamondModule>
