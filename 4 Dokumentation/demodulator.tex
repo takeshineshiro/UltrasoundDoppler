@@ -1,0 +1,63 @@
+%\title{18W MOSFET amplifier)
+% Title: 18W MOSFET amplifier, with npn transistor.
+% Author: RamÃ³n Jaramillo.
+% Source: http://www.circuitstoday.com/mosfet-amplifier-circuits
+% Abstract:
+% This example made use of circuitikz and siunits packages for drawing a 18W MOSFET  Amplifier for one-channel. It is mandatory than siunitx and related packages have been instaled, acording to your LaTeX distribution.
+\documentclass[tikz,border=10pt
+              ]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,automata,matrix,trees}
+\usetikzlibrary{decorations.pathreplacing,calc,positioning}
+\usetikzlibrary{fit}					% fitting shapes to coordinates
+\usetikzlibrary{dsp,chains}
+\usepackage{tikz-timing}[2009/12/09]
+\usetikztiminglibrary[new={char=Q,reset char=R}]{counters}
+\usetikzlibrary{decorations,arrows} 
+\usetikzlibrary{decorations.pathmorphing} 
+\usepgflibrary{decorations.pathreplacing} 
+\usetikzlibrary{dsp,chains}
+\begin{document}
+\begin{tikzpicture}
+	\matrix (m0) [row sep=2.5mm, column sep=12mm]
+	{	%--------------------------------------------------------------------
+		\node[coordinate]                  (m00) {};   		  &
+		\node[coordinate]                  (m01) {};   		  &
+		\node[dspmixer, pin={[pin edge={to-,very thick,black}]below:$cos(2\pi f_0)$}]                    (m02) {};   		  &
+		\node[dspsquare]                   (m03) {LPF};   	  &
+		\node[dspnodeopen,dsp/label=below] (m0X) {$I(t)$};	  \\				%--------------------------------------------------------------------
+		\node[dspnodeopen,dsp/label=above] (m10) {$f_{RF}(t)$};    &
+		\node[dspnodefull]                 (m11) {};          &
+		\node[coordinate]                  (m12) {};          &
+		\node[coordinate]                  (m13) {};          &
+		\node[coordinate]                  (m1X) {};          \\		%--------------------------------------------------------------------
+		\\		%--------------------------------------------------------------------
+		\node[coordinate]                  (m20) {};          &
+		\node[coordinate]                  (m21) {};          &
+		\node[dspmixer, pin={[pin edge={to-,very thick,black}]below:$sin(2\pi f_0)$}]                    (m22) {};   		  &
+		\node[dspsquare]                   (m23) {LPF};		  &
+		\node[dspnodeopen,dsp/label=below] (m2X) {$Q(t)$};    \\		%--------------------------------------------------------------------		%--------------------------------------------------------------------
+		\node[coordinate] (m30) {}; &
+		\node[coordinate] (m31) {}; &
+		\node[coordinate] (m32) {}; &
+		\node[coordinate] (m33) {}; &
+		\node[coordinate] (m3X) {};    \\		%--------------------------------------------------------------------
+	};	
+	\begin{scope}[start chain]
+		\chainin (m10);
+		\chainin (m11) [join=by dspconn];
+		\chainin (m01) [join=by dspline];
+		\chainin (m21) [join=by dspline];
+	\end{scope}
+	%\draw[dspconn]  (m12) --  (m02);	
+	%\draw[dspconn]  (m32) -- node[below] {$sin(2\pi f_0)$} (m22);	
+			
+	\foreach \i [evaluate = \i as \j using int(\i+1)] in {1,..., 2}
+	{
+		\draw[dspconn] (m0\i) -- (m0\j);
+		\draw[dspconn] (m2\i) -- (m2\j);
+	}
+	\draw[dspflow] (m03) -- (m0X);
+	\draw[dspflow] (m23) -- (m2X);
+\end{tikzpicture}
+\end{document}

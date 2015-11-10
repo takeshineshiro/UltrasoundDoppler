@@ -11,6 +11,7 @@ TEMPLATE = app
 DEPENDPATH += $$PWD
 INCLUDEPATH += $$PWD
 
+#CONFIG += static # for static compile
 CONFIG += c++11
 QMAKE_CXXFLAGS += -std=c++11
 

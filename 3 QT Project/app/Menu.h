@@ -16,7 +16,6 @@
 #include <QHBoxLayout>
 #include <QSlider>
 
-
 #include "stringextentions.h"
 #include "usdmodel.h"
 #include "mmode.h"

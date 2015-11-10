@@ -1,5 +1,5 @@
 @echo off
-set F=Thesis
+set F=Praesentation
 set TEX=pdflatex -quiet
 set BIBTEX=bibtex %F% -quiet
 set BUILDTEX=%TEX% -synctex=1 -interaction=nonstopmode %F%.tex
